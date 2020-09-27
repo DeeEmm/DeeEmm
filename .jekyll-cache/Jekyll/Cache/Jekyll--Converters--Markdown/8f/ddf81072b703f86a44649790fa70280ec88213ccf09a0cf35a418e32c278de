@@ -1,0 +1,7 @@
+I"<p><img src="http://www.sequelpro.com/assets/images/g-notebook-header.png" border="0" alt="http://www.sequelpro.com/assets/images/g-notebook-header.png" title="http://www.sequelpro.com/assets/images/g-notebook-header.png" hspace="15" width="207" height="133" align="right" />A recent project using a remote database server forced me to go looking for a suitable database client for my Mac. Previously i had used EMMA on Linux, but as I only has my macbook to hand I decided to have a look into what was available.<br /><br />A quick google turned up Sequel Pro - an open source project - <a href="http://www.sequelpro.com/" title="http://www.sequelpro.com/">http://www.sequelpro.com/</a></p>
+<p>Sequel Pro is a very capable tool, that works flawlessly, it supports SSL connections and had a wide range of encoding options. The layout is instantly familiar to anyone who is used to using phpMyAdmin, and the interface is pretty intuitive to use.</p>
+<p>The query editor allows easy query management with both a history feature as well as a favourites menu to keep track of your more frequently used querys, this alone is a great feature for anyone who needs to use the same querys over and over. The query editor also provides basic text editor functionality and syntax highlighting to make life a littel easier, it also includes auto complete.</p>
+<p>Overall, if you need a remote database client, or simply want to use something other than phpMyAdmin, I would reccomend Sequel Pro. A great application, at a great price.</p>
+<p>DM.</p>
+<p>&nbsp;</p>
+:ET

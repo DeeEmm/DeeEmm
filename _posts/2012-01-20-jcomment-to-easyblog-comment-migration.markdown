@@ -1,0 +1,34 @@
+---
+layout: post
+title: Jcomment to EasyBlog comment migration
+joomla_id: 231
+joomla_url: jcomment-to-easyblog-comment-migration
+category: Joomla 1.7 How To's
+tags: comment easyblog jcomment migration phpmyadmin sql
+date: 2012-01-20 13:55:05.000000000 +10:30
+---
+<p>The recent migration from Joomla 1.5 to Joomla 1.7 left me without a comments system for the tutorials section of the site. Previously this was handled by Jcomment, a great component that allows you to easily add commenting to standard Joomla articles, its only drawback, is that the Joomla 1.7 version is still some way from release.</p>
+<p>After having taken a look at various options, including several other commenting systems, I decided that the best solution would be to import the tutorial articles into EasyBlog, mostly as this would help keep some continuity on the site. The migration of the posts went flawlessly, as expected, but this still left me with the actual comments to migrate. I briefly considered a manual migration, but then discovered that there are actually quite a few comments on the site.</p>
+<p>After a bit of digging around I discovered that EasyBlog creates a table that cross references the old article ID's to the new ID's. This is created during the migration process and the values are stored in the '#__easyblog_migrate_content' table. Perfect for migrating the missing comments across.</p>
+<p>Using this table I was able to change the object_id in the original jcomments table to match the new post_id for EasyBlog. I simply ran the following SQL statement from within phpMyAdmin. (You will notice that I've made a copy of the original table into the table h0ahq_oldjcomments, just in case.)</p>
+<pre class="brush:sql">UPDATE h0ahq_easyblog_migrate_content p, h0ahq_oldjcomments pp
+SET pp.object_id = p.post_id
+WHERE pp.object_id = p.post_id
+</pre>
+<pre><strong><br></strong></pre>
+<p>With the correct values assigned to the comments, I deleted all&nbsp;unnecessary&nbsp;fields (all fields except&nbsp;`userid`, `comment`, `date` and `object_id`) and then exported the table.</p>
+<p>I then modified the SQL in a text editor as follows: I deleted the CREATE TABLE section and modified the INSERT statement as follows...</p>
+<pre class="brush:sql">INSERT INTO `h0ahq_oldjcomments` (`userid`, `comment`, `date`, `newid`) VALUES
+</pre>
+<pre><strong><br></strong></pre>
+<p>Changed to</p>
+<pre class="brush:sql">INSERT INTO `h0ahq_easyblog_comment` (`created_by`, `comment`, `created`, `post_id`) VALUES
+</pre>
+<pre><strong><br></strong></pre>
+<p>I then saved the file and using phpMyAdmin I imported the new comments into the database (again using phpMyAdmin).</p>
+<p>Now all of the comments were under the correct posts but when viewing them I found that some of them had a left-margin set within an inline stye causing the comment to shift over to the right side of the page. After a &nbsp;bit of digging, this transpired to be&nbsp;because&nbsp;there was some data missing from the database. For each entry there are two fields set which relate to the comments location within the comment stream, this is needed EasyBlog allows nested comments. My quick import simply assigned zero values to these fields confusing the script as to where the comments should sit within the comment stream.</p>
+<p>The fields should function as follows - Assuming that all comments are sequential and not nested, on the first comment the values for the two fields lft and rgt will be 1 and 2, the next comment will be 3 and 4, and so on...</p>
+<p>Rather than get technical and write a PHP script to do the job properly, I decided to manually add the values. I simply gave all comments the values 1 and 2 for the fields lft and rgt respectively (via phpMyAdmin). I then manually edited the posts where there were more then one comment so that the subsequent posts had the values, 3&amp;4, 5&amp;6, etc. I used the following SQL to find the duplicate entries:</p>
+<pre><strong>SELECT `post_id` FROM `h0ahq_easyblog_comment` GROUP BY &nbsp;`post_id` HAVING &nbsp;(COUNT(`post_id`) &gt; 1)</strong></pre>
+<p>Fortunately there were not too many posts with multiple comments.</p>
+<p>/DM</p>

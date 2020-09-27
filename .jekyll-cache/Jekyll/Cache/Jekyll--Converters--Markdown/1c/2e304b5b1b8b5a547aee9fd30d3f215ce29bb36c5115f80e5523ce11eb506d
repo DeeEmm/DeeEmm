@@ -1,0 +1,25 @@
+I"<p>It's been along time since I wrote anything to this page, this is mainly due to not having the time to spare to site and get some words together.<br /><br />So, what has been happening in the past four months?<br /><br />The DMCMS (DeeEmm CMS) project has been updated a couple of times, the updates were mainly security related and mostly due to the site being hacked (Damn script kiddies!) The development has been rather slow apart from that. The project has&nbsp; now branched into two seperate versions, with a 'lite' version being available to download from Sourceforge - this is basically the normal version that has been available. The second branch is a version that is incorporating full user and permissions management.<br /><br />The new branch was originally going to be available this year but has now taken a back seat to other projects.<br /><br />The current 'lite' version is currenly still available as a beta version release, but it is likely that this will be released as version 1 before the new year.</p>
+<p><br /><strong>Synergy</strong></p>
+<p>A great little program I come across that allows you to use one keyboard and mouse for more than one computer is 'Synergy' <a href="http://sourceforge.net/projects/synergy2/" title="Synergy">http://sourceforge.net/projects/synergy2/</a> Synergy is cross platform compatible and utilises the loacl LAN network to pass mouse and keyboard info between computers. The synergy client needs to be installed on both computers, and then setup to allow one computer (the one with the keyboard and mouse) to be run as the synergy server - the screen positions between both then need to be set and youre then ready.</p>
+<p>To switch between computers the mouse is simply moved off of the screen and on to the next computer monitor, in the same way that multiple monitors work.</p>
+<p>Cut and paste for text also works between computers.</p>
+<p>I have been using this utility for months now - I have thrown away my old KVM switch - which was very klunky and unreliable and now just use Synergy. I use it to share between two Ubuntu machines and an XP machine and have not had a problem (in fact I'm using it to type this!) Synergy will also work with the MAC as well.</p>
+<p>Synergy is available for free from the web link above. When using it with Ubuntu, you may need to invoke it from the command line with the command 'sudo synergyc XXX.XXX.XXX.XXX' (replace with the IP address of the synergy server)</p>
+<p>&nbsp;</p>
+<p><strong>Cross Platform IDE's</strong></p>
+<p>Another thing that I have been looking into is a replacement for Visual Basic.</p>
+<p>I have a few projects that Im working on that really need to be ported to the Mac and Linux as well as the Windows platform, this is mostly so that I can support a wider user base, but also because I feel that I should.</p>
+<p>I had considered using Java so that it would be platfiorm independent, but just did not like the interface that Java applications tend to have, whilst I'm aware that I can develop my own - it's simply something that I do not have the time to do.</p>
+<p>After some searching I came across three candidates - QT (pronounced 'Cute'), wxWidgets and REALbasic.</p>
+<p>Installation for all three is availabe through the Synaptics package manager.</p>
+<p>Coming from a VB background, getting used to a C++ based language is a little hard at first, this is especially true of QT as yiou are required to do a lot of long hand programming and setting up to get things to work as the IDE only seems to be used to create the interface, it is not used to develop the other projects files - instead these need to be created with a text editor. Compilation also needs to be carried out seperately</p>
+<p>wxWidgets, appears to be much the same as QT although the IDE can also be used to edit files</p>
+<p>The package that really shines is REALbasic. It is very similar to VB, in both it's layout and operation and integrates the interface designer, editors and compiler in one package.</p>
+<p>Applications can be compiled for MAC, Linux or Windows (although the pro version will need to be purchased for a small fee). The only thing that it lacks is a wider range of functions - although these can be added by the purchase and installation of 'Plugin packs'available from 3rd party developers.</p>
+<p>I'm currently working on one project to see how it converts, and to see if it is suitable for my other projects</p>
+<p>I will let you know how I get on.</p>
+<p>For more information you can visit the following web sites</p>
+<p><a href="http://www.wxwidgets.org/" title="http://www.wxwidgets.org/">http://www.wxwidgets.org/ </a></p>
+<p><a href="http://trolltech.com/" title="http://trolltech.com/">http://trolltech.com/ </a></p>
+<p><a href="http://www.realsoftware.com/" title="http://www.realsoftware.com">http://www.realsoftware.com </a></p>
+:ET

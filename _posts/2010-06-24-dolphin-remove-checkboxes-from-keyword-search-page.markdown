@@ -1,0 +1,25 @@
+---
+layout: post
+title: Dolphin - Remove checkboxes from keyword search page
+joomla_id: 209
+joomla_url: dolphin-remove-checkboxes-from-keyword-search-page
+category: Dolphin 7.0.x Modifications
+tags: checkboxes d7-remove dolphin-7 keyword mod search-page
+date: 2010-06-24 04:38:06.000000000 +09:30
+---
+<p>If, like me, you do not like the massive long list of checkboxes at the top of the keyword search page, removing them is pretty simple.</p>
+<p>Edit the following file...</p>
+<p><strong>searchKeyword.php</strong></p>
+<p>At about line 97 look for the following text...</p>
+<p class="code">$aForm = array(<br> 'form_attrs' =&gt; array(<br> 'id' =&gt; 'searchForm',<br> 'action' =&gt; '',<br> 'method' =&gt; 'post',<br> 'onsubmit' =&gt; '',<br> ),<br> 'inputs' =&gt; array(<br> 'section' =&gt; array(<br> 'type' =&gt; 'checkbox_set',<br> 'name' =&gt; 'section',<br> 'caption' =&gt; _t('_Section'),<br> 'values' =&gt; $aValues,<br> 'value' =&gt; $aValue,<br> ),<br> 'keyword' =&gt; array(<br> 'type' =&gt; 'text',<br> 'name' =&gt; 'keyword',<br> 'caption' =&gt; _t('_Keyword')<br> ),<br> 'search' =&gt; array(<br> 'type' =&gt; 'submit',<br> 'name' =&gt; 'search',<br> 'value' =&gt; _t('_Search')<br> )<br> )<br> );</p>
+<p>Then within this text find the following section...</p>
+<p class="code">'section' =&gt; array(<br> 'type' =&gt; 'checkbox_set',<br> 'name' =&gt; 'section',<br> 'caption' =&gt; _t('_Section'),<br> 'values' =&gt; $aValues,<br> 'value' =&gt; $aValue,<br> ),</p>
+<p>...delete it, or comment it out - like this...</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p class="code" style="padding-top: 10px; padding-right: 15px; padding-bottom: 10px; padding-left: 15px; margin-top: 5px; margin-right: 0px; margin-bottom: 15px; margin-left: 0px; border-left-width: 5px; border-right-width: 1px; border-top-width: 1px; border-bottom-width: 1px; background-image: initial; background-attachment: initial; background-origin: initial; background-clip: initial; background-color: #f6f6f6; font: normal normal normal 1em/1.5 'Courier News', monospace; background-position: initial initial; background-repeat: initial initial; border-color: #999999; border-style: solid;">// &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;'section' =&gt; array(<br>// &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;'type' =&gt; 'checkbox_set',<br>// &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;'name' =&gt; 'section',<br>// &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 'caption' =&gt; _t('_Section'),<br>// &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;'values' =&gt; $aValues,<br>// &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;'value' =&gt; $aValue,<br>// &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;),</p>
+<p><span style="font-family: Verdana, Arial, Helvetica, sans-serif;">Hey presto... </span></p>
+<p><span style="font-family: Verdana, Arial, Helvetica, sans-serif;">No more Fugly checkboxes </span></p>
+<p><span style="font-family: Verdana, Arial, Helvetica, sans-serif;">/DM</span></p>
+<p>&nbsp;</p>

@@ -1,0 +1,9 @@
+---
+layout: post
+title: test
+joomla_id: 192
+joomla_url: test
+category: Javascript
+date: 2010-07-01 12:37:52.000000000 +09:30
+---
+<p>delete</p>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>DOLPHIN - Create Custom Blocks | DeeEmm</title>
+<meta name="generator" content="Jekyll v4.1.1" />
+<meta property="og:title" content="DOLPHIN - Create Custom Blocks" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Just a very quick tutorial this time.i was looking for a way to create a block that didn&#39;t have the normal border and header so that I could add in my own custom HTML. After looking through the code, this is very easy to do - in fact it doesn;t even really need a modification (well not in the traditional sense of the word).Basically what you need to do is this... Go to the Page Builder in the admin interface Create a block by dragging the &#39;Simple HTML&#39; sample into position. Add your HTML / text etc, give it a meaningful caption and save it Now you will need to get access to your database by using something like phpMyAdmin. Go to the &#39;Page Compose&#39; table and find the entry for your newly added block - TIP look for the same caption Now edit this record so that the value of &#39;Design Box&#39; is 0 Now you can checkout your new border-less block by viewing your site in a browser. DM" />
+<meta property="og:description" content="Just a very quick tutorial this time.i was looking for a way to create a block that didn&#39;t have the normal border and header so that I could add in my own custom HTML. After looking through the code, this is very easy to do - in fact it doesn;t even really need a modification (well not in the traditional sense of the word).Basically what you need to do is this... Go to the Page Builder in the admin interface Create a block by dragging the &#39;Simple HTML&#39; sample into position. Add your HTML / text etc, give it a meaningful caption and save it Now you will need to get access to your database by using something like phpMyAdmin. Go to the &#39;Page Compose&#39; table and find the entry for your newly added block - TIP look for the same caption Now edit this record so that the value of &#39;Design Box&#39; is 0 Now you can checkout your new border-less block by viewing your site in a browser. DM" />
+<link rel="canonical" href="http://localhost:4000/dolphin%206.1.x%20modifications/2009/08/02/dolphin-create-custom-blocks.html" />
+<meta property="og:url" content="http://localhost:4000/dolphin%206.1.x%20modifications/2009/08/02/dolphin-create-custom-blocks.html" />
+<meta property="og:site_name" content="DeeEmm" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2009-08-02T22:25:03+09:30" />
+<script type="application/ld+json">
+{"description":"Just a very quick tutorial this time.i was looking for a way to create a block that didn&#39;t have the normal border and header so that I could add in my own custom HTML. After looking through the code, this is very easy to do - in fact it doesn;t even really need a modification (well not in the traditional sense of the word).Basically what you need to do is this... Go to the Page Builder in the admin interface Create a block by dragging the &#39;Simple HTML&#39; sample into position. Add your HTML / text etc, give it a meaningful caption and save it Now you will need to get access to your database by using something like phpMyAdmin. Go to the &#39;Page Compose&#39; table and find the entry for your newly added block - TIP look for the same caption Now edit this record so that the value of &#39;Design Box&#39; is 0 Now you can checkout your new border-less block by viewing your site in a browser. DM","@type":"BlogPosting","headline":"DOLPHIN - Create Custom Blocks","dateModified":"2009-08-02T22:25:03+09:30","datePublished":"2009-08-02T22:25:03+09:30","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/dolphin%206.1.x%20modifications/2009/08/02/dolphin-create-custom-blocks.html"},"url":"http://localhost:4000/dolphin%206.1.x%20modifications/2009/08/02/dolphin-create-custom-blocks.html","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="DeeEmm" /></head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/">DeeEmm</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/about/">About</a><a class="page-link" href="/archives/">Archives</a><a class="page-link" href="/blog/">Blog</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">DOLPHIN - Create Custom Blocks</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2009-08-02T22:25:03+09:30" itemprop="datePublished">Aug 2, 2009
+      </time></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>Just a very quick tutorial this time.<br /><br />i was looking for a way to create a block that didn't have the normal border and header so that I could add in my own custom HTML. After looking through the code, this is very easy to do - in fact it doesn;t even really need a modification (well not in the traditional sense of the word).<br /><br />Basically what you need to do is this...<br /><br /></p>
+<ol>
+<li>Go to the Page Builder in the admin interface</li>
+<li>Create a block by dragging the 'Simple HTML' sample into position.</li>
+<li>Add your HTML / text etc, give it a meaningful caption and save it</li>
+<li>Now you will need to get access to your database by using something like phpMyAdmin.</li>
+<li>Go to the 'Page Compose' table and find the entry for your newly added block - TIP look for the same caption</li>
+<li>Now edit this record so that the value of 'Design Box' is 0</li>
+<li>Now you can checkout your new border-less block by viewing your site in a browser.</li>
+</ol>
+<p>DM</p>
+
+  </div><a class="u-url" href="/dolphin%206.1.x%20modifications/2009/08/02/dolphin-create-custom-blocks.html" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">DeeEmm</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">DeeEmm</li><li><a class="u-email" href="mailto:deeemmm@deeemm.com">deeemmm@deeemm.com</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/DeeEmm"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">DeeEmm</span></a></li><li><a href="https://www.twitter.com/DeeEmm__"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">DeeEmm__</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>Waxing lyrical about life the universe and everything tech related since lunchtime 2006.</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>

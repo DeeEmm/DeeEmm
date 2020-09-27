@@ -1,0 +1,50 @@
+---
+layout: post
+title: D7 Move avatar from promo to banner
+joomla_id: 204
+joomla_url: d7-move-avatar-from-promo-to-banner
+category: Dolphin 7.0.x Modifications
+tags: avatar banner bxinjection d7 dolphin-7 move promo template
+date: 2010-05-02 06:53:31.000000000 +09:30
+---
+<p>After updating my Dolphin 6 site to the new version 7 software I decided that I wanted to move the avatar to the banner - basically the same as for my D6 site. I also wanted to put the quotes at the bottom - I decided to mimick the style and layout for my D6 site - I wanted my upgrade to D7 to be more or less transparent to my users.</p>
+<p>&nbsp;</p>
+<h3><strong>How To Relocate the daily quotes</strong></h3>
+<p>To modify the quotes position is&nbsp; simple enough - you just need to modify the sys_injections table - look for <strong>quotes_injection</strong> and then change the key to<strong> injection_footer_after</strong></p>
+<p><strong>injection_footer_after</strong> refers to the tag that the content will replace - in this case the tag in the footer</p>
+<p>&nbsp;</p>
+<p><strong class="code">bx_injection:injection_footer_after /&gt;</strong></p>
+<p>&nbsp;</p>
+<p>This is only half of the story though - as the quotes do not display correctly - this is mostly as the css has a <strong>position:absolute</strong> attribute - this needs to be changed to position:relative, or removed altogether. This can easily be changed in unit.css in the quotes module - look for the <strong>.quote_div</strong> class name. Whilst you are there you might also want to change the rest of the styling to suit your own site.</p>
+<p>You can also override the modules style by adding the following to general.css</p>
+<p>&nbsp;</p>
+<p><span class="code">div.quote_div { position:relative;}</span></p>
+<p>&nbsp;</p>
+<p>Or just use the following code which will also position it nicely</p>
+<pre>&nbsp;&nbsp;&nbsp; div.quote_div {<br>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; position:relative;<br>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; margin-top:20px;<br>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; clear:both;<br>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; width:100%;<br>&nbsp;&nbsp;&nbsp; }<br>&nbsp;&nbsp;&nbsp; <br>&nbsp;&nbsp;&nbsp; div.quote_div div.daily_quotes {<br>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; text-align: center;<br>&nbsp;&nbsp;&nbsp; }</pre>
+<p>&nbsp;</p>
+<p>You could also put the quotes block anywhere you like by creating your own injection points - simply add the following tag to your template in the position you want to inject the code - I added this after the footer.</p>
+<p>&nbsp;</p>
+<p><strong class="code">bx_injection:my_injection /&gt;</strong></p>
+<p>&nbsp;</p>
+<p>Then change the key in the sys_injections table to <strong>my_injection</strong>. Now the quotes display below the bottom footer instead of inside it.</p>
+<p>You can include any kind of custom content in this manner by adding it to the sys_injections table - include the custom php code you want to execute in the data field and make sure you change the type to php.</p>
+<p>In this manner you can include the avatar and username in the banner.</p>
+<p>&nbsp;</p>
+<h3>Add the avatar to the banner</h3>
+<p>The code that puts the avatar and username in the promo block is in design.inc.php - unless you want two avatars displayed you will need to comment it out after you have moved it.</p>
+<p>&nbsp;</p>
+<pre>$aInfo =  getProfileInfo(); &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp; <br>$sWelcomeElement = '</pre>
+<div class="label_thumbnail">' . get_member_thumbnail($aInfo['ID'], "left", false) . '</div>
+<div class="label_thumb">' . _t('_Hello member', $aInfo['NickName']) . '</div>
+<pre>';</pre>
+<p>&nbsp;</p>
+<p>Simple create a new entry into the sys_injections table - I called it 'avatar' - then add in the info. We can use the same code for generating the avatar and text for the header. You have to change the way that the code is handled slightly - but not too much - we also need to check if the user is logged in. if not we will display nothing, but we could easily show the login / join buttons instead.</p>
+<pre>$aInfo = getProfileInfo(); <br>return $aInfo = getProfileInfo();  if(isMember()) { return '</pre>
+<div class="label_thumbnail">' . get_member_thumbnail($aInfo['ID'], "left", false) . '</div>
+<div class="label_thumb">' . _t('_Hello member', $aInfo['NickName']) . '</div>
+<pre>';} <br><br><br></pre>
+<p>Make sure that you set the key to injection_logo_after so that it is injected in the same position as the quotes were.</p>
+<p>You will now see the avatar and text displayed in the header - but you will notice that it does not display 100% correctly - it displays underneath the logo. This is because there are no style elements associated with it - the original styles applied in index.css no longer apply as the elements were explicitly defined - To remedy this simply add the following styles in general.css for the image and test respectively and style them to suit your needs</p>
+<pre>div.sys_ml_wrapper div.label_thumbnail {&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; <br>    position:relative;<br>&nbsp;&nbsp;  float:right;<br>&nbsp;&nbsp;  top:28px;<br>}<br><br>div.sys_ml_wrapper div.label_thumb {<br>&nbsp;&nbsp;  float:right;<br>&nbsp;&nbsp;  margin-right:20px;<br>&nbsp;&nbsp;  position:relative;<br>&nbsp;&nbsp;  top:60px;&nbsp;&nbsp; &nbsp;<br>}</pre>
+<p>/DM</p>

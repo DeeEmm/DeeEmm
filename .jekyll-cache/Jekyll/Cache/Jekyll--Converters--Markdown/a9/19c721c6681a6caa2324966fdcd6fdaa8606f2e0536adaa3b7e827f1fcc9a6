@@ -1,0 +1,7 @@
+I"d<p>Some time ago I converted my rotary table into a dividing head using a stepper motor, Arduino nano and a stepper motor driver. The setup incorporated a basic two line LCD display and rotary encoder as the GUI and user input device respectively.</p>
+<p>Operation was very basic, with a basic menu driven system to set number of steps / turns per degree and choose the mode of operation (degrees or divisions per increment).</p>
+<p>Someone asked me about this the other day so I posted the files up on GitHub along with some photos of the set up. There should be enough detail in the photos and code comments to allow you to replicate this. It is pretty basic.</p>
+<p>Feel free to use / modify as you wish.</p>
+<p>Code is licensed under GPL3 license.</p>
+<p><a href="https://github.com/DeeEmm/DIY-Dividing-Head">https://github.com/DeeEmm/DIY-Dividing-Head</a> </p>
+:ET

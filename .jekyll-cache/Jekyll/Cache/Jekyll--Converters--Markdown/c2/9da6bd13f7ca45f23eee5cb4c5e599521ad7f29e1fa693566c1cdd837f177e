@@ -1,0 +1,9 @@
+I"“<p>If you use Ilbello Del Web's excellent Spywall mod, you might have noticed that when people subscribe to a users wall feed, the link that gets sent in the email notifying you of a new wall post points to the Boonex Wall module.</p>
+<p>To change this link to point at the users profile, make the following change.</p>
+<p><strong>Edit modules/boonex/wall/classes/BxWallModule.php</strong></p>
+<p>Find</p>
+<p class="code">'ViewLink' =&gt; BX_DOL_URL_ROOT . $this-&gt;_oConfig-&gt;getBaseUri() &nbsp;. 'index/' . $aProfileInfo['NickName']</p>
+<p>Change it to</p>
+<p class="code">'ViewLink' =&gt; BX_DOL_URL_ROOT . $aProfileInfo['NickName']</p>
+<p>Enjoy :)</p>
+:ET

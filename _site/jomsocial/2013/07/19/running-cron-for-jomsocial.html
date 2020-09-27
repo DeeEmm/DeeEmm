@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>Running CRON for JomSocial | DeeEmm</title>
+<meta name="generator" content="Jekyll v4.1.1" />
+<meta property="og:title" content="Running CRON for JomSocial" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="To enable your JomSocial site to communicate with it&#39;s members you need to set a CRON job up to pop messages off of the mail queue. This is done by calling the following script. &quot;http://yourdomain.com/index.php?option=com_community&amp;task=cron&quot; Normally this can be easily achieved by adding a cron via cPanel or whatever your flavour of web admin interface happens to be. If, like me, you are running a virtual or dedicated server you might need to add a CRON via the command line. My particular flavour of linux happens to use the crontab function to run CRON tasks. To add a cron job its simply a case of running the following command sudo crontab -e This will invoke the crontab editor which should then display the crontab file which initially is just a bunch of comments. If you follow the link from the JomSocial mail queue page to their documents page&nbsp;you will notice that they recommend the following commands for adding a CRON task. lynx -source &quot;http://www.domain.com/index.php?option=com_community&amp;task=cron&quot; &gt; /dev/null wget -O /dev/null &quot;http://www.domain.com/index.php?option=com_community&amp;task=cron&quot; &gt; /dev/null&nbsp; For some reason I could get neither of these to work. Lynx was pretty easy - it wasn&#39;t installed, and I didn&#39;t particularly want to install it so I decided that wget was the way to go, but try as hard as I could I could not seem to pop any messages off of the mail queue. I tested the commands from the command line but still no go. I verified that the script was working by callling the URL directly in a browser and noticed that the message instantly popped off of the mail queue. Next I tried to call the local file via php using the following command /usr/bin/php5 &quot;/var/www/mysite/index.php?option=com_community&amp;task=cron&quot; The only problem with this approach is that you cannot pass the post vars to the file, so the file runs but ignores the &quot;?option=com_community&amp;task=cron&quot; part. This means that only the index page is returned. This led me to do a bit of further testing on the wget function. It turns out that this did exactly the same - it worked byt only returned the index page meaning that somehow it was ignoring the post vars. A little digging and I found that I can add an option to specify the post vars by using the &nbsp;--post-data&nbsp; option. Cool. Except that also did not work. :( Interestingly whilst looking for info on the wget function I noticed that most people seemed to favour CURL instead of WGET when coding in PHP, so I thought I&#39;d give it a try from the command line. Guess what. It worked first time. curl &quot;http://mysite.com/index.php?option=com_community&amp;task=cron&quot; Cool, so now I have a working command, so I have to do is make it work within CRON. First thing is to drop the response. This is easily achieved by routing the output to /dev/null, I also added 2&gt;&amp;1 to reroute any error messages into the land of unicorns. So putting together the whole thing looks like this... */5 * * * *&nbsp;curl &quot;http://mysite.com/index.php?option=com_community&amp;task=cron&quot; &gt;/dev/null 2&gt;&amp;1 This means that every 5 minutes CURL will call the URL and route the result to /dev/null I added this line to my crontab file and to test set the interval to run every minute. In addition to this I also checked that my Joomla email configuration was correct. I am using sendmail so I first checked that sendmail was installed. You can easily do this my issuing the command whereis sendmail If it is installed it will return the location of the sendmail executable. If sendmail isn&#39;t installed, you can easily install it by issuing the following command&nbsp; sudo apt-get install sendmail Next I checked my /etc/hosts file it should look like this: 127.0.0.1 localhost localhost.localdomain HOSTNAME Where HOSTNAME is the hostname of your server. To find this out you can run the command hostname With everything set up you can invoke the sendmail configuration utility by running the command&nbsp; sendmailconfig and answering &#39;Y&#39; to everything: &nbsp; Now when I send some test messages I can see them appear on the mail queue as &#39;pending&#39; then 5 minutes later they magically &nbsp;change to a green tick and get processed. Much better then previously when they simply stalled after they got put on the mail queue. /DM &nbsp; &nbsp;" />
+<meta property="og:description" content="To enable your JomSocial site to communicate with it&#39;s members you need to set a CRON job up to pop messages off of the mail queue. This is done by calling the following script. &quot;http://yourdomain.com/index.php?option=com_community&amp;task=cron&quot; Normally this can be easily achieved by adding a cron via cPanel or whatever your flavour of web admin interface happens to be. If, like me, you are running a virtual or dedicated server you might need to add a CRON via the command line. My particular flavour of linux happens to use the crontab function to run CRON tasks. To add a cron job its simply a case of running the following command sudo crontab -e This will invoke the crontab editor which should then display the crontab file which initially is just a bunch of comments. If you follow the link from the JomSocial mail queue page to their documents page&nbsp;you will notice that they recommend the following commands for adding a CRON task. lynx -source &quot;http://www.domain.com/index.php?option=com_community&amp;task=cron&quot; &gt; /dev/null wget -O /dev/null &quot;http://www.domain.com/index.php?option=com_community&amp;task=cron&quot; &gt; /dev/null&nbsp; For some reason I could get neither of these to work. Lynx was pretty easy - it wasn&#39;t installed, and I didn&#39;t particularly want to install it so I decided that wget was the way to go, but try as hard as I could I could not seem to pop any messages off of the mail queue. I tested the commands from the command line but still no go. I verified that the script was working by callling the URL directly in a browser and noticed that the message instantly popped off of the mail queue. Next I tried to call the local file via php using the following command /usr/bin/php5 &quot;/var/www/mysite/index.php?option=com_community&amp;task=cron&quot; The only problem with this approach is that you cannot pass the post vars to the file, so the file runs but ignores the &quot;?option=com_community&amp;task=cron&quot; part. This means that only the index page is returned. This led me to do a bit of further testing on the wget function. It turns out that this did exactly the same - it worked byt only returned the index page meaning that somehow it was ignoring the post vars. A little digging and I found that I can add an option to specify the post vars by using the &nbsp;--post-data&nbsp; option. Cool. Except that also did not work. :( Interestingly whilst looking for info on the wget function I noticed that most people seemed to favour CURL instead of WGET when coding in PHP, so I thought I&#39;d give it a try from the command line. Guess what. It worked first time. curl &quot;http://mysite.com/index.php?option=com_community&amp;task=cron&quot; Cool, so now I have a working command, so I have to do is make it work within CRON. First thing is to drop the response. This is easily achieved by routing the output to /dev/null, I also added 2&gt;&amp;1 to reroute any error messages into the land of unicorns. So putting together the whole thing looks like this... */5 * * * *&nbsp;curl &quot;http://mysite.com/index.php?option=com_community&amp;task=cron&quot; &gt;/dev/null 2&gt;&amp;1 This means that every 5 minutes CURL will call the URL and route the result to /dev/null I added this line to my crontab file and to test set the interval to run every minute. In addition to this I also checked that my Joomla email configuration was correct. I am using sendmail so I first checked that sendmail was installed. You can easily do this my issuing the command whereis sendmail If it is installed it will return the location of the sendmail executable. If sendmail isn&#39;t installed, you can easily install it by issuing the following command&nbsp; sudo apt-get install sendmail Next I checked my /etc/hosts file it should look like this: 127.0.0.1 localhost localhost.localdomain HOSTNAME Where HOSTNAME is the hostname of your server. To find this out you can run the command hostname With everything set up you can invoke the sendmail configuration utility by running the command&nbsp; sendmailconfig and answering &#39;Y&#39; to everything: &nbsp; Now when I send some test messages I can see them appear on the mail queue as &#39;pending&#39; then 5 minutes later they magically &nbsp;change to a green tick and get processed. Much better then previously when they simply stalled after they got put on the mail queue. /DM &nbsp; &nbsp;" />
+<link rel="canonical" href="http://localhost:4000/jomsocial/2013/07/19/running-cron-for-jomsocial.html" />
+<meta property="og:url" content="http://localhost:4000/jomsocial/2013/07/19/running-cron-for-jomsocial.html" />
+<meta property="og:site_name" content="DeeEmm" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2013-07-19T07:21:14+09:30" />
+<script type="application/ld+json">
+{"description":"To enable your JomSocial site to communicate with it&#39;s members you need to set a CRON job up to pop messages off of the mail queue. This is done by calling the following script. &quot;http://yourdomain.com/index.php?option=com_community&amp;task=cron&quot; Normally this can be easily achieved by adding a cron via cPanel or whatever your flavour of web admin interface happens to be. If, like me, you are running a virtual or dedicated server you might need to add a CRON via the command line. My particular flavour of linux happens to use the crontab function to run CRON tasks. To add a cron job its simply a case of running the following command sudo crontab -e This will invoke the crontab editor which should then display the crontab file which initially is just a bunch of comments. If you follow the link from the JomSocial mail queue page to their documents page&nbsp;you will notice that they recommend the following commands for adding a CRON task. lynx -source &quot;http://www.domain.com/index.php?option=com_community&amp;task=cron&quot; &gt; /dev/null wget -O /dev/null &quot;http://www.domain.com/index.php?option=com_community&amp;task=cron&quot; &gt; /dev/null&nbsp; For some reason I could get neither of these to work. Lynx was pretty easy - it wasn&#39;t installed, and I didn&#39;t particularly want to install it so I decided that wget was the way to go, but try as hard as I could I could not seem to pop any messages off of the mail queue. I tested the commands from the command line but still no go. I verified that the script was working by callling the URL directly in a browser and noticed that the message instantly popped off of the mail queue. Next I tried to call the local file via php using the following command /usr/bin/php5 &quot;/var/www/mysite/index.php?option=com_community&amp;task=cron&quot; The only problem with this approach is that you cannot pass the post vars to the file, so the file runs but ignores the &quot;?option=com_community&amp;task=cron&quot; part. This means that only the index page is returned. This led me to do a bit of further testing on the wget function. It turns out that this did exactly the same - it worked byt only returned the index page meaning that somehow it was ignoring the post vars. A little digging and I found that I can add an option to specify the post vars by using the &nbsp;--post-data&nbsp; option. Cool. Except that also did not work. :( Interestingly whilst looking for info on the wget function I noticed that most people seemed to favour CURL instead of WGET when coding in PHP, so I thought I&#39;d give it a try from the command line. Guess what. It worked first time. curl &quot;http://mysite.com/index.php?option=com_community&amp;task=cron&quot; Cool, so now I have a working command, so I have to do is make it work within CRON. First thing is to drop the response. This is easily achieved by routing the output to /dev/null, I also added 2&gt;&amp;1 to reroute any error messages into the land of unicorns. So putting together the whole thing looks like this... */5 * * * *&nbsp;curl &quot;http://mysite.com/index.php?option=com_community&amp;task=cron&quot; &gt;/dev/null 2&gt;&amp;1 This means that every 5 minutes CURL will call the URL and route the result to /dev/null I added this line to my crontab file and to test set the interval to run every minute. In addition to this I also checked that my Joomla email configuration was correct. I am using sendmail so I first checked that sendmail was installed. You can easily do this my issuing the command whereis sendmail If it is installed it will return the location of the sendmail executable. If sendmail isn&#39;t installed, you can easily install it by issuing the following command&nbsp; sudo apt-get install sendmail Next I checked my /etc/hosts file it should look like this: 127.0.0.1 localhost localhost.localdomain HOSTNAME Where HOSTNAME is the hostname of your server. To find this out you can run the command hostname With everything set up you can invoke the sendmail configuration utility by running the command&nbsp; sendmailconfig and answering &#39;Y&#39; to everything: &nbsp; Now when I send some test messages I can see them appear on the mail queue as &#39;pending&#39; then 5 minutes later they magically &nbsp;change to a green tick and get processed. Much better then previously when they simply stalled after they got put on the mail queue. /DM &nbsp; &nbsp;","@type":"BlogPosting","headline":"Running CRON for JomSocial","dateModified":"2013-07-19T07:21:14+09:30","datePublished":"2013-07-19T07:21:14+09:30","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/jomsocial/2013/07/19/running-cron-for-jomsocial.html"},"url":"http://localhost:4000/jomsocial/2013/07/19/running-cron-for-jomsocial.html","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="DeeEmm" /></head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/">DeeEmm</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/about/">About</a><a class="page-link" href="/archives/">Archives</a><a class="page-link" href="/blog/">Blog</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Running CRON for JomSocial</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2013-07-19T07:21:14+09:30" itemprop="datePublished">Jul 19, 2013
+      </time></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>To enable your JomSocial site to communicate with it's members you need to set a CRON job up to pop messages off of the mail queue. This is done by calling the following script. "http://yourdomain.com/index.php?option=com_community&amp;task=cron"</p>
+<p>Normally this can be easily achieved by adding a cron via cPanel or whatever your flavour of web admin interface happens to be. If, like me, you are running a virtual or dedicated server you might need to add a CRON via the command line.</p>
+<p>My particular flavour of linux happens to use the crontab function to run CRON tasks. To add a cron job its simply a case of running the following command</p>
+<p class="caption"><strong><em>sudo crontab -e</em></strong></p>
+<p>This will invoke the crontab editor which should then display the crontab file which initially is just a bunch of comments.</p>
+<p>If you follow the link from the JomSocial mail queue page to their <a href="http://www.jomsocial.com/support/docs/item/720-setting-up-cron-job-scheduled-task.html">documents page</a>&nbsp;you will notice that they recommend the following commands for adding a CRON task.</p>
+<ul>
+<li><em><strong>lynx -source "<a class="external free" href="http://www.domain.com/index.php?option=com_community&amp;task=cron" rel="nofollow">http://www.domain.com/index.php?option=com_community&amp;task=cron</a>" &gt; /dev/null </strong></em></li>
+</ul>
+<ul>
+<li><em><strong>wget -O /dev/null "<a class="external free" href="http://www.domain.com/index.php?option=com_community&amp;task=cron" rel="nofollow">http://www.domain.com/index.php?option=com_community&amp;task=cron</a>" &gt; /dev/null&nbsp;</strong></em></li>
+</ul>
+<p>For some reason I could get neither of these to work.</p>
+<p>Lynx was pretty easy - it wasn't installed, and I didn't particularly want to install it so I decided that wget was the way to go, but try as hard as I could I could not seem to pop any messages off of the mail queue. I tested the commands from the command line but still no go. I verified that the script was working by callling the URL directly in a browser and noticed that the message instantly popped off of the mail queue.</p>
+<p>Next I tried to call the local file via php using the following command</p>
+<p>/usr/bin/php5 "/var/www/mysite/index.php?option=com_community&amp;task=cron"</p>
+<p>The only problem with this approach is that you cannot pass the post vars to the file, so the file runs but ignores the "?option=com_community&amp;task=cron" part. This means that only the index page is returned.</p>
+<p>This led me to do a bit of further testing on the wget function. It turns out that this did exactly the same - it worked byt only returned the index page meaning that somehow it was ignoring the post vars. A little digging and I found that I can add an option to specify the post vars by using the <em><strong>&nbsp;--post-data</strong></em>&nbsp; option. Cool. Except that also did not work. :(</p>
+<p>Interestingly whilst looking for info on the wget function I noticed that most people seemed to favour CURL instead of WGET when coding in PHP, so I thought I'd give it a try from the command line. Guess what. It worked first time.</p>
+<p><strong><em>curl "http://mysite.com/index.php?option=com_community&amp;task=cron"</em></strong></p>
+<p>Cool, so now I have a working command, so I have to do is make it work within CRON. First thing is to drop the response. This is easily achieved by routing the output to /dev/null, I also added 2&gt;&amp;1 to reroute any error messages into the land of unicorns. So putting together the whole thing looks like this...</p>
+<p><strong><em>*/5 * * * *&nbsp;<strong>c</strong>url "http://mysite.com/index.php?option=com_community&amp;task=cron" &gt;/dev/null 2&gt;&amp;1</em></strong></p>
+<p>This means that every 5 minutes CURL will call the URL and route the result to /dev/null </p>
+<p>I added this line to my crontab file and to test set the interval to run every minute.</p>
+<p>In addition to this I also checked that my Joomla email configuration was correct. I am using sendmail so I first checked that sendmail was installed. You can easily do this my issuing the command <em><strong>whereis sendmail</strong></em> If it is installed it will return the location of the sendmail executable.</p>
+<p>If sendmail isn't installed, you can easily install it by issuing the following command&nbsp;</p>
+<p><em><strong>sudo apt-get install sendmail </strong></em></p>
+<p><br />Next I checked my /etc/hosts file it should look like this:</p>
+<p><em><strong>127.0.0.1 localhost localhost.localdomain HOSTNAME </strong></em></p>
+<p>Where HOSTNAME is the hostname of your server. To find this out you can run the command <em><strong>hostname</strong></em></p>
+<p>With everything set up you can invoke the sendmail configuration utility by running the command&nbsp; <em><strong>sendmailconfig</strong></em> and answering 'Y' to everything:</p>
+<p>&nbsp;</p>
+<p>Now when I send some test messages I can see them appear on the mail queue as 'pending' then 5 minutes later they magically &nbsp;change to a green tick and get processed.</p>
+<p>Much better then previously when they simply stalled after they got put on the mail queue.</p>
+<p>/DM</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+
+  </div><a class="u-url" href="/jomsocial/2013/07/19/running-cron-for-jomsocial.html" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">DeeEmm</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">DeeEmm</li><li><a class="u-email" href="mailto:deeemmm@deeemm.com">deeemmm@deeemm.com</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/DeeEmm"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">DeeEmm</span></a></li><li><a href="https://www.twitter.com/DeeEmm__"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">DeeEmm__</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>Waxing lyrical about life the universe and everything tech related since lunchtime 2006.</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>

@@ -1,0 +1,9 @@
+---
+layout: post
+title: "Mick\n\n\t   \n\n\nBrooklands Bentley"
+joomla_id: 398
+joomla_url: mick-brooklands-bentley-1-9
+category: CycleKarts
+date: 2020-02-05 11:47:41.000000000 +10:30
+---
+<div class="es-stream-content  es-story--bg-0">Been a bit too sidetracked by Christmas and other things to get any progress on the project. I did manage to do a few little jobs, but no major progress since picking up the wheels.<p>I picked up some 6mm end mills and M25 nuts + nylocks the other day, which means that I now have no excuse not to finish off my rear axle. When I say 'finish off the axle' I actually mean somehow turn the length of 1" steel I bought into something that more resembles an axle. I need ot machine 6mm slots for the keyways and turn threads on the ends for holding the wheels on. I also picked up some bolt on axle collars which I *think* I might use as the inner location for the wheels. What I overlooked with the axle / wheel setup is that a 25mm shaft with a 25mm hub has no shoulder against which the hub can sit, so the axle clamps should hopefully solve this oversight. I assume that this is how they are set up on go karts.</p><p>I still have to figure out a few details on how to bolt everything up but I'll probably just wing it like usual. What can go wrong? <img class="emoji" width="20" height="20" src="https://cyclekarts.com.au/media/com_easysocial/images/icons/emoji/lol.png" alt="" /></p><p>I really need to have a clearout of the workshop to create some space to get the kart up on trestles so that I can work on it. At the moment there is zero space. Time to move some stuff on.										</p></div>

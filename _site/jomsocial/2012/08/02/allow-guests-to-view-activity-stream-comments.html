@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>Allow guests to view JomSocial activity stream comments | DeeEmm</title>
+<meta name="generator" content="Jekyll v4.1.1" />
+<meta property="og:title" content="Allow guests to view JomSocial activity stream comments" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="I have recently migrated a site from Dolphin to JomSocial and needed to modify the way that the activity stream was displayed to visitors. By default the replies and likes of activity stream posts are only displayed to friends of the original poster. This means that the comments are very limited in their reach. The overall effect of hiding activity stream comments and likes from guests is that this valuable activity is wasted.&nbsp;I wanted to show this activity to guest visitors so that they could see how active the site is. This in turn encourages them to join and hopefully encourages them to comment.&nbsp; Of course, this may not be suitable for all sites, but in the case of this site, there was no activity that is &#39;secret&#39; or &#39;private&#39;; the activity stream is public viewable, and so should be the comments. The modification you need to do this is pretty straightforward, it simply involves removing or commenting out two lines of code.&nbsp; Modification Instructions open the following file... components/com_community/templates/YOUR_TEMPLATE/activities.index.php Look for the following line of code at around line 223 &lt;?php if( $allowComment ) { ?&gt; Replace it with the following &lt;?php //if( $allowComment ) { ?&gt; Next look for the following line of code at about line 263 &lt;?php } ?&gt; Replace it with the following &lt;?php //} ?&gt; &nbsp; This simply comments out the lines. You can also opt to delete them completely if you wish. Now your activity stream will display comments and likes to visitors as well as all members. The only caveat to this is is that if you are logged in it will display the &#39;reply&#39; link but will not allow you to actually reply unless you are a friend of the original poster. What happens when&nbsp;you are not a friend of the original poster and you try to post a reply is that you will simply see a popup message box saying &#39;permission denied&#39;. There are two ways that you can deal with this. These are as follows. 1. Change the message. To change the message to something a little more meaningful you can do the following... Edit the file components/com_community/controllers/system.php At around line 1460 look for the following code... $objResponse-&gt;addAlert(&#39;Permission denied&#39;); Simply change this message to something else - for example... $objResponse-&gt;addAlert(&#39;Only friends can reply&#39;); &nbsp; 2. Allow non-friends to post. If you want to let anyone be able to post to the Activity stream you can do the following... The easy way... Enable the following setting in the admin panel components &gt; jomsocial &gt; configuration &gt; site &gt; &nbsp;activity &gt; allow everyone to comment &nbsp; The hard way... Find the same line mentioned above, but this time replace it with the following code... $table =&amp; JTable::getInstance(&#39;Wall&#39;, &#39;CTable&#39;); $table-&gt;type = $act-&gt;comment_type; $table-&gt;contentid = $act-&gt;comment_id; $table-&gt;post_by = $my-&gt;id; $table-&gt;comment = $comment; $table-&gt;store(); $cache = CFactory::getFastCache(); $cache-&gt;clean(array(&#39;activities&#39;)); $comment = CWall::formatComment($table); $objResponse-&gt;addScriptCall(&#39;joms.miniwall.insert&#39;, $actid, $comment); CFactory::load( &#39;libraries&#39; , &#39;notification&#39; ); $params = new CParameter( &#39;&#39; ); $params-&gt;set( &#39;message&#39; , $table-&gt;comment ); $url = &#39;index.php?option=com_community&amp;view=profile&amp;userid=&#39; . $act-&gt;actor.&#39;&amp;actid=&#39;.$actid; $params-&gt;set( &#39;url&#39; , $url ); $params-&gt;set( &#39;stream&#39; , JText::_(&#39;COM_COMMUNITY_SINGULAR_STREAM&#39;) ); $params-&gt;set( &#39;stream_url&#39; , $url ); CNotificationLibrary::add( &#39;profile_activity_add_comment&#39; , $my-&gt;id , $act-&gt;actor , JText::sprintf(&#39;COM_COMMUNITY_ACITIVY_WALL_EMAIL_SUBJECT&#39; ) , &#39;&#39; , &#39;profile.activitycomment&#39; , $params ); Now anyone can reply to any post in the activity stream. Additionally anyone can also post directly to another users profile page. cool huh?!? &nbsp; NOTE &nbsp; Well I guess that this modification will not be for everybody, but if like me you have a community site this might just increase your activity. /DM" />
+<meta property="og:description" content="I have recently migrated a site from Dolphin to JomSocial and needed to modify the way that the activity stream was displayed to visitors. By default the replies and likes of activity stream posts are only displayed to friends of the original poster. This means that the comments are very limited in their reach. The overall effect of hiding activity stream comments and likes from guests is that this valuable activity is wasted.&nbsp;I wanted to show this activity to guest visitors so that they could see how active the site is. This in turn encourages them to join and hopefully encourages them to comment.&nbsp; Of course, this may not be suitable for all sites, but in the case of this site, there was no activity that is &#39;secret&#39; or &#39;private&#39;; the activity stream is public viewable, and so should be the comments. The modification you need to do this is pretty straightforward, it simply involves removing or commenting out two lines of code.&nbsp; Modification Instructions open the following file... components/com_community/templates/YOUR_TEMPLATE/activities.index.php Look for the following line of code at around line 223 &lt;?php if( $allowComment ) { ?&gt; Replace it with the following &lt;?php //if( $allowComment ) { ?&gt; Next look for the following line of code at about line 263 &lt;?php } ?&gt; Replace it with the following &lt;?php //} ?&gt; &nbsp; This simply comments out the lines. You can also opt to delete them completely if you wish. Now your activity stream will display comments and likes to visitors as well as all members. The only caveat to this is is that if you are logged in it will display the &#39;reply&#39; link but will not allow you to actually reply unless you are a friend of the original poster. What happens when&nbsp;you are not a friend of the original poster and you try to post a reply is that you will simply see a popup message box saying &#39;permission denied&#39;. There are two ways that you can deal with this. These are as follows. 1. Change the message. To change the message to something a little more meaningful you can do the following... Edit the file components/com_community/controllers/system.php At around line 1460 look for the following code... $objResponse-&gt;addAlert(&#39;Permission denied&#39;); Simply change this message to something else - for example... $objResponse-&gt;addAlert(&#39;Only friends can reply&#39;); &nbsp; 2. Allow non-friends to post. If you want to let anyone be able to post to the Activity stream you can do the following... The easy way... Enable the following setting in the admin panel components &gt; jomsocial &gt; configuration &gt; site &gt; &nbsp;activity &gt; allow everyone to comment &nbsp; The hard way... Find the same line mentioned above, but this time replace it with the following code... $table =&amp; JTable::getInstance(&#39;Wall&#39;, &#39;CTable&#39;); $table-&gt;type = $act-&gt;comment_type; $table-&gt;contentid = $act-&gt;comment_id; $table-&gt;post_by = $my-&gt;id; $table-&gt;comment = $comment; $table-&gt;store(); $cache = CFactory::getFastCache(); $cache-&gt;clean(array(&#39;activities&#39;)); $comment = CWall::formatComment($table); $objResponse-&gt;addScriptCall(&#39;joms.miniwall.insert&#39;, $actid, $comment); CFactory::load( &#39;libraries&#39; , &#39;notification&#39; ); $params = new CParameter( &#39;&#39; ); $params-&gt;set( &#39;message&#39; , $table-&gt;comment ); $url = &#39;index.php?option=com_community&amp;view=profile&amp;userid=&#39; . $act-&gt;actor.&#39;&amp;actid=&#39;.$actid; $params-&gt;set( &#39;url&#39; , $url ); $params-&gt;set( &#39;stream&#39; , JText::_(&#39;COM_COMMUNITY_SINGULAR_STREAM&#39;) ); $params-&gt;set( &#39;stream_url&#39; , $url ); CNotificationLibrary::add( &#39;profile_activity_add_comment&#39; , $my-&gt;id , $act-&gt;actor , JText::sprintf(&#39;COM_COMMUNITY_ACITIVY_WALL_EMAIL_SUBJECT&#39; ) , &#39;&#39; , &#39;profile.activitycomment&#39; , $params ); Now anyone can reply to any post in the activity stream. Additionally anyone can also post directly to another users profile page. cool huh?!? &nbsp; NOTE &nbsp; Well I guess that this modification will not be for everybody, but if like me you have a community site this might just increase your activity. /DM" />
+<link rel="canonical" href="http://localhost:4000/jomsocial/2012/08/02/allow-guests-to-view-activity-stream-comments.html" />
+<meta property="og:url" content="http://localhost:4000/jomsocial/2012/08/02/allow-guests-to-view-activity-stream-comments.html" />
+<meta property="og:site_name" content="DeeEmm" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2012-08-02T04:37:17+09:30" />
+<script type="application/ld+json">
+{"description":"I have recently migrated a site from Dolphin to JomSocial and needed to modify the way that the activity stream was displayed to visitors. By default the replies and likes of activity stream posts are only displayed to friends of the original poster. This means that the comments are very limited in their reach. The overall effect of hiding activity stream comments and likes from guests is that this valuable activity is wasted.&nbsp;I wanted to show this activity to guest visitors so that they could see how active the site is. This in turn encourages them to join and hopefully encourages them to comment.&nbsp; Of course, this may not be suitable for all sites, but in the case of this site, there was no activity that is &#39;secret&#39; or &#39;private&#39;; the activity stream is public viewable, and so should be the comments. The modification you need to do this is pretty straightforward, it simply involves removing or commenting out two lines of code.&nbsp; Modification Instructions open the following file... components/com_community/templates/YOUR_TEMPLATE/activities.index.php Look for the following line of code at around line 223 &lt;?php if( $allowComment ) { ?&gt; Replace it with the following &lt;?php //if( $allowComment ) { ?&gt; Next look for the following line of code at about line 263 &lt;?php } ?&gt; Replace it with the following &lt;?php //} ?&gt; &nbsp; This simply comments out the lines. You can also opt to delete them completely if you wish. Now your activity stream will display comments and likes to visitors as well as all members. The only caveat to this is is that if you are logged in it will display the &#39;reply&#39; link but will not allow you to actually reply unless you are a friend of the original poster. What happens when&nbsp;you are not a friend of the original poster and you try to post a reply is that you will simply see a popup message box saying &#39;permission denied&#39;. There are two ways that you can deal with this. These are as follows. 1. Change the message. To change the message to something a little more meaningful you can do the following... Edit the file components/com_community/controllers/system.php At around line 1460 look for the following code... $objResponse-&gt;addAlert(&#39;Permission denied&#39;); Simply change this message to something else - for example... $objResponse-&gt;addAlert(&#39;Only friends can reply&#39;); &nbsp; 2. Allow non-friends to post. If you want to let anyone be able to post to the Activity stream you can do the following... The easy way... Enable the following setting in the admin panel components &gt; jomsocial &gt; configuration &gt; site &gt; &nbsp;activity &gt; allow everyone to comment &nbsp; The hard way... Find the same line mentioned above, but this time replace it with the following code... $table =&amp; JTable::getInstance(&#39;Wall&#39;, &#39;CTable&#39;); $table-&gt;type = $act-&gt;comment_type; $table-&gt;contentid = $act-&gt;comment_id; $table-&gt;post_by = $my-&gt;id; $table-&gt;comment = $comment; $table-&gt;store(); $cache = CFactory::getFastCache(); $cache-&gt;clean(array(&#39;activities&#39;)); $comment = CWall::formatComment($table); $objResponse-&gt;addScriptCall(&#39;joms.miniwall.insert&#39;, $actid, $comment); CFactory::load( &#39;libraries&#39; , &#39;notification&#39; ); $params = new CParameter( &#39;&#39; ); $params-&gt;set( &#39;message&#39; , $table-&gt;comment ); $url = &#39;index.php?option=com_community&amp;view=profile&amp;userid=&#39; . $act-&gt;actor.&#39;&amp;actid=&#39;.$actid; $params-&gt;set( &#39;url&#39; , $url ); $params-&gt;set( &#39;stream&#39; , JText::_(&#39;COM_COMMUNITY_SINGULAR_STREAM&#39;) ); $params-&gt;set( &#39;stream_url&#39; , $url ); CNotificationLibrary::add( &#39;profile_activity_add_comment&#39; , $my-&gt;id , $act-&gt;actor , JText::sprintf(&#39;COM_COMMUNITY_ACITIVY_WALL_EMAIL_SUBJECT&#39; ) , &#39;&#39; , &#39;profile.activitycomment&#39; , $params ); Now anyone can reply to any post in the activity stream. Additionally anyone can also post directly to another users profile page. cool huh?!? &nbsp; NOTE &nbsp; Well I guess that this modification will not be for everybody, but if like me you have a community site this might just increase your activity. /DM","@type":"BlogPosting","headline":"Allow guests to view JomSocial activity stream comments","dateModified":"2012-08-02T04:37:17+09:30","datePublished":"2012-08-02T04:37:17+09:30","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/jomsocial/2012/08/02/allow-guests-to-view-activity-stream-comments.html"},"url":"http://localhost:4000/jomsocial/2012/08/02/allow-guests-to-view-activity-stream-comments.html","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="DeeEmm" /></head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/">DeeEmm</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/about/">About</a><a class="page-link" href="/archives/">Archives</a><a class="page-link" href="/blog/">Blog</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Allow guests to view JomSocial activity stream comments</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2012-08-02T04:37:17+09:30" itemprop="datePublished">Aug 2, 2012
+      </time></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>I have recently migrated a site from Dolphin to JomSocial and needed to modify the way that the activity stream was displayed to visitors. By default the replies and likes of activity stream posts are only displayed to friends of the original poster. This means that the comments are very limited in their reach.</p>
+<p>The overall effect of hiding activity stream comments and likes from guests is that this valuable activity is wasted.&nbsp;I wanted to show this activity to guest visitors so that they could see how active the site is. This in turn encourages them to join and hopefully encourages them to comment.&nbsp;</p>
+<p>Of course, this may not be suitable for all sites, but in the case of this site, there was no activity that is 'secret' or 'private'; the activity stream is public viewable, and so should be the comments.</p>
+<p>The modification you need to do this is pretty straightforward, it simply involves removing or commenting out two lines of code.&nbsp;</p>
+<p><strong>Modification Instructions</strong></p>
+<p>open the following file...</p>
+<p>components/com_community/templates/YOUR_TEMPLATE/activities.index.php</p>
+<p>Look for the following line of code at around line 223</p>
+<pre class="brush:php">&lt;?php if( $allowComment ) { ?&gt;
+
+</pre>
+<p>Replace it with the following</p>
+<pre class="brush:xml">&lt;?php //if( $allowComment ) { ?&gt;
+</pre>
+<p>Next look for the following line of code at about line 263</p>
+<pre class="brush:xml">&lt;?php } ?&gt;
+
+</pre>
+<p>Replace it with the following</p>
+<pre class="brush:xml">&lt;?php //} ?&gt;
+
+</pre>
+<p>&nbsp;</p>
+<p>This simply comments out the lines. You can also opt to delete them completely if you wish.</p>
+<p>Now your activity stream will display comments and likes to visitors as well as all members. The only caveat to this is is that if you are logged in it will display the 'reply' link but will not allow you to actually reply unless you are a friend of the original poster. What happens when&nbsp;you are not a friend of the original poster and you try to post a reply is that you will simply see a popup message box saying 'permission denied'. There are two ways that you can deal with this. These are as follows.</p>
+<p>1. Change the message.</p>
+<p>To change the message to something a little more meaningful you can do the following...</p>
+<p>Edit the file components/com_community/controllers/system.php</p>
+<p>At around line 1460 look for the following code...</p>
+<pre class="brush:php">$objResponse-&gt;addAlert('Permission denied');
+</pre>
+<p>Simply change this message to something else - for example...</p>
+<pre class="brush:php">$objResponse-&gt;addAlert('Only friends can reply');
+</pre>
+<p>&nbsp;</p>
+<p>2. Allow non-friends to post.</p>
+<p>If you want to let anyone be able to post to the Activity stream you can do the following...</p>
+<p>The easy way...</p>
+<p>Enable the following setting in the admin panel</p>
+<p>components &gt; jomsocial &gt; configuration &gt; site &gt; &nbsp;activity &gt; allow everyone to comment</p>
+<p>&nbsp;</p>
+<p>The hard way...</p>
+<p>Find the same line mentioned above, but this time replace it with the following code...</p>
+<pre class="brush:php">			$table =&amp; JTable::getInstance('Wall', 'CTable');
+			$table-&gt;type 		= $act-&gt;comment_type;
+			$table-&gt;contentid 	= $act-&gt;comment_id;
+			$table-&gt;post_by 	= $my-&gt;id;
+			$table-&gt;comment 	= $comment;
+			$table-&gt;store();
+
+			$cache	= CFactory::getFastCache();
+			$cache-&gt;clean(array('activities'));
+
+			$comment = CWall::formatComment($table);
+			$objResponse-&gt;addScriptCall('joms.miniwall.insert', $actid, $comment);
+
+			CFactory::load( 'libraries' , 'notification' );
+			$params		= new CParameter( '' );
+			$params-&gt;set( 'message' , $table-&gt;comment );
+			$url			= 'index.php?option=com_community&amp;view=profile&amp;userid=' . $act-&gt;actor.'&amp;actid='.$actid;
+			$params-&gt;set( 'url' , $url );
+			$params-&gt;set( 'stream' , JText::_('COM_COMMUNITY_SINGULAR_STREAM') );
+			$params-&gt;set( 'stream_url' , $url );
+
+
+			CNotificationLibrary::add( 'profile_activity_add_comment' , $my-&gt;id , $act-&gt;actor , JText::sprintf('COM_COMMUNITY_ACITIVY_WALL_EMAIL_SUBJECT' ) , '' , 'profile.activitycomment' , $params );
+
+</pre>
+<p>Now anyone can reply to any post in the activity stream. Additionally anyone can also post directly to another users profile page. cool huh?!?</p>
+<p>&nbsp;</p>
+<p>NOTE</p>
+<p>&nbsp;</p>
+<p>Well I guess that this modification will not be for everybody, but if like me you have a community site this might just increase your activity.</p>
+<p>/DM</p>
+
+  </div><a class="u-url" href="/jomsocial/2012/08/02/allow-guests-to-view-activity-stream-comments.html" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">DeeEmm</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">DeeEmm</li><li><a class="u-email" href="mailto:deeemmm@deeemm.com">deeemmm@deeemm.com</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/DeeEmm"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">DeeEmm</span></a></li><li><a href="https://www.twitter.com/DeeEmm__"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">DeeEmm__</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>Waxing lyrical about life the universe and everything tech related since lunchtime 2006.</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>

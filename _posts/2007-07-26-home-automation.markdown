@@ -1,0 +1,10 @@
+---
+layout: post
+title: Home Automation
+joomla_id: 90
+joomla_url: home-automation
+category: General
+tags: home-automation x10
+date: 2007-07-26 00:00:00.000000000 +09:30
+---
+<p>This week I've been delving a little into home automation. Home automation is a topic that I have been meaning to have a look into for quite some time. Being an industrial automation specialist, the home automation sector is a very interesting topic for me as it is something that should be relatively easy to someone of my background to do.<br><br>Prior to looking into home automation I had a few pre-conceived ideas of usefull facets including modulated signals using domestic AC supply as a carrier wave. It was no surprise to see that this has been adpoted as part of the X10 standard.<br><br>My personal view of home automation was to utilise a home PC, equipped as a master controller with inputs and outputs to control functions within the house such as lighting and access control. Modern Home Automation system can be much more sophisticated also including audio and video streams throughout the house.<br><br>Home Automation is a relatively new sector, with relatively few companies providing off the shelf systems that can be catered to suit end user needs. With the utilisation of a development medium such as Visual Basic and a simple I/O interface or perhaps interfacing to the already available X10 standard it may be possible to greatly reduce Home Automation costs.</p>

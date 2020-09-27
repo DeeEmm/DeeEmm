@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>P38 Touch screen media player - Part 2 | DeeEmm</title>
+<meta name="generator" content="Jekyll v4.1.1" />
+<meta property="og:title" content="P38 Touch screen media player - Part 2" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Following on from P38 Touch screen media player - Part 1 the Raspi touch screen arrived a week or so ago and I&#39;ve been itching to see if it fits. I did a quick offer-up when it arrived and it looked as though it might be a bit small, so I&#39;ve been keen to find out. Tonight I removed the old screen and installed the new one. Unfortunately my suspicions were correct - the new screen is not tall enough and so leaves a gap at the top / bottom. The issue is simply that screen aspect ratios have changed since the P38 was a current model. The old 4:3 aspect ratio has now been superceded by 16:9, or wide screen / letterbox aspect. The result is that it is like looking at a widescreen movie on an old TV - you get a black stripe at the top and bottom of the screen - or in this case a gap. I did a search to see if I could get a 6&quot; HDMI touch screen as this would have been the perfect height, but none seem to be available, at least not for an affordable price. The touch screen membranes are available, but no 6&quot; LCD screens. Whilst it may be possible to repurpose the original screen from the sat nav unit and retrofit a touch screen membrane over the top of it, that would mean reverse engineering the video connectors for the screen and then making / installing a VGA converter. So, it&#39;s much easier to to stick with the 5&quot; Raspi HDMI screen and make a mask up to hide the gaps, specially as it fits perfectly in the case...       As you can see below the touch screen unit wedges nicely into the space left by the old monitor. It also leaves enough room to be able to use the USB ports on the RASPI and still retain the small circuit board used for the pushbuttons and click wheel. The circuit board also houses the LED backlights as well as a status light on the mute button and front panel. I need to spend a bit of time to decode the PCB. It looks like there should be a simple pin-out for the buttons and LEDs, this will make it easy to connect to the RASPI so this it takes its input from these buttons.        So in principle the screen fits but needs a mask to hide the gaps. It would also be good to use the existing buttons and click wheel, but the circuit board needs to be decoded and some signal conditioning might need to happen. If this is the case it might be simpler and cheaper to make up a replacement using prototype board. Apart from the above, the next steps are to choose some suitable software and start programming    " />
+<meta property="og:description" content="Following on from P38 Touch screen media player - Part 1 the Raspi touch screen arrived a week or so ago and I&#39;ve been itching to see if it fits. I did a quick offer-up when it arrived and it looked as though it might be a bit small, so I&#39;ve been keen to find out. Tonight I removed the old screen and installed the new one. Unfortunately my suspicions were correct - the new screen is not tall enough and so leaves a gap at the top / bottom. The issue is simply that screen aspect ratios have changed since the P38 was a current model. The old 4:3 aspect ratio has now been superceded by 16:9, or wide screen / letterbox aspect. The result is that it is like looking at a widescreen movie on an old TV - you get a black stripe at the top and bottom of the screen - or in this case a gap. I did a search to see if I could get a 6&quot; HDMI touch screen as this would have been the perfect height, but none seem to be available, at least not for an affordable price. The touch screen membranes are available, but no 6&quot; LCD screens. Whilst it may be possible to repurpose the original screen from the sat nav unit and retrofit a touch screen membrane over the top of it, that would mean reverse engineering the video connectors for the screen and then making / installing a VGA converter. So, it&#39;s much easier to to stick with the 5&quot; Raspi HDMI screen and make a mask up to hide the gaps, specially as it fits perfectly in the case...       As you can see below the touch screen unit wedges nicely into the space left by the old monitor. It also leaves enough room to be able to use the USB ports on the RASPI and still retain the small circuit board used for the pushbuttons and click wheel. The circuit board also houses the LED backlights as well as a status light on the mute button and front panel. I need to spend a bit of time to decode the PCB. It looks like there should be a simple pin-out for the buttons and LEDs, this will make it easy to connect to the RASPI so this it takes its input from these buttons.        So in principle the screen fits but needs a mask to hide the gaps. It would also be good to use the existing buttons and click wheel, but the circuit board needs to be decoded and some signal conditioning might need to happen. If this is the case it might be simpler and cheaper to make up a replacement using prototype board. Apart from the above, the next steps are to choose some suitable software and start programming    " />
+<link rel="canonical" href="http://localhost:4000/general/2017/12/21/p38-touch-screen-media-player-part-2-1.html" />
+<meta property="og:url" content="http://localhost:4000/general/2017/12/21/p38-touch-screen-media-player-part-2-1.html" />
+<meta property="og:site_name" content="DeeEmm" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2017-12-21T11:26:00+10:30" />
+<script type="application/ld+json">
+{"description":"Following on from P38 Touch screen media player - Part 1 the Raspi touch screen arrived a week or so ago and I&#39;ve been itching to see if it fits. I did a quick offer-up when it arrived and it looked as though it might be a bit small, so I&#39;ve been keen to find out. Tonight I removed the old screen and installed the new one. Unfortunately my suspicions were correct - the new screen is not tall enough and so leaves a gap at the top / bottom. The issue is simply that screen aspect ratios have changed since the P38 was a current model. The old 4:3 aspect ratio has now been superceded by 16:9, or wide screen / letterbox aspect. The result is that it is like looking at a widescreen movie on an old TV - you get a black stripe at the top and bottom of the screen - or in this case a gap. I did a search to see if I could get a 6&quot; HDMI touch screen as this would have been the perfect height, but none seem to be available, at least not for an affordable price. The touch screen membranes are available, but no 6&quot; LCD screens. Whilst it may be possible to repurpose the original screen from the sat nav unit and retrofit a touch screen membrane over the top of it, that would mean reverse engineering the video connectors for the screen and then making / installing a VGA converter. So, it&#39;s much easier to to stick with the 5&quot; Raspi HDMI screen and make a mask up to hide the gaps, specially as it fits perfectly in the case...       As you can see below the touch screen unit wedges nicely into the space left by the old monitor. It also leaves enough room to be able to use the USB ports on the RASPI and still retain the small circuit board used for the pushbuttons and click wheel. The circuit board also houses the LED backlights as well as a status light on the mute button and front panel. I need to spend a bit of time to decode the PCB. It looks like there should be a simple pin-out for the buttons and LEDs, this will make it easy to connect to the RASPI so this it takes its input from these buttons.        So in principle the screen fits but needs a mask to hide the gaps. It would also be good to use the existing buttons and click wheel, but the circuit board needs to be decoded and some signal conditioning might need to happen. If this is the case it might be simpler and cheaper to make up a replacement using prototype board. Apart from the above, the next steps are to choose some suitable software and start programming    ","@type":"BlogPosting","headline":"P38 Touch screen media player - Part 2","dateModified":"2017-12-21T11:26:00+10:30","datePublished":"2017-12-21T11:26:00+10:30","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/general/2017/12/21/p38-touch-screen-media-player-part-2-1.html"},"url":"http://localhost:4000/general/2017/12/21/p38-touch-screen-media-player-part-2-1.html","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="DeeEmm" /></head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/">DeeEmm</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/about/">About</a><a class="page-link" href="/archives/">Archives</a><a class="page-link" href="/blog/">Blog</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">P38 Touch screen media player - Part 2</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2017-12-21T11:26:00+10:30" itemprop="datePublished">Dec 21, 2017
+      </time></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>Following on from <a title="P38 Touch screen media player - Part 1" href="index.php/entry/general/p38-touch-screen-media-player-part-1">P38 Touch screen media player - Part 1</a> the Raspi touch screen arrived a week or so ago and I've been itching to see if it fits. I did a quick offer-up when it arrived and it looked as though it might be a bit small, so I've been keen to find out.</p>
+<p>Tonight I removed the old screen and installed the new one. Unfortunately my suspicions were correct - the new screen is not tall enough and so leaves a gap at the top / bottom. The issue is simply that screen aspect ratios have changed since the P38 was a current model. The old 4:3 aspect ratio has now been superceded by 16:9, or wide screen / letterbox aspect. The result is that it is like looking at a widescreen movie on an old TV - you get a black stripe at the top and bottom of the screen - or in this case a gap.</p>
+
+<p>I did a search to see if I could get a 6" HDMI touch screen as this would have been the perfect height, but none seem to be available, at least not for an affordable price. The touch screen membranes are available, but no 6" LCD screens. Whilst it may be possible to repurpose the original screen from the sat nav unit and retrofit a touch screen membrane over the top of it, that would mean reverse engineering the video connectors for the screen and then making / installing a VGA converter. So, it's much easier to to stick with the 5" Raspi HDMI screen and make a mask up to hide the gaps, specially as it fits perfectly in the case...</p>
+<p><img style="display: block; margin-left: auto; margin-right: auto;" src="images/easyblog_articles/283/b2ap3_large_IMG_3322.jpg" width="751" height="563" align="center" data-style="clear" /></p>
+<p> </p>
+<p><img style="display: block; margin-left: auto; margin-right: auto;" src="images/easyblog_articles/283/b2ap3_large_IMG_3321.jpg" width="745" height="559" align="center" data-style="clear" /></p>
+<p> </p>
+<p><img style="display: block; margin-left: auto; margin-right: auto;" src="images/easyblog_articles/283/b2ap3_large_IMG_3320.jpg" width="742" height="556" align="center" data-style="clear" /></p>
+<p> </p>
+<p>As you can see below the touch screen unit wedges nicely into the space left by the old monitor. It also leaves enough room to be able to use the USB ports on the RASPI and still retain the small circuit board used for the pushbuttons and click wheel. The circuit board also houses the LED backlights as well as a status light on the mute button and front panel. I need to spend a bit of time to decode the PCB. It looks like there should be a simple pin-out for the buttons and LEDs, this will make it easy to connect to the RASPI so this it takes its input from these buttons. </p>
+<p> </p>
+<p><img style="display: block; margin-left: auto; margin-right: auto;" src="images/easyblog_articles/283/b2ap3_large_IMG_3391.jpg" width="1280" height="960" align="center" data-style="clear" /></p>
+<p> </p>
+<p><img style="display: block; margin-left: auto; margin-right: auto;" src="images/easyblog_articles/283/b2ap3_large_IMG_3392.jpg" width="1280" height="960" align="center" data-style="clear" /></p>
+<p> </p>
+<p>So in principle the screen fits but needs a mask to hide the gaps. It would also be good to use the existing buttons and click wheel, but the circuit board needs to be decoded and some signal conditioning might need to happen. If this is the case it might be simpler and cheaper to make up a replacement using prototype board.</p>
+<p>Apart from the above, the next steps are to choose some suitable software and start programming</p>
+<p> </p>
+<p> </p>
+
+  </div><a class="u-url" href="/general/2017/12/21/p38-touch-screen-media-player-part-2-1.html" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">DeeEmm</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">DeeEmm</li><li><a class="u-email" href="mailto:deeemmm@deeemm.com">deeemmm@deeemm.com</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/DeeEmm"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">DeeEmm</span></a></li><li><a href="https://www.twitter.com/DeeEmm__"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">DeeEmm__</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>Waxing lyrical about life the universe and everything tech related since lunchtime 2006.</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>

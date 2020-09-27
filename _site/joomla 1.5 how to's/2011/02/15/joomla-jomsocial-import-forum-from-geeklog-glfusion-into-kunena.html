@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>Joomla / JomSocial - Import Forum from Geeklog / GLFusion into Kunena | DeeEmm</title>
+<meta name="generator" content="Jekyll v4.1.1" />
+<meta property="og:title" content="Joomla / JomSocial - Import Forum from Geeklog / GLFusion into Kunena" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="This is the second article in the migrate from Geeklog to Joomla series and outlines the method by which you can inport your existing geeklog forum into Kunena. Our previous article outlined how to migrate your users across to Joomla and also integrate them into the JomSocial component. You can find the first article here - Joomla / JomSocial - Import users from Geeklog / GLFusion Kunena is a great forum component, and easily rivals dedicated forums such as phpBB or SMF. It also integrates nicely with JomSocial, allowing proper integration of avatars and profiles. Although there are other forum components available, only Kunena integration will be covered here. The migration process requires that you have access to both the original site&#39;s SQL database, and the target sites database via an SQL editor. I personally favor phpMyAdmin, mostly as it comes pre bundled in C-Panel, but any other flavour will also do the job. You need to be able to export and import tables, and also execute SQL commands. The basic premise is this. The relevant tables will be exported from the old site and then imported into the target database. We will then execute some SQL statements to copy this data into the target database at the correct locations, and then tidy up some secondary information to make it all work. Sounds easy huh. First off you will need to export the following tables from your geeklog database. gl_forum_topicgl_forum_forums Next. Import these tables into your Joomla database. (You can delete them later.) Once the tables have been imported you will need to run the following SQL statements, in sequence. insert into jos_kunena_messages (id, parent, thread, catid, name, userid, email, subject, time, ip, hits) SELECT id, pid, pid, &#39;forum&#39;, name, uid, email, subject, date, ip, views from gl_forum_topic This copies the topic titles across. it sets much of the topic information, such as which categories they belong to, but some of this needs to be &#39;fixed&#39; later. &nbsp; insert into jos_kunena_messages_text (mesid, message) SELECT id, comment from gl_forum_topic This statement imports the actual posts into the new database. &nbsp; insert into jos_kunena_categories (id, name, parent) SELECT forum_id, forum_name, &#39;100&#39; from gl_forum_forumsinsert into jos_kunena_categories (id, name, parent) values(&#39;100&#39;, &#39;forum category&#39;,&#39;0&#39;)update jos_kunena_categories set published = &#39;1&#39; where published = &#39;0&#39; These statements set the category information, and also set each category to &#39;published&#39; so that it is visible in the browser. &nbsp; update jos_kunena_messages set thread = id where thread = &#39;0&#39;update jos_kunena_messages, gl_forum_topic set jos_kunena_messages.catid = gl_forum_topic.forum where jos_kunena_messages.id = gl_forum_topic.id;update jos_kunena_messages set parent = threadupdate jos_kunena_messages set parent = &#39;0&#39; where id = threadupdate jos_kunena_categories set pub_access = &#39;0&#39; , pub_recurse = &#39;1&#39;, admin_access = &#39;30&#39; Finally, these statements tidy up the messages table and correctly allocate the categories to the messages. Once you have carried out the above steps you should then be able to see all of your old geeklog forum posts in Kunena." />
+<meta property="og:description" content="This is the second article in the migrate from Geeklog to Joomla series and outlines the method by which you can inport your existing geeklog forum into Kunena. Our previous article outlined how to migrate your users across to Joomla and also integrate them into the JomSocial component. You can find the first article here - Joomla / JomSocial - Import users from Geeklog / GLFusion Kunena is a great forum component, and easily rivals dedicated forums such as phpBB or SMF. It also integrates nicely with JomSocial, allowing proper integration of avatars and profiles. Although there are other forum components available, only Kunena integration will be covered here. The migration process requires that you have access to both the original site&#39;s SQL database, and the target sites database via an SQL editor. I personally favor phpMyAdmin, mostly as it comes pre bundled in C-Panel, but any other flavour will also do the job. You need to be able to export and import tables, and also execute SQL commands. The basic premise is this. The relevant tables will be exported from the old site and then imported into the target database. We will then execute some SQL statements to copy this data into the target database at the correct locations, and then tidy up some secondary information to make it all work. Sounds easy huh. First off you will need to export the following tables from your geeklog database. gl_forum_topicgl_forum_forums Next. Import these tables into your Joomla database. (You can delete them later.) Once the tables have been imported you will need to run the following SQL statements, in sequence. insert into jos_kunena_messages (id, parent, thread, catid, name, userid, email, subject, time, ip, hits) SELECT id, pid, pid, &#39;forum&#39;, name, uid, email, subject, date, ip, views from gl_forum_topic This copies the topic titles across. it sets much of the topic information, such as which categories they belong to, but some of this needs to be &#39;fixed&#39; later. &nbsp; insert into jos_kunena_messages_text (mesid, message) SELECT id, comment from gl_forum_topic This statement imports the actual posts into the new database. &nbsp; insert into jos_kunena_categories (id, name, parent) SELECT forum_id, forum_name, &#39;100&#39; from gl_forum_forumsinsert into jos_kunena_categories (id, name, parent) values(&#39;100&#39;, &#39;forum category&#39;,&#39;0&#39;)update jos_kunena_categories set published = &#39;1&#39; where published = &#39;0&#39; These statements set the category information, and also set each category to &#39;published&#39; so that it is visible in the browser. &nbsp; update jos_kunena_messages set thread = id where thread = &#39;0&#39;update jos_kunena_messages, gl_forum_topic set jos_kunena_messages.catid = gl_forum_topic.forum where jos_kunena_messages.id = gl_forum_topic.id;update jos_kunena_messages set parent = threadupdate jos_kunena_messages set parent = &#39;0&#39; where id = threadupdate jos_kunena_categories set pub_access = &#39;0&#39; , pub_recurse = &#39;1&#39;, admin_access = &#39;30&#39; Finally, these statements tidy up the messages table and correctly allocate the categories to the messages. Once you have carried out the above steps you should then be able to see all of your old geeklog forum posts in Kunena." />
+<link rel="canonical" href="http://localhost:4000/joomla%201.5%20how%20to's/2011/02/15/joomla-jomsocial-import-forum-from-geeklog-glfusion-into-kunena.html" />
+<meta property="og:url" content="http://localhost:4000/joomla%201.5%20how%20to's/2011/02/15/joomla-jomsocial-import-forum-from-geeklog-glfusion-into-kunena.html" />
+<meta property="og:site_name" content="DeeEmm" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2011-02-15T21:32:02+10:30" />
+<script type="application/ld+json">
+{"description":"This is the second article in the migrate from Geeklog to Joomla series and outlines the method by which you can inport your existing geeklog forum into Kunena. Our previous article outlined how to migrate your users across to Joomla and also integrate them into the JomSocial component. You can find the first article here - Joomla / JomSocial - Import users from Geeklog / GLFusion Kunena is a great forum component, and easily rivals dedicated forums such as phpBB or SMF. It also integrates nicely with JomSocial, allowing proper integration of avatars and profiles. Although there are other forum components available, only Kunena integration will be covered here. The migration process requires that you have access to both the original site&#39;s SQL database, and the target sites database via an SQL editor. I personally favor phpMyAdmin, mostly as it comes pre bundled in C-Panel, but any other flavour will also do the job. You need to be able to export and import tables, and also execute SQL commands. The basic premise is this. The relevant tables will be exported from the old site and then imported into the target database. We will then execute some SQL statements to copy this data into the target database at the correct locations, and then tidy up some secondary information to make it all work. Sounds easy huh. First off you will need to export the following tables from your geeklog database. gl_forum_topicgl_forum_forums Next. Import these tables into your Joomla database. (You can delete them later.) Once the tables have been imported you will need to run the following SQL statements, in sequence. insert into jos_kunena_messages (id, parent, thread, catid, name, userid, email, subject, time, ip, hits) SELECT id, pid, pid, &#39;forum&#39;, name, uid, email, subject, date, ip, views from gl_forum_topic This copies the topic titles across. it sets much of the topic information, such as which categories they belong to, but some of this needs to be &#39;fixed&#39; later. &nbsp; insert into jos_kunena_messages_text (mesid, message) SELECT id, comment from gl_forum_topic This statement imports the actual posts into the new database. &nbsp; insert into jos_kunena_categories (id, name, parent) SELECT forum_id, forum_name, &#39;100&#39; from gl_forum_forumsinsert into jos_kunena_categories (id, name, parent) values(&#39;100&#39;, &#39;forum category&#39;,&#39;0&#39;)update jos_kunena_categories set published = &#39;1&#39; where published = &#39;0&#39; These statements set the category information, and also set each category to &#39;published&#39; so that it is visible in the browser. &nbsp; update jos_kunena_messages set thread = id where thread = &#39;0&#39;update jos_kunena_messages, gl_forum_topic set jos_kunena_messages.catid = gl_forum_topic.forum where jos_kunena_messages.id = gl_forum_topic.id;update jos_kunena_messages set parent = threadupdate jos_kunena_messages set parent = &#39;0&#39; where id = threadupdate jos_kunena_categories set pub_access = &#39;0&#39; , pub_recurse = &#39;1&#39;, admin_access = &#39;30&#39; Finally, these statements tidy up the messages table and correctly allocate the categories to the messages. Once you have carried out the above steps you should then be able to see all of your old geeklog forum posts in Kunena.","@type":"BlogPosting","headline":"Joomla / JomSocial - Import Forum from Geeklog / GLFusion into Kunena","dateModified":"2011-02-15T21:32:02+10:30","datePublished":"2011-02-15T21:32:02+10:30","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/joomla%201.5%20how%20to's/2011/02/15/joomla-jomsocial-import-forum-from-geeklog-glfusion-into-kunena.html"},"url":"http://localhost:4000/joomla%201.5%20how%20to's/2011/02/15/joomla-jomsocial-import-forum-from-geeklog-glfusion-into-kunena.html","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="DeeEmm" /></head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/">DeeEmm</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/about/">About</a><a class="page-link" href="/archives/">Archives</a><a class="page-link" href="/blog/">Blog</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Joomla / JomSocial - Import Forum from Geeklog / GLFusion into Kunena</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2011-02-15T21:32:02+10:30" itemprop="datePublished">Feb 15, 2011
+      </time></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>This is the second article in the migrate from Geeklog to Joomla series and outlines the method by which you can inport your existing geeklog forum into Kunena. Our previous article outlined how to migrate your users across to Joomla and also integrate them into the JomSocial component. You can find the first article here -<span> <a href="resources/tutorials/53-joomla-how-tos/201-joomla--jomsocial-import-users-from-geeklog--glfusion.html" style="color: #0062d5; text-decoration: underline;">Joomla / JomSocial - Import users from Geeklog / GLFusion</a></span></p>
+<p>Kunena is a great forum component, and easily rivals dedicated forums such as phpBB or SMF. It also integrates nicely with JomSocial, allowing proper integration of avatars and profiles. Although there are other forum components available, only Kunena integration will be covered here.</p>
+<p>The migration process requires that you have access to both the original site's SQL database, and the target sites database via an SQL editor. I personally favor phpMyAdmin, mostly as it comes pre bundled in C-Panel, but any other flavour will also do the job. You need to be able to export and import tables, and also execute SQL commands.</p>
+<p>The basic premise is this.</p>
+<p>The relevant tables will be exported from the old site and then imported into the target database. We will then execute some SQL statements to copy this data into the target database at the correct locations, and then tidy up some secondary information to make it all work. Sounds easy huh.</p>
+<p>First off you will need to export the following tables from your geeklog database.</p>
+<p><strong>gl_forum_topic<br />gl_forum_forums</strong></p>
+<p>Next. Import these tables into your Joomla database. (You can delete them later.)</p>
+<p>Once the tables have been imported you will need to run the following SQL statements, in sequence.</p>
+<pre>insert into jos_kunena_messages (id, parent, thread, catid, name, userid, email, subject, time, ip, hits) SELECT id, pid, pid, 'forum', name, uid, email, subject, date, ip, views from gl_forum_topic</pre>
+<p>This copies the topic titles across. it sets much of the topic information, such as which categories they belong to, but some of this needs to be 'fixed' later.</p>
+<p>&nbsp;</p>
+<pre>insert into jos_kunena_messages_text (mesid, message) SELECT id, comment from gl_forum_topic</pre>
+<p>This statement imports the actual posts into the new database.</p>
+<p>&nbsp;</p>
+<pre>insert into jos_kunena_categories (id, name, parent) SELECT forum_id, forum_name, '100' from gl_forum_forums<br />insert into jos_kunena_categories (id, name, parent) values('100', 'forum category','0')<br />update jos_kunena_categories set published = '1' where published = '0'</pre>
+<p>These statements set the category information, and also set each category to 'published' so that it is visible in the browser.</p>
+<p>&nbsp;</p>
+<pre>update jos_kunena_messages set thread = id where thread = '0'<br />update jos_kunena_messages, gl_forum_topic set jos_kunena_messages.catid = gl_forum_topic.forum where jos_kunena_messages.id = gl_forum_topic.id;<br />update jos_kunena_messages set parent = thread<br />update jos_kunena_messages set parent = '0' where id = thread<br />update jos_kunena_categories set pub_access = '0' , pub_recurse = '1', admin_access = '30'</pre>
+<p>Finally, these statements tidy up the messages table and correctly allocate the categories to the messages.</p>
+<p>Once you have carried out the above steps you should then be able to see all of your old geeklog forum posts in Kunena.</p>
+
+  </div><a class="u-url" href="/joomla%201.5%20how%20to's/2011/02/15/joomla-jomsocial-import-forum-from-geeklog-glfusion-into-kunena.html" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">DeeEmm</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">DeeEmm</li><li><a class="u-email" href="mailto:deeemmm@deeemm.com">deeemmm@deeemm.com</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/DeeEmm"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">DeeEmm</span></a></li><li><a href="https://www.twitter.com/DeeEmm__"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">DeeEmm__</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>Waxing lyrical about life the universe and everything tech related since lunchtime 2006.</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>

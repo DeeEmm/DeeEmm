@@ -1,0 +1,6 @@
+I"}<p>The Sourceforge DMCMS source control active repository has now been changed from CVS to SVN. The old CVS repository will remain accessible for historical reasons.</p>
+<p>At this point there are no plans to migrate existing data from CVS to SVN.</p>
+<p>The SVN repository will be routinely updated as changes are made. The ability to easily download a tarball may mean that interim builds will simply be made available via the SVN repository instead of for direct download via the forums, but this will be assessed as usage progresses.</p>
+<p>If there are any questions, please leave them in the comments section below.</p>
+<p>/DM</p>
+:ET

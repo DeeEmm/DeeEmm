@@ -1,0 +1,9 @@
+---
+layout: post
+title: " Eclipse"
+joomla_id: 108
+joomla_url: "-eclipse"
+category: General
+date: 2008-01-20 00:00:00.000000000 +10:30
+---
+<p>Last Friday I decided to throw a curve ball at my editing practices and  try something that didn't involve Ultraedit. Somehow I ended up on the  Eclipse IRC network and had a chat about the relevent merits of Eclipse,  it's useability, scalability etc. I had briefly tried Eclipse before  but had not really tried to use it in earnest, plus I think that I  probably had the wrong version installed. <br /><br />Eclipse is basically  an editor platform on which plugins are added to flavour it to your  requirements - if you want to edit and compile C++ you simply install  the relevent plugins to turn it into a C++ IDE. Likewise for PHP / Web  editing you add in the relevent PHP plugins - this is the part I didn't  do last time! Armed with new information - and a link to the PDT package  download page (the PDT package is the PHP Development Tools plugin) I  installed a copy of Eclipse. It's worth noting at this point that if you  don't have the Java Runtime installed on your machine you will need to  install it as the program will not function correctly - the installer  will alert you if you need to install it (you can install it easily via  synaptics).<br /><br />My first impressions of the PDT package are that it  seems to be pretty impressive - I like the way that it lists included  files in a hand to use menu, the syntax highlighting is as good as most -  generally the layout is well presented. Projects are easily generated  and it has a built in CVS client although I havent set it up yet.<br /><br />I'm  going to try using it for the next week or so and see how I get on.  Watch this space...</p>

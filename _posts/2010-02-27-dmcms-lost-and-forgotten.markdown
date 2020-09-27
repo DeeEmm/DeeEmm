@@ -1,0 +1,18 @@
+---
+layout: post
+title: DMCMS Lost and forgotten?
+joomla_id: 125
+joomla_url: dmcms-lost-and-forgotten
+category: DMCMS
+tags: cms dmcms forgotten
+date: 2010-02-27 11:05:07.000000000 +10:30
+---
+<p>Development on DMCMS has laid dormant for a while, and to most it probably seems like it has been abandoned. Work commitments, managing websites, becoming a father, running my own business, renovating a house, building a car or two, plus various other projects take up lots of time, and I end up finding that I have none left to do things like develop DMCMS.</p>
+<p>Last year I actually picked up from where I had left off and rewrote the current 0.7.6 version to release it as a branch of the main code - `DMCMS Light Version 1`. A lot of progress was also made on the Version 0.8.0 code, with many features production ready. Unfortunately we suffered a break in at our premises, and both the laptop the code was developed on, and the backup drive were stolen. Unfortunately, as a result of this, all of the development files were lost, as I had not committed any changes to CVS.</p>
+<p>Having just updated the site, I just noticed that most of the work on the 0.7.6 release was uploaded here - the old site was running from it as it was one of my live test sites. So with a little work, I should be able to get back to the same status - a production ready version 1. At this stage I am not completely sure what status the code is at - there may have been other untested changes that were lost, but the main part of the re-write - a change in file structure - is very obviously still intact. When I get time, I will have an audit.</p>
+<p>Unfortunately, the theft, and the loss of most of 0.8.0 has now made me have a bit of a rethink about what to do with it, and at present, I am not sure whether I will continue. There is simply too much ground to make up. If anything, a full rewrite might be both a quicker option, and one that brings DMCMS up to date. There are a lot of well thought out aspects of DMCMS, but there are many aspects that do not lend themselves well to managing a user-base, and extensibility - both things that were not considered way back in 2004 when I first started writing it.</p>
+<p>There are a lot of lessons learned, and there have also been many advances with technology in the past 6 years, and whilst I may not have the actual code written - There is always a complete CMS mapped out in my head - I just need to figure out how to get it into my laptop as typing it simply takes too long. Roll on Bio-Data-Link. :)</p>
+<p>So, whilst talking of lessons learned - there is one that I can impart for free in the hope that someone else does not suffer the same fate that I did. External hard drives are a wonder of technology - for those of use who have been around for a while, we would never have thought it possible that you could get 500Gb or even 1Tb in a portable drive enclosure - storage that is in addition to your main hard drive (my first computer had 16k RAM - and that was it - lol).</p>
+<p>So using an external hard drive as a backup drive is perfect - especially with something like time machine on the Mac - plus with a Macbook what better way to backup - you even get to do it on the road. Perfect! Or is it??</p>
+<p>When my laptop was stolen, the backup drive was stolen as well - mostly as it was plugged into the Macbook. Whilst this is fine for data integrity (it's unlikely that both hard drives will fail) it's not so good for security. So my tip for today is never leave your back drive and laptop in the same location. Obvious? maybe, but I never considered that someone would go to the lengths they did to steal mine.</p>
+<p>Just my 02c for today.</p>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>Hide Joomla template elements from members (logged in users) | DeeEmm</title>
+<meta name="generator" content="Jekyll v4.1.1" />
+<meta property="og:title" content="Hide Joomla template elements from members (logged in users)" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="If you are using a custom template and want to control how it is displayed, you may need the following mod. This quick easy modification will allow you to only show some page elements to guests. I made this modification to hide the slideshow in Gobbers Themes &#39;Comenian&#39; template, but it can easily be adapted for other elements on other templates. Basically we need to wrap the element we want to hide in some php code that checks if the user is logged in. If they are not, then the element is shown. Open the templates main index file, you can find this in the template directory, in this case it is /templates/comenian/index.php The index.php file is the file that generates the main template layout, simply browse to the template you wish to alter. Open index.php in your favourite editor, and find the element you wish to hide, in this case it is the slideshow. It can be any piece of code in the template. A tip here is to use your browser and the view code / DOM inspector (such as firebug) to find the code you wish to hide, and then look for it in the index.php file. Here&#39;s the code we wish to hide for the comenian template &lt;div id=&quot;slideshow-w&quot;&gt;  &lt;div id=&quot;slideshow&quot;&gt;  &lt;img src=&quot;templates/&lt;?php echo $this-&gt;template ?&gt;/images/slide1.jpg&quot; alt=&quot;image1&quot; /&gt; &lt;img src=&quot;templates/&lt;?php echo $this-&gt;template ?&gt;/images/slide2.jpg&quot; alt=&quot;image2&quot; /&gt;  &lt;img src=&quot;templates/&lt;?php echo $this-&gt;template ?&gt;/images/slide3.jpg&quot; alt=&quot;image3&quot; /&gt;  &lt;img src=&quot;templates/&lt;?php echo $this-&gt;template ?&gt;/images/slide4.jpg&quot; alt=&quot;image4&quot; /&gt;  &lt;img src=&quot;templates/&lt;?php echo $this-&gt;template ?&gt;/images/slide5.jpg&quot; alt=&quot;image5&quot; /&gt; &lt;/div&gt; &lt;/div&gt; &lt;script type=&quot;text/javascript&quot; charset=&quot;utf-8&quot;&gt; var $j = jQuery.noConflict(); $j(document).ready(function(){  $j(&quot;#slideshow&quot;).slideshow({  pauseSeconds:&lt;?php echo $pause ?&gt;,// 5,  height:&lt;?php echo $hauteur ?&gt;, //469,  fadeSpeed:&lt;?php echo $fadespeed ?&gt;,// 0.5, width:&lt;?php echo $largeur ?&gt;, //950,  caption: false  });  });  &lt;/script&gt; Insert the following code before the elements you wish to hide &lt;?php $user = JFactory::getUser();if($user-&gt;guest ) : ?&gt; The first line is a class call that loads the class required to generate the variables we need to check. The second line is the check itself. Now insert the following code after the elements you wish to hide &lt;?php endif; ?&gt; The two commands form a basic if statement, if the statement is true, the code in between will be executed. To make the code only execute if the statement is false - ie only display for logged in users, simply add an exclamation mark before the logic like this... if(!$user-&gt;guest ) : ?&gt; You can also test for other conditions here as well, such as only displaying the code on specific pages. To find out how to do this, see this article" />
+<meta property="og:description" content="If you are using a custom template and want to control how it is displayed, you may need the following mod. This quick easy modification will allow you to only show some page elements to guests. I made this modification to hide the slideshow in Gobbers Themes &#39;Comenian&#39; template, but it can easily be adapted for other elements on other templates. Basically we need to wrap the element we want to hide in some php code that checks if the user is logged in. If they are not, then the element is shown. Open the templates main index file, you can find this in the template directory, in this case it is /templates/comenian/index.php The index.php file is the file that generates the main template layout, simply browse to the template you wish to alter. Open index.php in your favourite editor, and find the element you wish to hide, in this case it is the slideshow. It can be any piece of code in the template. A tip here is to use your browser and the view code / DOM inspector (such as firebug) to find the code you wish to hide, and then look for it in the index.php file. Here&#39;s the code we wish to hide for the comenian template &lt;div id=&quot;slideshow-w&quot;&gt;  &lt;div id=&quot;slideshow&quot;&gt;  &lt;img src=&quot;templates/&lt;?php echo $this-&gt;template ?&gt;/images/slide1.jpg&quot; alt=&quot;image1&quot; /&gt; &lt;img src=&quot;templates/&lt;?php echo $this-&gt;template ?&gt;/images/slide2.jpg&quot; alt=&quot;image2&quot; /&gt;  &lt;img src=&quot;templates/&lt;?php echo $this-&gt;template ?&gt;/images/slide3.jpg&quot; alt=&quot;image3&quot; /&gt;  &lt;img src=&quot;templates/&lt;?php echo $this-&gt;template ?&gt;/images/slide4.jpg&quot; alt=&quot;image4&quot; /&gt;  &lt;img src=&quot;templates/&lt;?php echo $this-&gt;template ?&gt;/images/slide5.jpg&quot; alt=&quot;image5&quot; /&gt; &lt;/div&gt; &lt;/div&gt; &lt;script type=&quot;text/javascript&quot; charset=&quot;utf-8&quot;&gt; var $j = jQuery.noConflict(); $j(document).ready(function(){  $j(&quot;#slideshow&quot;).slideshow({  pauseSeconds:&lt;?php echo $pause ?&gt;,// 5,  height:&lt;?php echo $hauteur ?&gt;, //469,  fadeSpeed:&lt;?php echo $fadespeed ?&gt;,// 0.5, width:&lt;?php echo $largeur ?&gt;, //950,  caption: false  });  });  &lt;/script&gt; Insert the following code before the elements you wish to hide &lt;?php $user = JFactory::getUser();if($user-&gt;guest ) : ?&gt; The first line is a class call that loads the class required to generate the variables we need to check. The second line is the check itself. Now insert the following code after the elements you wish to hide &lt;?php endif; ?&gt; The two commands form a basic if statement, if the statement is true, the code in between will be executed. To make the code only execute if the statement is false - ie only display for logged in users, simply add an exclamation mark before the logic like this... if(!$user-&gt;guest ) : ?&gt; You can also test for other conditions here as well, such as only displaying the code on specific pages. To find out how to do this, see this article" />
+<link rel="canonical" href="http://localhost:4000/joomla%201.6%20how%20to's/2011/05/07/hide-template-elements-from-members-logged-in-users.html" />
+<meta property="og:url" content="http://localhost:4000/joomla%201.6%20how%20to's/2011/05/07/hide-template-elements-from-members-logged-in-users.html" />
+<meta property="og:site_name" content="DeeEmm" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2011-05-07T00:58:57+09:30" />
+<script type="application/ld+json">
+{"description":"If you are using a custom template and want to control how it is displayed, you may need the following mod. This quick easy modification will allow you to only show some page elements to guests. I made this modification to hide the slideshow in Gobbers Themes &#39;Comenian&#39; template, but it can easily be adapted for other elements on other templates. Basically we need to wrap the element we want to hide in some php code that checks if the user is logged in. If they are not, then the element is shown. Open the templates main index file, you can find this in the template directory, in this case it is /templates/comenian/index.php The index.php file is the file that generates the main template layout, simply browse to the template you wish to alter. Open index.php in your favourite editor, and find the element you wish to hide, in this case it is the slideshow. It can be any piece of code in the template. A tip here is to use your browser and the view code / DOM inspector (such as firebug) to find the code you wish to hide, and then look for it in the index.php file. Here&#39;s the code we wish to hide for the comenian template &lt;div id=&quot;slideshow-w&quot;&gt;  &lt;div id=&quot;slideshow&quot;&gt;  &lt;img src=&quot;templates/&lt;?php echo $this-&gt;template ?&gt;/images/slide1.jpg&quot; alt=&quot;image1&quot; /&gt; &lt;img src=&quot;templates/&lt;?php echo $this-&gt;template ?&gt;/images/slide2.jpg&quot; alt=&quot;image2&quot; /&gt;  &lt;img src=&quot;templates/&lt;?php echo $this-&gt;template ?&gt;/images/slide3.jpg&quot; alt=&quot;image3&quot; /&gt;  &lt;img src=&quot;templates/&lt;?php echo $this-&gt;template ?&gt;/images/slide4.jpg&quot; alt=&quot;image4&quot; /&gt;  &lt;img src=&quot;templates/&lt;?php echo $this-&gt;template ?&gt;/images/slide5.jpg&quot; alt=&quot;image5&quot; /&gt; &lt;/div&gt; &lt;/div&gt; &lt;script type=&quot;text/javascript&quot; charset=&quot;utf-8&quot;&gt; var $j = jQuery.noConflict(); $j(document).ready(function(){  $j(&quot;#slideshow&quot;).slideshow({  pauseSeconds:&lt;?php echo $pause ?&gt;,// 5,  height:&lt;?php echo $hauteur ?&gt;, //469,  fadeSpeed:&lt;?php echo $fadespeed ?&gt;,// 0.5, width:&lt;?php echo $largeur ?&gt;, //950,  caption: false  });  });  &lt;/script&gt; Insert the following code before the elements you wish to hide &lt;?php $user = JFactory::getUser();if($user-&gt;guest ) : ?&gt; The first line is a class call that loads the class required to generate the variables we need to check. The second line is the check itself. Now insert the following code after the elements you wish to hide &lt;?php endif; ?&gt; The two commands form a basic if statement, if the statement is true, the code in between will be executed. To make the code only execute if the statement is false - ie only display for logged in users, simply add an exclamation mark before the logic like this... if(!$user-&gt;guest ) : ?&gt; You can also test for other conditions here as well, such as only displaying the code on specific pages. To find out how to do this, see this article","@type":"BlogPosting","headline":"Hide Joomla template elements from members (logged in users)","dateModified":"2011-05-07T00:58:57+09:30","datePublished":"2011-05-07T00:58:57+09:30","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/joomla%201.6%20how%20to's/2011/05/07/hide-template-elements-from-members-logged-in-users.html"},"url":"http://localhost:4000/joomla%201.6%20how%20to's/2011/05/07/hide-template-elements-from-members-logged-in-users.html","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="DeeEmm" /></head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/">DeeEmm</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/about/">About</a><a class="page-link" href="/archives/">Archives</a><a class="page-link" href="/blog/">Blog</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Hide Joomla template elements from members (logged in users)</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2011-05-07T00:58:57+09:30" itemprop="datePublished">May 7, 2011
+      </time></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>If you are using a custom template and want to control how it is displayed, you may need the following mod.</p>
+<p>This quick easy modification will allow you to only show some page elements to guests. I made this modification to hide the slideshow in Gobbers Themes 'Comenian' template, but it can easily be adapted for other elements on other templates.</p>
+<p>Basically we need to wrap the element we want to hide in some php code that checks if the user is logged in. If they are not, then the element is shown.</p>
+<p>Open the templates main index file, you can find this in the template directory, in this case it is</p>
+<p><strong>/templates/<span style="background-color: #ffffff;"><span style="color: #ff0000;">comenian</span></span>/index.php</strong></p>
+<p>The index.php file is the file that generates the main template layout, simply browse to the template you wish to alter.</p>
+<p>Open index.php in your favourite editor, and find the element you wish to hide, in this case it is the slideshow. It can be any piece of code in the template. A tip here is to use your browser and the view code / DOM inspector (such as firebug) to find the code you wish to hide, and then look for it in the index.php file.</p>
+<p>Here's the code we wish to hide for the comenian template</p>
+<pre>&lt;div id="slideshow-w"&gt;<br />  &lt;div id="slideshow"&gt;<br />  &lt;img src="templates/&lt;?php echo $this-&gt;template ?&gt;/images/slide1.jpg" alt="image1" /&gt;<br /> &lt;img src="templates/&lt;?php echo $this-&gt;template ?&gt;/images/slide2.jpg" alt="image2" /&gt;<br />  &lt;img src="templates/&lt;?php echo $this-&gt;template ?&gt;/images/slide3.jpg" alt="image3" /&gt;<br />  &lt;img src="templates/&lt;?php echo $this-&gt;template ?&gt;/images/slide4.jpg" alt="image4" /&gt;<br />  &lt;img src="templates/&lt;?php echo $this-&gt;template ?&gt;/images/slide5.jpg" alt="image5" /&gt;<br /> &lt;/div&gt;<br /> &lt;/div&gt;<br /> &lt;script type="text/javascript" charset="utf-8"&gt;<br /> var $j = jQuery.noConflict();<br /> $j(document).ready(function(){<br />  $j("#slideshow").slideshow({<br />  pauseSeconds:&lt;?php echo $pause ?&gt;,// 5,<br />  height:&lt;?php echo $hauteur ?&gt;, //469,<br />  fadeSpeed:&lt;?php echo $fadespeed ?&gt;,// 0.5,<br /> width:&lt;?php echo $largeur ?&gt;, //950,<br />  caption: false<br />  });<br />  });<br />  &lt;/script&gt;</pre>
+<p>Insert the following code before the elements you wish to hide</p>
+<pre style="color: #000000; font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 10px; margin-top: 5px; margin-right: 0px; margin-bottom: 15px; margin-left: 0px; padding-top: 10px; padding-right: 15px; padding-bottom: 10px; padding-left: 15px; border-left-width: 5px; border-right-width: 1px; border-top-width: 1px; border-bottom-width: 1px; background-image: initial; background-attachment: initial; background-origin: initial; background-clip: initial; background-color: #f6f6f6; font: normal normal normal 1em/1.5 'Courier News', monospace; white-space: pre-wrap; word-wrap: break-word; background-position: initial initial; background-repeat: initial initial; border-color: #999999; border-style: solid;">&lt;?php <br />$user = JFactory::getUser();<br />if($user-&gt;guest ) : ?&gt; <br /></pre>
+<p>The first line is a class call that loads the class required to generate the variables we need to check. The second line is the check itself.</p>
+<p>Now insert the following code after the elements you wish to hide</p>
+<pre><span style="font-family: monospace; ">&lt;?php endif; ?&gt;</span></pre>
+<p>The two commands form a basic if statement, if the statement is true, the code in between will be executed.</p>
+<p>To make the code only execute if the statement is false - ie only display for logged in users, simply add an exclamation mark before the logic like this...</p>
+<pre><span style="font-family: 'Courier News', monospace; line-height: 15px; white-space: pre-wrap; ">if(!$user-&gt;guest ) : ?&gt;</span></pre>
+<p>You can also test for other conditions here as well, such as only displaying the code on specific pages. To find out how to do this, <a href="resources/tutorials/59-joomla-16-how-tos/212-show-template-elements-on-selective-pages.html" title="http://www.deeemm.com/resources/tutorials/59-joomla-16-how-tos/212-show-template-elements-on-selective-pages.html">see this article</a></p>
+
+  </div><a class="u-url" href="/joomla%201.6%20how%20to's/2011/05/07/hide-template-elements-from-members-logged-in-users.html" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">DeeEmm</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">DeeEmm</li><li><a class="u-email" href="mailto:deeemmm@deeemm.com">deeemmm@deeemm.com</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/DeeEmm"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">DeeEmm</span></a></li><li><a href="https://www.twitter.com/DeeEmm__"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">DeeEmm__</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>Waxing lyrical about life the universe and everything tech related since lunchtime 2006.</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>

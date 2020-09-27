@@ -1,0 +1,17 @@
+---
+layout: post
+title: Ubuntu 8.04
+joomla_id: 115
+joomla_url: ubuntu-804
+category: General
+tags: firefox fireftp nautilus ubuntu
+date: 2008-05-06 12:12:36.000000000 +09:30
+---
+<p>Well not being able to resist the advert shown above, I decided to take the plunge and update my Ubuntu install. Generally I have been very happy with 'Gutsy' What could go wrong?</p>
+<p align="justify">The update is very straightforward and is easily done via synaptics update manager - first you make sure that the current install is up to date and then it allows you to install the update. The whole process takes about 20 minutes whilst it downloads and installs the relevent files and then reboots.</p>
+<p align="justify">There's&nbsp; a load of updated apps which is great as some of the apps in the Gutsy repository were a little out of date, Unfortunately there is still no VMware and more unfortunately it is likely that your curent VMware will stop working as mine did - however - fear not - it is fixable - After the mandatory google - I simply reinstalled it following some instructions for 8.04 and all was good (don't forget to back up your Virtual machine files first just in case).</p>
+<p align="justify">One dissapointment for me was the new version of Firefox - well not firefox exactly (it's even better than it usually is) but the fact that most of the extension developers have not updated thier code to work with the new version. This is a bit of a pain for me as I regularly use quite a few additional tools for web development. The biggest pain is google sync as I use it to sync my bookmarks between my machines. Firebug and FireFTP need to come to the party too.</p>
+<p align="justify">Maybe this is an apt time to get rid of FireFTP - after all there's integrated FTP support within Nautilus&nbsp; but Firebug is just too usefull a tool to do without - c'mon guys hurry it up or I will have to roll back to FF2.</p>
+<p align="justify">As usual with Ubuntu - things simply work - there was nothing else I needed to 'fix' the update was completely painless - I'm sure that if VMWare was supported it too would have been painlessly and faultlessly updated.</p>
+<p align="justify">So...</p>
+<p align="justify">Go ahead, what are you waiting for?</p>

@@ -1,0 +1,7 @@
+I" <div class="ebd-block  " data-type="text"><p>I ran into the following error when trying to install MYSQL2 under gems. I was trying to install MYSQL2 to be able to import content from deeemm.com&nbsp;into my local jekyll dev site using the instructions posted here -&nbsp;https://import.jekyllrb.com/docs/joomla3/ but kept getting an ssl dependency error.<br /></p><p>I got this error&nbsp;</p></div>
+<div class="ebd-block  " data-type="code"><script type="text/javascript">
+EasyBlog.require()
+.library("ace")
+.done(function($){
+</script></div>
+:ET

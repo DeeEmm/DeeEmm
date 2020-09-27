@@ -1,0 +1,16 @@
+---
+layout: post
+title: ZeroPi - RasPi 3D Printer Shield.
+joomla_id: 310
+joomla_url: zeropi
+category: General
+date: 2015-10-14 07:03:39.000000000 +10:30
+---
+<p><span style="color: #1d2129; font-family: system-ui, -apple-system, system-ui, '.SFNSText-Regular', sans-serif; font-size: 14px;">Just backed the <a href="https://www.kickstarter.com/projects/1204283/zeropi-arduino-and-raspberry-pi-compatible-develop" target="_blank" rel="noopener noreferrer">Zero Pi project on Kickstarter.</a> Looks like a cheap and easy way to build a Raspberry Pi based 3D printer.</span></p>
+<p><span style="color: #1d2129; font-family: system-ui, -apple-system, system-ui, '.SFNSText-Regular', sans-serif; font-size: 14px;"></span></p>
+<p><span style="color: #1d2129; font-family: system-ui, -apple-system, system-ui, '.SFNSText-Regular', sans-serif; font-size: 14px;">I like that this opens up the potential for WiFi access with an integrated onboard web-server. This is the perfect combination for the Fabribot 3D printer that I am developing where browser based printer control is something that I would like to achieve. Imagine: Just open up your browser, navigate to your printers IP address. Upload a file and print. </span><span style="color: #1d2129; font-family: system-ui, -apple-system, system-ui, '.SFNSText-Regular', sans-serif; font-size: 14px;">There's even the possibility of integrating onboard slicing - where you can send the printer an STL instead of G-Code. It's all pretty easy to achieve with a Linux based controller and a simple web interface.</span></p>
+<p><span style="color: #1d2129; font-family: system-ui, -apple-system, system-ui, '.SFNSText-Regular', sans-serif; font-size: 14px;">From what I understand there's a communications abstraction layer between the Arduino and RasPi aspects of the system, both of which also operate independently. This communications layer allows you to access Arduino I/O &amp; variables from within the Linux core and vice versa. The actual details are a little unclear but for adding a simple web interface to an Arduino an leveraging the power of linux to take care of file handing it seems to have all that is required.</span></p>
+<p><span style="color: #1d2129; font-family: system-ui, -apple-system, system-ui, '.SFNSText-Regular', sans-serif; font-size: 14px;">I'm pretty excited about this. Guess now I need to get my game together and finish off the Fabribot</span></p>
+<p><span style="color: #1d2129; font-family: system-ui, -apple-system, system-ui, '.SFNSText-Regular', sans-serif; font-size: 14px;"> </span></p>
+<p> </p>
+<p> </p>

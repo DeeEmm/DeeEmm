@@ -1,0 +1,10 @@
+---
+layout: post
+title: Ubuntu
+joomla_id: 99
+joomla_url: ubuntu
+category: General
+tags: gimp open-office ubuntu
+date: 2007-12-14 00:00:00.000000000 +10:30
+---
+<p>A recent hard drive crash ended up in me treating myself to a new laptop. Somehow the hard drive on my old Dell decided to just... well... stop working. A bit strange to say the least - the hard drive was less than a year old and hadn't really seen any rough use. But anyhows - I used the whole fiasco to talk myself into replacing the whole laptop with a new one (but of course bought a replacement H/D to revive the Dell)<br><br>With my new machine pretty much installed and up and running, with the exception of a webserver to my taste (I've been playing with Ulimate Server - a slim php/sql distro that runs from a USB stick but it doesn't work with my syntax checker) I decided to get the Dell up and running with linux.<br><br>After looking into the current range of Linux distro's I decided to give Ubuntu a go as it seemed like the least painfull route to getting it up and running. I have previously used Fedora but had a lot of trouble with wireless drivers.<br><br>So far I must say that I am very impressed with ubuntu and the ease of installation. (I'm typing this from Firefox in ubuntu right now ;) ). everything has worked pretty much right out of the box. I've enabled Beryl (the expose style task switcher) and am currently setting up the avant window manager (a mac icon dock clone).<br><br>Other software will get installed in time - I'm already happy using open office and gimp the only program I need to sort out is a decent text editor...<br><br>I'll keep you posted of the progress.</p>

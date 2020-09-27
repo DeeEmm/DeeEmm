@@ -1,0 +1,9 @@
+---
+layout: post
+title: New Features On Their Way
+joomla_id: 80
+joomla_url: new-features-on-their-way
+category: General
+date: 2007-06-21 00:00:00.000000000 +09:30
+---
+<p>{jcomments off}Work has been progressing towards the next release of DMCMS which will  likely be another major revision due to the amount of changes that have  happened. <br /><br />The template parsing methodology has completely  changed, gone is the fixed layout and instead in it's place is a  template based layout system that allow layouts to be configured within  the template itself. configuration variables can also be set within a  template configuration file allowing complete freedom to template  writers.<br /><br />The user commenting system is also now up and running,  in fact the only thing stopping the next version from being released is  the incomplete user admin system which is currently being finished off.<br /><br />As  usual I have discovered more IE related issues, this time relating to  the layout, it's only a small bug and will be fixed by release time.<br /><br />I  have also spent some time tidying up the code - although there is still  a lot to do.<br /><br />DM.</p>

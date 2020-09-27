@@ -1,0 +1,38 @@
+I"è<p>If you wish to convert your Geeklog site to the Joomla platform, then you will have a number of things that you will need to do. First off, you will need to get a copy of Joomla up and running. In my case, I am using JomSocial, but the process is the same for both JomSocial and Joomla installations.</p>
+<p>To perform this migration you will need to use a database management tool to run SQL statements. I use phpMyAdmin, which is usually bundled with most hosting packages, but you could easily use any other similar tool for this.</p>
+<p>Once you have your Joomla install set up, you will need to make a backup of the following table on your Geeklog site</p>
+<p><strong>gl_users</strong></p>
+<p>To do this using phpMyAdmin, simply navigate to the table and then go to the export tab. Check the 'save to file' checkbox and then save the backup to your local computer.</p>
+<p>Next you will need to add this table to your Joomla database. To do this using phpMyAdmin, navigate to your Joomla database and then hit the import tab. Browse to the file you just saved and then hit the 'go' button. You should now be able to see the gl_users table in your joomla database.</p>
+<p>The reason for copying this is simply to make copying the fields easier. If you are only using one database with both the Geeklog and Joomla info in it, there is no need to do this</p>
+<p>Now for the exciting part...</p>
+<p>The main issue with user migration between platforms, is the multitude of different authentication methods used, Joomla uses a salted password, where the password is stored in the following format</p>
+<p><strong>password:salt</strong></p>
+<p>Fortunately for us, it still works if we leave the salt off. This is great news as it means we can simply copy our MD5 hashed Geeklog passwords straight across without having to do anything to them.</p>
+<p>All that it left to do now, is to map the Geeklog database fields to their corresponding Joomla database fields, and construct an SQL statement to perform the migration.</p>
+<p>The Joomla database table that contains the user data is</p>
+<p><strong>jos_users</strong></p>
+<p>But there are two other tables that we need to consider. These contain the user permissions data, and without corresponding entries, users will not be able to log in. These table are</p>
+<p><strong>jos_core_acl_aro</strong></p>
+<p><strong>jos_core_acl_groups_aro_map</strong></p>
+<p>Important things to remember are that we need to maintain the same ID field as the Geeklog table, the user ID is used to reference all content, in the geeklog <em>gl_users</em> table this is the <em>`uid</em>` field. Same with the username and password fields. It is really only these three fields that are needed to get everything up and running.</p>
+<p>So, putting all of this together, we end up with the following SQL statements.</p>
+<p>To migrate the user data, first you will need to empty the existing data from the tables, to do this in phpMyAdmin, simply navigate to the table and then selet the 'Emtpy' tab. Just in case something goes wrong, make sure you take a backup of everything BEFORE you try any of this, then you can proceed with the migration.</p>
+<p>To populate<em> jos_users</em> table</p>
+<p class="code">insert into jos_users (id, username, name, password, usertype, gid, email, registerDate) SELECT uid, username, fullname, passwd, 'Registered', '18', email, regdate from gl_users</p>
+<p>To populate <em>jos_core_acl_aro</em> table</p>
+<p class="code">insert into&nbsp; jos_core_acl_aro (section_value, value, name) select 'users', id, name from jos_users;</p>
+<p>To populate <em>jos_core_acl_groups_aro_map</em></p>
+<p class="code">insert into jos_core_acl_groups_aro_map (group_id, aro_id) select '18', id from jos_core_acl_aro;</p>
+<p>This will set all users as normal registered users. Assuming that you're site is like mine, and that you only have one or two admins, it's easy enough to manually change users into administrators.&nbsp;To do this you will need to change both the <em>jos_users</em> table and the <em>jos_core_acl_groups_aro_map</em> table.</p>
+<p>In <em>`jos_users`</em>, change the <em>`user_type`</em> field to 'Super Administrator', and the <em>`gid`</em> field to '25'</p>
+<p>In `<em>jos_core_acl_groups_aro_map`, </em>change the <em>`group_id</em>` field to '25'</p>
+<p>You should now be able to log into your site using your Geeklog log in details, and also log in to the administration panel using your administrators log in details.</p>
+<p>If you are a JomSocial user and you would also like to copy across your user avatars, you can use the following SQL statements</p>
+<p>To copy the user avatar image info...</p>
+<p class="code">INSERT into jos_community_users (userid, avatar, thumb) SELECT uid, photo, photo FROM gl_users</p>
+<p>To convert the image data to include the correct path (for only those users who have an avatar)...</p>
+<p class="code">UPDATE jos_community_users set avatar = CONCAT('images/avatar/', thumb) WHERE thumb not like null</p>
+<p>Now, simply copy the avatars into your images/avatar folder.</p>
+<p>/DM</p>
+:ET

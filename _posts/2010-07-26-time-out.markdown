@@ -1,0 +1,18 @@
+---
+layout: post
+title: Time Out
+joomla_id: 134
+joomla_url: time-out
+category: General
+tags: break dolphin holiday
+date: 2010-07-26 04:33:21.000000000 +09:30
+---
+<p>After 6 months of Dolphin development, I have decided that it is log overdue, to take some time out. The change in bias for the site from personal tech Blog to business site, alongside the change in business direction has proven to be a lot less&nbsp;profitable&nbsp;than anticipated.</p>
+<p>The focus on Dolphin as a platform for which to develop was seen as a potential with high returns, and so some effort was spent in writing up some simple mods and providing support and development work for it's users. The idea was to test the water and see how the market lay.&nbsp;The reality is that the active userbase is relatively small, as are the returns.</p>
+<p>The effort taken to write up even relatively simple mods, is a fairly big undertaking. Testing is required to ensure that mods function correctly, database scripts need to be written to add in additional database fields, and with every update, each mod needs to be tested and updated again. All of this amounted in an inordinate amount of time being required for developing, and maintaining a suite of mods.</p>
+<p>The reality is that even with a selection of mods available, there is simply not enough of a turnover to be able to earn a living from, plus there seems to be a massive underground movement in ripping off mods - more so than with any other community that I have been involved with. People rip off your work, and pass it out like it is their right to do so. For someone trying to make a living this sucks.</p>
+<p>This has left me with no option than to abandon the idea of pursuing this full time, and go back to concentrating on other works. This is why you will now see all of my old premium mods available for free, and all new mods are now being released as tutorials, which are much easier to update and maintain.</p>
+<p>I currently have a few projects in the pipeline, some are web based, but most are not, and none are Dolphin related. It is these that I now want to concentrate on as they are viable projects that can potentially bring in a decent revenue.</p>
+<p>I will of course keep an eye on what's happening over at Boonex, if only to keep certain people on their toes - After all, someone has to help the n00bs out.</p>
+<p>:)</p>
+<p>/DM</p>

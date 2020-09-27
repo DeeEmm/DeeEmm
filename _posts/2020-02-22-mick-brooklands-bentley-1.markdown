@@ -1,0 +1,9 @@
+---
+layout: post
+title: "Mick\n\n\t   \n\n\nBrooklands Bentley"
+joomla_id: 394
+joomla_url: mick-brooklands-bentley-1
+category: CycleKarts
+date: 2020-02-22 14:02:48.000000000 +10:30
+---
+<div class="es-stream-content  es-story--bg-0">Finally got around to making a start on the rear axle. I worked out the length, cut the bar stock down and turned one end to size in the lathe. I still need to do the other end and cut some threads in the ends. The drive hub, bearings and wheel hub now fit perfectly.<p>I also made a start on the motor mount. I cut some plate to span between two cross members, this will support the motor. I'm still trying to figure out the best way to set up the chain drive. I rotated the torque converter downwards to see how the path of the chain was to the drive pulley, but it clashes with the cross member. Need to finalise this before I can move on. So slow progress, but progress none-the-less.										</p></div>

@@ -1,0 +1,14 @@
+I"ü<p>{jcomments off}Trying to get the latest incarnation of DMCMS ready for release seems  to be a never ending battle. Just when I thought that I had it licked  something else crops up - and guess what!! - it's yet another IE flaw /  bug / idiosynchracy. After redesigning the admin interface into a nice  tabbed affair that put everything on one page in an easy to digest  format I then find that it doesn't work in explorer. Phah - seems to be  about par for the course recently.</p>
+<p>Now whilst this is really  frustrating I wont declare to hate IE and it's odd renderings, after  all, being a Firefox protagonist I am in the minority. IE is also the  browser that I first discovered the internet on, so I must at least owe  it something.</p>
+<p>My day today is being spent at home, which is great  as I get to spend some time trying to finish the 0.8.0.beta release off  whilst heating is being installed in the house. It's also great as I am  now within swearing distance of an internet connection so I can try out  some of the stuff that requires connectivity to the world wide wobble  (such as user registration verification).</p>
+<p>I've decided to load the  latest offerings onto my webserver at home and test everything out,  first thing I wanted to do was create a new CVS branch for my source  repository - pretty easy stuff. Then I check out the latest branch as a  release so that I can load it onto the server and update the existing  DMCMS test installation.</p>
+<p>Wait....WTF???</p>
+<p>There seems to be  lots of extra files and folders in the released data - stuff that had  been previously deleted (and commited). TSK.</p>
+<p>Try as hard as I  might I can't seem to get a release without the extra files.</p>
+<p>I  dont recall this happening before.</p>
+<p>Phah - yet another diversion  to keep me from acheiving the goal of getting this thing finished off.</p>
+<p>I  may yet give up.</p>
+<p>:(</p>
+<p><br /><strong>Update</strong></p>
+<p>I  'fixed' the issue of the old file / folder remains by creating a new CVS  module only containing the new files. I apologise to those of you who  have been checking out files from the dmcms module - you will now need  to redirect your CVS clients to point at dmcms_080. But hey - maybe a  new module for each release is a good idea??</p>
+:ET

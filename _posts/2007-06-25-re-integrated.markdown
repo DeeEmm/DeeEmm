@@ -1,0 +1,13 @@
+---
+layout: post
+title: Re-Integrated
+joomla_id: 82
+joomla_url: re-integrated
+category: General
+date: 2007-06-25 00:00:00.000000000 +09:30
+---
+<p>{jcomments off}Latest offerings for the upcoming release is a better method of  integration for 3rd party web applications (forums, wikis, etc. etc...).  The current method using the phpBB integration file has been changed  and will be known under a more generic name.</p>
+<p>The basic method of  useage is the same - the integration files is called from within the 3rd  party application, the relevent DMCMS bits are created and then  assigned to a local variable allowing the DMCMS parts (header and/or  footer) to be seamlessly stitched into the 3rd party app.</p>
+<p>It may  be necessary to modify the 3rd party app so that the DMCMS header /  footer replaces existing logos etc, but this is entirely down to you.</p>
+<p>I  revisited this a short time ago due to wanting to add the site footer  onto the bottom of the forum, I've since revisited integration again as I  have now included the DMWiki.</p>
+<p>The new files will be available  after the 0.8.0.Beta release as some updated files are required to make  the new method of integration work.</p>

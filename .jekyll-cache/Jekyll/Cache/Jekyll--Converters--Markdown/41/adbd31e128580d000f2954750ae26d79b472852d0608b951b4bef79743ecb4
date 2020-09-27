@@ -1,0 +1,10 @@
+I"¦<p>If you would like to hide the flash promo from displaying to logged in members all you have to do is the following.</p>
+<p>Edit <strong>inc/design.inc.php</strong></p>
+<p>Find the following line in the getPromoCode() function (it's the last line)</p>
+<p class="code">return $sCode;</p>
+<p>Then add just before it:</p>
+<p class="code">if(isMember()) $sCode = '';</p>
+<p>That's it! Easy huh?</p>
+<p>/DM</p>
+<p>&nbsp;</p>
+:ET

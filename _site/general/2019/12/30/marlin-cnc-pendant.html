@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>Marlin CNC Pendant | DeeEmm</title>
+<meta name="generator" content="Jekyll v4.1.1" />
+<meta property="og:title" content="Marlin CNC Pendant" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="I built an MPCNC a while back and am&nbsp;finally getting around to finishing it off. My machine is a combined use CNC and 3D printer so I have elected to use Marlin software. The main use for my machine is 3D printing using a direct granule extruder that I am developing for use with recycled plastics, this requires a larger format and heavier machine than a regular 3D printer due to the size of the extruder. I also have plenty of aluminium CNC work for it, so it&#39;s very much a dual use machine.&nbsp; One aspect that I wanted to add was a jog-wheel control, so that I could control it in the same manner as other CNCs I have used, but being controlled by 3D printer software it does not lend itself well to traditional CNC controls. After looking around for such a solution I did not really see something that worked exactly as I wanted. There are a few solutions using G-Code parsers to send G-Code to the controller, but the issue with using these with a jogwheel is that a small flick of the wheel produces many G-code move commands, which are buffered in the machines memory. This means that the machine will continue to move long after the jog wheel has stopped, resulting in a large overshoot and difficult control characteristics.My initial solution was to modify the Marlin code to accept direct input from the jogwheel, but then I came across Jamies joystick solution over at the MPCNC forums and decided that I could leverage this as the protocol for my jog-wheel control.Essentially what I have created is an external controller that mimics the joystick and is connected to the same inputs used by the joystick. This connects to Marlin in the standard manner defined by Jamies code, which has now been added to the latest Marlin 2.0 release. This means that there are no code hacks to maintain and no code to change, just the standard connections and standard setup you would have to go through if you were hooking up a regular joystick.Here&#39;s how it works: The regular joystick control comprises of three potentiometers for X,Y and Z respectively. Using three voltage controlled resistors (VCRs) we can easily make the Arduino mimic the potentiometers within the joystick.The controller uses an Arduino nano, a regular CNC style encoder jogwheel and simple selector switches to select the axis and speed. (X, Y, Z &amp; X1, X10, X100). A regular MPG jogwheel pendant like those found on ebay will also work. Three MCP4151 10kohm VCR chips are used to interface with the main controller and mimic the X,Y and Z axis joystick inputs. The arduino controls the VCRs using the SPI serial comms protocol. This uses a two wire serial bus that connects all three chips to the Arduinos MOSI / CLK ports. The relevant chip is selected using a simple Chip Select (CS) signal connected to outputs on the Arduino. The arduino enables the relevant VCR, decodes which speed is selected and then sets the virtual potentiometers to a value that corresponds with the speed selected, for as long as the encoder is rotated.When the jogwheel is inactive, the VCRs are set to mid position to mimic the joystick center. If X1 is selected and the jog-wheel rotated, it will move the potentiometers virtual wiper to a position that corresponds with a small joystick movement. As the speed selector is changed, this resistance changes which mimics a larger joystick movement. Of course the movement will only be one axis at a time and only at the selected speed, although smaller movements tend to create short pulses which result in slower movement.There is also an adaptive output speed function, which will scale the output such that the output speed (potentiometer position) is proportional to the speed that the jog-wheel is rotated. The faster you rotate the encoder, the faster the CNC will move. Like the regular speed selects, this can be enabled by pulling the assigned input low. The adaptive speed function overrides all other speeds selected.The project is currently working and tested with Marlin 2.0. You can view a video of the adaptive speed function working below...To download the project or to contribute, please visit the projects Github page at https://github.com/DeeEmm/Marlin-CNC-Pendant GitHub - DeeEmm/Marlin-CNC-Pendant: A jogwheel based pendant controller to interface to Marlin / Arduino controlled 3D printers &amp; CNCs" />
+<meta property="og:description" content="I built an MPCNC a while back and am&nbsp;finally getting around to finishing it off. My machine is a combined use CNC and 3D printer so I have elected to use Marlin software. The main use for my machine is 3D printing using a direct granule extruder that I am developing for use with recycled plastics, this requires a larger format and heavier machine than a regular 3D printer due to the size of the extruder. I also have plenty of aluminium CNC work for it, so it&#39;s very much a dual use machine.&nbsp; One aspect that I wanted to add was a jog-wheel control, so that I could control it in the same manner as other CNCs I have used, but being controlled by 3D printer software it does not lend itself well to traditional CNC controls. After looking around for such a solution I did not really see something that worked exactly as I wanted. There are a few solutions using G-Code parsers to send G-Code to the controller, but the issue with using these with a jogwheel is that a small flick of the wheel produces many G-code move commands, which are buffered in the machines memory. This means that the machine will continue to move long after the jog wheel has stopped, resulting in a large overshoot and difficult control characteristics.My initial solution was to modify the Marlin code to accept direct input from the jogwheel, but then I came across Jamies joystick solution over at the MPCNC forums and decided that I could leverage this as the protocol for my jog-wheel control.Essentially what I have created is an external controller that mimics the joystick and is connected to the same inputs used by the joystick. This connects to Marlin in the standard manner defined by Jamies code, which has now been added to the latest Marlin 2.0 release. This means that there are no code hacks to maintain and no code to change, just the standard connections and standard setup you would have to go through if you were hooking up a regular joystick.Here&#39;s how it works: The regular joystick control comprises of three potentiometers for X,Y and Z respectively. Using three voltage controlled resistors (VCRs) we can easily make the Arduino mimic the potentiometers within the joystick.The controller uses an Arduino nano, a regular CNC style encoder jogwheel and simple selector switches to select the axis and speed. (X, Y, Z &amp; X1, X10, X100). A regular MPG jogwheel pendant like those found on ebay will also work. Three MCP4151 10kohm VCR chips are used to interface with the main controller and mimic the X,Y and Z axis joystick inputs. The arduino controls the VCRs using the SPI serial comms protocol. This uses a two wire serial bus that connects all three chips to the Arduinos MOSI / CLK ports. The relevant chip is selected using a simple Chip Select (CS) signal connected to outputs on the Arduino. The arduino enables the relevant VCR, decodes which speed is selected and then sets the virtual potentiometers to a value that corresponds with the speed selected, for as long as the encoder is rotated.When the jogwheel is inactive, the VCRs are set to mid position to mimic the joystick center. If X1 is selected and the jog-wheel rotated, it will move the potentiometers virtual wiper to a position that corresponds with a small joystick movement. As the speed selector is changed, this resistance changes which mimics a larger joystick movement. Of course the movement will only be one axis at a time and only at the selected speed, although smaller movements tend to create short pulses which result in slower movement.There is also an adaptive output speed function, which will scale the output such that the output speed (potentiometer position) is proportional to the speed that the jog-wheel is rotated. The faster you rotate the encoder, the faster the CNC will move. Like the regular speed selects, this can be enabled by pulling the assigned input low. The adaptive speed function overrides all other speeds selected.The project is currently working and tested with Marlin 2.0. You can view a video of the adaptive speed function working below...To download the project or to contribute, please visit the projects Github page at https://github.com/DeeEmm/Marlin-CNC-Pendant GitHub - DeeEmm/Marlin-CNC-Pendant: A jogwheel based pendant controller to interface to Marlin / Arduino controlled 3D printers &amp; CNCs" />
+<link rel="canonical" href="http://localhost:4000/general/2019/12/30/marlin-cnc-pendant.html" />
+<meta property="og:url" content="http://localhost:4000/general/2019/12/30/marlin-cnc-pendant.html" />
+<meta property="og:site_name" content="DeeEmm" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2019-12-30T03:17:11+10:30" />
+<script type="application/ld+json">
+{"description":"I built an MPCNC a while back and am&nbsp;finally getting around to finishing it off. My machine is a combined use CNC and 3D printer so I have elected to use Marlin software. The main use for my machine is 3D printing using a direct granule extruder that I am developing for use with recycled plastics, this requires a larger format and heavier machine than a regular 3D printer due to the size of the extruder. I also have plenty of aluminium CNC work for it, so it&#39;s very much a dual use machine.&nbsp; One aspect that I wanted to add was a jog-wheel control, so that I could control it in the same manner as other CNCs I have used, but being controlled by 3D printer software it does not lend itself well to traditional CNC controls. After looking around for such a solution I did not really see something that worked exactly as I wanted. There are a few solutions using G-Code parsers to send G-Code to the controller, but the issue with using these with a jogwheel is that a small flick of the wheel produces many G-code move commands, which are buffered in the machines memory. This means that the machine will continue to move long after the jog wheel has stopped, resulting in a large overshoot and difficult control characteristics.My initial solution was to modify the Marlin code to accept direct input from the jogwheel, but then I came across Jamies joystick solution over at the MPCNC forums and decided that I could leverage this as the protocol for my jog-wheel control.Essentially what I have created is an external controller that mimics the joystick and is connected to the same inputs used by the joystick. This connects to Marlin in the standard manner defined by Jamies code, which has now been added to the latest Marlin 2.0 release. This means that there are no code hacks to maintain and no code to change, just the standard connections and standard setup you would have to go through if you were hooking up a regular joystick.Here&#39;s how it works: The regular joystick control comprises of three potentiometers for X,Y and Z respectively. Using three voltage controlled resistors (VCRs) we can easily make the Arduino mimic the potentiometers within the joystick.The controller uses an Arduino nano, a regular CNC style encoder jogwheel and simple selector switches to select the axis and speed. (X, Y, Z &amp; X1, X10, X100). A regular MPG jogwheel pendant like those found on ebay will also work. Three MCP4151 10kohm VCR chips are used to interface with the main controller and mimic the X,Y and Z axis joystick inputs. The arduino controls the VCRs using the SPI serial comms protocol. This uses a two wire serial bus that connects all three chips to the Arduinos MOSI / CLK ports. The relevant chip is selected using a simple Chip Select (CS) signal connected to outputs on the Arduino. The arduino enables the relevant VCR, decodes which speed is selected and then sets the virtual potentiometers to a value that corresponds with the speed selected, for as long as the encoder is rotated.When the jogwheel is inactive, the VCRs are set to mid position to mimic the joystick center. If X1 is selected and the jog-wheel rotated, it will move the potentiometers virtual wiper to a position that corresponds with a small joystick movement. As the speed selector is changed, this resistance changes which mimics a larger joystick movement. Of course the movement will only be one axis at a time and only at the selected speed, although smaller movements tend to create short pulses which result in slower movement.There is also an adaptive output speed function, which will scale the output such that the output speed (potentiometer position) is proportional to the speed that the jog-wheel is rotated. The faster you rotate the encoder, the faster the CNC will move. Like the regular speed selects, this can be enabled by pulling the assigned input low. The adaptive speed function overrides all other speeds selected.The project is currently working and tested with Marlin 2.0. You can view a video of the adaptive speed function working below...To download the project or to contribute, please visit the projects Github page at https://github.com/DeeEmm/Marlin-CNC-Pendant GitHub - DeeEmm/Marlin-CNC-Pendant: A jogwheel based pendant controller to interface to Marlin / Arduino controlled 3D printers &amp; CNCs","@type":"BlogPosting","headline":"Marlin CNC Pendant","dateModified":"2019-12-30T03:17:11+10:30","datePublished":"2019-12-30T03:17:11+10:30","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/general/2019/12/30/marlin-cnc-pendant.html"},"url":"http://localhost:4000/general/2019/12/30/marlin-cnc-pendant.html","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="DeeEmm" /></head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/">DeeEmm</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/about/">About</a><a class="page-link" href="/archives/">Archives</a><a class="page-link" href="/blog/">Blog</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Marlin CNC Pendant</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2019-12-30T03:17:11+10:30" itemprop="datePublished">Dec 30, 2019
+      </time></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <div class="ebd-block  " data-type="text"><p>I built an MPCNC a while back and am&nbsp;finally getting around to finishing it off. My machine is a combined use CNC and 3D printer so I have elected to use Marlin software. The main use for my machine is 3D printing using a direct granule extruder that I am developing for use with recycled plastics, this requires a larger format and heavier machine than a regular 3D printer due to the size of the extruder. I also have plenty of aluminium CNC work for it, so it's very much a dual use machine.&nbsp;<br /></p></div>
+<div class="ebd-block  " data-type="readmore"></div>
+<div class="ebd-block  " data-type="text"><p>One aspect that I wanted to add was a jog-wheel control, so that I could control it in the same manner as other CNCs I have used, but being controlled by 3D printer software it does not lend itself well to traditional CNC controls. After looking around for such a solution I did not really see something that worked exactly as I wanted. There are a few solutions using G-Code parsers to send G-Code to the controller, but the issue with using these with a jogwheel is that a small flick of the wheel produces many G-code move commands, which are buffered in the machines memory. This means that the machine will continue to move long after the jog wheel has stopped, resulting in a large overshoot and difficult control characteristics.<br /><br />My initial solution was to modify the Marlin code to accept direct input from the jogwheel, but then I came across Jamies joystick solution over at the MPCNC forums and decided that I could leverage this as the protocol for my jog-wheel control.<br /><br />Essentially what I have created is an external controller that mimics the joystick and is connected to the same inputs used by the joystick. This connects to Marlin in the standard manner defined by Jamies code, which has now been added to the latest Marlin 2.0 release. This means that there are no code hacks to maintain and no code to change, just the standard connections and standard setup you would have to go through if you were hooking up a regular joystick.<br /><br />Here's how it works: The regular joystick control comprises of three potentiometers for X,Y and Z respectively. Using three voltage controlled resistors (VCRs) we can easily make the Arduino mimic the potentiometers within the joystick.<br /><br />The controller uses an Arduino nano, a regular CNC style encoder jogwheel and simple selector switches to select the axis and speed. (X, Y, Z &amp; X1, X10, X100). A regular MPG jogwheel pendant like those found on ebay will also work. Three MCP4151 10kohm VCR chips are used to interface with the main controller and mimic the X,Y and Z axis joystick inputs. The arduino controls the VCRs using the SPI serial comms protocol. This uses a two wire serial bus that connects all three chips to the Arduinos MOSI / CLK ports. The relevant chip is selected using a simple Chip Select (CS) signal connected to outputs on the Arduino. The arduino enables the relevant VCR, decodes which speed is selected and then sets the virtual potentiometers to a value that corresponds with the speed selected, for as long as the encoder is rotated.<br /><br />When the jogwheel is inactive, the VCRs are set to mid position to mimic the joystick center. If X1 is selected and the jog-wheel rotated, it will move the potentiometers virtual wiper to a position that corresponds with a small joystick movement. As the speed selector is changed, this resistance changes which mimics a larger joystick movement. Of course the movement will only be one axis at a time and only at the selected speed, although smaller movements tend to create short pulses which result in slower movement.<br /><br />There is also an adaptive output speed function, which will scale the output such that the output speed (potentiometer position) is proportional to the speed that the jog-wheel is rotated. The faster you rotate the encoder, the faster the CNC will move. Like the regular speed selects, this can be enabled by pulling the assigned input low. The adaptive speed function overrides all other speeds selected.<br /><br />The project is currently working and tested with Marlin 2.0. You can view a video of the adaptive speed function working below...<br /><br />To download the project or to contribute, please visit the projects Github page at <a href="https://github.com/DeeEmm/Marlin-CNC-Pendant">https://github.com/DeeEmm/Marlin-CNC-Pendant<br /><br /></a></p></div>
+<div class="ebd-block  " data-type="youtube"><div class="youtube-embed video-embed-wrapper is-responsive">
+	<iframe src="https://www.youtube.com/embed/_DIcDE9QY0A?feature=oembed" width="480" height="270" allowfullscreen=""></iframe>
+</div></div>
+<div class="ebd-block  " data-type="links"><div class="media-table">
+		<a class="media-thumb" href="https://github.com/DeeEmm/Marlin-CNC-Pendant/" data-preview-image-wrapper="" target="_blank">
+			<img class="media-object" alt="..." width="160" height="160" data-preview-image="" src="https://avatars0.githubusercontent.com/u/3038710?s=60&amp;amp;v=4" />
+		</a>
+		<div class="media-body">
+			<h4 class="media-heading">
+				<a href="https://github.com/DeeEmm/Marlin-CNC-Pendant/" data-preview-title="" target="_blank">GitHub - DeeEmm/Marlin-CNC-Pendant: A jogwheel based pendant controller to interface to Marlin / Arduino controlled 3D printers &amp; CNCs</a>
+			</h4>
+
+			<div class="media-content" data-preview-content="">A jogwheel based pendant controller to interface to Marlin / Arduino controlled 3D printers &amp; CNCs  - DeeEmm/Marlin-CNC-Pendant</div>
+
+			<div class="media-link">
+				<a href="https://github.com/DeeEmm/Marlin-CNC-Pendant/" data-preview-link="" target="_blank">https://github.com/DeeEmm/Marlin-CNC-Pendant/</a>
+			</div>
+		</div>
+	</div></div>
+<div class="ebd-block  " data-type="links"><div class="media-table">
+		<a class="media-thumb" href="https://forum.v1engineering.com/t/joystick-managed-by-marlin/10863/60" data-preview-image-wrapper="">
+			<img class="media-object" alt="..." width="160" height="160" data-preview-image="" src="https://us1.dh-cdn.net/uploads/db5587/original/2X/8/80a6ba28d95c089e3a0b7432139a26faa946cd84.png" />
+		</a>
+		<div class="media-body">
+			<h4 class="media-heading">
+				<a href="https://forum.v1engineering.com/t/joystick-managed-by-marlin/10863/60" data-preview-title="">Joystick managed by Marlin - Hardware Development - V1 Engineering Forum</a>
+			</h4>
+
+			<div class="media-content" data-preview-content="">As a bit of a diversion from my second build, I’ve put together a joystick that allows jogging with analog control of the feed rate.  https://youtu.be/b2xEmkZEF6Y  I decided to take a different approach from the approach&amp;hellip;</div>
+
+			<div class="media-link">
+				<a href="https://forum.v1engineering.com/t/joystick-managed-by-marlin/10863/60" data-preview-link="">https://forum.v1engineering.com/t/joystick-managed-by-marlin/10863/60</a>
+			</div>
+		</div>
+	</div></div>
+<div class="ebd-block  " data-type="links"><div class="media-table">
+		<a class="media-thumb" href="https://forum.v1engineering.com/t/jogwheel-mpg-pendant-control/13829" data-preview-image-wrapper="">
+			<img class="media-object" alt="..." width="160" height="160" data-preview-image="" src="https://us1.dh-cdn.net/uploads/db5587/original/2X/8/80a6ba28d95c089e3a0b7432139a26faa946cd84.png" />
+		</a>
+		<div class="media-body">
+			<h4 class="media-heading">
+				<a href="https://forum.v1engineering.com/t/jogwheel-mpg-pendant-control/13829" data-preview-title="">Jogwheel / MPG pendant control - Hardware Development - V1 Engineering Forum</a>
+			</h4>
+
+			<div class="media-content" data-preview-content="">Hi All.  I built an MPCNC a while back and finally getting around to finishing it off. My machine is a combined use CNC and 3D printer so I have elected to use Marlin software. The main use for my machine is 3D printing &amp;hellip;</div>
+
+			<div class="media-link">
+				<a href="https://forum.v1engineering.com/t/jogwheel-mpg-pendant-control/13829" data-preview-link="">https://forum.v1engineering.com/t/jogwheel-mpg-pendant-control/13829</a>
+			</div>
+		</div>
+	</div></div>
+
+  </div><a class="u-url" href="/general/2019/12/30/marlin-cnc-pendant.html" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">DeeEmm</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">DeeEmm</li><li><a class="u-email" href="mailto:deeemmm@deeemm.com">deeemmm@deeemm.com</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/DeeEmm"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">DeeEmm</span></a></li><li><a href="https://www.twitter.com/DeeEmm__"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">DeeEmm__</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>Waxing lyrical about life the universe and everything tech related since lunchtime 2006.</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>

@@ -1,0 +1,16 @@
+---
+layout: post
+title: Scroll to top of page
+joomla_id: 191
+joomla_url: scroll-to-top-of-page
+category: Javascript
+tags: javascript page scroll top
+date: 2010-05-26 04:50:07.000000000 +09:30
+---
+<p>Regular hyperlinks and anchors are fine for navigating pages in most situations, but i found that whilst trying to add an anchor to the top of a dynamically created page, so that i could add a 'return to top of page' link to the bottom, there was nowhere to add the code. A different approach was required.</p>
+<p>The solution I found was to use the javascript scroll command. This simply resides at the location you require the link - in my case at the bottom of the page. The code I used was as follows:</p>
+<p>&nbsp;</p>
+<p><span class="code"><a href="javascript:scroll(0,0)">^Top</a></span></p>
+<p>&nbsp;</p>
+<p>Obviously you can replace the '<em><strong>^Top</strong></em>' text with whatever you require.</p>
+<p>/DM</p>

@@ -1,0 +1,51 @@
+I"¦<div style="background-image: initial; background-attachment: initial; background-origin: initial; background-clip: initial; margin: 8px;">
+<div style="background-image: initial; background-attachment: initial; background-origin: initial; background-clip: initial; margin: 8px;">
+<div style="background-image: initial; background-attachment: initial; background-origin: initial; background-clip: initial; margin: 8px;">
+<p>If you want to replace the default Joomla behaviour of showing a 404 error for restricted content, then you can use the follow custom error handler within your template.</p>
+<p>As no core files are modified, and only template changes are made, this is a 'legal' enhancement. Feel free to modify the code to do as you wish.</p>
+<p>Simply replace the contents of your error.php file with the following...</p>
+<pre style="font-family: monospace; font-size: small; padding-top: 0.5em; padding-right: 1em; padding-bottom: 0.5em; padding-left: 1em; border-left-width: 1px; text-align: left; overflow-x: auto; overflow-y: auto; border-color: black;"><em style="font-style: italic;"></em></pre>
+<pre class="brush:xml">xmlns="http://www.w3.org/1999/xhtml" xml:lang=""lang=""dir=""&gt; http-equiv="content-type"content="text/html; charset=utf-8" /&gt; name="language"content="" /&gt; - rel="stylesheet"href="/templates/system/css/system.css"type="text/css" /&gt; rel="stylesheet"href="/templates/ohsadmin/css/position.css"type="text/css"media="screen,projection" /&gt; rel="stylesheet"href="/templates/ohsadmin/css/layout.css"type="text/css"media="screen,projection" /&gt; rel="stylesheet"href="/templates/ohsadmin/css/print.css"type="text/css"media="Print" /&gt; rel="stylesheet"href="/templates/ohsadmin/css/.css"type="text/css" /&gt; rel="stylesheet"href=""type="text/css" /&gt; rel="stylesheet"href="/templates/ohsadmin/css/template_rtl.css"type="text/css" /&gt;   
+id="all"&gt;
+id="back"&gt;
+id="header"&gt;
+class="logoheader"&gt;
+id="logo"&gt; src="/"alt="" /&gt; class="header1"&gt;
+
+class="skiplinks"&gt;
+href="#wrapper2"class="u2"&gt;
+href="#nav"class="u2"&gt;
+id="line"&gt;
+id="contentarea2" &gt;
+class="left1"id="nav"&gt;
+class="unseen"&gt;
+
+id="wrapper2"&gt;
+id="errorboxbody"&gt;
+id="searchbox"&gt;
+class="unseen"&gt;
+
+href="/index.php"title=""&gt;
+
+
+.
+id="footer-outer"&gt;
+id="footer-sub"&gt;
+id="footer"&gt; style="text-decoration:none"href="http://www.indau.com.au/"&gt;Indau.Pty.Ltd ABN 51 008 182 161
+    rel="stylesheet"href="/templates/system/css/error.css"type="text/css" /&gt; 
+class="error"&gt;
+id="outline"&gt;
+id="errorboxoutline"&gt;
+id="errorboxheader"&gt;
+id="errorboxbody"&gt;
+href="/index.php"title=""&gt;
+href="/index.php?option=com_search"title=""&gt;
+.
+id="techinfo"&gt;
+
+</pre>
+<pre style="font-family: monospace; font-size: small; padding-top: 0.5em; padding-right: 1em; padding-bottom: 0.5em; padding-left: 1em; border-left-width: 1px; text-align: left; overflow-x: auto; overflow-y: auto; border-color: black;"><span class="Apple-style-span" style="color: #333333; font-family: Tahoma, Helvetica, Arial, sans-serif; font-size: 12px; white-space: normal;">The modification is an adaptation of the advanced login redirect on 404 mod by Chad Wagner -&nbsp;<a href="http://extensions.joomla.org/extensions/site-management/url-redirection/17970" title="http://extensions.joomla.org/extensions/site-management/url-redirection/17970">http://extensions.joomla.org/extensions/site-management/url-redirection/17970</a></span></pre>
+</div>
+</div>
+</div>
+:ET

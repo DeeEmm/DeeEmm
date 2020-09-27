@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>Fixing the paragraph spacing issue | DeeEmm</title>
+<meta name="generator" content="Jekyll v4.1.1" />
+<meta property="og:title" content="Fixing the paragraph spacing issue" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="You may have noticed that after neatly setting out your post within the TinyMCE editor, when the page is published, the paragraphs are all squashed up. The issue is a CSS issue. Basically the style applied to the P tag by TinyMCE and D7 are different - so it displays OK in the editor, but when the D7 code renders it - it is displayed differently. The offending code is in templates/base/css/general.css, the attribute margin:0px is applied to the P tag, remove this and the issue will be gone, BUT there is one caveat - obviously this affects ALL instances of the P tag - so it may be that whilst this cures the immediate issue, it may cause problems elsewhere (i&#39;ve not tested this, and this may be different for your site - depending on which template you use and what modifications you have applied to them) To fix the issue, you will need to change general.css in two places - Line 1 Change &nbsp; a img, form, p &nbsp; to a img, form and on line 120 change p { margin:0px; padding:0px; } to p { padding:0px; } There is no real need to apply the attributes to the P as has been done in the original code, plus declaring the base P tag in two different places can lead to inheritance issues. If it turns out that removing these elements has too much of a knock on effect on other areas of the site, then The best solution may be to alter the TinyMCE css to match the D7 general by adding the margin:0px to plugins/tiny_mce/themes/advanced/skins/default/content.css At least then what you see will actually be what you get" />
+<meta property="og:description" content="You may have noticed that after neatly setting out your post within the TinyMCE editor, when the page is published, the paragraphs are all squashed up. The issue is a CSS issue. Basically the style applied to the P tag by TinyMCE and D7 are different - so it displays OK in the editor, but when the D7 code renders it - it is displayed differently. The offending code is in templates/base/css/general.css, the attribute margin:0px is applied to the P tag, remove this and the issue will be gone, BUT there is one caveat - obviously this affects ALL instances of the P tag - so it may be that whilst this cures the immediate issue, it may cause problems elsewhere (i&#39;ve not tested this, and this may be different for your site - depending on which template you use and what modifications you have applied to them) To fix the issue, you will need to change general.css in two places - Line 1 Change &nbsp; a img, form, p &nbsp; to a img, form and on line 120 change p { margin:0px; padding:0px; } to p { padding:0px; } There is no real need to apply the attributes to the P as has been done in the original code, plus declaring the base P tag in two different places can lead to inheritance issues. If it turns out that removing these elements has too much of a knock on effect on other areas of the site, then The best solution may be to alter the TinyMCE css to match the D7 general by adding the margin:0px to plugins/tiny_mce/themes/advanced/skins/default/content.css At least then what you see will actually be what you get" />
+<link rel="canonical" href="http://localhost:4000/dolphin%207.0.x%20modifications/2010/02/22/fixing-the-paragraph-spacing-issue.html" />
+<meta property="og:url" content="http://localhost:4000/dolphin%207.0.x%20modifications/2010/02/22/fixing-the-paragraph-spacing-issue.html" />
+<meta property="og:site_name" content="DeeEmm" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2010-02-22T03:00:57+10:30" />
+<script type="application/ld+json">
+{"description":"You may have noticed that after neatly setting out your post within the TinyMCE editor, when the page is published, the paragraphs are all squashed up. The issue is a CSS issue. Basically the style applied to the P tag by TinyMCE and D7 are different - so it displays OK in the editor, but when the D7 code renders it - it is displayed differently. The offending code is in templates/base/css/general.css, the attribute margin:0px is applied to the P tag, remove this and the issue will be gone, BUT there is one caveat - obviously this affects ALL instances of the P tag - so it may be that whilst this cures the immediate issue, it may cause problems elsewhere (i&#39;ve not tested this, and this may be different for your site - depending on which template you use and what modifications you have applied to them) To fix the issue, you will need to change general.css in two places - Line 1 Change &nbsp; a img, form, p &nbsp; to a img, form and on line 120 change p { margin:0px; padding:0px; } to p { padding:0px; } There is no real need to apply the attributes to the P as has been done in the original code, plus declaring the base P tag in two different places can lead to inheritance issues. If it turns out that removing these elements has too much of a knock on effect on other areas of the site, then The best solution may be to alter the TinyMCE css to match the D7 general by adding the margin:0px to plugins/tiny_mce/themes/advanced/skins/default/content.css At least then what you see will actually be what you get","@type":"BlogPosting","headline":"Fixing the paragraph spacing issue","dateModified":"2010-02-22T03:00:57+10:30","datePublished":"2010-02-22T03:00:57+10:30","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/dolphin%207.0.x%20modifications/2010/02/22/fixing-the-paragraph-spacing-issue.html"},"url":"http://localhost:4000/dolphin%207.0.x%20modifications/2010/02/22/fixing-the-paragraph-spacing-issue.html","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="DeeEmm" /></head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/">DeeEmm</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/about/">About</a><a class="page-link" href="/archives/">Archives</a><a class="page-link" href="/blog/">Blog</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Fixing the paragraph spacing issue</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2010-02-22T03:00:57+10:30" itemprop="datePublished">Feb 22, 2010
+      </time></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <div class="forum_post_text">
+<p>You may have noticed that after neatly setting out your post within the TinyMCE editor, when the page is published, the paragraphs are all squashed up.</p>
+<p>The issue is a CSS issue. Basically the style applied to the P tag by TinyMCE and D7 are different - so it displays OK in the editor, but when the D7 code renders it - it is displayed differently.</p>
+<p>The offending code is in templates/base/css/general.css, the attribute margin:0px is applied to the P tag, remove this and the issue will be gone, BUT there is one caveat - obviously this affects ALL instances of the P tag - so it may be that whilst this cures the immediate issue, it may cause problems elsewhere (i've not tested this, and this may be different for your site - depending on which template you use and what modifications you have applied to them)</p>
+<p>To fix the issue, you will need to change general.css in two places -</p>
+<p>Line 1</p>
+<p>Change</p>
+<p>&nbsp;</p>
+<p class="caption"><strong><em class="code">a img, form, p</em></strong></p>
+<p>&nbsp;</p>
+<p>to</p>
+<pre class="code" style="padding-left: 30px;">a img, form</pre>
+<p>and on line 120</p>
+<p>change</p>
+<p class="code" style="padding-left: 30px;">p<br /> {<br /> margin:0px;<br /> padding:0px;<br /> }</p>
+<p>to</p>
+<p class="code" style="padding-left: 30px;">p<br /> {<br /> padding:0px;<br /> }</p>
+<p>There is no real need to apply the attributes to the P as has been done in the original code, plus declaring the base P tag in two different places can lead to inheritance issues.</p>
+<p>If it turns out that removing these elements has too much of a knock on effect on other areas of the site, then The best solution may be to alter the TinyMCE css to match the D7 general by adding the margin:0px to plugins/tiny_mce/themes/advanced/skins/default/content.css At least then what you see will actually be what you get</p>
+</div>
+
+  </div><a class="u-url" href="/dolphin%207.0.x%20modifications/2010/02/22/fixing-the-paragraph-spacing-issue.html" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">DeeEmm</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">DeeEmm</li><li><a class="u-email" href="mailto:deeemmm@deeemm.com">deeemmm@deeemm.com</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/DeeEmm"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">DeeEmm</span></a></li><li><a href="https://www.twitter.com/DeeEmm__"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">DeeEmm__</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>Waxing lyrical about life the universe and everything tech related since lunchtime 2006.</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>

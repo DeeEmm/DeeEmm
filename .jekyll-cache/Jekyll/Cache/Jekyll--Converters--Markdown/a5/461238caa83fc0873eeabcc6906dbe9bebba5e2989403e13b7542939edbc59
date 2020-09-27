@@ -1,0 +1,5 @@
+I"m<p>Over the past couple of days I have had a number of PayPal payment gateway issues. This has resulted in a number of transactions not being completed even though the PayPal transaction was successful.Transactions were stuck in the 'pending' mode and several customers complained that their purchases were not available for download.</p>
+<p>You will be pleased to hear that the issue has now been traced to the recent Virtuemart update that was released. A change was added to this release to ensure that only the primary PayPal email was used for checkout. This resulted in a checkout failure if any other email address was used. If like me you have several email addresses associated with your PayPal account you will likely suffer similar issues and will be interested in downloading Virtuemart bugfix version 2.0.26d:</p>
+<p>You can download the updated version 2.0.26d from http://dev.virtuemart.net/projects/virtuemart/files </p>
+<p>Apologies to those who were unable to download their purchases straight away. If any new customers experience any issues please comment below and let me know and I will jump right onto it.</p>
+:ET

@@ -1,0 +1,37 @@
+---
+layout: post
+title: Dolphin Orca Update
+joomla_id: 160
+joomla_url: dolphin-orca-update
+category: Latest News
+tags: dolphin orca-2 update-2
+date: 2010-06-02 23:05:01.000000000 +09:30
+---
+<p>The Dolphin forum, or Orca, as it is known, was a parallel stand alone development that was integrated as a module into the Dolphin 7 release. This module is a massive improvement over the previous integration in Dolphin 6, and has provided an easier opportunity to improve it.</p>
+<p>Many Dolphin users are unhappy with the features supplied with the standard forum module, often opting to replace it with other forums such as phpBB or IPB. This has mixed success, as often the integrations are simply iframe hacks, or miss out important aspects such as avatars or messaging. This is where Orca is already a step ahead. The integration is already completed, it is a core part of the Dolphin product, and so already has all of the needed variables and data available to it, to use in improving its features.</p>
+<p>We have been working on an update to Orca, to add in the missing features that many complain about, these are usability features for both users and administrators alike, as well as the creation of a set of moderation tools.</p>
+<p>The project is in it's very early stages, and only in Alpha release, but as it's based on a functional product, we already have a demo set up. This will be updated as the project progresses.</p>
+<p><strong>Planned Features for Version 1</strong></p>
+<p>The following features are planned for the first release. This list may not be exhaustive, and could possibly change over time, but for the time being is a good indication of what we would like to achieve. The current time-frame for the version one release is not known, but we would like to aim for about a month.</p>
+<ul>
+<li>Administration interface to control all standard features / settings</li>
+<li>Moderators</li>
+<li>Post view counts</li>
+<li>Post reply counts</li>
+<li>Signature</li>
+<li>Post moderation tools</li>
+<li>Stats Block</li>
+<li>Image browser / File browser + uploader</li>
+<li>Video embed tools</li>
+<li>Post reply buttons at bottom of forum</li>
+<li>Return to top link</li>
+<li>HTML Purifier</li>
+<li>Simplify TinyMCE layout</li>
+<li>Add TinyMCE Styles</li>
+<li>Fix TinyMCE Paragraph Display bug</li>
+<li>Bad word filter</li>
+<li>Fix private forums bug</li>
+<li>Fix fadeout riding over member menu</li>
+</ul>
+<p>If you would like to take the demo for a test drive, please visit <a href="http://fred.deeemm.com/forum" title="http://fred.deeemm.com/forum">http://fred.deeemm.com/forum</a> This is a live site, so feel free to join and leave comments / test / etc</p>
+<p>/DM</p>

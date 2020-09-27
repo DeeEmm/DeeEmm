@@ -1,0 +1,9 @@
+I"b<p>If you do not want a new window opening when you click on links in RSS feeds - such as the forum feed, you will need to do the following.</p>
+<p>Edit</p>
+<p><strong><em>/inc/js/jquery.dolRSSFeed.js</em></strong></p>
+<p>find two instanced of</p>
+<p class="code">target="_blank"</p>
+<p>replace them with</p>
+<p class="code">target="_top"</p>
+<p>/DM</p>
+:ET

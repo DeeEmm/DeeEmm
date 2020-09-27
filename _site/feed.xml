@@ -1,0 +1,509 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-09-28T00:48:40+09:30</updated><id>http://localhost:4000/feed.xml</id><title type="html">DeeEmm</title><subtitle>Waxing lyrical about life the universe and everything tech related since lunchtime 2006.</subtitle><entry><title type="html">Welcome to my new Github io page</title><link href="http://localhost:4000/general/2020/09/28/my-new-github-io-page.html" rel="alternate" type="text/html" title="Welcome to my new Github io page" /><published>2020-09-28T00:36:23+09:30</published><updated>2020-09-28T00:36:23+09:30</updated><id>http://localhost:4000/general/2020/09/28/my-new-github-io-page</id><content type="html" xml:base="http://localhost:4000/general/2020/09/28/my-new-github-io-page.html">&lt;p&gt;Just figuring out how to use Jekyll &lt;del&gt;and migrate my existing page here from DeeEmm.com&lt;/del&gt; now that I have migrated my blog here from DeeEmm.com&lt;/p&gt;
+
+&lt;p&gt;I’m so used to editing in HTML, gonna have to get used to markup. To be honest I’m not sure what’s best, after all HTML is itself markup language. I kinda like the purity of HTML and CSS, even though I entrust my web site to a CMS (which is pretty much like cheating)&lt;/p&gt;
+
+&lt;p&gt;So I guess that moving to jekyll is probably halfway between the two. Not quite as pure as writing in HTML &amp;amp; CSS, but not quite as dirty as using a CMS.&lt;/p&gt;
+
+&lt;p&gt;I’m also telling myself that this move is going to reignite my blog a little. I do lots of projects on many different things, many of which I ‘blog’ about elsewhere. So I would like to start posting more of that stuff here.&lt;/p&gt;
+
+&lt;p&gt;For example, I have a bunch of Github projects that I never really include here, so moving ‘here’ to Github should really mean that I include those kind of projects a lot more.&lt;/p&gt;
+
+&lt;p&gt;I guess we will see.&lt;/p&gt;
+
+&lt;p&gt;Right now I have to migrate images and write some scripts to change a whole bunch of dead links in my EasyBlog import, but the main content is at least here. Once everything is fixed up I’ll point my domain here and get rid of the old site. One less site and server to have to worry about.&lt;/p&gt;
+
+&lt;p&gt;BTW. I’m writing this in ‘Prose’, an online editor. It’s kinda cool. Nice and clean, no distractions, just a very basic source editor, it has a preview button and a save button and that’s about it. I think I might grow to like this. :)&lt;/p&gt;
+
+&lt;p&gt;EDIT: I edited the post in a regular text editor after I cloned it locally. In fact I edited it in ‘Nova’ the brand new editor from Panic (the people who brought you Coda). But more on that in another post. It’s quite nice editing in a text editor. I feel like I’m coding, more than I feel like I’m writing a blog post. (which is kinda cool).&lt;/p&gt;</content><author><name></name></author><category term="General" /><category term="gem" /><category term="jekyll" /><category term="github" /><summary type="html">Just figuring out how to use Jekyll and migrate my existing page here from DeeEmm.com now that I have migrated my blog here from DeeEmm.com</summary></entry><entry><title type="html">Installing mysql2 under OSX with gem</title><link href="http://localhost:4000/general/2020/09/26/installing-mysql2-under-osx-with.html" rel="alternate" type="text/html" title="Installing mysql2 under OSX with gem" /><published>2020-09-26T01:58:33+09:30</published><updated>2020-09-26T01:58:33+09:30</updated><id>http://localhost:4000/general/2020/09/26/installing-mysql2-under-osx-with</id><content type="html" xml:base="http://localhost:4000/general/2020/09/26/installing-mysql2-under-osx-with.html">&lt;div class=&quot;ebd-block  &quot; data-type=&quot;text&quot;&gt;&lt;p&gt;I ran into the following error when trying to install MYSQL2 under gems. I was trying to install MYSQL2 to be able to import content from deeemm.com&amp;nbsp;into my local jekyll dev site using the instructions posted here -&amp;nbsp;https://import.jekyllrb.com/docs/joomla3/ but kept getting an ssl dependency error.&lt;br /&gt;&lt;/p&gt;&lt;p&gt;I got this error&amp;nbsp;&lt;/p&gt;&lt;/div&gt;
+&lt;div class=&quot;ebd-block  &quot; data-type=&quot;code&quot;&gt;&lt;script type=&quot;text/javascript&quot;&gt;
+EasyBlog.require()
+.library(&quot;ace&quot;)
+.done(function($){
+
+	var editor = ace.edit(&quot;5f6ea5188d2d5&quot;);
+	editor.setTheme(&quot;ace/theme/github&quot;);
+	editor.getSession().setMode(&quot;ace/mode/javascript&quot;);
+
+	editor.renderer.setShowGutter(true);
+	editor.setFontSize(&quot;12&quot;);
+	editor.setReadOnly(false);
+	editor.setTheme(&quot;ace/theme/github&quot;);
+
+	$('#5f6ea5188d2d5').height('250px');
+	editor.resize();
+});
+&lt;/script&gt;
+&lt;pre id=&quot;5f6ea5188d2d5&quot; class=&quot;eb-block-code&quot;&gt;
+linking shared-object mysql2/mysql2.bundle
+ld: warning: directory not found for option '-L/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.Internal.sdk/usr/local/lib'
+ld: library not found for -lssl
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+make: *** [mysql2.bundle] Error 1
+ERROR:  Error installing mysql2:
+	ERROR: Failed to build gem native extension.
+
+    current directory: /Library/Ruby/Gems/2.6.0/gems/mysql2-0.5.3/ext/mysql2 
+&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&quot;ebd-block  &quot; data-type=&quot;readmore&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;ebd-block  &quot; data-type=&quot;text&quot;&gt;&lt;p&gt;whilst trying to install MYSQL2 like this...&lt;/p&gt;&lt;/div&gt;
+&lt;div class=&quot;ebd-block  &quot; data-type=&quot;code&quot;&gt;&lt;script type=&quot;text/javascript&quot;&gt;
+EasyBlog.require()
+.library(&quot;ace&quot;)
+.done(function($){
+
+	var editor = ace.edit(&quot;5f6ea5188d59c&quot;);
+	editor.setTheme(&quot;ace/theme/github&quot;);
+	editor.getSession().setMode(&quot;ace/mode/javascript&quot;);
+
+	editor.renderer.setShowGutter(true);
+	editor.setFontSize(&quot;12&quot;);
+	editor.setReadOnly(false);
+	editor.setTheme(&quot;ace/theme/github&quot;);
+
+	$('#5f6ea5188d59c').height('250px');
+	editor.resize();
+});
+&lt;/script&gt;
+&lt;pre id=&quot;5f6ea5188d59c&quot; class=&quot;eb-block-code&quot;&gt;
+gem install -V mysql2 
+&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&quot;ebd-block  &quot; data-type=&quot;text&quot;&gt;&lt;p&gt;Oddly enough MYSQL was already installed as I have a local server set up as a&amp;nbsp;development environment, but it would appear that ssl was missing.&amp;nbsp;&lt;/p&gt;&lt;p&gt;I ended up solving it with the following fix posted in the comments on stack exchange -&amp;nbsp;https://stackoverflow.com/questions/3608287/error-installing-mysql2-failed-to-build-gem-native-extension&lt;/p&gt;&lt;/div&gt;
+&lt;div class=&quot;ebd-block  &quot; data-type=&quot;code&quot;&gt;&lt;script type=&quot;text/javascript&quot;&gt;
+EasyBlog.require()
+.library(&quot;ace&quot;)
+.done(function($){
+
+	var editor = ace.edit(&quot;5f6ea5188d777&quot;);
+	editor.setTheme(&quot;ace/theme/github&quot;);
+	editor.getSession().setMode(&quot;ace/mode/javascript&quot;);
+
+	editor.renderer.setShowGutter(true);
+	editor.setFontSize(&quot;12&quot;);
+	editor.setReadOnly(false);
+	editor.setTheme(&quot;ace/theme/github&quot;);
+
+	$('#5f6ea5188d777').height('250px');
+	editor.resize();
+});
+&lt;/script&gt;
+&lt;pre id=&quot;5f6ea5188d777&quot; class=&quot;eb-block-code&quot;&gt;
+gem install mysql2 -v '0.5.2' -- --with-ldflags=-L/usr/local/opt/openssl/lib --with-cppflags=-I/usr/local/opt/openssl/include 
+&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&quot;ebd-block  &quot; data-type=&quot;text&quot;&gt;&lt;p&gt;Ok, ok, I know that it's not the current version of MYSQL, but it at least allowed me to run jekyll and import the posts on to my local machine.&lt;br /&gt;&lt;br /&gt;I tried substituting versions with&amp;nbsp;0.5.7 &amp;amp; 0.8.0 and they did not work, but I did find that the statement still worked if I removed the version switch altogether...&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;&lt;/div&gt;
+&lt;div class=&quot;ebd-block  &quot; data-type=&quot;code&quot;&gt;&lt;script type=&quot;text/javascript&quot;&gt;
+EasyBlog.require()
+.library(&quot;ace&quot;)
+.done(function($){
+
+	var editor = ace.edit(&quot;5f6ea5188d949&quot;);
+	editor.setTheme(&quot;ace/theme/github&quot;);
+	editor.getSession().setMode(&quot;ace/mode/javascript&quot;);
+
+	editor.renderer.setShowGutter(true);
+	editor.setFontSize(&quot;12&quot;);
+	editor.setReadOnly(false);
+	editor.setTheme(&quot;ace/theme/github&quot;);
+
+	$('#5f6ea5188d949').height('250px');
+	editor.resize();
+});
+&lt;/script&gt;
+&lt;pre id=&quot;5f6ea5188d949&quot; class=&quot;eb-block-code&quot;&gt;
+sudo gem install mysql2 -- --with-ldflags=-L/usr/local/opt/openssl/lib --with-cppflags=-I/usr/local/opt/openssl/include 
+&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&quot;ebd-block  &quot; data-type=&quot;text&quot;&gt;&lt;p&gt;Note: the two dashes are a shorthand way of setting verbose mode '--V'&lt;/p&gt;&lt;p&gt;I hope this saves someone a few hours head scratching.&lt;/p&gt;&lt;p&gt;/DM&lt;/p&gt;&lt;/div&gt;</content><author><name></name></author><category term="General" /><category term="gem" /><category term="jekyll" /><category term="lssl-error" /><category term="osx" /><category term="sysql2" /><summary type="html">I ran into the following error when trying to install MYSQL2 under gems. I was trying to install MYSQL2 to be able to import content from deeemm.com&amp;nbsp;into my local jekyll dev site using the instructions posted here -&amp;nbsp;https://import.jekyllrb.com/docs/joomla3/ but kept getting an ssl dependency error.I got this error&amp;nbsp;</summary></entry><entry><title type="html">GitHub Pages</title><link href="http://localhost:4000/general/2020/09/25/github-pages.html" rel="alternate" type="text/html" title="GitHub Pages" /><published>2020-09-25T12:23:35+09:30</published><updated>2020-09-25T12:23:35+09:30</updated><id>http://localhost:4000/general/2020/09/25/github-pages</id><content type="html" xml:base="http://localhost:4000/general/2020/09/25/github-pages.html">&lt;div class=&quot;ebd-block  &quot; data-type=&quot;text&quot;&gt;&lt;p&gt;I'm probably late to the game with this one but just&amp;nbsp;discovered &lt;a href=&quot;https://pages.github.com/&quot; title=&quot;&quot; class=&quot;&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;GitHub Pages&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;a href=&quot;https://pages.github.com/&quot; title=&quot;&quot; class=&quot;&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;&lt;/a&gt;&lt;span&gt;Gonna give it a test drive and then might migrate DeeEmm.com over there&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span&gt;My only concern is that being owned by Micro$oft, there's every possibility that at some point in the future they may decide to drop this service, although to be fair a similar sentiment went through the ranks when M$ initially took over GitHub and that's been fine (So Far.)&lt;/span&gt;&lt;br /&gt;&lt;/p&gt;&lt;p&gt;&lt;span&gt;I've been thinking of&lt;/span&gt;&lt;span&gt; moving the site from Joomla to Wordpress for a while now, but moving it to GitHub would also work (especially as it's one less server to worry about updating)&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span&gt;&lt;/span&gt;&lt;span&gt;Will see how it goes.&lt;/span&gt;&lt;/p&gt;&lt;p&gt;/DM&lt;/p&gt;&lt;p&gt;&lt;br /&gt;&lt;/p&gt;&lt;/div&gt;</content><author><name></name></author><category term="General" /><category term="deeemmcom" /><category term="github" /><category term="github-pages" /><summary type="html">I'm probably late to the game with this one but just&amp;nbsp;discovered GitHub PagesGonna give it a test drive and then might migrate DeeEmm.com over thereMy only concern is that being owned by Micro$oft, there's every possibility that at some point in the future they may decide to drop this service, although to be fair a similar sentiment went through the ranks when M$ initially took over GitHub and that's been fine (So Far.)I've been thinking of moving the site from Joomla to Wordpress for a while now, but moving it to GitHub would also work (especially as it's one less server to worry about updating)Will see how it goes./DM</summary></entry><entry><title type="html">DIY Drip doser</title><link href="http://localhost:4000/general/2020/09/25/diy-drip-doser.html" rel="alternate" type="text/html" title="DIY Drip doser" /><published>2020-09-25T11:03:36+09:30</published><updated>2020-09-25T11:03:36+09:30</updated><id>http://localhost:4000/general/2020/09/25/diy-drip-doser</id><content type="html" xml:base="http://localhost:4000/general/2020/09/25/diy-drip-doser.html">&lt;div class=&quot;ebd-block  &quot; data-type=&quot;text&quot;&gt;&lt;p&gt;&lt;span&gt;If you've read &lt;a href=&quot;https://deeemm.com/index.php/entry/general/lanthanum-chloride-dosing&quot; title=&quot;&quot; class=&quot;&quot;&gt;my post on dosing Lanthanum Chloride&lt;/a&gt; you might be trying to work out how to drip&amp;nbsp;dose. Dosing machines tend to have programs that work for periodical dosing and not constant dosing, so they are not great when it comes to the regular drip-drip style dosing you need for Lanthanum Chloride.&lt;br /&gt;&lt;br /&gt;The best solution by far is to the regular hospital&amp;nbsp;style drip bags and drop counter. This allows you to count drops, adjust the flow&amp;nbsp;and calculate a dosing rate based on the frequency that the drops drip at, (or is that drips drop at?) Of course not everybody has access to that kind of stuff or else are impatient like me, and so&amp;nbsp;need&amp;nbsp;a DIY solution.&lt;/span&gt;&lt;/p&gt;&lt;p&gt;The solution to this problem is actually quite a simple&amp;nbsp;DIY solution that can easily be made from those surplus bits and bobs you have laying around.&lt;/p&gt;&lt;p&gt;&lt;span&gt;My DIY drip doser is made from an old ginger beer bottle. It has&amp;nbsp;two holes in the lid with silicone tube.&amp;nbsp;I used a glass bottle rather than something like a plastic drink bottle so that you could not accidentally&amp;nbsp;squeeze it and overdose the tank.&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span&gt;O&lt;/span&gt;&lt;span&gt;ne hole&amp;nbsp;&lt;/span&gt;&lt;span&gt;has a short length of silicone tube in it, this is the outlet. I&lt;/span&gt;&lt;span&gt;t should pushed in only far enough to make a seal.&amp;nbsp;&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span&gt;Tip: The further into the bottle you push the outlet tube, the more solution will be left in the bottle&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span&gt;The other hole has a longer piece of tube in it that reaches all the way&amp;nbsp;to the top of the&amp;nbsp;inside and all the way to the top on the outside.. The&amp;nbsp;outside&amp;nbsp;end of the longer tube&amp;nbsp;has a regular air line valve in it to regulate the flow. You can easily use this valve to dial in the flow to what you need.&amp;nbsp;I have mine set to&amp;nbsp;drip&amp;nbsp;at about a rate of about 1 drop every 5 seconds. &lt;br /&gt;&lt;br /&gt;Tip:&amp;nbsp;The outside length of tube is longer to allow you tie it up and prevent it from falling into the water, which will stop the doser from working&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span&gt;The bottle needs to be inverted after you have filled it, you might want to do this over a sink or toilet the first time as it has a tendency to let a little 'squirt' out whilst the pressure differential inside and outside of the bottle equalises.&lt;br /&gt;&lt;br /&gt;So how fast to dose?&amp;nbsp;It's generally accepted that a&amp;nbsp;drop is approximately&amp;nbsp;0.05 mL So you can use this value to help calculate your dosing regimen. Depending on what you are dosing, you may also be able to dilute it if you wish to dose slower than your valve will allow, or use a higher concentration if you wish to dose faster.&lt;/span&gt;&lt;/p&gt;&lt;p&gt;The amount I'm dosing with my Lanthanum chloride is relatively weak, so it would not cause an issue if the entire bottle ended up in the tank.&lt;/p&gt;&lt;p&gt;&lt;span&gt;If you want to gain some confidence on whether your DIY doser works, just fill it up with tank water and set it dosing, then measure how long it takes to dose the bottle.&lt;br /&gt;&lt;br /&gt;/DM&lt;br /&gt;&lt;br /&gt;&lt;/span&gt;&lt;/p&gt;&lt;/div&gt;</content><author><name></name></author><category term="General" /><category term="aquarium" /><category term="diy" /><category term="drip-doser" /><category term="lanthanum-chloride" /><category term="marine" /><summary type="html">If you've read my post on dosing Lanthanum Chloride you might be trying to work out how to drip&amp;nbsp;dose. Dosing machines tend to have programs that work for periodical dosing and not constant dosing, so they are not great when it comes to the regular drip-drip style dosing you need for Lanthanum Chloride.The best solution by far is to the regular hospital&amp;nbsp;style drip bags and drop counter. This allows you to count drops, adjust the flow&amp;nbsp;and calculate a dosing rate based on the frequency that the drops drip at, (or is that drips drop at?) Of course not everybody has access to that kind of stuff or else are impatient like me, and so&amp;nbsp;need&amp;nbsp;a DIY solution.The solution to this problem is actually quite a simple&amp;nbsp;DIY solution that can easily be made from those surplus bits and bobs you have laying around.My DIY drip doser is made from an old ginger beer bottle. It has&amp;nbsp;two holes in the lid with silicone tube.&amp;nbsp;I used a glass bottle rather than something like a plastic drink bottle so that you could not accidentally&amp;nbsp;squeeze it and overdose the tank.One hole&amp;nbsp;has a short length of silicone tube in it, this is the outlet. It should pushed in only far enough to make a seal.&amp;nbsp;Tip: The further into the bottle you push the outlet tube, the more solution will be left in the bottleThe other hole has a longer piece of tube in it that reaches all the way&amp;nbsp;to the top of the&amp;nbsp;inside and all the way to the top on the outside.. The&amp;nbsp;outside&amp;nbsp;end of the longer tube&amp;nbsp;has a regular air line valve in it to regulate the flow. You can easily use this valve to dial in the flow to what you need.&amp;nbsp;I have mine set to&amp;nbsp;drip&amp;nbsp;at about a rate of about 1 drop every 5 seconds. Tip:&amp;nbsp;The outside length of tube is longer to allow you tie it up and prevent it from falling into the water, which will stop the doser from workingThe bottle needs to be inverted after you have filled it, you might want to do this over a sink or toilet the first time as it has a tendency to let a little 'squirt' out whilst the pressure differential inside and outside of the bottle equalises.So how fast to dose?&amp;nbsp;It's generally accepted that a&amp;nbsp;drop is approximately&amp;nbsp;0.05 mL So you can use this value to help calculate your dosing regimen. Depending on what you are dosing, you may also be able to dilute it if you wish to dose slower than your valve will allow, or use a higher concentration if you wish to dose faster.The amount I'm dosing with my Lanthanum chloride is relatively weak, so it would not cause an issue if the entire bottle ended up in the tank.If you want to gain some confidence on whether your DIY doser works, just fill it up with tank water and set it dosing, then measure how long it takes to dose the bottle./DM</summary></entry><entry><title type="html">Lanthanum Chloride Dosing</title><link href="http://localhost:4000/general/2020/09/23/lanthanum-chloride-dosing.html" rel="alternate" type="text/html" title="Lanthanum Chloride Dosing" /><published>2020-09-23T03:12:30+09:30</published><updated>2020-09-23T03:12:30+09:30</updated><id>http://localhost:4000/general/2020/09/23/lanthanum-chloride-dosing</id><content type="html" xml:base="http://localhost:4000/general/2020/09/23/lanthanum-chloride-dosing.html">&lt;div class=&quot;ebd-block  &quot; data-type=&quot;text&quot;&gt;&lt;p&gt;So a year down the track after building my &lt;a href=&quot;https://deeemm.com/index.php/entry/general/diy-cheato-reactor&quot; title=&quot;&quot; class=&quot;&quot;&gt;algae reactor&lt;/a&gt; I've given up using it due to poor results. In the mean time I've tried a few other things to get my phos levels down...&lt;/p&gt;&lt;/div&gt;
+&lt;div class=&quot;ebd-block  &quot; data-type=&quot;readmore&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;ebd-block  &quot; data-type=&quot;text&quot;&gt;&lt;p&gt;&lt;span&gt;Growth was not as good as I would have liked with the algae reactor&amp;nbsp;and in all honesty it could not compete with the display. So I decommissioned the algae reactor and filled it up with PhosGuard. The&amp;nbsp;PhosGuard was better, but it was an expensive solution. I then tried GFO in the hope that it would last longer / be better than the PhosGuard&amp;nbsp;but again, it did little to the levels and was expensive to maintain.&lt;/span&gt;&lt;/p&gt;		&lt;p&gt;&lt;br /&gt;&lt;/p&gt;&lt;p&gt;Right about the time of Covid my roll filter decided to strip a gear which put it out of action. This meant that I had to stop using the GFO&amp;nbsp;as I had no way to take the fine particles out of the water, so my tank essential was left to go fallow. I ended up with a LOT of algae in the display tank. I was too embarrassed to take a photo.&amp;nbsp;&lt;/p&gt;&lt;p&gt;So when the replacement part finally arrived (two weeks ago) the tank had lain fallow for six months. Fortunately the algae was pretty easy to remove, it just lifted out. I ended up with a half a bucket.&lt;br /&gt;&lt;br /&gt;So what to do about this phosphate issue?&lt;br /&gt;&lt;br /&gt;I decided to use Lanthanum Chloride. I had read about this last year when I researched the algae reactor, but general consensus was that it was too dangerous to use. Of course, such advice is usually just anecdotal. More recently I ended up reading a few articles where people were successfully using it as part of their tank regimen with no issues. I also read about a fella who had used Hy-Chlor - a readily available pool cleaning chemical here in South Australia. Preferring DIY solutions for tank husbandry this seemed just the ticket.&lt;/p&gt;&lt;p&gt;So after a trip to our local DIY shop I ended up with a litre bottle of Hy-Chlor for the paltry sum of AU$30.&amp;nbsp;I mixed up a solution of 1ml of hy-chlor to 1 litre of RO water and made a crude drip doser and then dosed the tank over an 8 hour period. I measured the phos levels the next day, the level had halved.&amp;nbsp;&lt;br /&gt;&lt;br /&gt;WOOT!&lt;/p&gt;&lt;p&gt;I left the tank for a day.&amp;nbsp;Further dosing using half of the amount (0.5ml in 1/2 litre) saw my levels drop to just over zero.&lt;/p&gt;&lt;p&gt;WOOT!&lt;/p&gt;&lt;p&gt;That's the lowest the Phos level has been since I started measuring it&lt;/p&gt;&lt;p&gt;I&amp;nbsp;left the tank for a few days. Measuring the phos levels again saw them rise, which is completely expected as the phos will be leaching back out of the rock and substrate. One thread I read had a tank owner saying that it had taken over a year to get this leaching under control, so I expect that I have a long journey ahead. The great thing is that the chemical is dirt&amp;nbsp;cheap ($30 for a litre) and so will last a LOOOOONG time.&amp;nbsp;&lt;/p&gt;&lt;p&gt;Next step is to set up some kind of dosing setup.&amp;nbsp;I do however need to exercise some caution and get a test kit so that I can also test for free&amp;nbsp;LaCl3 in the water. Eventually when the phos has depleted the free&amp;nbsp;LaCl3 levels will rise in the water column, if this level is allowed to rise&amp;nbsp;too high it will become lethal to the tank. The highest safe&amp;nbsp;concentration documented is 1mg/l, which is a massively high amount compared to the amount I'm dosing, but if left unchecked, especially if auto dosing the stuff, it could soon build up.&lt;/p&gt;&lt;p&gt;Other users use a higher dose periodically to bring the phos levels down and then let them rise up again. I'm not sure if this is the best option for me with the&amp;nbsp;leeching LR. What I want to try and do is match the dosing rate to the leeching rate so that it does not bring the phos down to zero but some small value instead. This way I should be able to detect when the leeching has subsided as the phos levels will then drop to zero. Well that's the theory at any rate.&lt;/p&gt;&lt;p&gt;In summary, LaCl3 does not appear to be as dangerous or&amp;nbsp;difficult to use as many have made it sound. Just use dilute amounts, over a period of time interspaced with phosphate testing&amp;nbsp;and you will be fine.&amp;nbsp;The results I have seen are very promising and I feel that&amp;nbsp;as long as I test the free LaCl3 in the water column I cannot see why it should be an issue.&amp;nbsp;&lt;/p&gt;&lt;p&gt;If you do use this method you will need a fine (10 micron) filter setup to remove the flocculant from the water (LaCL3 bonds with the phosphate to turn it into a solid that needs to be removed by filtration). I dose into my weir, which goes directly to my roll filter, this gives a fair amount of reaction time without the LaCl3 reaching the tank. It's quite satisfying to watch the roll filter going crazy as the LaCl3 is dosed. Others place a filter sock in a high flow area in their sump and dose into that instead. Whatever method you use it seems that general consensus is to try and catch the flocculant and prevent it from going into the tank as it can irritate some fish. This is evidently more prevalent with tangs, however I have a blue tang in my tank which has not been bothered at all. Maybe this is related to the small dose, so there is less free LaCl3 in the water column.&lt;/p&gt;&lt;/div&gt;
+&lt;div class=&quot;ebd-block  &quot; data-type=&quot;text&quot;&gt;&lt;p&gt;&lt;strong data-redactor-tag=&quot;strong&quot;&gt;Some details on my dosing&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;I'm using Hy-Chlor pool phosphate remover - it's AU$30 for 1 litre - &lt;a href=&quot;https://www.bunnings.com.au/hy-clor-1l-pool-phosphate-remover_p3090143&quot; title=&quot;&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;https://www.bunnings.com.au/hy-clor-1l-pool-phosphate-remover_p3090143&lt;/a&gt; It's essentially pure LaCl3 diluted in solution. There are no other chemicals noted in the 'ingredients'&lt;/p&gt;&lt;p&gt;Hy-Chor contains a concentration of 150mg/litre of LaCl3&lt;/p&gt;&lt;p&gt;I diluted it at a ratio of 1ml into a litre of RO water&lt;/p&gt;&lt;p&gt;This brings the actual concentration down to 0.15mg/litre&lt;/p&gt;&lt;p&gt;This is then dosed into my system which is 233 litres over about 12 hours. (some dose this amount much quicker but I prefer to err on the side of caution) &lt;/p&gt;&lt;p&gt;This means that the actual concentration in my tank is potentially as high as 0.00064mg/litre assuming that none of it gets consumed by phosphate and it stays in it's initial state. Of course the LaCl3 is consumed and precipitated out as a solid which further reduces the amount of free LaCl in the tank.&lt;/p&gt;&lt;p&gt;To get to dangerous HcLa3 levels (assuming the 1mg / litre threshold) it would take me 1553.5 litres of this solution to bring the LaCl3 level in the tank up to 1mg/litre.&lt;/p&gt;&lt;p&gt;That means there's lots of room for raising the dosing strength, but given I have seen promising results from the small dose I have been using I will stick with the current regimen. There is also the phosphate level itself to consider, it dropped down to near zero levels with the testing that I undertook, a higher dosing level / rate would strip the phosphate level &lt;em data-redactor-tag=&quot;em&quot;&gt;too&lt;/em&gt; low which would not be good for the tank as some trace levels of phosphate are required for the corals. Likewise too high a dose of LaCl3 will leave unreacted LaCl3 free to enter into the display, where it will be free to bond with phosphate sources there. This would probably result in flocculant being created on the surface of the live rick and substrate as the phosphate leeches out. This flocculant would then be free to float around and may irritate tank inhabitants as previously described.&lt;/p&gt;&lt;p&gt;I'll get it set up and do some further testing and then report back here after a period of time with how things are going. Hopefully it will be some positive news&lt;/p&gt;&lt;p&gt;/DM&lt;/p&gt;&lt;/div&gt;</content><author><name></name></author><category term="General" /><category term="aquarium" /><category term="dosing" /><category term="lacl3" /><category term="lanthanum-chloride" /><category term="phosphate" /><summary type="html">So a year down the track after building my algae reactor I've given up using it due to poor results. In the mean time I've tried a few other things to get my phos levels down... Growth was not as good as I would have liked with the algae reactor&amp;nbsp;and in all honesty it could not compete with the display. So I decommissioned the algae reactor and filled it up with PhosGuard. The&amp;nbsp;PhosGuard was better, but it was an expensive solution. I then tried GFO in the hope that it would last longer / be better than the PhosGuard&amp;nbsp;but again, it did little to the levels and was expensive to maintain. Right about the time of Covid my roll filter decided to strip a gear which put it out of action. This meant that I had to stop using the GFO&amp;nbsp;as I had no way to take the fine particles out of the water, so my tank essential was left to go fallow. I ended up with a LOT of algae in the display tank. I was too embarrassed to take a photo.&amp;nbsp;So when the replacement part finally arrived (two weeks ago) the tank had lain fallow for six months. Fortunately the algae was pretty easy to remove, it just lifted out. I ended up with a half a bucket.So what to do about this phosphate issue?I decided to use Lanthanum Chloride. I had read about this last year when I researched the algae reactor, but general consensus was that it was too dangerous to use. Of course, such advice is usually just anecdotal. More recently I ended up reading a few articles where people were successfully using it as part of their tank regimen with no issues. I also read about a fella who had used Hy-Chlor - a readily available pool cleaning chemical here in South Australia. Preferring DIY solutions for tank husbandry this seemed just the ticket.So after a trip to our local DIY shop I ended up with a litre bottle of Hy-Chlor for the paltry sum of AU$30.&amp;nbsp;I mixed up a solution of 1ml of hy-chlor to 1 litre of RO water and made a crude drip doser and then dosed the tank over an 8 hour period. I measured the phos levels the next day, the level had halved.&amp;nbsp;WOOT!I left the tank for a day.&amp;nbsp;Further dosing using half of the amount (0.5ml in 1/2 litre) saw my levels drop to just over zero.WOOT!That's the lowest the Phos level has been since I started measuring itI&amp;nbsp;left the tank for a few days. Measuring the phos levels again saw them rise, which is completely expected as the phos will be leaching back out of the rock and substrate. One thread I read had a tank owner saying that it had taken over a year to get this leaching under control, so I expect that I have a long journey ahead. The great thing is that the chemical is dirt&amp;nbsp;cheap ($30 for a litre) and so will last a LOOOOONG time.&amp;nbsp;Next step is to set up some kind of dosing setup.&amp;nbsp;I do however need to exercise some caution and get a test kit so that I can also test for free&amp;nbsp;LaCl3 in the water. Eventually when the phos has depleted the free&amp;nbsp;LaCl3 levels will rise in the water column, if this level is allowed to rise&amp;nbsp;too high it will become lethal to the tank. The highest safe&amp;nbsp;concentration documented is 1mg/l, which is a massively high amount compared to the amount I'm dosing, but if left unchecked, especially if auto dosing the stuff, it could soon build up.Other users use a higher dose periodically to bring the phos levels down and then let them rise up again. I'm not sure if this is the best option for me with the&amp;nbsp;leeching LR. What I want to try and do is match the dosing rate to the leeching rate so that it does not bring the phos down to zero but some small value instead. This way I should be able to detect when the leeching has subsided as the phos levels will then drop to zero. Well that's the theory at any rate.In summary, LaCl3 does not appear to be as dangerous or&amp;nbsp;difficult to use as many have made it sound. Just use dilute amounts, over a period of time interspaced with phosphate testing&amp;nbsp;and you will be fine.&amp;nbsp;The results I have seen are very promising and I feel that&amp;nbsp;as long as I test the free LaCl3 in the water column I cannot see why it should be an issue.&amp;nbsp;If you do use this method you will need a fine (10 micron) filter setup to remove the flocculant from the water (LaCL3 bonds with the phosphate to turn it into a solid that needs to be removed by filtration). I dose into my weir, which goes directly to my roll filter, this gives a fair amount of reaction time without the LaCl3 reaching the tank. It's quite satisfying to watch the roll filter going crazy as the LaCl3 is dosed. Others place a filter sock in a high flow area in their sump and dose into that instead. Whatever method you use it seems that general consensus is to try and catch the flocculant and prevent it from going into the tank as it can irritate some fish. This is evidently more prevalent with tangs, however I have a blue tang in my tank which has not been bothered at all. Maybe this is related to the small dose, so there is less free LaCl3 in the water column. Some details on my dosingI'm using Hy-Chlor pool phosphate remover - it's AU$30 for 1 litre - https://www.bunnings.com.au/hy-clor-1l-pool-phosphate-remover_p3090143 It's essentially pure LaCl3 diluted in solution. There are no other chemicals noted in the 'ingredients'Hy-Chor contains a concentration of 150mg/litre of LaCl3I diluted it at a ratio of 1ml into a litre of RO waterThis brings the actual concentration down to 0.15mg/litreThis is then dosed into my system which is 233 litres over about 12 hours. (some dose this amount much quicker but I prefer to err on the side of caution) This means that the actual concentration in my tank is potentially as high as 0.00064mg/litre assuming that none of it gets consumed by phosphate and it stays in it's initial state. Of course the LaCl3 is consumed and precipitated out as a solid which further reduces the amount of free LaCl in the tank.To get to dangerous HcLa3 levels (assuming the 1mg / litre threshold) it would take me 1553.5 litres of this solution to bring the LaCl3 level in the tank up to 1mg/litre.That means there's lots of room for raising the dosing strength, but given I have seen promising results from the small dose I have been using I will stick with the current regimen. There is also the phosphate level itself to consider, it dropped down to near zero levels with the testing that I undertook, a higher dosing level / rate would strip the phosphate level too low which would not be good for the tank as some trace levels of phosphate are required for the corals. Likewise too high a dose of LaCl3 will leave unreacted LaCl3 free to enter into the display, where it will be free to bond with phosphate sources there. This would probably result in flocculant being created on the surface of the live rick and substrate as the phosphate leeches out. This flocculant would then be free to float around and may irritate tank inhabitants as previously described.I'll get it set up and do some further testing and then report back here after a period of time with how things are going. Hopefully it will be some positive news/DM</summary></entry><entry><title type="html">Aquarium Automation with Reef-Pi</title><link href="http://localhost:4000/general/2020/09/22/aquarium-automation-with-reef-pi.html" rel="alternate" type="text/html" title="Aquarium Automation with Reef-Pi" /><published>2020-09-22T04:31:42+09:30</published><updated>2020-09-22T04:31:42+09:30</updated><id>http://localhost:4000/general/2020/09/22/aquarium-automation-with-reef-pi</id><content type="html" xml:base="http://localhost:4000/general/2020/09/22/aquarium-automation-with-reef-pi.html">&lt;div class=&quot;ebd-block  &quot; data-type=&quot;text&quot;&gt;&lt;p&gt;I'm setting up a &lt;a href=&quot;https://reef-pi.github.io/&quot; title=&quot;&quot; class=&quot;&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;reef-pi&lt;/a&gt; controller on my tank. Reef-Pi is a DIY Raspberry-Pi based aquarium controller.&amp;nbsp;I had considered making a simple controller using an Arduino, but when i was searching online I found&amp;nbsp;the Reef-Pi project and decided it was perfect for my needs and would save a bunch of work and time. Win-Win!&lt;/p&gt;&lt;p&gt;&lt;br /&gt;&lt;/p&gt;&lt;/div&gt;
+&lt;div class=&quot;ebd-block  &quot; data-type=&quot;readmore&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;ebd-block  &quot; data-type=&quot;text&quot;&gt;&lt;p&gt;The main reason I was considering some kind of tank controller was just to control my lights with the eventual goal of building some DIY LED Lights. I also quite like the idea of switching all of my pumps to DC pumps powered by a solar charged battery bank to help save on electricity costs and overcome power outages, so moving to a centralised controller would make this possible. I'm not 100% sure if reef-pi will be able to control the main pump in this manner but it's something that can be looked into down the track, it certainly has the capability to control DC pumps and so looks like it will&amp;nbsp;be able to do the job.&lt;/p&gt;&lt;p&gt;For the time being I'll concentrate on getting the pi set up with some simple on / off relay control and dimming control for the existing LED lighting and control of the tanks heaters. There is also the possibility to integrate things like Auto Top Up, doser&amp;nbsp;control, PH monitoring,&amp;nbsp;feeder control, etc. In fact there is a pretty flexible macro system that means it can potentially control many different things.&lt;/p&gt;&lt;p&gt;So I decided to invest some time into putting a Reef-Pi system together with the end&amp;nbsp;goal of complete tank control, whatever that looks like.&lt;/p&gt;&lt;/div&gt;
+&lt;div class=&quot;ebd-block  &quot; data-type=&quot;thumbnails&quot;&gt;&lt;div class=&quot;eb-thumbs&quot;&gt;
+	&lt;div class=&quot;eb-thumbs-col&quot;&gt;&lt;div class=&quot;eb-thumb&quot; data-position=&quot;0&quot;&gt;&lt;div&gt;&lt;div class=&quot;ebd-block  is-nested is-isolated &quot; data-type=&quot;image&quot; style=&quot;text-align: center;&quot;&gt;&lt;div class=&quot;eb-image style-clear&quot;&gt;
+	&lt;div class=&quot;eb-image-figure is-responsive&quot; style=&quot;width:100%;&quot;&gt;
+
+				&lt;a class=&quot;eb-image-viewport eb-image-popup-button&quot; href=&quot;images/easyblog_articles/413/b2ap3_large_IMG_20200922_171018.jpg&quot; title=&quot;&quot;&gt;
+		
+					&lt;img src=&quot;images/easyblog_articles/413/b2ap3_small_IMG_20200922_171018.jpg&quot; /&gt;
+		&lt;/a&gt;
+	&lt;/div&gt;
+				&lt;/div&gt;&lt;/div&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;
+	&lt;div class=&quot;eb-thumbs-col&quot;&gt;&lt;div class=&quot;eb-thumb&quot; data-position=&quot;1&quot;&gt;&lt;div&gt;&lt;div class=&quot;ebd-block  is-nested is-isolated &quot; data-type=&quot;image&quot; style=&quot;text-align: center;&quot;&gt;&lt;div class=&quot;eb-image style-clear&quot;&gt;
+	&lt;div class=&quot;eb-image-figure is-responsive&quot; style=&quot;width:100%;&quot;&gt;
+
+				&lt;a class=&quot;eb-image-viewport eb-image-popup-button&quot; href=&quot;images/easyblog_articles/413/b2ap3_large_IMG_20200922_171026.jpg&quot; title=&quot;&quot;&gt;
+		
+					&lt;img src=&quot;images/easyblog_articles/413/b2ap3_small_IMG_20200922_171026.jpg&quot; /&gt;
+		&lt;/a&gt;
+	&lt;/div&gt;
+				&lt;/div&gt;&lt;/div&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;
+	&lt;div class=&quot;eb-thumbs-col&quot;&gt;&lt;/div&gt;
+	&lt;div class=&quot;eb-thumbs-col&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;&lt;/div&gt;
+&lt;div class=&quot;ebd-block  &quot; data-type=&quot;text&quot;&gt;&lt;p&gt;&lt;br /&gt;For the case I'm going to repurpose this UPS supply. It's one that I had running my tank for a while but is now surplus to requirements. it has 6 outlets on the back which i will convert to switched outlets controlled by the pi. for this I have purchased a generic relay&amp;nbsp;board which I will switch by a darlington array controlled by GPIO. It also has two RG45 connectors which I will look at using for external sensor connection. They are probably not the most robust connector for this purpose but as they are&amp;nbsp;there , I'll repurpose them (EDIT: looks like the apex uses the same connectors). It also has some status LEDs and an on / off button that I will utilise for something (feeding mode maybe). The switch is a SPST latching style but I might take a look at it and see if I cannot make it a momentary style as I can then use the switch to perform a variety of tasks depending on how it is used (short press / long press / multiple presses). When you consider that people used to communicate and talk to each other with just a single switch (morse code) then the possibilities are almost endless :D&amp;nbsp;&lt;/p&gt;&lt;p&gt;&lt;br /&gt;&lt;/p&gt;&lt;/div&gt;
+&lt;div class=&quot;ebd-block  &quot; data-type=&quot;thumbnails&quot;&gt;&lt;div class=&quot;eb-thumbs&quot;&gt;
+	
+	
+	
+	
+&lt;div class=&quot;eb-thumbs-col&quot;&gt;&lt;div class=&quot;eb-thumb&quot; data-position=&quot;0&quot;&gt;&lt;div&gt;&lt;div class=&quot;ebd-block  is-nested is-isolated &quot; data-type=&quot;image&quot; style=&quot;text-align: center;&quot;&gt;&lt;div class=&quot;eb-image style-clear&quot;&gt;
+	&lt;div class=&quot;eb-image-figure is-responsive&quot; style=&quot;width:100%;&quot;&gt;
+
+				&lt;a class=&quot;eb-image-viewport eb-image-popup-button&quot; href=&quot;images/easyblog_articles/413/b2ap3_large_IMG_20200922_172131.jpg&quot; title=&quot;&quot;&gt;
+		
+					&lt;img src=&quot;images/easyblog_articles/413/b2ap3_small_IMG_20200922_172131.jpg&quot; /&gt;
+		&lt;/a&gt;
+	&lt;/div&gt;
+				&lt;/div&gt;&lt;/div&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;eb-thumbs-col&quot;&gt;&lt;div class=&quot;eb-thumb&quot; data-position=&quot;1&quot;&gt;&lt;div&gt;&lt;div class=&quot;ebd-block  is-nested is-isolated &quot; data-type=&quot;image&quot; style=&quot;text-align: center;&quot;&gt;&lt;div class=&quot;eb-image style-clear&quot;&gt;
+	&lt;div class=&quot;eb-image-figure is-responsive&quot; style=&quot;width:100%;&quot;&gt;
+
+				&lt;a class=&quot;eb-image-viewport eb-image-popup-button&quot; href=&quot;images/easyblog_articles/413/b2ap3_large_IMG_20200922_172146.jpg&quot; title=&quot;&quot;&gt;
+		
+					&lt;img src=&quot;images/easyblog_articles/413/b2ap3_small_IMG_20200922_172146.jpg&quot; /&gt;
+		&lt;/a&gt;
+	&lt;/div&gt;
+				&lt;/div&gt;&lt;/div&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;eb-thumbs-col&quot;&gt;&lt;div class=&quot;eb-thumb&quot; data-position=&quot;2&quot;&gt;&lt;div&gt;&lt;div class=&quot;ebd-block  is-nested is-isolated &quot; data-type=&quot;image&quot; style=&quot;text-align: center;&quot;&gt;&lt;div class=&quot;eb-image style-clear&quot;&gt;
+	&lt;div class=&quot;eb-image-figure is-responsive&quot; style=&quot;width:100%;&quot;&gt;
+
+				&lt;a class=&quot;eb-image-viewport eb-image-popup-button&quot; href=&quot;images/easyblog_articles/413/b2ap3_large_IMG_20200922_230113.jpg&quot; title=&quot;&quot;&gt;
+		
+					&lt;img src=&quot;images/easyblog_articles/413/b2ap3_small_IMG_20200922_230113.jpg&quot; /&gt;
+		&lt;/a&gt;
+	&lt;/div&gt;
+				&lt;/div&gt;&lt;/div&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;eb-thumbs-col&quot;&gt;&lt;div class=&quot;eb-thumb&quot; data-position=&quot;3&quot;&gt;&lt;div&gt;&lt;div class=&quot;ebd-block  is-nested is-isolated &quot; data-type=&quot;image&quot; style=&quot;text-align: center;&quot;&gt;&lt;div class=&quot;eb-image style-clear&quot;&gt;
+	&lt;div class=&quot;eb-image-figure is-responsive&quot; style=&quot;width:100%;&quot;&gt;
+
+				&lt;a class=&quot;eb-image-viewport eb-image-popup-button&quot; href=&quot;images/easyblog_articles/413/b2ap3_large_IMG_20200922_172054.jpg&quot; title=&quot;&quot;&gt;
+		
+					&lt;img src=&quot;images/easyblog_articles/413/b2ap3_small_IMG_20200922_172054.jpg&quot; /&gt;
+		&lt;/a&gt;
+	&lt;/div&gt;
+				&lt;/div&gt;&lt;/div&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;eb-thumbs-col&quot;&gt;&lt;div class=&quot;eb-thumb&quot; data-position=&quot;4&quot;&gt;&lt;div&gt;&lt;div class=&quot;ebd-block  is-nested is-isolated &quot; data-type=&quot;image&quot; style=&quot;text-align: center;&quot;&gt;&lt;div class=&quot;eb-image style-clear&quot;&gt;
+	&lt;div class=&quot;eb-image-figure is-responsive&quot; style=&quot;width:100%;&quot;&gt;
+
+				&lt;a class=&quot;eb-image-viewport eb-image-popup-button&quot; href=&quot;images/easyblog_articles/413/b2ap3_large_IMG_20200922_171414.jpg&quot; title=&quot;&quot;&gt;
+		
+					&lt;img src=&quot;images/easyblog_articles/413/b2ap3_small_IMG_20200922_171414.jpg&quot; /&gt;
+		&lt;/a&gt;
+	&lt;/div&gt;
+				&lt;/div&gt;&lt;/div&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;div class=&quot;ebd-block  &quot; data-type=&quot;text&quot;&gt;&lt;p&gt;Power requirements are most probably going to come from an ATX supply simply as it has a range of voltages all in one package that will supply 5v for the controller, 12v for things like the relays. lighting and dosing pumps. I have measured the three voids left in the case after the removal of the old electronics and will find a suitable PSU.&lt;/p&gt;&lt;p&gt;Dosing pumps, almost forgot about those. I already use a reef magic to dose 2 part and carbon and would really like another channel to be able to dose LaCl as I'm using this to overcome a decade old Phoshpate issue (yes my tank is OLD). I do have another reef magic, but with everything crammed into the cabinet there's not much room. So building this reef pi setup will also allow me to condense some of the systems into smaller more compact forms and free up some room. So the ultimate plan is to also include 4 or 5 dosing heads. I've seen some of the installations using standard DC powered dosing heads like the kind used in the reef magic and they are pretty neat as the actual pump motors are very small.&lt;/p&gt;&lt;p&gt;I don't do water changes on my tank, so nutrient control is fairly high on the importance charts. It also means that there is no need for an auto water change setup, however I might implement an auto top up system (I have a semi auto setup at the moment). I did have a very basic auto top up system set up with a solenoid and a timer, it would be trivial to set this up again.&lt;/p&gt;&lt;p&gt;PH and Temp control are obvious inclusions, and additional parameter testing would also be desirable, although I'm not sure how feasible some of those are.&lt;/p&gt;&lt;p&gt;&lt;br /&gt;&lt;/p&gt;&lt;/div&gt;
+&lt;div class=&quot;ebd-block  &quot; data-type=&quot;thumbnails&quot;&gt;&lt;div class=&quot;eb-thumbs&quot;&gt;
+	
+	
+	
+	
+&lt;div class=&quot;eb-thumbs-col&quot;&gt;&lt;div class=&quot;eb-thumb&quot; data-position=&quot;0&quot;&gt;&lt;div&gt;&lt;div class=&quot;ebd-block  is-nested is-isolated &quot; data-type=&quot;image&quot; style=&quot;text-align: center;&quot;&gt;&lt;div class=&quot;eb-image style-clear&quot;&gt;
+	&lt;div class=&quot;eb-image-figure is-responsive&quot; style=&quot;width:100%;&quot;&gt;
+
+				&lt;a class=&quot;eb-image-viewport eb-image-popup-button&quot; href=&quot;images/easyblog_articles/413/b2ap3_large_IMG_20200922_170553.jpg&quot; title=&quot;&quot;&gt;
+		
+					&lt;img src=&quot;images/easyblog_articles/413/b2ap3_small_IMG_20200922_170553.jpg&quot; /&gt;
+		&lt;/a&gt;
+	&lt;/div&gt;
+				&lt;/div&gt;&lt;/div&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;eb-thumb&quot; data-position=&quot;3&quot;&gt;&lt;div&gt;&lt;div class=&quot;ebd-block  is-nested is-isolated &quot; data-type=&quot;image&quot; style=&quot;text-align: center;&quot;&gt;&lt;div class=&quot;eb-image style-clear&quot;&gt;
+	&lt;div class=&quot;eb-image-figure is-responsive&quot; style=&quot;width:100%;&quot;&gt;
+
+				&lt;a class=&quot;eb-image-viewport eb-image-popup-button&quot; href=&quot;images/easyblog_articles/413/b2ap3_large_IMG_20200922_225423.jpg&quot; title=&quot;&quot;&gt;
+		
+					&lt;img src=&quot;images/easyblog_articles/413/b2ap3_small_IMG_20200922_225423.jpg&quot; /&gt;
+		&lt;/a&gt;
+	&lt;/div&gt;
+				&lt;/div&gt;&lt;/div&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;eb-thumbs-col&quot;&gt;&lt;div class=&quot;eb-thumb&quot; data-position=&quot;1&quot;&gt;&lt;div&gt;&lt;div class=&quot;ebd-block  is-nested is-isolated &quot; data-type=&quot;image&quot; style=&quot;text-align: center;&quot;&gt;&lt;div class=&quot;eb-image style-clear&quot;&gt;
+	&lt;div class=&quot;eb-image-figure is-responsive&quot; style=&quot;width:100%;&quot;&gt;
+
+				&lt;a class=&quot;eb-image-viewport eb-image-popup-button&quot; href=&quot;images/easyblog_articles/413/b2ap3_large_IMG_20200922_170544.jpg&quot; title=&quot;&quot;&gt;
+		
+					&lt;img src=&quot;images/easyblog_articles/413/b2ap3_small_IMG_20200922_170544.jpg&quot; /&gt;
+		&lt;/a&gt;
+	&lt;/div&gt;
+				&lt;/div&gt;&lt;/div&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;eb-thumb&quot; data-position=&quot;4&quot;&gt;&lt;div&gt;&lt;div class=&quot;ebd-block  is-nested is-isolated &quot; data-type=&quot;image&quot; style=&quot;text-align: center;&quot;&gt;&lt;div class=&quot;eb-image style-clear&quot;&gt;
+	&lt;div class=&quot;eb-image-figure is-responsive&quot; style=&quot;width:100%;&quot;&gt;
+
+				&lt;a class=&quot;eb-image-viewport eb-image-popup-button&quot; href=&quot;images/easyblog_articles/413/b2ap3_large_IMG_20200922_170437.jpg&quot; title=&quot;&quot;&gt;
+		
+					&lt;img src=&quot;images/easyblog_articles/413/b2ap3_small_IMG_20200922_170437.jpg&quot; /&gt;
+		&lt;/a&gt;
+	&lt;/div&gt;
+				&lt;/div&gt;&lt;/div&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;eb-thumbs-col&quot;&gt;&lt;div class=&quot;eb-thumb&quot; data-position=&quot;2&quot;&gt;&lt;div&gt;&lt;div class=&quot;ebd-block  is-nested is-isolated &quot; data-type=&quot;image&quot; style=&quot;text-align: center;&quot;&gt;&lt;div class=&quot;eb-image style-clear&quot;&gt;
+	&lt;div class=&quot;eb-image-figure is-responsive&quot; style=&quot;width:100%;&quot;&gt;
+
+				&lt;a class=&quot;eb-image-viewport eb-image-popup-button&quot; href=&quot;images/easyblog_articles/413/b2ap3_large_IMG_20200922_222006.jpg&quot; title=&quot;&quot;&gt;
+		
+					&lt;img src=&quot;images/easyblog_articles/413/b2ap3_small_IMG_20200922_222006.jpg&quot; /&gt;
+		&lt;/a&gt;
+	&lt;/div&gt;
+				&lt;/div&gt;&lt;/div&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;eb-thumb&quot; data-position=&quot;5&quot;&gt;&lt;div&gt;&lt;div class=&quot;ebd-block  is-nested is-isolated &quot; data-type=&quot;image&quot; style=&quot;text-align: center;&quot;&gt;&lt;div class=&quot;eb-image style-clear&quot;&gt;
+	&lt;div class=&quot;eb-image-figure is-responsive&quot; style=&quot;width:100%;&quot;&gt;
+
+				&lt;a class=&quot;eb-image-viewport eb-image-popup-button&quot; href=&quot;images/easyblog_articles/413/b2ap3_large_IMG_20200922_170611.jpg&quot; title=&quot;&quot;&gt;
+		
+					&lt;img src=&quot;images/easyblog_articles/413/b2ap3_small_IMG_20200922_170611.jpg&quot; /&gt;
+		&lt;/a&gt;
+	&lt;/div&gt;
+				&lt;/div&gt;&lt;/div&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;div class=&quot;ebd-block  &quot; data-type=&quot;text&quot;&gt;&lt;p&gt;So far I've loaded up the Reef-Pi image and set it up to run wirelessly. I connected it up to a GPIO breakout board that I had, which whilst cool is a little too large as it takes up lots of&amp;nbsp;real-estate in the case. I do have another smaller breakout board with screw terminals but might also look for something else. I'll do a bit of a search for something more suitable when I'm looking for a PSU. I haven't decided on a location for the PI yet. The front void in the case where the battery went has a removable front over and so this might be a good&amp;nbsp;location should I need to easily get to it without completely dismantling the entire thing, But that's also one of the larger voids, which might mean that it's the only suitable location for a PSU, so I guess the next step is to track down a suitable PSU.&lt;/p&gt;&lt;p&gt;I did spend some time dismantling the rear socket outlets. These originally had bus-bars connecting each bank of three sockets together. I cut the bars to seperate the live feed to&amp;nbsp;each socket and soldered new cables to each section. I then wired these leads to the 8 way relay board.&amp;nbsp;&lt;/p&gt;&lt;p&gt;Just a quick note on those relay boards. These ones were bought from Jaycar (an Aussie tech / electronics store) and the only ones available are 12v. This poses a small problem as the RasPi is only 5v, so there's no way that it can directly switch this board. The solution however&amp;nbsp;is simple. You can use a&amp;nbsp;darlington array - basically a chip that contains a series of darlington pair diodes. This will allow you to switch the 12v signal required for the coils using the lower 5v output from the Raspi GPIO. Using the darlington&amp;nbsp;array also proves a degree of separation between the inductive load of the coils and the RPi which is also a very good thing as the coil will create a very high voltage spike as the magnetic field in the coil collapses when the voltage is removed, although this particular relay board does have opto-isolators which provide a clean break to prevent this back EMF from reaching the RPi&lt;/p&gt;&lt;p&gt;I wired the sockets up to the relay board and next need to design and&amp;nbsp;print up some 3D printed brackets to mount the board to the rear&amp;nbsp;of the sockets. This nicely keeps the 240v at the back of the case, hopefully away from all of the other components.&lt;/p&gt;&lt;/div&gt;
+&lt;div class=&quot;ebd-block  &quot; data-type=&quot;heading&quot;&gt;&lt;h2&gt;
+	&lt;span&gt;Installing the&amp;nbsp;Reef-Pi software&lt;/span&gt;&lt;/h2&gt;&lt;/div&gt;
+&lt;div class=&quot;ebd-block  &quot; data-type=&quot;text&quot;&gt;&lt;p&gt;I'm going to outline the basic steps to install a headless installation (no desktop operating system) on your RPi. There's other better guides out there (there's links to the official guide at the bottom) this is simply for my own reference, but if it helps you then great. I'm installing from a Mac so it differs a little from a Windoze&amp;nbsp;machine.&lt;/p&gt;&lt;p&gt;Essentially we'll load up the RPi operating system, connect to the RPi via a&amp;nbsp;network connection and then complete the installation of the Reef-Pi application via remote terminal on the RPi itself.&amp;nbsp;&lt;/p&gt;&lt;p&gt;&lt;br /&gt;&lt;/p&gt;&lt;p&gt;Here, goes...&lt;/p&gt;&lt;p&gt;Download latest RPi image, I used the lite version (no desktop)&lt;/p&gt;&lt;p&gt;&lt;a href=&quot;https://www.raspberrypi.org/downloads/raspberry-pi-os/&quot; title=&quot;&quot; class=&quot;&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;https://www.raspberrypi.org/downloads/raspberry-pi-os/&lt;/a&gt;&lt;br /&gt;&lt;/p&gt;&lt;p&gt;&lt;br /&gt;&lt;/p&gt;&lt;p&gt;Transfer image to card using Etcher.&lt;/p&gt;&lt;p&gt;&lt;strong data-redactor-tag=&quot;strong&quot; data-verified=&quot;redactor&quot;&gt;&lt;a href=&quot;https://www.balena.io/etcher/&quot; title=&quot;&quot; class=&quot;&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;https://www.balena.io/etcher/&lt;/a&gt;&lt;/strong&gt;&lt;br /&gt;&lt;/p&gt;&lt;p&gt;&lt;strong data-redactor-tag=&quot;strong&quot; data-verified=&quot;redactor&quot;&gt;&lt;br /&gt;&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;Then you will need to&amp;nbsp;create files for SSH and WiFi. On a Mac you can do the following from the terminal.&amp;nbsp;&lt;span&gt;The SSH file is absolutely necessary, the wifi is optional if you access via&amp;nbsp;ethernet&amp;nbsp;cable&lt;br /&gt;&lt;br /&gt;NOTE: You may need to remove and plug in the SD card again to be able to see it in Finder (etcher un-mounts (ejects)&amp;nbsp;the card when it is finished)&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span&gt;Issue the following commands in terminal to create the empty files&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;strong data-redactor-tag=&quot;strong&quot; data-verified=&quot;redactor&quot;&gt;touch /Volumes/boot/ssh&lt;br /&gt;touch /Volumes/boot/wpa_supplicant.conf&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;Next edit the wps_supplicant.conf file and add the following contents, changing it to suit your network&lt;/p&gt;&lt;p&gt;&lt;strong data-redactor-tag=&quot;strong&quot; data-verified=&quot;redactor&quot;&gt;country=US&lt;br /&gt;&lt;/strong&gt;&lt;strong data-redactor-tag=&quot;strong&quot; data-verified=&quot;redactor&quot;&gt;ctrl_interface=DIR=/var/run/wpa_supplicant&lt;br /&gt;&lt;/strong&gt;&lt;strong data-redactor-tag=&quot;strong&quot; data-verified=&quot;redactor&quot;&gt;GROUP=netdev&lt;br /&gt;&lt;/strong&gt;&lt;strong data-redactor-tag=&quot;strong&quot; data-verified=&quot;redactor&quot;&gt;update_config=1&lt;br /&gt;&lt;/strong&gt;&lt;strong data-redactor-tag=&quot;strong&quot; data-verified=&quot;redactor&quot;&gt;network={&lt;br /&gt;&lt;/strong&gt;&lt;strong data-redactor-tag=&quot;strong&quot; data-verified=&quot;redactor&quot;&gt;&amp;nbsp; &amp;nbsp;&amp;nbsp;ssid=&quot;NETWORK-NAME&quot;&lt;br /&gt;&lt;/strong&gt;&lt;strong data-redactor-tag=&quot;strong&quot; data-verified=&quot;redactor&quot;&gt;&amp;nbsp; &amp;nbsp;&amp;nbsp;psk=&quot;NETWORK-PASSWORD&quot;&lt;br /&gt;&lt;/strong&gt;&lt;strong data-redactor-tag=&quot;strong&quot; data-verified=&quot;redactor&quot;&gt;}&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;&lt;strong data-redactor-tag=&quot;strong&quot; data-verified=&quot;redactor&quot;&gt;&lt;br /&gt;&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;Now you can plug the SD card into your RPi and turn it on.&amp;nbsp;&lt;span&gt;Next you can SSH into your RPi. You will need to find its IP address on your network. The simplest way to do this is to look at the network user list in the&amp;nbsp;admin panel of&amp;nbsp;your router.&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span&gt;In terminal on your mac use the following command to access the RPI via secure shell.&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;strong data-redactor-tag=&quot;strong&quot; data-verified=&quot;redactor&quot;&gt;ssh pi@192.168.1.5&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;it will ask you for your password, the default password is &lt;em data-redactor-tag=&quot;em&quot; data-verified=&quot;redactor&quot;&gt;raspberry&lt;/em&gt;&lt;/p&gt;&lt;p&gt;You will notice the command prompt change - you&amp;nbsp;are now connected to your RPi&lt;/p&gt;&lt;p&gt;&lt;strong data-redactor-tag=&quot;strong&quot; data-verified=&quot;redactor&quot;&gt;&lt;br /&gt;&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;Next update and upgrade packages...&lt;/p&gt;&lt;p&gt;&lt;strong data-redactor-tag=&quot;strong&quot; data-verified=&quot;redactor&quot;&gt;sudo apt-get &lt;span class=&quot;hljs-keyword&quot; data-verified=&quot;redactor&quot; data-redactor-tag=&quot;span&quot; data-redactor-class=&quot;hljs-keyword&quot;&gt;update&lt;/span&gt; -y&lt;br /&gt;&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;Followed by...&lt;/p&gt;&lt;p&gt;&lt;strong data-redactor-tag=&quot;strong&quot; data-verified=&quot;redactor&quot;&gt;sudo apt-&lt;span class=&quot;hljs-keyword&quot; data-verified=&quot;redactor&quot; data-redactor-tag=&quot;span&quot; data-redactor-class=&quot;hljs-keyword&quot;&gt;get&lt;/span&gt; &lt;span class=&quot;hljs-keyword&quot; data-verified=&quot;redactor&quot; data-redactor-tag=&quot;span&quot; data-redactor-class=&quot;hljs-keyword&quot;&gt;upgrade&lt;/span&gt; -y&lt;br /&gt;&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;&lt;br /&gt;&lt;/p&gt;&lt;p&gt;...next&amp;nbsp;edit the config file&lt;/p&gt;&lt;p&gt;&lt;strong data-redactor-tag=&quot;strong&quot; data-verified=&quot;redactor&quot;&gt;/boot/config.txt&lt;br /&gt;&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;...and add the following to the end of the file&lt;/p&gt;&lt;p&gt;&lt;span class=&quot;hljs-attr&quot; data-verified=&quot;redactor&quot; data-redactor-tag=&quot;span&quot; data-redactor-class=&quot;hljs-attr&quot;&gt;&lt;strong data-redactor-tag=&quot;strong&quot; data-verified=&quot;redactor&quot;&gt;#Reef Pi Config&lt;br /&gt;&lt;/strong&gt;&lt;/span&gt;&lt;strong data-redactor-tag=&quot;strong&quot; data-verified=&quot;redactor&quot;&gt;&lt;span class=&quot;hljs-attr&quot; data-verified=&quot;redactor&quot; data-redactor-tag=&quot;span&quot; data-redactor-class=&quot;hljs-attr&quot;&gt;dtparam&lt;/span&gt;=i2c_arm=&lt;span class=&quot;hljs-literal&quot; data-verified=&quot;redactor&quot; data-redactor-tag=&quot;span&quot; data-redactor-class=&quot;hljs-literal&quot;&gt;on&lt;br /&gt;&lt;/span&gt;&lt;/strong&gt;&lt;strong data-redactor-tag=&quot;strong&quot; data-verified=&quot;redactor&quot;&gt;&lt;span class=&quot;hljs-attr&quot; data-verified=&quot;redactor&quot; data-redactor-tag=&quot;span&quot; data-redactor-class=&quot;hljs-attr&quot;&gt;dtparam&lt;/span&gt;=spi=&lt;span class=&quot;hljs-literal&quot; data-verified=&quot;redactor&quot; data-redactor-tag=&quot;span&quot; data-redactor-class=&quot;hljs-literal&quot;&gt;on&lt;br /&gt;&lt;/span&gt;&lt;/strong&gt;&lt;strong data-redactor-tag=&quot;strong&quot; data-verified=&quot;redactor&quot;&gt;&lt;span class=&quot;hljs-attr&quot; data-verified=&quot;redactor&quot; data-redactor-tag=&quot;span&quot; data-redactor-class=&quot;hljs-attr&quot;&gt;dtparam&lt;/span&gt;=audio=&lt;span class=&quot;hljs-literal&quot; data-verified=&quot;redactor&quot; data-redactor-tag=&quot;span&quot; data-redactor-class=&quot;hljs-literal&quot;&gt;on&lt;br /&gt;&lt;/span&gt;&lt;/strong&gt;&lt;strong data-redactor-tag=&quot;strong&quot; data-verified=&quot;redactor&quot;&gt;&lt;span class=&quot;hljs-attr&quot; data-verified=&quot;redactor&quot; data-redactor-tag=&quot;span&quot; data-redactor-class=&quot;hljs-attr&quot;&gt;enable_uart&lt;/span&gt;=&lt;span class=&quot;hljs-number&quot; data-verified=&quot;redactor&quot; data-redactor-tag=&quot;span&quot; data-redactor-class=&quot;hljs-number&quot;&gt;1&lt;br /&gt;&lt;/span&gt;&lt;/strong&gt;&lt;strong data-redactor-tag=&quot;strong&quot; data-verified=&quot;redactor&quot;&gt;&lt;span class=&quot;hljs-attr&quot; data-verified=&quot;redactor&quot; data-redactor-tag=&quot;span&quot; data-redactor-class=&quot;hljs-attr&quot;&gt;dtoverlay&lt;/span&gt;=w1-gpio&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;&lt;br /&gt;&lt;/p&gt;&lt;p&gt;Now reboot by issuing the following command. This will enable all of the changes you have made&lt;/p&gt;&lt;p&gt;&lt;span&gt;&lt;strong data-redactor-tag=&quot;strong&quot; data-verified=&quot;redactor&quot;&gt;sudo reboot&lt;/strong&gt;&lt;/span&gt;&lt;br /&gt;&lt;/p&gt;&lt;p&gt;&lt;br /&gt;Next install&amp;nbsp;reef-pi itself, you will need to know the latest version, you can find this at -&amp;nbsp;&lt;span&gt;&lt;a href=&quot;https://github.com/reef-pi/reef-pi/releases&quot; title=&quot;&quot; class=&quot;&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;https://github.com/reef-pi/reef-pi/releases&lt;/a&gt;&amp;nbsp;&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span&gt;Log back in to the RPi via SSH (using the command above or just hit the up key on your keyboard to access the command history) and enter the following command (substituting the path / version&amp;nbsp;for the one found at&amp;nbsp;&lt;a href=&quot;https://github.com/reef-pi/reef-pi/releases&quot; title=&quot;&quot; class=&quot;&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;https://github.com/reef-pi/reef-pi/releases&lt;/a&gt;)&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;strong data-redactor-tag=&quot;strong&quot; data-verified=&quot;redactor&quot;&gt;wget -c https://github.com/reef-pi/reef-pi/releases/download/3.0/reef-pi-3.5-pi0.deb&lt;br /&gt;&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;then...&lt;/p&gt;&lt;p&gt;&lt;strong data-redactor-tag=&quot;strong&quot; data-verified=&quot;redactor&quot;&gt;sudo dpkg -i reef-pi-3.5-pi0.deb&lt;br /&gt;&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;&lt;strong data-redactor-tag=&quot;strong&quot; data-verified=&quot;redactor&quot;&gt;&lt;br /&gt;&lt;/strong&gt;&lt;/p&gt;&lt;p&gt;Now if you visit the IP address you found earlier in your&amp;nbsp;browser by typing it into your address bar (for example&amp;nbsp;http://192.168.1.5)&amp;nbsp;you should see a login&amp;nbsp;screen for your reef-pi. The default username and password are 'reef-pi'&lt;/p&gt;&lt;p&gt;Congrats. you now have a headless installation. You can now go on to set up other aspects like setting the default&amp;nbsp;network name so that you can access your reef pi by its net name rather than IP address (which may change every time you cycle the power). You can set this and other system related aspects using the 'raspi-config' command from the command line when logged into your RPi.&lt;br /&gt;&lt;br /&gt;There's some good resources available online for the set up and installation of reef-pi, I used the following when setting up my own Reef-pi, there's further info available there.&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;&lt;p&gt;&lt;a href=&quot;https://www.raspberrypi.org/documentation/configuration/wireless/headless.md&quot; title=&quot;&quot; class=&quot;&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;https://www.raspberrypi.org/documentation/configuration/wireless/headless.md&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;a href=&quot;https://desertbot.io/blog/headless-raspberry-pi-3-bplus-ssh-wifi-setup&quot; title=&quot;&quot; class=&quot;&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;https://desertbot.io/blog/headless-raspberry-pi-3-bplus-ssh-wifi-setup&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;a href=&quot;https://reef-pi.github.io/general-guides/install/&quot; title=&quot;&quot; class=&quot;&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;https://reef-pi.github.io/general-guides/install/&lt;/a&gt;&lt;br /&gt;&lt;/p&gt;&lt;p&gt;&lt;br /&gt;&lt;/p&gt;&lt;p&gt;If you get stuck there's also the following...&lt;/p&gt;&lt;p&gt;&lt;a href=&quot;https://reef-pi.github.io/additional-documentation/troubleshooting/&quot; title=&quot;&quot; class=&quot;&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;https://reef-pi.github.io/additional-documentation/troubleshooting/&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;br /&gt;&lt;/p&gt;&lt;p&gt;And a really awesome reef-pi thread over on reef2reef where you&amp;nbsp;can also ask&amp;nbsp;questions and get advice. The thread is really active and the devs really responsive which is perfect project support.&amp;nbsp;&lt;br /&gt;&lt;br /&gt;&lt;a href=&quot;https://www.reef2reef.com/threads/reef-pi-an-opensource-reef-tank-controller-based-on-raspberry-pi.289256/&quot; title=&quot;&quot; class=&quot;&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;https://www.reef2reef.com/threads/reef-pi-an-opensource-reef-tank-controller-based-on-raspberry-pi.289256/&lt;/a&gt;&lt;br /&gt;&lt;/p&gt;&lt;p&gt;&lt;br /&gt;&lt;/p&gt;&lt;p&gt;Reef-Pi is an awesome project and definitely worth looking into if you are considering buying or building some form of controller for your aquarium. I recommend it.&lt;/p&gt;&lt;/div&gt;</content><author><name></name></author><category term="General" /><category term="aquarium" /><category term="raspberry-pi" /><category term="reef-pi" /><category term="rpi" /><summary type="html">I'm setting up a reef-pi controller on my tank. Reef-Pi is a DIY Raspberry-Pi based aquarium controller.&amp;nbsp;I had considered making a simple controller using an Arduino, but when i was searching online I found&amp;nbsp;the Reef-Pi project and decided it was perfect for my needs and would save a bunch of work and time. Win-Win! The main reason I was considering some kind of tank controller was just to control my lights with the eventual goal of building some DIY LED Lights. I also quite like the idea of switching all of my pumps to DC pumps powered by a solar charged battery bank to help save on electricity costs and overcome power outages, so moving to a centralised controller would make this possible. I'm not 100% sure if reef-pi will be able to control the main pump in this manner but it's something that can be looked into down the track, it certainly has the capability to control DC pumps and so looks like it will&amp;nbsp;be able to do the job.For the time being I'll concentrate on getting the pi set up with some simple on / off relay control and dimming control for the existing LED lighting and control of the tanks heaters. There is also the possibility to integrate things like Auto Top Up, doser&amp;nbsp;control, PH monitoring,&amp;nbsp;feeder control, etc. In fact there is a pretty flexible macro system that means it can potentially control many different things.So I decided to invest some time into putting a Reef-Pi system together with the end&amp;nbsp;goal of complete tank control, whatever that looks like.</summary></entry><entry><title type="html">Installing reef-pi on orange pi under armbian</title><link href="http://localhost:4000/general/2020/09/21/installing-reef-pi-on-orange-pi-under.html" rel="alternate" type="text/html" title="Installing reef-pi on orange pi under armbian" /><published>2020-09-21T01:37:28+09:30</published><updated>2020-09-21T01:37:28+09:30</updated><id>http://localhost:4000/general/2020/09/21/installing-reef-pi-on-orange-pi-under</id><content type="html" xml:base="http://localhost:4000/general/2020/09/21/installing-reef-pi-on-orange-pi-under.html">&lt;div class=&quot;ebd-block  &quot; data-type=&quot;text&quot;&gt;&lt;p&gt;Download image&lt;br /&gt;&lt;br /&gt;http://www.orangepi.org/downloadresources/&lt;br /&gt;&lt;br /&gt;for my orange pi pc I used the latest Armbian 'buster'&lt;br /&gt;&lt;br /&gt;https://www.armbian.com/orange-pi-pc/&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;http://www.orangepi.org/orangepibbsen/forum.php?mod=viewthread&amp;amp;tid=342&lt;br /&gt;&lt;br /&gt;https://drive.google.com/drive/folders/0B1hyW7T0dqn6fndnZTRhRm5BaW4zVDVyTGlGMWJES3Z1eXVDQzI5R1lnV21oRHFsWnVwSEU&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;Flash to SD using etcher&lt;br /&gt;&lt;br /&gt;https://www.balena.io/etcher/&lt;br /&gt;&lt;br /&gt;Install card into orange pi&lt;br /&gt;&lt;br /&gt;Turn on&lt;br /&gt;&lt;br /&gt;get ip address&lt;br /&gt;&lt;br /&gt;ssl root@192.168.1.4&lt;br /&gt;&lt;br /&gt;password orangepi&lt;br /&gt;&lt;br /&gt;boom, you;re in. now to insstall reef pi&lt;br /&gt;&lt;br /&gt;sudo apt-get update -y &lt;br /&gt;&lt;br /&gt;sudo apt-get upgrade -y&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;add following to &lt;br /&gt;&lt;br /&gt;/boot/orangepiEnv.txt&lt;br /&gt;&lt;br /&gt;dtparam=i2c_arm=on &lt;br /&gt;dtparam=spi=on &lt;br /&gt;dtparam=audio=on &lt;br /&gt;enable_uart=1 &lt;br /&gt;dtoverlay=w1-gpio&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;wget -c https://github.com/reef-pi/reef-pi/releases/download/3.0/reef-pi-3.0-pi3.deb &lt;br /&gt;sudo dpkg -i reef-pi-3.0-pi3.deb&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;then install wifi (if you have it)&lt;br /&gt;&lt;br /&gt;https://raspberrypihq.com/how-to-add-wifi-to-the-raspberry-pi/&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;https://pypi.org/project/OPi.GPIO/&lt;br /&gt;&lt;br /&gt;pip install OPi.GPIO&lt;br /&gt;&lt;/p&gt;&lt;/div&gt;</content><author><name></name></author><category term="General" /><summary type="html">Download imagehttp://www.orangepi.org/downloadresources/for my orange pi pc I used the latest Armbian 'buster'https://www.armbian.com/orange-pi-pc/http://www.orangepi.org/orangepibbsen/forum.php?mod=viewthread&amp;amp;tid=342https://drive.google.com/drive/folders/0B1hyW7T0dqn6fndnZTRhRm5BaW4zVDVyTGlGMWJES3Z1eXVDQzI5R1lnV21oRHFsWnVwSEUFlash to SD using etcherhttps://www.balena.io/etcher/Install card into orange piTurn onget ip addressssl root@192.168.1.4password orangepiboom, you;re in. now to insstall reef pisudo apt-get update -y sudo apt-get upgrade -yadd following to /boot/orangepiEnv.txtdtparam=i2c_arm=on dtparam=spi=on dtparam=audio=on enable_uart=1 dtoverlay=w1-gpiowget -c https://github.com/reef-pi/reef-pi/releases/download/3.0/reef-pi-3.0-pi3.deb sudo dpkg -i reef-pi-3.0-pi3.debthen install wifi (if you have it)https://raspberrypihq.com/how-to-add-wifi-to-the-raspberry-pi/https://pypi.org/project/OPi.GPIO/pip install OPi.GPIO</summary></entry><entry><title type="html">[Rant] Goudy Plugins</title><link href="http://localhost:4000/general/2020/09/12/rant-goudy-plugins.html" rel="alternate" type="text/html" title="[Rant] Goudy Plugins" /><published>2020-09-12T15:55:00+09:30</published><updated>2020-09-12T15:55:00+09:30</updated><id>http://localhost:4000/general/2020/09/12/rant-goudy-plugins</id><content type="html" xml:base="http://localhost:4000/general/2020/09/12/rant-goudy-plugins.html">&lt;p&gt;Why is it that plugin and extension designers feel the need to make their admin interfaces completely different from the parent product? Bright colours and shitty icons make their admin interfaces look like a garish nightmare. Same with the front end renderings as well. FFS, it’s like someone let a monkey loose with a pot of crayons. &lt;br /&gt;
+&lt;br /&gt;
+I’ve had to dismiss half a dozen plugins tonight just because I could not bear looking at the shitty interface every time I wanted to use them. &lt;br /&gt;
+&lt;br /&gt;
+AAAARRRGGH.&lt;br /&gt;
+&lt;br /&gt;
+Leave the styling to the end user eh. &lt;br /&gt;
+&lt;br /&gt;
+/ RANT&lt;/p&gt;</content><author><name></name></author><category term="General" /><summary type="html">Why is it that plugin and extension designers feel the need to make their admin interfaces completely different from the parent product? Bright colours and shitty icons make their admin interfaces look like a garish nightmare. Same with the front end renderings as well. FFS, it’s like someone let a monkey loose with a pot of crayons. I’ve had to dismiss half a dozen plugins tonight just because I could not bear looking at the shitty interface every time I wanted to use them. AAAARRRGGH. Leave the styling to the end user eh. / RANT</summary></entry><entry><title type="html">Adding additional partial payment field to DotStore woocommerce-product-attachment plugin</title><link href="http://localhost:4000/general/2020/09/12/adding-additional-partial-payment-field-to-dotstore-woocommerce-product-attachment-plugin.html" rel="alternate" type="text/html" title="Adding additional partial payment field to DotStore woocommerce-product-attachment plugin" /><published>2020-09-12T11:26:35+09:30</published><updated>2020-09-12T11:26:35+09:30</updated><id>http://localhost:4000/general/2020/09/12/adding-additional-partial-payment-field-to-dotstore-woocommerce-product-attachment-plugin</id><content type="html" xml:base="http://localhost:4000/general/2020/09/12/adding-additional-partial-payment-field-to-dotstore-woocommerce-product-attachment-plugin.html">&lt;p&gt;I'm using the woocommerce deposits plugin with DotStore product-attachment plugin but noted that the partially paid order status was not included in the available selections.&lt;/p&gt;
+
+&lt;p&gt;After some digging I found that the radio buttons are controlled within the following file...&lt;br /&gt; &lt;br /&gt; ../wp-content/plugins/woo-product-attachment/admin/class-woocommerce-product-attachment-admin.php&lt;br /&gt; &lt;br /&gt; Specifically around lines 950 and 1375. All that was left was to determine what the order status for a partially paid order was.&lt;br /&gt; &lt;br /&gt; After sone digging around in the woocommerce deposits plugin I discovered that the status is 'wc-partial-payment', All that was left to do was to create extra radio buttons in the code and assign them the new 'wc-partial-payment' order status.&lt;br /&gt; &lt;br /&gt; at about line 976 an extra list element. Just slot it in after the list element for the 'completed' status.&lt;/p&gt;
+&lt;pre&gt;                    &amp;lt;li&amp;gt;&amp;lt;label for=&quot;wcpoa_wc_partial_payment&quot;&amp;gt;&lt;br /&gt;                    &amp;lt;input name=&quot;wcpoa_order_status[&amp;lt;?php &lt;br /&gt;                    echo  esc_attr( $wcpoa_attachments_id ) ;&lt;br /&gt;                    ?&amp;gt;][]&quot;&lt;br /&gt;                    class=&quot;&quot; value=&quot;wcpoa-wc-partial-payment&quot; type=&quot;checkbox&quot;&lt;br /&gt;                    &amp;lt;?php &lt;br /&gt;                    if ( !is_null( $wcpoa_order_status ) &amp;amp;&amp;amp; in_array( 'wcpoa-wc-partial-payment', $wcpoa_order_status, true ) ) {&lt;br /&gt;                        echo  'checked=&quot;checked&quot;' ;&lt;br /&gt;                    }&lt;br /&gt;                    ?&amp;gt;&amp;gt;&lt;br /&gt;                    &amp;lt;?php &lt;br /&gt;                    esc_html_e( 'Partially Paid', $plugin_txt_domain );&lt;br /&gt;                    ?&amp;gt;&lt;br /&gt;                    &amp;lt;/label&amp;gt;&lt;br /&gt;                    &amp;lt;/li&amp;gt;&lt;/pre&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;p&gt;and again at 1413&lt;/p&gt;
+&lt;pre&gt;                    &amp;lt;li&amp;gt;&lt;br /&gt;                    &amp;lt;label for=&quot;wcpoa_wc_partial_payment&quot;&amp;gt;&lt;br /&gt;                    &amp;lt;input name=&quot;wcpoa_order_status[]&quot; class=&quot;&quot;&lt;br /&gt;                     value=&quot;wcpoa-wc-partial-payment&quot;&lt;br /&gt;                     type=&quot;checkbox&quot;&amp;gt;&amp;lt;?php &lt;br /&gt;            esc_html_e( 'Partial Payment', $plugin_txt_domain );&lt;br /&gt;            ?&amp;gt;&lt;br /&gt;                       &amp;lt;/label&amp;gt;&lt;br /&gt;                       &amp;lt;/li&amp;gt;&lt;/pre&gt;
+&lt;p&gt;&lt;br /&gt;Now downloads can be selected to be made available after customers have made partial payment.&lt;br /&gt; &lt;br /&gt; /DM&lt;/p&gt;</content><author><name></name></author><category term="General" /><summary type="html">I'm using the woocommerce deposits plugin with DotStore product-attachment plugin but noted that the partially paid order status was not included in the available selections. After some digging I found that the radio buttons are controlled within the following file... ../wp-content/plugins/woo-product-attachment/admin/class-woocommerce-product-attachment-admin.php Specifically around lines 950 and 1375. All that was left was to determine what the order status for a partially paid order was. After sone digging around in the woocommerce deposits plugin I discovered that the status is 'wc-partial-payment', All that was left to do was to create extra radio buttons in the code and assign them the new 'wc-partial-payment' order status. at about line 976 an extra list element. Just slot it in after the list element for the 'completed' status.                     &amp;lt;li&amp;gt;&amp;lt;label for=&quot;wcpoa_wc_partial_payment&quot;&amp;gt;                    &amp;lt;input name=&quot;wcpoa_order_status[&amp;lt;?php                     echo  esc_attr( $wcpoa_attachments_id ) ;                    ?&amp;gt;][]&quot;                    class=&quot;&quot; value=&quot;wcpoa-wc-partial-payment&quot; type=&quot;checkbox&quot;                    &amp;lt;?php                     if ( !is_null( $wcpoa_order_status ) &amp;amp;&amp;amp; in_array( 'wcpoa-wc-partial-payment', $wcpoa_order_status, true ) ) {                        echo  'checked=&quot;checked&quot;' ;                    }                    ?&amp;gt;&amp;gt;                    &amp;lt;?php                     esc_html_e( 'Partially Paid', $plugin_txt_domain );                    ?&amp;gt;                    &amp;lt;/label&amp;gt;                    &amp;lt;/li&amp;gt;   and again at 1413                     &amp;lt;li&amp;gt;                    &amp;lt;label for=&quot;wcpoa_wc_partial_payment&quot;&amp;gt;                    &amp;lt;input name=&quot;wcpoa_order_status[]&quot; class=&quot;&quot;                     value=&quot;wcpoa-wc-partial-payment&quot;                     type=&quot;checkbox&quot;&amp;gt;&amp;lt;?php             esc_html_e( 'Partial Payment', $plugin_txt_domain );            ?&amp;gt;                      &amp;lt;/label&amp;gt;                       &amp;lt;/li&amp;gt; Now downloads can be selected to be made available after customers have made partial payment. /DM</summary></entry><entry><title type="html">Adding additional order status’s to DotStore</title><link href="http://localhost:4000/general/2020/09/12/adding-additional-order-status-s-to-dotshield.html" rel="alternate" type="text/html" title="Adding additional order status’s to DotStore" /><published>2020-09-12T11:18:00+09:30</published><updated>2020-09-12T11:18:00+09:30</updated><id>http://localhost:4000/general/2020/09/12/adding-additional-order-status-s-to-dotshield</id><content type="html" xml:base="http://localhost:4000/general/2020/09/12/adding-additional-order-status-s-to-dotshield.html">&lt;div class=&quot;ebd-block  &quot; data-type=&quot;text&quot;&gt;I'm using the woocommerce deposits plugin with DotStore product-attachment plugin but noted that the partially paid order status was not included in the available selections.&lt;br /&gt;&lt;br /&gt;After some digging I found that the radio buttons are controlled within the following file...&lt;br /&gt;&lt;br /&gt;../wp-content/plugins/woo-product-attachment/admin/class-woocommerce-product-attachment-admin.php&lt;br /&gt;&lt;br /&gt;Specifically around lines 950 and 1375. All that was left was to determine what the order status for a partially paid order was.&lt;br /&gt;&lt;br /&gt;&lt;p&gt;&lt;span&gt;After sone digging around in the woocommerce deposits plugin I discovered that the status is 'wc-partial-payment', All that was left to do was to create extra radio buttons in the code and assign them the new 'wc-partial-payment' order status.&lt;/span&gt;&amp;nbsp;&lt;/p&gt;&lt;/div&gt;</content><author><name></name></author><category term="General" /><summary type="html">I'm using the woocommerce deposits plugin with DotStore product-attachment plugin but noted that the partially paid order status was not included in the available selections.After some digging I found that the radio buttons are controlled within the following file...../wp-content/plugins/woo-product-attachment/admin/class-woocommerce-product-attachment-admin.phpSpecifically around lines 950 and 1375. All that was left was to determine what the order status for a partially paid order was.After sone digging around in the woocommerce deposits plugin I discovered that the status is 'wc-partial-payment', All that was left to do was to create extra radio buttons in the code and assign them the new 'wc-partial-payment' order status.&amp;nbsp;</summary></entry></feed>

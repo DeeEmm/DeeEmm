@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>Dolphin - Remove big join button from promo | DeeEmm</title>
+<meta name="generator" content="Jekyll v4.1.1" />
+<meta property="og:title" content="Dolphin - Remove big join button from promo" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="There are a few different ways of removing the join button from the promo banner. The method you use will vary depending on your requirements. You can even change the location that it navigates to. Here&#39;s a few different methods. &nbsp; Remove (hide) button via CSS Edit the following file templates/tmpl_uni/css/top_menu.css Add the following to the bottom of the file .sys_tm_actions div.button_wrapper .bigJoinButton { display:none !important;}.sys_tm_actions div.button_wrapper .bigJoinButton + .button_wrapper_close{ display:none !important;} This hides the button, but relies on some CSS3 attributes (the plus sign is a boolean operator used to say that both&nbsp;.bigJoinButton + .button_wrapper_close are required) - this is not supported by earlier versions of explorer. The requirement for the second css statement is to hide the image that forms the right hand side of the button - the Boonex code does not differentiate between the login and join buttons, so without the conditional statement it will hide this image on both buttons. If your template does not include this, then simply use the first statement to hide the button. &nbsp; Remove button via base template To remove the code that generates the button, edit the following file /templates/base/login_join.html find the following... &nbsp; &nbsp; delete it or comment it out like this... &nbsp; &nbsp; &nbsp; &nbsp; Change the target of the button The last option is to leave the button as it is, and simply change it to open a different target. Edit /templates/base/login_join.html find the following... &nbsp; Change it to the following &nbsp; &nbsp; In all of these cases, dont forget, that the button is not the only link that directs to the join.page. If your goal is to provide a custom join page, you may also have to edit other areas of the site. The easy one to fix is the link that the promo banner navigates to - this can be changed via the admin panel. Harder are the links in the breadcrumbs bar and the login popup. But that&#39;s something for another article. /DM &nbsp;" />
+<meta property="og:description" content="There are a few different ways of removing the join button from the promo banner. The method you use will vary depending on your requirements. You can even change the location that it navigates to. Here&#39;s a few different methods. &nbsp; Remove (hide) button via CSS Edit the following file templates/tmpl_uni/css/top_menu.css Add the following to the bottom of the file .sys_tm_actions div.button_wrapper .bigJoinButton { display:none !important;}.sys_tm_actions div.button_wrapper .bigJoinButton + .button_wrapper_close{ display:none !important;} This hides the button, but relies on some CSS3 attributes (the plus sign is a boolean operator used to say that both&nbsp;.bigJoinButton + .button_wrapper_close are required) - this is not supported by earlier versions of explorer. The requirement for the second css statement is to hide the image that forms the right hand side of the button - the Boonex code does not differentiate between the login and join buttons, so without the conditional statement it will hide this image on both buttons. If your template does not include this, then simply use the first statement to hide the button. &nbsp; Remove button via base template To remove the code that generates the button, edit the following file /templates/base/login_join.html find the following... &nbsp; &nbsp; delete it or comment it out like this... &nbsp; &nbsp; &nbsp; &nbsp; Change the target of the button The last option is to leave the button as it is, and simply change it to open a different target. Edit /templates/base/login_join.html find the following... &nbsp; Change it to the following &nbsp; &nbsp; In all of these cases, dont forget, that the button is not the only link that directs to the join.page. If your goal is to provide a custom join page, you may also have to edit other areas of the site. The easy one to fix is the link that the promo banner navigates to - this can be changed via the admin panel. Harder are the links in the breadcrumbs bar and the login popup. But that&#39;s something for another article. /DM &nbsp;" />
+<link rel="canonical" href="http://localhost:4000/dolphin%207.0.x%20modifications/2010/06/24/dolphin-remove-big-join-button.html" />
+<meta property="og:url" content="http://localhost:4000/dolphin%207.0.x%20modifications/2010/06/24/dolphin-remove-big-join-button.html" />
+<meta property="og:site_name" content="DeeEmm" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2010-06-24T05:18:27+09:30" />
+<script type="application/ld+json">
+{"description":"There are a few different ways of removing the join button from the promo banner. The method you use will vary depending on your requirements. You can even change the location that it navigates to. Here&#39;s a few different methods. &nbsp; Remove (hide) button via CSS Edit the following file templates/tmpl_uni/css/top_menu.css Add the following to the bottom of the file .sys_tm_actions div.button_wrapper .bigJoinButton { display:none !important;}.sys_tm_actions div.button_wrapper .bigJoinButton + .button_wrapper_close{ display:none !important;} This hides the button, but relies on some CSS3 attributes (the plus sign is a boolean operator used to say that both&nbsp;.bigJoinButton + .button_wrapper_close are required) - this is not supported by earlier versions of explorer. The requirement for the second css statement is to hide the image that forms the right hand side of the button - the Boonex code does not differentiate between the login and join buttons, so without the conditional statement it will hide this image on both buttons. If your template does not include this, then simply use the first statement to hide the button. &nbsp; Remove button via base template To remove the code that generates the button, edit the following file /templates/base/login_join.html find the following... &nbsp; &nbsp; delete it or comment it out like this... &nbsp; &nbsp; &nbsp; &nbsp; Change the target of the button The last option is to leave the button as it is, and simply change it to open a different target. Edit /templates/base/login_join.html find the following... &nbsp; Change it to the following &nbsp; &nbsp; In all of these cases, dont forget, that the button is not the only link that directs to the join.page. If your goal is to provide a custom join page, you may also have to edit other areas of the site. The easy one to fix is the link that the promo banner navigates to - this can be changed via the admin panel. Harder are the links in the breadcrumbs bar and the login popup. But that&#39;s something for another article. /DM &nbsp;","@type":"BlogPosting","headline":"Dolphin - Remove big join button from promo","dateModified":"2010-06-24T05:18:27+09:30","datePublished":"2010-06-24T05:18:27+09:30","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/dolphin%207.0.x%20modifications/2010/06/24/dolphin-remove-big-join-button.html"},"url":"http://localhost:4000/dolphin%207.0.x%20modifications/2010/06/24/dolphin-remove-big-join-button.html","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="DeeEmm" /></head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/">DeeEmm</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/about/">About</a><a class="page-link" href="/archives/">Archives</a><a class="page-link" href="/blog/">Blog</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Dolphin - Remove big join button from promo</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2010-06-24T05:18:27+09:30" itemprop="datePublished">Jun 24, 2010
+      </time></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>There are a few different ways of removing the join button from the promo banner. The method you use will vary depending on your requirements. You can even change the location that it navigates to.</p>
+<p>Here's a few different methods.</p>
+<p>&nbsp;</p>
+<p><strong>Remove (hide) button via CSS</strong></p>
+<p>Edit the following file</p>
+<p><em>templates/tmpl_uni/css/top_menu.css</em></p>
+<p>Add the following to the bottom of the file</p>
+<p class="code">.sys_tm_actions div.button_wrapper .bigJoinButton {<br /> display:none !important;<br />}<br /><br />.sys_tm_actions div.button_wrapper .bigJoinButton + .button_wrapper_close{<br /> display:none !important;<br />}</p>
+<p>This hides the button, but relies on some CSS3 attributes (the plus sign is a boolean operator used to say that both&nbsp;<span style="font-family: 'Courier News', monospace; line-height: 15px;">.</span>bigJoinButton + .button_wrapper_close are required) - this is not supported by earlier versions of explorer.</p>
+<p>The requirement for the second css statement is to hide the image that forms the right hand side of the button - the Boonex code does not differentiate between the login and join buttons, so without the conditional statement it will hide this image on both buttons.</p>
+<p>If your template does not include this, then simply use the first statement to hide the button.</p>
+<p>&nbsp;</p>
+<p><strong>Remove button via base template</strong></p>
+<p>To remove the code that generates the button, edit the following file</p>
+<p><em>/templates/base/login_join.html</em></p>
+<p>find the following...</p>
+<p>&nbsp;</p>
+<div class="button_wrapper" style="margin-right: 14px;"><input class="form_input_submit bigJoinButton submit" type="button" name="join" value="value" />
+<div class="button_wrapper_close">&nbsp;</div>
+</div>
+<p>delete it or comment it out like this...</p>
+<p>&nbsp;</p>
+<pre style="color: #000000; font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 10px; margin-top: 5px; margin-right: 0px; margin-bottom: 15px; margin-left: 0px; padding-top: 10px; padding-right: 15px; padding-bottom: 10px; padding-left: 15px; border-left-width: 5px; border-right-width: 1px; border-top-width: 1px; border-bottom-width: 1px; background-image: initial; background-attachment: initial; background-origin: initial; background-clip: initial; background-color: #f6f6f6; font: normal normal normal 1em/1.5 'Courier News', monospace; white-space: pre-wrap; word-wrap: break-word; background-position: initial initial; background-repeat: initial initial; border-color: #999999; border-style: solid;">&nbsp;</pre>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p><strong>Change the target of the button</strong></p>
+<p>The last option is to leave the button as it is, and simply change it to open a different target.</p>
+<p>Edit</p>
+<p><em>/templates/base/login_join.html</em></p>
+<p>find the following...</p>
+<p>&nbsp;</p>
+<pre style="color: #000000; font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 10px; margin-top: 5px; margin-right: 0px; margin-bottom: 15px; margin-left: 0px; padding-top: 10px; padding-right: 15px; padding-bottom: 10px; padding-left: 15px; border-left-width: 5px; border-right-width: 1px; border-top-width: 1px; border-bottom-width: 1px; background-image: initial; background-attachment: initial; background-origin: initial; background-clip: initial; background-color: #f6f6f6; font: normal normal normal 1em/1.5 'Courier News', monospace; white-space: pre-wrap; word-wrap: break-word; background-position: initial initial; background-repeat: initial initial; border-color: #999999; border-style: solid;"><input class="form_input_submit bigJoinButton submit" type="button" name="join" value="value" /></pre>
+<p>Change it to the following</p>
+<p>&nbsp;</p>
+<pre style="color: #000000; font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 10px; margin-top: 5px; margin-right: 0px; margin-bottom: 15px; margin-left: 0px; padding-top: 10px; padding-right: 15px; padding-bottom: 10px; padding-left: 15px; border-left-width: 5px; border-right-width: 1px; border-top-width: 1px; border-bottom-width: 1px; background-image: initial; background-attachment: initial; background-origin: initial; background-clip: initial; background-color: #f6f6f6; font: normal normal normal 1em/1.5 'Courier News', monospace; white-space: pre-wrap; word-wrap: break-word; background-position: initial initial; background-repeat: initial initial; border-color: #999999; border-style: solid;"><input class="form_input_submit bigJoinButton submit" type="button" name="join" value="value" /></pre>
+<p>&nbsp;</p>
+<p>In all of these cases, dont forget, that the button is not the only link that directs to the join.page. If your goal is to provide a custom join page, you may also have to edit other areas of the site.</p>
+<p>The easy one to fix is the link that the promo banner navigates to - this can be changed via the admin panel. Harder are the links in the breadcrumbs bar and the login popup. But that's something for another article.</p>
+<p>/DM</p>
+<p>&nbsp;</p>
+
+  </div><a class="u-url" href="/dolphin%207.0.x%20modifications/2010/06/24/dolphin-remove-big-join-button.html" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">DeeEmm</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">DeeEmm</li><li><a class="u-email" href="mailto:deeemmm@deeemm.com">deeemmm@deeemm.com</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/DeeEmm"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">DeeEmm</span></a></li><li><a href="https://www.twitter.com/DeeEmm__"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">DeeEmm__</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>Waxing lyrical about life the universe and everything tech related since lunchtime 2006.</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>

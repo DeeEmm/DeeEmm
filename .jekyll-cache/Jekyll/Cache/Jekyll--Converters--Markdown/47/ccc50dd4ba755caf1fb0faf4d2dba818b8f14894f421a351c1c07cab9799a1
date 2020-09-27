@@ -1,0 +1,8 @@
+I"Ù<p>The final part of our Geeklog to Joomla / Jomsocial migration deals with migrating the main site content.</p>
+<p>With Geeklog, content is organised into 'Stories'. Similarly, with Joomla, content is organised into 'Articles'.</p>
+<p>Migration is simple, and requires running one SQL command.</p>
+<p>First, ensure that you copy the following tables to your new database</p>
+<p><strong>gl_stories</strong></p>
+<p>then simply run the following command<br /><br /><em>INSERT INTO `jos_content` (`title`,`introtext`,`fulltext`,`catid`,`created`,`hits`)<br />SELECT title,introtext,bodytext,tid,date,hits<br />FROM gl_stories<br /></em></p>
+<p>You will now be able to see all of your old Geeklog stories in the Article manager.</p>
+:ET

@@ -1,0 +1,10 @@
+---
+layout: post
+title: Ubuntu Forums Hacked
+joomla_id: 251
+joomla_url: ubuntu-forums-hacked
+category: General
+tags: hacked ubuntu
+date: 2013-07-27 05:13:52.000000000 +09:30
+---
+<p>Looks like the Ubuntu forums have been hacked as they are currently offline.<br> <br> The forum is currently displaying the maintenance page with the following information:<br> <br> Ubuntu Forums is down for maintenance<br> <br> There has been a security breach on the Ubuntu Forums. The Canonical IS team is working hard as we speak to restore normal operations. This page will be updated with progress reports.<br> <br> What we know<br> <br> Unfortunately the attackers have gotten every user's local username, password, and email address from the Ubuntu Forums database.<br> The passwords are not stored in plain text, they are stored as salted hashes. However, if you were using the same password as your Ubuntu Forums one on another service (such as email), you are strongly encouraged to change the password on the other service ASAP.<br> Ubuntu One, Launchpad and other Ubuntu/Canonical services are NOT affected by the breach.<br> Progress report<br> <br> 2013-07-20 2011UTC: Reports of defacement<br> 2013-07-20 2015UTC: Site taken down, this splash page put in place while investigation continues.<br> 2013-07-21: we believe the root cause of the breach has been identified. We are currently reinstalling the forums software from scratch. No data (posts, private messages etc.) will be lost as part of this process.<br> 2013-07-22 -&gt; 2013-07-25: work on reinstalling the forums continues.<br> 2013-07-26: the forums are up running again and being tested privately by Forum administrators.</p>

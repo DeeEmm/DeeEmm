@@ -1,0 +1,46 @@
+---
+layout: post
+title: Add Youtube video button to TinyMCE
+joomla_id: 211
+joomla_url: add-youtube-video-button-to-tinymce
+category: Dolphin 7.0.x Modifications
+tags: button mod tinymce video youtube
+date: 2010-06-24 06:15:56.000000000 +09:30
+---
+<p>Not strictly a Dolphin modification, as it applies to TinyMCE in general, but I will outline it here for Dolphin 7. It's a pretty easy modification to do, just two files to edit.</p>
+<p>The functionality for this is already in TinyMCE, but for some reason it is not enabled. I've tested this out on version 7.0.2 with no issues.</p>
+<p><strong>To enable YouTube /flash video button in the forums</strong></p>
+<p>Edit</p>
+<p><em>modules/boonex/forum/layout/base/xsl/canvas_init.xsl</em></p>
+<p>Find the following line</p>
+<p class="code">theme_advanced_buttons3_add : "emotions,iespell,flash,separator,print",</p>
+<p>Change it to...</p>
+<p>&nbsp;</p>
+<p><span class="code">theme_advanced_buttons3_add : "emotions,iespell,flash,separator,print,separator,media",</span></p>
+<p>&nbsp;</p>
+<p>Now compile the forums, and you should see a new button</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p><strong>To enable YouTube /flash video button for the rest of the site</strong></p>
+<p>Edit...</p>
+<div><em>/templates/base/scripts/BxBaseConfig.php</em></div>
+<div>Find...</div>
+<div class="code">theme_advanced_buttons3_add : "emotions",</div>
+<div>Replace it with</div>
+<div class="code">theme_advanced_buttons3_add : "emotions,separator,media",</div>
+<div>This should add it into TinyMCE for the main areas of the site such as blogs etc.</div>
+<div>&nbsp;</div>
+<div>&nbsp;</div>
+<div><strong>To insert a youtube video</strong></div>
+<div>
+<ul>
+<li>Copy the url from the video's page,</li>
+<li>Click on the button in TinyMCE.</li>
+<li>Select 'flash'</li>
+<li>Paste URL into URL box</li>
+<li>Click insert</li>
+</ul>
+<div>Job Done!!</div>
+</div>
+<p>&nbsp;</p>
+<p>&nbsp;</p>

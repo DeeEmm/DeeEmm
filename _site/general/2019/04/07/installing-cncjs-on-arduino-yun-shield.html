@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>Installing CNCJS on Arduino Yun Shield | DeeEmm</title>
+<meta name="generator" content="Jekyll v4.1.1" />
+<meta property="og:title" content="Installing CNCJS on Arduino Yun Shield" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Intro OpenWRT&nbsp; &nbsp; Updating OpenWRT to latest version I tried to install CNCJS under the Last version of Yun firmware available via the Dragino repository but found that it was not possible. After much trying what I discovered was that development for the YUN firmware was dropped&nbsp;in favour of the current IOT branch leaving the last version of node at 0.12.7 which was too old to install CNCJS on. I tried in vain the update node to at least version 4 but found that it simply was not possible to compile it on the earlier version of OpenWRT. So leaves the only possible pathway as upgrading the&nbsp; First step update firmware to the current IOT branch, this involves two steps as trying to install the IOT image via the browser update manager will return an error. so there is an intermediate firmware that needs to be installed to negate this. The YUN repositories are no longer maintained so the latest openWRT firmware now resides un the IOT branch http://www.dragino.com/downloads/downloads/motherboards/ms14/Firmware/ First step is to install the intermediate firmware &nbsp; Next you have to enable to firmware which has to be invoked from the command lin within the SSH terminal &nbsp; then update to IOT firmware &nbsp; &nbsp; &nbsp;installing Node.js&nbsp;&nbsp; On the Dragino YUN firmware node is installed by default, you can check if it is installed on your distro by issuing the check version command node -v&nbsp;&nbsp; &nbsp; Same applies for npm npm -v If you do not have node.js installed on your distro you can install them via opkg &nbsp; Package lists src/gz chaos_calmer_base https://archive.openwrt.org/chaos_calmer/15.05/ar71xx/generic/packages/base src/gz chaos_calmer_packages https://archive.openwrt.org/chaos_calmer/15.05/ar71xx/generic/packages/packages&nbsp; src/gz chaos_calmer_luci https://archive.openwrt.org/chaos_calmer/15.05/ar71xx/generic/packages/luci&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; src/gz chaos_calmer_routing https://archive.openwrt.org/chaos_calmer/15.05/ar71xx/generic/packages/routing&nbsp; &nbsp;&nbsp; src/gz chaos_calmer_telephony https://archive.openwrt.org/chaos_calmer/15.05/ar71xx/generic/packages/telephony src/gz chaos_calmer_management https://archive.openwrt.org/chaos_calmer/15.05/ar71xx/generic/packages/management &nbsp; &nbsp; no nodejs included in packages for chaos_calmer &nbsp; opkg update &nbsp; opkg install node &nbsp; &nbsp; &nbsp; Before we go any further... These are the &#39;fixes&#39; that I needed to do to enable the installation process to be successful. It&#39;s probably worth just doing these right from the get-go as it will save you a heap of time in the long run. Of course, these fixes may not be exhaustive as your particular flavour of hardware / firmware may have other gremlins that need to be addressed, but for my early Iduino Yun board this is what worked for me. &nbsp; &nbsp; &nbsp; I found that sometimes OpenWRT does not handle HTTPS very well and will give you a bunch of socket errors, if you are having issues the best option is to point the NPM package manager at the HTTP version of the registry. It will work exactly the same but does not have the overhead of establishing secure connections for each transfer / transaction. Not only does it massively reduce the risk of network issues, but the reduced overheads probably make it a bit quicker too &nbsp; npm config set registry http://registry.npmjs.org/ &nbsp; Additionally, to further reduce issues with timeouts due to socket errors, it might be worth limiting the number of sockets you are using. The standard is 50. You can tweak the value but basically whilst more concurrent connections will be faster they will also chew up memory and overheads, of which neither are in great supply. &nbsp; npm set maxsockets 3 I&#39;ve found it necessary to do both of these along with the large swap to get the installation to work. You may have more luck on later processors / with larger memory but definitely on the earlier board I had, there was no chance it was going to work out of the box. &nbsp; I also disabled IPV6 handing via the web interface for the network adaptor I was using. This was another fix for random network hangs. &nbsp; network &gt; interface &gt; advanced settings&nbsp; &nbsp; I also installed version 4 of webpack as many dependencies relay on this version&nbsp; &nbsp; npm install webpack@4.x --save-dev -verbose &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Other things to check are that your DNS server settings are correct, they should be passed from your cable-modem, you can view them in the web interface on the status overview page &nbsp; Also make sure that your computer will not go to sleep, and that its memory does not get consumed by other processes, or that your internet connection does not get dragged down or cut off as all of these things will likely make the installation process stall. &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Updating NPM Depending on your end goal, you may need to update npm, this is the recommendation by CNCJS for running CNCJS on earlier versions of node &nbsp; &nbsp;npm install npm@latest -verbose&nbsp; &nbsp;The issue with this is that there are a LOT of dependencies and it will take ABSOLUTELY AGES and you may well end up with incompatibilities with other packages. It is actually fR better to simply flash more up to date firmware which includes more up to date versions of everything. Or at least it would be if there was an updated firmware image available. :(&nbsp; &nbsp; So my advice is, unless you absolutely cannot get it to work any other way - do not update NPM &nbsp; &nbsp; &nbsp; Installing CNCjs Now to install CNCjs itself &nbsp; &nbsp; &nbsp; We clone CNCJS from GIT and then install it locally. &nbsp; I absolutely recommend installing CNCJS with the verbose option checked, the installation will take ages and without verbose reporting you will have no idea is it is stuck, has crashed or is simply grinding away doing its thing. &nbsp; The --unsafe-perm option is also necessary as on OpenWRT everything is installed and run as root.&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; First, to install from GIT you will need to install bash or else you will not be able to run any of the installation scripts &nbsp; opkg update &nbsp; opkg install bash &nbsp; &nbsp;and also GIT... &nbsp; opkg update &amp;&amp; opkg install git &nbsp; &nbsp; &nbsp; then you can clone the repo.. &nbsp; git clone git://github.com/cncjs/cncjs.git cd /root/cncjs git checkout master npm install -verbose --unsafe-perm Your terminal will now churn away for (possibly a day) so time to go do something else. &nbsp; Once you have success, don&#39;t put the cuppa down just yet, there&#39;s more... &nbsp; npm run prepublish If the installation fails, check the error message and try to find a fix, this can involve - manually installing dependencies / modding installation scripts / whatever else Google suggests. I found that I had a LOT of network errors, I tried various &#39;fixes&#39; including those outlined above. I also disabled NPV6 via the web interface as I had read that this can cause issues. I probably tried 4 or 5 times to install, each time the installation would get a bit further before crashing. One thing to note however, is that&nbsp; every time it does manage to download a dependency it caches it locally in the npm/node_modules folder, so the next time you try to install it at least has the file cached. &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; NOW you can run cnc... &nbsp; ./bin/cnc &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; References &nbsp; &nbsp; installation troubleshooting... &nbsp; https://github.com/cncjs/cncjs/wiki/Troubleshooting &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;https://github.com/dragino/linino &nbsp; &nbsp;https://github.com/dragino/openwrt-yun &nbsp; https://openwrt.org/docs/guide-user/additional-software/extroot_configuration &nbsp; &nbsp; &nbsp; &nbsp;https://www.v1engineering.com/assembly/ramps-wiring/ &nbsp; https://www.v1engineering.com/marlin-firmware/ &nbsp; &nbsp;https://github.com/Allted/Marlin/tree/CHOOSE_VERSION&nbsp; &nbsp; &nbsp; &nbsp; https://github.com/Allted/Marlin/tree/MP3DP_Ramps_16T_MK &nbsp; https://github.com/cncjs/cncjs &nbsp; &nbsp; &nbsp; https://github.com/gnea/grbl-Mega &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; https://www.joemotacek.com/putting-a-newer-version-of-node-js-on-linkit-smart-7688-duo/ &nbsp; http://techfindings.one/archives/2175 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Specification： CPU: ATHEROS AR9331 chipset, which integrates MIPS 24Kc processor, CPU 400MHz, Switch (MAC, PHY) and integrates with MAC, RF, PA and LNA for WiFi.&nbsp; RAM : 64MB; Flash : 16MB Interfaces: 2 x RJ45, 1 x USB Host, 1 x UART, 14 multiplex GPIOs OS: Open Source OpenWrt&nbsp; Power: 3.3v power input WiFi: Support 150M 2.4Ghz WiFi, 802.11 b/g/n Frequency range: 2.4~2.4835GHz Modulation: BPSK, QPSK, CCK and OFDM (BPSK/QPSK/16-QAM/ 64-QAM) Sensitivity @PER : 135M : -65dBm@10%PER; 65M : -65dBm@10%PER; 54M : -68dBm@10%PER; 11M : -84dBm@8% PER; 6M : -88dBm@10% PER; 1M : -90dBm@8% PER Typical Distance: Indoor: 60m (max); Outdoor 150m (max) (with 2 dBi antenna)&nbsp; RF Power: 11n: 13dBm; 11g: 13-15dBm, 11b: 16-18dBm, Connector: I-PEX connector. Provide Optional ANT pin out for SMT &nbsp; &nbsp; &nbsp;" />
+<meta property="og:description" content="Intro OpenWRT&nbsp; &nbsp; Updating OpenWRT to latest version I tried to install CNCJS under the Last version of Yun firmware available via the Dragino repository but found that it was not possible. After much trying what I discovered was that development for the YUN firmware was dropped&nbsp;in favour of the current IOT branch leaving the last version of node at 0.12.7 which was too old to install CNCJS on. I tried in vain the update node to at least version 4 but found that it simply was not possible to compile it on the earlier version of OpenWRT. So leaves the only possible pathway as upgrading the&nbsp; First step update firmware to the current IOT branch, this involves two steps as trying to install the IOT image via the browser update manager will return an error. so there is an intermediate firmware that needs to be installed to negate this. The YUN repositories are no longer maintained so the latest openWRT firmware now resides un the IOT branch http://www.dragino.com/downloads/downloads/motherboards/ms14/Firmware/ First step is to install the intermediate firmware &nbsp; Next you have to enable to firmware which has to be invoked from the command lin within the SSH terminal &nbsp; then update to IOT firmware &nbsp; &nbsp; &nbsp;installing Node.js&nbsp;&nbsp; On the Dragino YUN firmware node is installed by default, you can check if it is installed on your distro by issuing the check version command node -v&nbsp;&nbsp; &nbsp; Same applies for npm npm -v If you do not have node.js installed on your distro you can install them via opkg &nbsp; Package lists src/gz chaos_calmer_base https://archive.openwrt.org/chaos_calmer/15.05/ar71xx/generic/packages/base src/gz chaos_calmer_packages https://archive.openwrt.org/chaos_calmer/15.05/ar71xx/generic/packages/packages&nbsp; src/gz chaos_calmer_luci https://archive.openwrt.org/chaos_calmer/15.05/ar71xx/generic/packages/luci&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; src/gz chaos_calmer_routing https://archive.openwrt.org/chaos_calmer/15.05/ar71xx/generic/packages/routing&nbsp; &nbsp;&nbsp; src/gz chaos_calmer_telephony https://archive.openwrt.org/chaos_calmer/15.05/ar71xx/generic/packages/telephony src/gz chaos_calmer_management https://archive.openwrt.org/chaos_calmer/15.05/ar71xx/generic/packages/management &nbsp; &nbsp; no nodejs included in packages for chaos_calmer &nbsp; opkg update &nbsp; opkg install node &nbsp; &nbsp; &nbsp; Before we go any further... These are the &#39;fixes&#39; that I needed to do to enable the installation process to be successful. It&#39;s probably worth just doing these right from the get-go as it will save you a heap of time in the long run. Of course, these fixes may not be exhaustive as your particular flavour of hardware / firmware may have other gremlins that need to be addressed, but for my early Iduino Yun board this is what worked for me. &nbsp; &nbsp; &nbsp; I found that sometimes OpenWRT does not handle HTTPS very well and will give you a bunch of socket errors, if you are having issues the best option is to point the NPM package manager at the HTTP version of the registry. It will work exactly the same but does not have the overhead of establishing secure connections for each transfer / transaction. Not only does it massively reduce the risk of network issues, but the reduced overheads probably make it a bit quicker too &nbsp; npm config set registry http://registry.npmjs.org/ &nbsp; Additionally, to further reduce issues with timeouts due to socket errors, it might be worth limiting the number of sockets you are using. The standard is 50. You can tweak the value but basically whilst more concurrent connections will be faster they will also chew up memory and overheads, of which neither are in great supply. &nbsp; npm set maxsockets 3 I&#39;ve found it necessary to do both of these along with the large swap to get the installation to work. You may have more luck on later processors / with larger memory but definitely on the earlier board I had, there was no chance it was going to work out of the box. &nbsp; I also disabled IPV6 handing via the web interface for the network adaptor I was using. This was another fix for random network hangs. &nbsp; network &gt; interface &gt; advanced settings&nbsp; &nbsp; I also installed version 4 of webpack as many dependencies relay on this version&nbsp; &nbsp; npm install webpack@4.x --save-dev -verbose &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Other things to check are that your DNS server settings are correct, they should be passed from your cable-modem, you can view them in the web interface on the status overview page &nbsp; Also make sure that your computer will not go to sleep, and that its memory does not get consumed by other processes, or that your internet connection does not get dragged down or cut off as all of these things will likely make the installation process stall. &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Updating NPM Depending on your end goal, you may need to update npm, this is the recommendation by CNCJS for running CNCJS on earlier versions of node &nbsp; &nbsp;npm install npm@latest -verbose&nbsp; &nbsp;The issue with this is that there are a LOT of dependencies and it will take ABSOLUTELY AGES and you may well end up with incompatibilities with other packages. It is actually fR better to simply flash more up to date firmware which includes more up to date versions of everything. Or at least it would be if there was an updated firmware image available. :(&nbsp; &nbsp; So my advice is, unless you absolutely cannot get it to work any other way - do not update NPM &nbsp; &nbsp; &nbsp; Installing CNCjs Now to install CNCjs itself &nbsp; &nbsp; &nbsp; We clone CNCJS from GIT and then install it locally. &nbsp; I absolutely recommend installing CNCJS with the verbose option checked, the installation will take ages and without verbose reporting you will have no idea is it is stuck, has crashed or is simply grinding away doing its thing. &nbsp; The --unsafe-perm option is also necessary as on OpenWRT everything is installed and run as root.&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; First, to install from GIT you will need to install bash or else you will not be able to run any of the installation scripts &nbsp; opkg update &nbsp; opkg install bash &nbsp; &nbsp;and also GIT... &nbsp; opkg update &amp;&amp; opkg install git &nbsp; &nbsp; &nbsp; then you can clone the repo.. &nbsp; git clone git://github.com/cncjs/cncjs.git cd /root/cncjs git checkout master npm install -verbose --unsafe-perm Your terminal will now churn away for (possibly a day) so time to go do something else. &nbsp; Once you have success, don&#39;t put the cuppa down just yet, there&#39;s more... &nbsp; npm run prepublish If the installation fails, check the error message and try to find a fix, this can involve - manually installing dependencies / modding installation scripts / whatever else Google suggests. I found that I had a LOT of network errors, I tried various &#39;fixes&#39; including those outlined above. I also disabled NPV6 via the web interface as I had read that this can cause issues. I probably tried 4 or 5 times to install, each time the installation would get a bit further before crashing. One thing to note however, is that&nbsp; every time it does manage to download a dependency it caches it locally in the npm/node_modules folder, so the next time you try to install it at least has the file cached. &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; NOW you can run cnc... &nbsp; ./bin/cnc &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; References &nbsp; &nbsp; installation troubleshooting... &nbsp; https://github.com/cncjs/cncjs/wiki/Troubleshooting &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;https://github.com/dragino/linino &nbsp; &nbsp;https://github.com/dragino/openwrt-yun &nbsp; https://openwrt.org/docs/guide-user/additional-software/extroot_configuration &nbsp; &nbsp; &nbsp; &nbsp;https://www.v1engineering.com/assembly/ramps-wiring/ &nbsp; https://www.v1engineering.com/marlin-firmware/ &nbsp; &nbsp;https://github.com/Allted/Marlin/tree/CHOOSE_VERSION&nbsp; &nbsp; &nbsp; &nbsp; https://github.com/Allted/Marlin/tree/MP3DP_Ramps_16T_MK &nbsp; https://github.com/cncjs/cncjs &nbsp; &nbsp; &nbsp; https://github.com/gnea/grbl-Mega &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; https://www.joemotacek.com/putting-a-newer-version-of-node-js-on-linkit-smart-7688-duo/ &nbsp; http://techfindings.one/archives/2175 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Specification： CPU: ATHEROS AR9331 chipset, which integrates MIPS 24Kc processor, CPU 400MHz, Switch (MAC, PHY) and integrates with MAC, RF, PA and LNA for WiFi.&nbsp; RAM : 64MB; Flash : 16MB Interfaces: 2 x RJ45, 1 x USB Host, 1 x UART, 14 multiplex GPIOs OS: Open Source OpenWrt&nbsp; Power: 3.3v power input WiFi: Support 150M 2.4Ghz WiFi, 802.11 b/g/n Frequency range: 2.4~2.4835GHz Modulation: BPSK, QPSK, CCK and OFDM (BPSK/QPSK/16-QAM/ 64-QAM) Sensitivity @PER : 135M : -65dBm@10%PER; 65M : -65dBm@10%PER; 54M : -68dBm@10%PER; 11M : -84dBm@8% PER; 6M : -88dBm@10% PER; 1M : -90dBm@8% PER Typical Distance: Indoor: 60m (max); Outdoor 150m (max) (with 2 dBi antenna)&nbsp; RF Power: 11n: 13dBm; 11g: 13-15dBm, 11b: 16-18dBm, Connector: I-PEX connector. Provide Optional ANT pin out for SMT &nbsp; &nbsp; &nbsp;" />
+<link rel="canonical" href="http://localhost:4000/general/2019/04/07/installing-cncjs-on-arduino-yun-shield.html" />
+<meta property="og:url" content="http://localhost:4000/general/2019/04/07/installing-cncjs-on-arduino-yun-shield.html" />
+<meta property="og:site_name" content="DeeEmm" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2019-04-07T01:25:52+10:30" />
+<script type="application/ld+json">
+{"description":"Intro OpenWRT&nbsp; &nbsp; Updating OpenWRT to latest version I tried to install CNCJS under the Last version of Yun firmware available via the Dragino repository but found that it was not possible. After much trying what I discovered was that development for the YUN firmware was dropped&nbsp;in favour of the current IOT branch leaving the last version of node at 0.12.7 which was too old to install CNCJS on. I tried in vain the update node to at least version 4 but found that it simply was not possible to compile it on the earlier version of OpenWRT. So leaves the only possible pathway as upgrading the&nbsp; First step update firmware to the current IOT branch, this involves two steps as trying to install the IOT image via the browser update manager will return an error. so there is an intermediate firmware that needs to be installed to negate this. The YUN repositories are no longer maintained so the latest openWRT firmware now resides un the IOT branch http://www.dragino.com/downloads/downloads/motherboards/ms14/Firmware/ First step is to install the intermediate firmware &nbsp; Next you have to enable to firmware which has to be invoked from the command lin within the SSH terminal &nbsp; then update to IOT firmware &nbsp; &nbsp; &nbsp;installing Node.js&nbsp;&nbsp; On the Dragino YUN firmware node is installed by default, you can check if it is installed on your distro by issuing the check version command node -v&nbsp;&nbsp; &nbsp; Same applies for npm npm -v If you do not have node.js installed on your distro you can install them via opkg &nbsp; Package lists src/gz chaos_calmer_base https://archive.openwrt.org/chaos_calmer/15.05/ar71xx/generic/packages/base src/gz chaos_calmer_packages https://archive.openwrt.org/chaos_calmer/15.05/ar71xx/generic/packages/packages&nbsp; src/gz chaos_calmer_luci https://archive.openwrt.org/chaos_calmer/15.05/ar71xx/generic/packages/luci&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; src/gz chaos_calmer_routing https://archive.openwrt.org/chaos_calmer/15.05/ar71xx/generic/packages/routing&nbsp; &nbsp;&nbsp; src/gz chaos_calmer_telephony https://archive.openwrt.org/chaos_calmer/15.05/ar71xx/generic/packages/telephony src/gz chaos_calmer_management https://archive.openwrt.org/chaos_calmer/15.05/ar71xx/generic/packages/management &nbsp; &nbsp; no nodejs included in packages for chaos_calmer &nbsp; opkg update &nbsp; opkg install node &nbsp; &nbsp; &nbsp; Before we go any further... These are the &#39;fixes&#39; that I needed to do to enable the installation process to be successful. It&#39;s probably worth just doing these right from the get-go as it will save you a heap of time in the long run. Of course, these fixes may not be exhaustive as your particular flavour of hardware / firmware may have other gremlins that need to be addressed, but for my early Iduino Yun board this is what worked for me. &nbsp; &nbsp; &nbsp; I found that sometimes OpenWRT does not handle HTTPS very well and will give you a bunch of socket errors, if you are having issues the best option is to point the NPM package manager at the HTTP version of the registry. It will work exactly the same but does not have the overhead of establishing secure connections for each transfer / transaction. Not only does it massively reduce the risk of network issues, but the reduced overheads probably make it a bit quicker too &nbsp; npm config set registry http://registry.npmjs.org/ &nbsp; Additionally, to further reduce issues with timeouts due to socket errors, it might be worth limiting the number of sockets you are using. The standard is 50. You can tweak the value but basically whilst more concurrent connections will be faster they will also chew up memory and overheads, of which neither are in great supply. &nbsp; npm set maxsockets 3 I&#39;ve found it necessary to do both of these along with the large swap to get the installation to work. You may have more luck on later processors / with larger memory but definitely on the earlier board I had, there was no chance it was going to work out of the box. &nbsp; I also disabled IPV6 handing via the web interface for the network adaptor I was using. This was another fix for random network hangs. &nbsp; network &gt; interface &gt; advanced settings&nbsp; &nbsp; I also installed version 4 of webpack as many dependencies relay on this version&nbsp; &nbsp; npm install webpack@4.x --save-dev -verbose &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Other things to check are that your DNS server settings are correct, they should be passed from your cable-modem, you can view them in the web interface on the status overview page &nbsp; Also make sure that your computer will not go to sleep, and that its memory does not get consumed by other processes, or that your internet connection does not get dragged down or cut off as all of these things will likely make the installation process stall. &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Updating NPM Depending on your end goal, you may need to update npm, this is the recommendation by CNCJS for running CNCJS on earlier versions of node &nbsp; &nbsp;npm install npm@latest -verbose&nbsp; &nbsp;The issue with this is that there are a LOT of dependencies and it will take ABSOLUTELY AGES and you may well end up with incompatibilities with other packages. It is actually fR better to simply flash more up to date firmware which includes more up to date versions of everything. Or at least it would be if there was an updated firmware image available. :(&nbsp; &nbsp; So my advice is, unless you absolutely cannot get it to work any other way - do not update NPM &nbsp; &nbsp; &nbsp; Installing CNCjs Now to install CNCjs itself &nbsp; &nbsp; &nbsp; We clone CNCJS from GIT and then install it locally. &nbsp; I absolutely recommend installing CNCJS with the verbose option checked, the installation will take ages and without verbose reporting you will have no idea is it is stuck, has crashed or is simply grinding away doing its thing. &nbsp; The --unsafe-perm option is also necessary as on OpenWRT everything is installed and run as root.&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; First, to install from GIT you will need to install bash or else you will not be able to run any of the installation scripts &nbsp; opkg update &nbsp; opkg install bash &nbsp; &nbsp;and also GIT... &nbsp; opkg update &amp;&amp; opkg install git &nbsp; &nbsp; &nbsp; then you can clone the repo.. &nbsp; git clone git://github.com/cncjs/cncjs.git cd /root/cncjs git checkout master npm install -verbose --unsafe-perm Your terminal will now churn away for (possibly a day) so time to go do something else. &nbsp; Once you have success, don&#39;t put the cuppa down just yet, there&#39;s more... &nbsp; npm run prepublish If the installation fails, check the error message and try to find a fix, this can involve - manually installing dependencies / modding installation scripts / whatever else Google suggests. I found that I had a LOT of network errors, I tried various &#39;fixes&#39; including those outlined above. I also disabled NPV6 via the web interface as I had read that this can cause issues. I probably tried 4 or 5 times to install, each time the installation would get a bit further before crashing. One thing to note however, is that&nbsp; every time it does manage to download a dependency it caches it locally in the npm/node_modules folder, so the next time you try to install it at least has the file cached. &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; NOW you can run cnc... &nbsp; ./bin/cnc &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; References &nbsp; &nbsp; installation troubleshooting... &nbsp; https://github.com/cncjs/cncjs/wiki/Troubleshooting &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;https://github.com/dragino/linino &nbsp; &nbsp;https://github.com/dragino/openwrt-yun &nbsp; https://openwrt.org/docs/guide-user/additional-software/extroot_configuration &nbsp; &nbsp; &nbsp; &nbsp;https://www.v1engineering.com/assembly/ramps-wiring/ &nbsp; https://www.v1engineering.com/marlin-firmware/ &nbsp; &nbsp;https://github.com/Allted/Marlin/tree/CHOOSE_VERSION&nbsp; &nbsp; &nbsp; &nbsp; https://github.com/Allted/Marlin/tree/MP3DP_Ramps_16T_MK &nbsp; https://github.com/cncjs/cncjs &nbsp; &nbsp; &nbsp; https://github.com/gnea/grbl-Mega &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; https://www.joemotacek.com/putting-a-newer-version-of-node-js-on-linkit-smart-7688-duo/ &nbsp; http://techfindings.one/archives/2175 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Specification： CPU: ATHEROS AR9331 chipset, which integrates MIPS 24Kc processor, CPU 400MHz, Switch (MAC, PHY) and integrates with MAC, RF, PA and LNA for WiFi.&nbsp; RAM : 64MB; Flash : 16MB Interfaces: 2 x RJ45, 1 x USB Host, 1 x UART, 14 multiplex GPIOs OS: Open Source OpenWrt&nbsp; Power: 3.3v power input WiFi: Support 150M 2.4Ghz WiFi, 802.11 b/g/n Frequency range: 2.4~2.4835GHz Modulation: BPSK, QPSK, CCK and OFDM (BPSK/QPSK/16-QAM/ 64-QAM) Sensitivity @PER : 135M : -65dBm@10%PER; 65M : -65dBm@10%PER; 54M : -68dBm@10%PER; 11M : -84dBm@8% PER; 6M : -88dBm@10% PER; 1M : -90dBm@8% PER Typical Distance: Indoor: 60m (max); Outdoor 150m (max) (with 2 dBi antenna)&nbsp; RF Power: 11n: 13dBm; 11g: 13-15dBm, 11b: 16-18dBm, Connector: I-PEX connector. Provide Optional ANT pin out for SMT &nbsp; &nbsp; &nbsp;","@type":"BlogPosting","headline":"Installing CNCJS on Arduino Yun Shield","dateModified":"2019-04-07T01:25:52+10:30","datePublished":"2019-04-07T01:25:52+10:30","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/general/2019/04/07/installing-cncjs-on-arduino-yun-shield.html"},"url":"http://localhost:4000/general/2019/04/07/installing-cncjs-on-arduino-yun-shield.html","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="DeeEmm" /></head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/">DeeEmm</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/about/">About</a><a class="page-link" href="/archives/">Archives</a><a class="page-link" href="/blog/">Blog</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Installing CNCJS on Arduino Yun Shield</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2019-04-07T01:25:52+10:30" itemprop="datePublished">Apr 7, 2019
+      </time></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <h3>Intro</h3>
+<p>OpenWRT&nbsp;</p>
+<p>&nbsp;</p>
+<h3>Updating OpenWRT to latest version</h3>
+<p>I tried to install CNCJS under the Last version of Yun firmware available via the Dragino repository but found that it was not possible. After much trying what I discovered was that development for the YUN firmware was dropped&nbsp;in favour of the current IOT branch leaving the last version of node at 0.12.7 which was too old to install CNCJS on. I tried in vain the update node to at least version 4 but found that it simply was not possible to compile it on the earlier version of OpenWRT. So leaves the only possible pathway as upgrading the&nbsp;</p>
+<p>First step update firmware to the current IOT branch, this involves two steps as trying to install the IOT image via the browser update manager will return an error. so there is an intermediate firmware that needs to be installed to negate this.</p>
+<p>The YUN repositories are no longer maintained so the latest openWRT firmware now resides un the IOT branch</p>
+<p><a href="http://www.dragino.com/downloads/downloads/motherboards/ms14/Firmware/">http://www.dragino.com/downloads/downloads/motherboards/ms14/Firmware/</a></p>
+<p>First step is to install the intermediate firmware</p>
+<p>&nbsp;</p>
+<p>Next you have to enable to firmware which has to be invoked from the command lin within the SSH terminal</p>
+<p>&nbsp;</p>
+<p>then update to IOT firmware</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<h3>&nbsp;installing Node.js&nbsp;&nbsp;</h3>
+<p>On the Dragino YUN firmware node is installed by default, you can check if it is installed on your distro by issuing the check version command</p>
+<p><em><strong>node -v&nbsp;&nbsp;</strong></em></p>
+<p>&nbsp;</p>
+<p>Same applies for npm</p>
+<p><em><strong>npm -v</strong></em></p>
+<p>If you do not have node.js installed on your distro you can install them via opkg</p>
+<p>&nbsp;</p>
+<p>Package lists</p>
+<p><b>src/gz chaos_calmer_base https://archive.openwrt.org/chaos_calmer/15.05/ar71xx/generic/packages/base</b></p>
+<p><b>src/gz chaos_calmer_packages https://archive.openwrt.org/chaos_calmer/15.05/ar71xx/generic/packages/packages&nbsp;</b></p>
+<p><b>src/gz chaos_calmer_luci https://archive.openwrt.org/chaos_calmer/15.05/ar71xx/generic/packages/luci&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</b></p>
+<p><b>src/gz chaos_calmer_routing https://archive.openwrt.org/chaos_calmer/15.05/ar71xx/generic/packages/routing&nbsp; &nbsp;&nbsp;</b></p>
+<p><b>src/gz chaos_calmer_telephony https://archive.openwrt.org/chaos_calmer/15.05/ar71xx/generic/packages/telephony</b></p>
+<p><b>src/gz chaos_calmer_management https://archive.openwrt.org/chaos_calmer/15.05/ar71xx/generic/packages/management</b></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>no nodejs included in packages for chaos_calmer</p>
+<p>&nbsp;</p>
+<p>opkg update</p>
+<p>&nbsp;</p>
+<p>opkg install node</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>Before we go any further...</p>
+<p>These are the 'fixes' that I needed to do to enable the installation process to be successful. It's probably worth just doing these right from the get-go as it will save you a heap of time in the long run. Of course, these fixes may not be exhaustive as your particular flavour of hardware / firmware may have other gremlins that need to be addressed, but for my early Iduino Yun board this is what worked for me.</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>I found that sometimes OpenWRT does not handle HTTPS very well and will give you a bunch of socket errors, if you are having issues the best option is to point the NPM package manager at the HTTP version of the registry. It will work exactly the same but does not have the overhead of establishing secure connections for each transfer / transaction. Not only does it massively reduce the risk of network issues, but the reduced overheads probably make it a bit quicker too</p>
+<p>&nbsp;</p>
+<p>npm config set registry http://registry.npmjs.org/</p>
+<p>&nbsp;</p>
+<p>Additionally, to further reduce issues with timeouts due to socket errors, it might be worth limiting the number of sockets you are using. The standard is 50. You can tweak the value but basically whilst more concurrent connections will be faster they will also chew up memory and overheads, of which neither are in great supply.</p>
+<p>&nbsp;</p>
+<p>npm set maxsockets 3</p>
+<p>I've found it necessary to do both of these along with the large swap to get the installation to work. You may have more luck on later processors / with larger memory but definitely on the earlier board I had, there was no chance it was going to work out of the box.</p>
+<p>&nbsp;</p>
+<p>I also disabled IPV6 handing via the web interface for the network adaptor I was using. This was another fix for random network hangs.</p>
+<p>&nbsp;</p>
+<p>network &gt; interface &gt; advanced settings&nbsp;</p>
+<p>&nbsp;</p>
+<p>I also installed version 4 of webpack as many dependencies relay on this version&nbsp;</p>
+<p>&nbsp;</p>
+<p>npm install webpack@4.x --save-dev -verbose</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>Other things to check are that your DNS server settings are correct, they should be passed from your cable-modem, you can view them in the web interface on the status overview page</p>
+<p>&nbsp;</p>
+<p>Also make sure that your computer will not go to sleep, and that its memory does not get consumed by other processes, or that your internet connection does not get dragged down or cut off as all of these things will likely make the installation process stall.</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>Updating NPM</p>
+<p>Depending on your end goal, you may need to update npm, this is the recommendation by CNCJS for running CNCJS on earlier versions of node</p>
+<p>&nbsp;</p>
+<p>&nbsp;npm install npm@latest -verbose&nbsp;</p>
+<p>&nbsp;The issue with this is that there are a LOT of dependencies and it will take ABSOLUTELY AGES and you may well end up with incompatibilities with other packages. It is actually fR better to simply flash more up to date firmware which includes more up to date versions of everything. Or at least it would be if there was an updated firmware image available. :(&nbsp;</p>
+<p>&nbsp;</p>
+<p>So my advice is, unless you absolutely cannot get it to work any other way - do not update NPM</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>Installing CNCjs</p>
+<p>Now to install CNCjs itself</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>We clone CNCJS from GIT and then install it locally.</p>
+<p>&nbsp;</p>
+<p>I absolutely recommend installing CNCJS with the verbose option checked, the installation will take ages and without verbose reporting you will have no idea is it is stuck, has crashed or is simply grinding away doing its thing.</p>
+<p>&nbsp;</p>
+<p>The --unsafe-perm option is also necessary as on OpenWRT everything is installed and run as root.&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;&nbsp;</p>
+<p>&nbsp;</p>
+<p>First, to install from GIT you will need to install bash or else you will not be able to run any of the installation scripts</p>
+<p>&nbsp;</p>
+<p>opkg update</p>
+<p>&nbsp;</p>
+<p>opkg install bash</p>
+<p>&nbsp;</p>
+<p>&nbsp;and also GIT...</p>
+<p>&nbsp;</p>
+<p>opkg update &amp;&amp; opkg install git</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>then you can clone the repo..</p>
+<p>&nbsp;</p>
+<p>git clone git://github.com/cncjs/cncjs.git</p>
+<p>cd /root/cncjs</p>
+<p>git checkout master</p>
+<p>npm install -verbose --unsafe-perm</p>
+<p>Your terminal will now churn away for (possibly a day) so time to go do something else.</p>
+<p>&nbsp;</p>
+<p>Once you have success, don't put the cuppa down just yet, there's more...</p>
+<p>&nbsp;</p>
+<p>npm run prepublish</p>
+<p>If the installation fails, check the error message and try to find a fix, this can involve - manually installing dependencies / modding installation scripts / whatever else Google suggests. I found that I had a LOT of network errors, I tried various 'fixes' including those outlined above. I also disabled NPV6 via the web interface as I had read that this can cause issues. I probably tried 4 or 5 times to install, each time the installation would get a bit further before crashing. One thing to note however, is that&nbsp; every time it does manage to download a dependency it caches it locally in the npm/node_modules folder, so the next time you try to install it at least has the file cached.</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>NOW you can run cnc...</p>
+<p>&nbsp;</p>
+<p>./bin/cnc</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>References</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>installation troubleshooting...</p>
+<p>&nbsp;</p>
+<p>https://github.com/cncjs/cncjs/wiki/Troubleshooting</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp; &nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;https://github.com/dragino/linino</p>
+<p>&nbsp;</p>
+<p>&nbsp;https://github.com/dragino/openwrt-yun</p>
+<p>&nbsp;</p>
+<p>https://openwrt.org/docs/guide-user/additional-software/extroot_configuration</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;https://www.v1engineering.com/assembly/ramps-wiring/</p>
+<p>&nbsp;</p>
+<p>https://www.v1engineering.com/marlin-firmware/</p>
+<p>&nbsp;</p>
+<p>&nbsp;https://github.com/Allted/Marlin/tree/CHOOSE_VERSION&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>https://github.com/Allted/Marlin/tree/MP3DP_Ramps_16T_MK</p>
+<p>&nbsp;</p>
+<p>https://github.com/cncjs/cncjs</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>https://github.com/gnea/grbl-Mega</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>https://www.joemotacek.com/putting-a-newer-version-of-node-js-on-linkit-smart-7688-duo/</p>
+<p>&nbsp;</p>
+<p>http://techfindings.one/archives/2175</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>Specification：</p>
+<p>CPU: ATHEROS AR9331 chipset, which integrates MIPS 24Kc processor, CPU 400MHz, Switch (MAC, PHY) and integrates with MAC, RF, PA and LNA for WiFi.&nbsp;</p>
+<p>RAM : 64MB;</p>
+<p>Flash : 16MB</p>
+<p>Interfaces: 2 x RJ45, 1 x USB Host, 1 x UART, 14 multiplex GPIOs</p>
+<p>OS: Open Source OpenWrt&nbsp;</p>
+<p>Power: 3.3v power input</p>
+<p>WiFi: Support 150M 2.4Ghz WiFi, 802.11 b/g/n</p>
+<p>Frequency range: 2.4~2.4835GHz</p>
+<p>Modulation: BPSK, QPSK, CCK and OFDM (BPSK/QPSK/16-QAM/ 64-QAM)</p>
+<p>Sensitivity @PER : 135M : -65dBm@10%PER; 65M : -65dBm@10%PER; 54M : -68dBm@10%PER; 11M : -84dBm@8% PER; 6M : -88dBm@10% PER; 1M : -90dBm@8% PER</p>
+<p>Typical Distance: Indoor: 60m (max); Outdoor 150m (max) (with 2 dBi antenna)&nbsp;</p>
+<p>RF Power: 11n: 13dBm; 11g: 13-15dBm, 11b: 16-18dBm,</p>
+<p>Connector: I-PEX connector. Provide Optional ANT pin out for SMT</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+
+  </div><a class="u-url" href="/general/2019/04/07/installing-cncjs-on-arduino-yun-shield.html" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">DeeEmm</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">DeeEmm</li><li><a class="u-email" href="mailto:deeemmm@deeemm.com">deeemmm@deeemm.com</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/DeeEmm"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">DeeEmm</span></a></li><li><a href="https://www.twitter.com/DeeEmm__"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">DeeEmm__</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>Waxing lyrical about life the universe and everything tech related since lunchtime 2006.</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>

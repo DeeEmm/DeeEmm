@@ -1,0 +1,20 @@
+---
+layout: post
+title: Home Automation Part Duex
+joomla_id: 94
+joomla_url: home-automation-part-duex
+category: General
+tags: active-home home-automation mce mcontrol x10
+date: 2007-10-02 00:00:00.000000000 +09:30
+---
+<p>Regular visitors may remember me mentioning that I had been looking into home automation. My 'research' has lead me to invest in an x10 Active Home starter kit which includes a whole bunch of lamp and appliance controllers and most importantly a PC interface.</p>
+<p>This and a bunch of other 'projects' have made me stop work on DMCMS for a while. Work on DMCMS will resume when I've finished the other more important stuff. Anyhows - back to my ramblings...</p>
+<p>The PC interface comes with the Active Home software allowing you to program scheduled programs to control the modeules.</p>
+<p>The modules themselves are controlled by signals carried through the pre existing power cables of the building, meaning that I dont need to run in a trillion new cables into my 80 year old house.</p>
+<p>Whilst the software that comes with the pack is probably fine, I've also been looking at two other packages, both of these packages integrate into Windows Media Centre and also offer remote access via the web. In addition they also offer CCTV integration and access from a PDA / Windows smart phone - handy for when I leave the coffee machine on.</p>
+<p>Both packages will also allow access via a browser interface - perfect for the small touch screen controller I've bought to act as a central control point.</p>
+<p>The first package is called Harmony and is available from iDomus in the UK (www.iDomus.co.uk). This package looks great and seamlessly integrates into WM, my only problem with this choice is that all of the additional features require additional modules to be purchased - this in itself is not a problem - it's reasonably priced.</p>
+<p>However, reasonably priced in the UK suddenly becomes unreasonably priced by the time that the Australian exchange rate is factored in.</p>
+<p>My second choice is the mControl package offered by Embedded Automation (http://www.embeddedautomation.com). This appears to offer the same features but all in one package - all for a fraction of the price of the Harmony version. My only gripe is that the interface doesn't look exactly the same as WMC - However - they do offer access to a SDK and offer support via a forum for developers, which means that I can fix that part myself (if I was really bothered that is...)</p>
+<p>Although the mControl package is my second choice it's too good value for money - this alone will probably persuade me to go ahead with it.</p>
+<h3>I'll keep you posted...</h3>

@@ -1,0 +1,46 @@
+---
+layout: post
+title: New JomSocial and Hikashop Plugins
+joomla_id: 266
+joomla_url: new-jomsocial-and-hikashop-plugins
+category: General
+tags: hikashop jomsocial plugin virtuemart webstore
+date: 2014-03-12 12:02:22.000000000 +10:30
+---
+<p>I've been busy tidying up and publishing some of the plugins and extensions that I use across my sites. Most of the plugins are simple extensions for JomSocial that add a bit of extra functionality that is not included within the core but there are also a few for Hikashop and Virtuemart as well.</p>
+<p>I still have some other extensions and components planned for release over the coming weeks / months and will release these as they are finalised and tested. Most are simple but there are also one or two fairly complex components that I may also decide to publish.</p>
+<p>So far the following plugins are available for purchase within the webstore:</p>
+<p>&nbsp;</p>
+<p><strong>JomSocial:</strong></p>
+<p><a style="color: #5990de; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 13px; line-height: 18px; text-align: center; outline: none !important;" href="store/product/39-jomsocial-infinite-scroll">JomSocial - Infinite Scroll</a></p>
+<p>This adds infinite scrolling effect to photos, videos, events and groups pages - just like Google and Facebook</p>
+<p><a style="color: #5990de; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 13px; line-height: 18px; text-align: center; outline: none !important;" href="store/product/30-jomsocial-auto-group">JomSocial Auto Group</a></p>
+<p>Automatically adds new members to the preselected group / groups&nbsp;</p>
+<p><a style="color: #5990de; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 13px; line-height: 18px; text-align: center; outline: none !important;" href="store/product/31-jomsocial-auto-friend">JomSocial Auto Friend</a></p>
+<p>Automatically adds selected user as friend of all new registrations - a bit like MySpace's 'Tom'</p>
+<p><a style="color: #5990de; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 13px; line-height: 18px; text-align: center; outline: none !important;" href="store/product/34-jomsocial-auto-friend-accept">JomSocial Auto Friend Accept</a></p>
+<p>Automatically accept all friend requests (useful if you want to change the friends system to a 'favourites' system as I did with <a href="http://garagetrail.com">garagetrail.com</a>)</p>
+<p><a style="color: #5990de; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 13px; line-height: 18px; text-align: center; outline: none !important;" href="store/product/36-jomsocial-new-user-stream-activity">JomSocial New User Stream Activity</a></p>
+<p>Plugin to post activity announcing new users on activity stream&nbsp;</p>
+<p><a style="color: #5990de; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 13px; line-height: 18px; text-align: center; outline: none !important;" href="store/product/38-jomsocial-photo-fader-module">JomSocial Photo Fader module</a></p>
+<p>Simple photos fader to display latest photos / album photos in module position</p>
+<p><a style="color: #5990de; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 13px; line-height: 18px; text-align: center; outline: none !important;" href="store/product/40-jomsocial-activity-stream-module">JomSocial Activity Stream Module</a></p>
+<p>Display a condensed Activity stream in a module position</p>
+<p>&nbsp;</p>
+<p><strong>HikaShop:</strong></p>
+<p><a style="color: #5990de; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 13px; line-height: 18px; text-align: center; outline: none !important;" href="store/product/33-hikashop-jomsocial-plugin">HikaShop JomSocial Plugin</a></p>
+<p>Plugin to display latest HikaShop activity on JomSocial activity stream</p>
+<p><a style="color: #5990de; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 13px; line-height: 18px; text-align: center; outline: none !important;" href="store/product/37-hikashop-infinite-scroll">Hikashop Infinite Scroll</a></p>
+<p>Adds<span style="line-height: 1.3em;">&nbsp;</span><span style="line-height: 1.3em;">infinite scrolling effect to Products and categories&nbsp;- just like Google and Facebook</span></p>
+<p>&nbsp;</p>
+<p><strong><span style="line-height: 1.3em;">Virtuemart:</span></strong></p>
+<p><span style="line-height: 1.3em;"><a style="color: #5990de; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 13px; line-height: 18px; text-align: center; outline: none !important;" href="store/product/32-virtuemart-auto-usergroup">Virtuemart Auto UserGroup</a></span></p>
+<p><span style="line-height: 1.3em;">Add customers to user group on successful purchase of product</span></p>
+<p>&nbsp;</p>
+<p>All of my plugins follow the rule of being simple and affordable. You will find no unnecessary features, just those that you need to do the job. Why pay premium prices for bloatware? If the feature isn't needed I don't include it and you don't have to pay for it. This keeps costs down, makes things easier to maintain and easier for the end user to use too. Additionally all of my extensions come with a money back guarantee. That's right - I guarantee that they will work or your money back! You can't say fairer than that!</p>
+<p>All extensions include help via our&nbsp;support ticket system which you are given access to when you have completed a successful purchase.</p>
+<p>All extensions also include all minor and incremental revision updates for free.&nbsp;</p>
+<p>&nbsp;</p>
+<p>Look out for the upcoming JomSocial Google XML site map component and the JomSocial Masonry activity stream!</p>
+<p>&nbsp;</p>
+<p style="text-align: center;"><em><span style="color: #777777; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 13px; line-height: 24px; background-color: #f5f5f5;">&nbsp;"simple, affordable plugins, extensions and modules that are&nbsp;</span><strong style="color: #777777; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 13px; line-height: 24px; background-color: #f5f5f5;">guaranteed</strong><span style="color: #777777; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 13px; line-height: 24px; background-color: #f5f5f5;">&nbsp;to work or your money back."</span></em></p>

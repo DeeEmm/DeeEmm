@@ -1,0 +1,15 @@
+---
+layout: post
+title: Site Reshuffle
+joomla_id: 252
+joomla_url: site-reshuffle
+category: General
+tags: akeeba downloads mods stackideas
+date: 2013-07-27 13:54:32.000000000 +09:30
+---
+<p>Been busy today tidying up the site. I've been meaning to get around to finishing off a few things, namely the poor cataloguing of the tutorials section and reinstatement of the downloads section which unfortunately broke during the last site update.</p>
+<p>I've changed the tutorials section so that it runs off of the excellent <a href="http://stackideas.com/sectionex" target="_blank" title="http://stackideas.com/sectionex">SectionX</a> from <a href="http://stackideas.com" target="_blank" title="http://stackideas.com">StackIdeas</a>. I had perviously used SectionX on a few 1.5 sites and was very disappointed that it was never updated it for later Joomla versions. In the end I migrated the tutorials across to EasyBlog, but it was never quite the same.</p>
+<p>Whilst recently updating a clients site I was pretty stoked to find that SectionX had been updated to work with the current Joomla versions. Great news! So I have installed it and re-enabled the old tutorials. All I need to do now is to go through the blogs and migrate any new posts back across to being a Joomla article. Stack Ideas offer a free plugin that claims to do this so I will give it a go and see what happens.</p>
+<p>One thing that I will need to revisit is commenting for articles in the tutorials section. This was being handled by EasyBlog but will now have to managed by something like Komento. (another StackIdeas product).</p>
+<p>Whilst it might seem like this blog post has been sponsored by StackIdeas, and I wont deny - they make some great stuff. There is one thing that they do not offer - a file manager. For this task I've decided to use the excellent Akeeba release system. I use a number of Akeeba products and like StackIdeas they are well built stable products that are well supported and simply work.&nbsp;The Akeeba release system allows easy versioning of downloads - perfect for software based releases.</p>
+<p>/DM</p>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>Dolphin - Record user Name and ID with IP address | DeeEmm</title>
+<meta name="generator" content="Jekyll v4.1.1" />
+<meta property="og:title" content="Dolphin - Record user Name and ID with IP address" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="You can (fairly) easily record the userid along with the ip address by adding an extra field to the database table and modifying member.phpHere&#39;s how...Add the following fields to the sys_ip_members_visits table in database ALTER TABLE `sys_ip_members_visits` ADD `UserID` INT( 10 ) NOT NULL ALTER TABLE `sys_ip_members_visits` ADD `UserName` VARCHAR( 30 ) NOT NULL &nbsp; Then search for following line in member.php $sInsertSQL = &quot;INSERT INTO `sys_ip_members_visits` SET `From`=&#39;{$sCurLongIP}&#39;, `DateTime`=NOW()&quot;; Replace it with $aMemberInfo = getProfileInfoDirect($member[&#39;ID&#39;]);$sUserName = $aMemberInfo[&#39;NickName&#39;];$sInsertSQL = &quot;INSERT INTO `sys_ip_members_visits` SET `From`=&#39;{$sCurLongIP}&#39;, `DateTime`=NOW(), `UserID`=&#39;{$sUserID}&#39;, `UserName`=&#39;{$sUserName}&#39;&quot;; Now edit inc/classes/BxDolAdminIPBlocklist.phpFind {$sFromC}{$sDatatimeC} Change it to IDUserName{$sFromC}{$sDatatimeC} Find $sLastDT = $aIPList[&#39;DateTime&#39;]; Add After $sUserID = $aIPList[&#39;UserID&#39;];$sUserName = $aIPList[&#39;UserName&#39;]; Find $sTableRes .= &quot;{$sFrom}{$sLastDT}&quot;; Replace it with $sTableRes .= &quot;{$sUserID}{$sUserName}{$sFrom}{$sLastDT}&quot;; All Done!!Now the userid will be recorded with the ip address and displayed in the table on the admin page." />
+<meta property="og:description" content="You can (fairly) easily record the userid along with the ip address by adding an extra field to the database table and modifying member.phpHere&#39;s how...Add the following fields to the sys_ip_members_visits table in database ALTER TABLE `sys_ip_members_visits` ADD `UserID` INT( 10 ) NOT NULL ALTER TABLE `sys_ip_members_visits` ADD `UserName` VARCHAR( 30 ) NOT NULL &nbsp; Then search for following line in member.php $sInsertSQL = &quot;INSERT INTO `sys_ip_members_visits` SET `From`=&#39;{$sCurLongIP}&#39;, `DateTime`=NOW()&quot;; Replace it with $aMemberInfo = getProfileInfoDirect($member[&#39;ID&#39;]);$sUserName = $aMemberInfo[&#39;NickName&#39;];$sInsertSQL = &quot;INSERT INTO `sys_ip_members_visits` SET `From`=&#39;{$sCurLongIP}&#39;, `DateTime`=NOW(), `UserID`=&#39;{$sUserID}&#39;, `UserName`=&#39;{$sUserName}&#39;&quot;; Now edit inc/classes/BxDolAdminIPBlocklist.phpFind {$sFromC}{$sDatatimeC} Change it to IDUserName{$sFromC}{$sDatatimeC} Find $sLastDT = $aIPList[&#39;DateTime&#39;]; Add After $sUserID = $aIPList[&#39;UserID&#39;];$sUserName = $aIPList[&#39;UserName&#39;]; Find $sTableRes .= &quot;{$sFrom}{$sLastDT}&quot;; Replace it with $sTableRes .= &quot;{$sUserID}{$sUserName}{$sFrom}{$sLastDT}&quot;; All Done!!Now the userid will be recorded with the ip address and displayed in the table on the admin page." />
+<link rel="canonical" href="http://localhost:4000/dolphin%207.0.x%20modifications/2010/07/01/dolphin-record-user-id-with-ip-address.html" />
+<meta property="og:url" content="http://localhost:4000/dolphin%207.0.x%20modifications/2010/07/01/dolphin-record-user-id-with-ip-address.html" />
+<meta property="og:site_name" content="DeeEmm" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2010-07-01T02:54:36+09:30" />
+<script type="application/ld+json">
+{"description":"You can (fairly) easily record the userid along with the ip address by adding an extra field to the database table and modifying member.phpHere&#39;s how...Add the following fields to the sys_ip_members_visits table in database ALTER TABLE `sys_ip_members_visits` ADD `UserID` INT( 10 ) NOT NULL ALTER TABLE `sys_ip_members_visits` ADD `UserName` VARCHAR( 30 ) NOT NULL &nbsp; Then search for following line in member.php $sInsertSQL = &quot;INSERT INTO `sys_ip_members_visits` SET `From`=&#39;{$sCurLongIP}&#39;, `DateTime`=NOW()&quot;; Replace it with $aMemberInfo = getProfileInfoDirect($member[&#39;ID&#39;]);$sUserName = $aMemberInfo[&#39;NickName&#39;];$sInsertSQL = &quot;INSERT INTO `sys_ip_members_visits` SET `From`=&#39;{$sCurLongIP}&#39;, `DateTime`=NOW(), `UserID`=&#39;{$sUserID}&#39;, `UserName`=&#39;{$sUserName}&#39;&quot;; Now edit inc/classes/BxDolAdminIPBlocklist.phpFind {$sFromC}{$sDatatimeC} Change it to IDUserName{$sFromC}{$sDatatimeC} Find $sLastDT = $aIPList[&#39;DateTime&#39;]; Add After $sUserID = $aIPList[&#39;UserID&#39;];$sUserName = $aIPList[&#39;UserName&#39;]; Find $sTableRes .= &quot;{$sFrom}{$sLastDT}&quot;; Replace it with $sTableRes .= &quot;{$sUserID}{$sUserName}{$sFrom}{$sLastDT}&quot;; All Done!!Now the userid will be recorded with the ip address and displayed in the table on the admin page.","@type":"BlogPosting","headline":"Dolphin - Record user Name and ID with IP address","dateModified":"2010-07-01T02:54:36+09:30","datePublished":"2010-07-01T02:54:36+09:30","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/dolphin%207.0.x%20modifications/2010/07/01/dolphin-record-user-id-with-ip-address.html"},"url":"http://localhost:4000/dolphin%207.0.x%20modifications/2010/07/01/dolphin-record-user-id-with-ip-address.html","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="DeeEmm" /></head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/">DeeEmm</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/about/">About</a><a class="page-link" href="/archives/">Archives</a><a class="page-link" href="/blog/">Blog</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Dolphin - Record user Name and ID with IP address</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2010-07-01T02:54:36+09:30" itemprop="datePublished">Jul 1, 2010
+      </time></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>You can (fairly) easily record the userid along with the ip address by adding an extra field to the database table and modifying member.php<br /><br />Here's how...<br /><br />Add the following fields to the sys_ip_members_visits table in database</p>
+<p><em><strong><code><span><span>ALTER</span> <span>TABLE</span> <span>`sys_ip_members_visits`</span> <span>ADD</span> <span>`UserID`</span> <span>INT</span><span>(</span> <span>10</span> <span>)</span> <span>NOT</span> <span>NULL<br /></span></span></code></strong></em></p>
+<p><strong><em><code><span><span>ALTER</span> <span>TABLE</span> <span>`sys_ip_members_visits`</span> <span>ADD</span> <span>`UserName`</span> <span>VARCHAR</span><span>(</span> <span>30</span> <span>)</span> <span>NOT</span> <span>NULL</span> </span></code></em></strong></p>
+<p>&nbsp;</p>
+<p>Then search for following line in <em><strong>member.php</strong></em></p>
+<pre>$sInsertSQL = "INSERT INTO `sys_ip_members_visits` SET `From`='{$sCurLongIP}', `DateTime`=NOW()";</pre>
+<p>Replace it with</p>
+<pre>$aMemberInfo = getProfileInfoDirect($member['ID']);<br />$sUserName = $aMemberInfo['NickName'];<br /><br />$sInsertSQL = "INSERT INTO `sys_ip_members_visits` SET `From`='{$sCurLongIP}', `DateTime`=NOW(), `UserID`='{$sUserID}', `UserName`='{$sUserName}'";<br /><br /></pre>
+<p><br />Now edit<strong><em> inc/classes/BxDolAdminIPBlocklist.php</em></strong><br /><br />Find</p>
+<pre>{$sFromC}{$sDatatimeC}</pre>
+<p>Change it to</p>
+<pre>IDUserName{$sFromC}{$sDatatimeC}</pre>
+<p><br />Find</p>
+<pre>$sLastDT = $aIPList['DateTime'];</pre>
+<p><br />Add After</p>
+<pre>$sUserID = $aIPList['UserID'];<br />$sUserName = $aIPList['UserName'];</pre>
+<p><br />Find</p>
+<pre>$sTableRes .= "{$sFrom}{$sLastDT}";</pre>
+<p>Replace it with</p>
+<pre>$sTableRes .= "{$sUserID}{$sUserName}{$sFrom}{$sLastDT}";</pre>
+<p>All Done!!<br /><br />Now the userid will be recorded with the ip address and displayed in the table on the admin page.</p>
+<p><em><strong><code><span><span><br /></span> </span></code></strong></em></p>
+
+  </div><a class="u-url" href="/dolphin%207.0.x%20modifications/2010/07/01/dolphin-record-user-id-with-ip-address.html" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">DeeEmm</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">DeeEmm</li><li><a class="u-email" href="mailto:deeemmm@deeemm.com">deeemmm@deeemm.com</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/DeeEmm"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">DeeEmm</span></a></li><li><a href="https://www.twitter.com/DeeEmm__"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">DeeEmm__</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>Waxing lyrical about life the universe and everything tech related since lunchtime 2006.</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>

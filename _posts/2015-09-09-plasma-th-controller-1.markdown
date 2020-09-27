@@ -1,0 +1,13 @@
+---
+layout: post
+title: 'Plasma THC controller 1 : Me 0'
+joomla_id: 312
+joomla_url: plasma-th-controller-1
+category: General
+date: 2015-09-09 08:38:31.000000000 +09:30
+---
+<p style="margin: 0px 0px 6px; font-family: system-ui, -apple-system, system-ui, '.SFNSText-Regular', sans-serif; color: #1d2129; font-size: 14px;"> </p>
+<p style="margin: 0px 0px 6px; font-family: system-ui, -apple-system, system-ui, '.SFNSText-Regular', sans-serif; color: #1d2129; font-size: 14px;">Plasma THC controller 1 : Me 0</p>
+<p style="margin: 6px 0px; font-family: system-ui, -apple-system, system-ui, '.SFNSText-Regular', sans-serif; color: #1d2129; font-size: 14px;">Finally got the torch height controller working on the plasma CNC. Unfortunately it did not survive testing. Made a couple of cuts when I noticed smoke coming from the THC unit. Opened it up to find this... <span class="_47e3 _5mfr" style="line-height: 0; vertical-align: middle; margin: 0px 1px; font-family: inherit;" title="cry emoticon"><img class="img" style="border: 0px; vertical-align: -3px;" src="https://static.xx.fbcdn.net/images/emoji.php/v9/te/1/16/1f622.png" alt="" width="16" height="16" /><span class="_7oe" style="display: inline; font-size: 0px; width: 0px; font-family: inherit;">:'(</span></span></p>
+<p style="margin: 6px 0px 0px; display: inline; font-family: system-ui, -apple-system, system-ui, '.SFNSText-Regular', sans-serif; color: #1d2129; font-size: 14px;"> </p>
+<p style="margin: 6px 0px 0px; display: inline; font-family: system-ui, -apple-system, system-ui, '.SFNSText-Regular', sans-serif; color: #1d2129; font-size: 14px;">Will see if I can get a replacement under warranty, otherwise looks like I will be getting jiggy with the soldering iron.</p>

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>CNC Plasma Upgrade | DeeEmm</title>
+<meta name="generator" content="Jekyll v4.1.1" />
+<meta property="og:title" content="CNC Plasma Upgrade" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="I built my Plasma CNC about 5 years ago. I had originally intended to use it to cut out component parts for a product that I make, however I found that the output quality&nbsp;was not 100% reliable and so with the cost of laser cutting being very cheap locally, it was simply not cost effective to run. So for the most part it has sat in the workshop taking up space. I&#39;ve recently decided to update it to hopefully improve its reliability. THC Issues&nbsp; The biggest issue with the quality was the torch height control. I tried several different manufacturers of THC controller, but none were really that good. The last unit&nbsp; I bought was a proma unit, which was&nbsp;fine, but after I had some computer issues, my controller software (linux CNC) because unusable. I tried a few times to fix the corrupt files, but as I was running an older version I really needed to upgrade, which basically meant starting again.&nbsp;And so since this time, the plasma table has been used&nbsp;as a literal table, for storing boxes on top of.At some point I had collected a DDCSV CNC controller to use on another project. This is a stand alone CNC controller that runs standard GCode and are used primarily for Milling type machines. As the plasma is a 3 axis machine, I decided that&nbsp;the DDCSV would work very well and solve my dead controller problems, the only issues is that it does not have the provision for a THC controller.All is not lost however, as I have the proma THC unit. This unit generated outputs that went to the LinuxCNC break-out-board (BOB)&nbsp;to tell LinuxCNC when to raise or lower the torch. As mentioned, the DDCSV unit does not have any provision for torch raise or torch&nbsp;lower, so any torch height control basically needs to take place outside of the DDCSV unit. Proma do sell a unit that interfaces directly to the Z axis&nbsp;stepper controller. This unit acts as a pass-through for the stepper signals coming from the CNC controller. If the torch&nbsp;height needs to be adjusted, it hijacks the signals and sends the relevant STEP / DIR signals to&nbsp;adjust the torch height, overriding the position set by the CNC controller.Unfortunately the proma unit I have does not work like this. Instead it controls volt-free contacts, which allow the Z+ and Z- signals to be wired to the BOB. Somehow I need to use these&nbsp;to create the relevant STEP / DIR signals. At this stage I think that an Arduino could be used to intercept the signals from the CNC controller, along with signals from the proma unit. It can then output the necessary signals to the stepper driver.In operation, there is no need for the torch&nbsp;height to be adjusted when the arc is active. The only time that the torch height is controlled by the CNC is when it is piercing. At the moment that the arc is struck, the proma unit can take over. This means that I can use the ARCOK signal to enable / disable the proma overriding the CNC signals. A simple bit of logic is all that is required.&nbsp;Fortunately&nbsp;the stepper amplifiers and DDCSV units use 5v for the stepper signals, this is the same as the Arduino Nanos that I have.&nbsp;In theory it should work, the only reservations that I have are related to HF interference.&nbsp; DDCSV Integration&nbsp; To get started I need to get the DDCSV unit hooked up. This should be pretty straight forwards as essentially the stepper drivers and stepper wiring is already done. I am however taking the opportunity to re-install everything inside of the control panel that I had set aside.&nbsp;I&#39;ve stripped out the old BOB connections and made a start on putting everything onto the backplane of the control panel.&nbsp;Next job is the get the front panel laid out and the holes cur for the controls" />
+<meta property="og:description" content="I built my Plasma CNC about 5 years ago. I had originally intended to use it to cut out component parts for a product that I make, however I found that the output quality&nbsp;was not 100% reliable and so with the cost of laser cutting being very cheap locally, it was simply not cost effective to run. So for the most part it has sat in the workshop taking up space. I&#39;ve recently decided to update it to hopefully improve its reliability. THC Issues&nbsp; The biggest issue with the quality was the torch height control. I tried several different manufacturers of THC controller, but none were really that good. The last unit&nbsp; I bought was a proma unit, which was&nbsp;fine, but after I had some computer issues, my controller software (linux CNC) because unusable. I tried a few times to fix the corrupt files, but as I was running an older version I really needed to upgrade, which basically meant starting again.&nbsp;And so since this time, the plasma table has been used&nbsp;as a literal table, for storing boxes on top of.At some point I had collected a DDCSV CNC controller to use on another project. This is a stand alone CNC controller that runs standard GCode and are used primarily for Milling type machines. As the plasma is a 3 axis machine, I decided that&nbsp;the DDCSV would work very well and solve my dead controller problems, the only issues is that it does not have the provision for a THC controller.All is not lost however, as I have the proma THC unit. This unit generated outputs that went to the LinuxCNC break-out-board (BOB)&nbsp;to tell LinuxCNC when to raise or lower the torch. As mentioned, the DDCSV unit does not have any provision for torch raise or torch&nbsp;lower, so any torch height control basically needs to take place outside of the DDCSV unit. Proma do sell a unit that interfaces directly to the Z axis&nbsp;stepper controller. This unit acts as a pass-through for the stepper signals coming from the CNC controller. If the torch&nbsp;height needs to be adjusted, it hijacks the signals and sends the relevant STEP / DIR signals to&nbsp;adjust the torch height, overriding the position set by the CNC controller.Unfortunately the proma unit I have does not work like this. Instead it controls volt-free contacts, which allow the Z+ and Z- signals to be wired to the BOB. Somehow I need to use these&nbsp;to create the relevant STEP / DIR signals. At this stage I think that an Arduino could be used to intercept the signals from the CNC controller, along with signals from the proma unit. It can then output the necessary signals to the stepper driver.In operation, there is no need for the torch&nbsp;height to be adjusted when the arc is active. The only time that the torch height is controlled by the CNC is when it is piercing. At the moment that the arc is struck, the proma unit can take over. This means that I can use the ARCOK signal to enable / disable the proma overriding the CNC signals. A simple bit of logic is all that is required.&nbsp;Fortunately&nbsp;the stepper amplifiers and DDCSV units use 5v for the stepper signals, this is the same as the Arduino Nanos that I have.&nbsp;In theory it should work, the only reservations that I have are related to HF interference.&nbsp; DDCSV Integration&nbsp; To get started I need to get the DDCSV unit hooked up. This should be pretty straight forwards as essentially the stepper drivers and stepper wiring is already done. I am however taking the opportunity to re-install everything inside of the control panel that I had set aside.&nbsp;I&#39;ve stripped out the old BOB connections and made a start on putting everything onto the backplane of the control panel.&nbsp;Next job is the get the front panel laid out and the holes cur for the controls" />
+<link rel="canonical" href="http://localhost:4000/general/2019/08/16/cnc-plasma-upgrade.html" />
+<meta property="og:url" content="http://localhost:4000/general/2019/08/16/cnc-plasma-upgrade.html" />
+<meta property="og:site_name" content="DeeEmm" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2019-08-16T03:30:07+09:30" />
+<script type="application/ld+json">
+{"description":"I built my Plasma CNC about 5 years ago. I had originally intended to use it to cut out component parts for a product that I make, however I found that the output quality&nbsp;was not 100% reliable and so with the cost of laser cutting being very cheap locally, it was simply not cost effective to run. So for the most part it has sat in the workshop taking up space. I&#39;ve recently decided to update it to hopefully improve its reliability. THC Issues&nbsp; The biggest issue with the quality was the torch height control. I tried several different manufacturers of THC controller, but none were really that good. The last unit&nbsp; I bought was a proma unit, which was&nbsp;fine, but after I had some computer issues, my controller software (linux CNC) because unusable. I tried a few times to fix the corrupt files, but as I was running an older version I really needed to upgrade, which basically meant starting again.&nbsp;And so since this time, the plasma table has been used&nbsp;as a literal table, for storing boxes on top of.At some point I had collected a DDCSV CNC controller to use on another project. This is a stand alone CNC controller that runs standard GCode and are used primarily for Milling type machines. As the plasma is a 3 axis machine, I decided that&nbsp;the DDCSV would work very well and solve my dead controller problems, the only issues is that it does not have the provision for a THC controller.All is not lost however, as I have the proma THC unit. This unit generated outputs that went to the LinuxCNC break-out-board (BOB)&nbsp;to tell LinuxCNC when to raise or lower the torch. As mentioned, the DDCSV unit does not have any provision for torch raise or torch&nbsp;lower, so any torch height control basically needs to take place outside of the DDCSV unit. Proma do sell a unit that interfaces directly to the Z axis&nbsp;stepper controller. This unit acts as a pass-through for the stepper signals coming from the CNC controller. If the torch&nbsp;height needs to be adjusted, it hijacks the signals and sends the relevant STEP / DIR signals to&nbsp;adjust the torch height, overriding the position set by the CNC controller.Unfortunately the proma unit I have does not work like this. Instead it controls volt-free contacts, which allow the Z+ and Z- signals to be wired to the BOB. Somehow I need to use these&nbsp;to create the relevant STEP / DIR signals. At this stage I think that an Arduino could be used to intercept the signals from the CNC controller, along with signals from the proma unit. It can then output the necessary signals to the stepper driver.In operation, there is no need for the torch&nbsp;height to be adjusted when the arc is active. The only time that the torch height is controlled by the CNC is when it is piercing. At the moment that the arc is struck, the proma unit can take over. This means that I can use the ARCOK signal to enable / disable the proma overriding the CNC signals. A simple bit of logic is all that is required.&nbsp;Fortunately&nbsp;the stepper amplifiers and DDCSV units use 5v for the stepper signals, this is the same as the Arduino Nanos that I have.&nbsp;In theory it should work, the only reservations that I have are related to HF interference.&nbsp; DDCSV Integration&nbsp; To get started I need to get the DDCSV unit hooked up. This should be pretty straight forwards as essentially the stepper drivers and stepper wiring is already done. I am however taking the opportunity to re-install everything inside of the control panel that I had set aside.&nbsp;I&#39;ve stripped out the old BOB connections and made a start on putting everything onto the backplane of the control panel.&nbsp;Next job is the get the front panel laid out and the holes cur for the controls","@type":"BlogPosting","headline":"CNC Plasma Upgrade","dateModified":"2019-08-16T03:30:07+09:30","datePublished":"2019-08-16T03:30:07+09:30","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/general/2019/08/16/cnc-plasma-upgrade.html"},"url":"http://localhost:4000/general/2019/08/16/cnc-plasma-upgrade.html","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="DeeEmm" /></head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/">DeeEmm</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/about/">About</a><a class="page-link" href="/archives/">Archives</a><a class="page-link" href="/blog/">Blog</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">CNC Plasma Upgrade</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2019-08-16T03:30:07+09:30" itemprop="datePublished">Aug 16, 2019
+      </time></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <div class="ebd-block  " data-type="text"><p>I built my Plasma CNC about 5 years ago. I had originally intended to use it to cut out component parts for a product that I make, however I found that the output quality&nbsp;was not 100% reliable and so with the cost of laser cutting being very cheap locally, it was simply not cost effective to run. So for the most part it has sat in the workshop taking up space. I've recently decided to update it to hopefully improve its reliability.<br /><br /></p></div>
+<div class="ebd-block  " data-type="readmore"></div>
+<div class="ebd-block  " data-type="heading"><h2>
+	<span>THC Issues&nbsp;</span>
+</h2></div>
+<div class="ebd-block  " data-type="text"><p>The biggest issue with the quality was the torch height control. I tried several different manufacturers of THC controller, but none were really that good. The last unit&nbsp; I bought was a proma unit, which was&nbsp;fine, but after I had some computer issues, my controller software (linux CNC) because unusable. I tried a few times to fix the corrupt files, but as I was running an older version I really needed to upgrade, which basically meant starting again.&nbsp;And so since this time, the plasma table has been used&nbsp;as a literal table, for storing boxes on top of.</p><p>At some point I had collected a DDCSV CNC controller to use on another project. This is a stand alone CNC controller that runs standard GCode and are used primarily for Milling type machines. As the plasma is a 3 axis machine, I decided that&nbsp;the DDCSV would work very well and solve my dead controller problems, the only issues is that it does not have the provision for a THC controller.</p><p>All is not lost however, as I have the proma THC unit. This unit generated outputs that went to the LinuxCNC break-out-board (BOB)&nbsp;to tell LinuxCNC when to raise or lower the torch. As mentioned, the DDCSV unit does not have any provision for torch raise or torch&nbsp;lower, so any torch height control basically needs to take place outside of the DDCSV unit. Proma do sell a unit that interfaces directly to the Z axis&nbsp;stepper controller. This unit acts as a pass-through for the stepper signals coming from the CNC controller. If the torch&nbsp;height needs to be adjusted, it hijacks the signals and sends the relevant STEP / DIR signals to&nbsp;adjust the torch height, overriding the position set by the CNC controller.</p><p>Unfortunately the proma unit I have does not work like this. Instead it controls volt-free contacts, which allow the Z+ and Z- signals to be wired to the BOB. Somehow I need to use these&nbsp;to create the relevant STEP / DIR signals. At this stage I think that an Arduino could be used to intercept the signals from the CNC controller, along with signals from the proma unit. It can then output the necessary signals to the stepper driver.</p><p>In operation, there is no need for the torch&nbsp;height to be adjusted when the arc is active. The only time that the torch height is controlled by the CNC is when it is piercing. At the moment that the arc is struck, the proma unit can take over. This means that I can use the ARCOK signal to enable / disable the proma overriding the CNC signals. A simple bit of logic is all that is required.&nbsp;Fortunately&nbsp;the stepper amplifiers and DDCSV units use 5v for the stepper signals, this is the same as the Arduino Nanos that I have.&nbsp;<br /></p><p>In theory it should work, the only reservations that I have are related to HF interference.&nbsp;</p></div>
+<div class="ebd-block  " data-type="heading"><h2>
+	<span>DDCSV Integration&nbsp;</span>
+</h2></div>
+<div class="ebd-block  " data-type="text"><p>To get started I need to get the DDCSV unit hooked up. This should be pretty straight forwards as essentially the stepper drivers and stepper wiring is already done. I am however taking the opportunity to re-install everything inside of the control panel that I had set aside.&nbsp;</p><p>I've stripped out the old BOB connections and made a start on putting everything onto the backplane of the control panel.&nbsp;</p><p>Next job is the get the front panel laid out and the holes cur for the controls</p></div>
+<div class="ebd-block  " data-type="thumbnails"><div class="eb-thumbs">
+	<div class="eb-thumbs-col"><div class="eb-thumb" data-position="0"><div><div class="ebd-block  is-nested is-isolated " data-type="image" style="text-align: center;"><div class="eb-image style-clear">
+	<div class="eb-image-figure is-responsive" style="width:100%;">
+
+				<a class="eb-image-viewport eb-image-popup-button" href="images/easyblog_articles/329/b2ap3_large_IMG_8047.jpg" title="Old Setup">
+		
+					<img src="images/easyblog_articles/329/b2ap3_small_IMG_8047.jpg" />
+		</a>
+	</div>
+					<div class="eb-image-caption" style="width:100%;">
+			<span>Old Setup</span>
+		</div>
+			</div></div>
+
+</div></div></div>
+	<div class="eb-thumbs-col"><div class="eb-thumb" data-position="1"><div><div class="ebd-block  is-nested is-isolated " data-type="image" style="text-align: center;"><div class="eb-image style-clear">
+	<div class="eb-image-figure is-responsive" style="width:100%;">
+
+				<a class="eb-image-viewport eb-image-popup-button" href="images/easyblog_articles/329/b2ap3_large_IMG_8049.jpg" title="New Setup">
+		
+					<img src="images/easyblog_articles/329/b2ap3_small_IMG_8049.jpg" />
+		</a>
+	</div>
+					<div class="eb-image-caption" style="width:100%;">
+			<span>New Setup</span>
+		</div>
+			</div></div>
+
+</div></div></div>
+	<div class="eb-thumbs-col"></div>
+	<div class="eb-thumbs-col"></div>
+</div></div>
+
+  </div><a class="u-url" href="/general/2019/08/16/cnc-plasma-upgrade.html" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">DeeEmm</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">DeeEmm</li><li><a class="u-email" href="mailto:deeemmm@deeemm.com">deeemmm@deeemm.com</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/DeeEmm"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">DeeEmm</span></a></li><li><a href="https://www.twitter.com/DeeEmm__"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">DeeEmm__</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>Waxing lyrical about life the universe and everything tech related since lunchtime 2006.</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>

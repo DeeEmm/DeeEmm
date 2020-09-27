@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>TinyMCE - add items to style drop down | DeeEmm</title>
+<meta name="generator" content="Jekyll v4.1.1" />
+<meta property="og:title" content="TinyMCE - add items to style drop down" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="If you have to display code snippets on your Joomla site, you might find that the following mod is of help. This quick mod will allow you to add items to the styles drop down in the TinyMCE editor - in this case a style for the code class. The mod is pretty straight forward. Normally when TinyMCE is called it looks for a stylesheet called &#39;editor.css&#39; in the default templates CSS folder. The contents of this are used to propagate the styles drop down. If this file is not found in the default templates CSS folder, then the system version is used instead. To add custom styles to the drop down, simply create the following file. (where current_template is the name of your template) /templates/current_template/css/editor.css Now you can add in the styles that you want displayed I added the following class to display the code as shown on this page pre, .code { padding: 10px 15px; margin: 5px 0 15px; border-left: 5px solid #999999; border-right: 1px solid #999999; border-top: 1px solid #999999; border-bottom: 1px solid #999999; background: #FFFFFF; font: 1em/1 &quot;Courier News&quot;, monospace; } After uploading the new editor.css file you should be able to see the option &#39;code&#39; in the drop down menu. To use it, select the text in the editor you want the style applied to and then select code form the drop down menu. Whilst this has altered the way that the code is displayed in the editor, we still have to alter the way that it is delivered to the browser. To do this you will need to add the same code above to your templates default style sheet /templates/current_template/css/template.css In this case, there is already an entry for pre, .code so we simply need to replace the style elements with our new ones above. Additionally, depending on your template, you may also have other instances of pre, .code in other style sheets. To determine if this is the case either take a look at the source code of your page and see what style sheets are being called, or look at the template setting in the admin panel to see if there are any additional themes in use, in my case there was an additional style sheet overriding the main one. /templates/current_template/styles/background/purewhite/css/editor.css Simply comment out or remove pre, .code in the overriding style sheet. Now when the page is served to the browser, the correct style is applied. There is, however, one caveat to this - the new editor.css style sheet, supersedes the default one previously used, so any style elements that used to be listed in the styles drop down, will now be missing. To overcome this you can copy them from the system style sheet into your new editor.css" />
+<meta property="og:description" content="If you have to display code snippets on your Joomla site, you might find that the following mod is of help. This quick mod will allow you to add items to the styles drop down in the TinyMCE editor - in this case a style for the code class. The mod is pretty straight forward. Normally when TinyMCE is called it looks for a stylesheet called &#39;editor.css&#39; in the default templates CSS folder. The contents of this are used to propagate the styles drop down. If this file is not found in the default templates CSS folder, then the system version is used instead. To add custom styles to the drop down, simply create the following file. (where current_template is the name of your template) /templates/current_template/css/editor.css Now you can add in the styles that you want displayed I added the following class to display the code as shown on this page pre, .code { padding: 10px 15px; margin: 5px 0 15px; border-left: 5px solid #999999; border-right: 1px solid #999999; border-top: 1px solid #999999; border-bottom: 1px solid #999999; background: #FFFFFF; font: 1em/1 &quot;Courier News&quot;, monospace; } After uploading the new editor.css file you should be able to see the option &#39;code&#39; in the drop down menu. To use it, select the text in the editor you want the style applied to and then select code form the drop down menu. Whilst this has altered the way that the code is displayed in the editor, we still have to alter the way that it is delivered to the browser. To do this you will need to add the same code above to your templates default style sheet /templates/current_template/css/template.css In this case, there is already an entry for pre, .code so we simply need to replace the style elements with our new ones above. Additionally, depending on your template, you may also have other instances of pre, .code in other style sheets. To determine if this is the case either take a look at the source code of your page and see what style sheets are being called, or look at the template setting in the admin panel to see if there are any additional themes in use, in my case there was an additional style sheet overriding the main one. /templates/current_template/styles/background/purewhite/css/editor.css Simply comment out or remove pre, .code in the overriding style sheet. Now when the page is served to the browser, the correct style is applied. There is, however, one caveat to this - the new editor.css style sheet, supersedes the default one previously used, so any style elements that used to be listed in the styles drop down, will now be missing. To overcome this you can copy them from the system style sheet into your new editor.css" />
+<link rel="canonical" href="http://localhost:4000/joomla%201.5%20how%20to's/2010/03/01/tinymce-add-items-to-style-drop-down.html" />
+<meta property="og:url" content="http://localhost:4000/joomla%201.5%20how%20to's/2010/03/01/tinymce-add-items-to-style-drop-down.html" />
+<meta property="og:site_name" content="DeeEmm" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2010-03-01T04:03:18+10:30" />
+<script type="application/ld+json">
+{"description":"If you have to display code snippets on your Joomla site, you might find that the following mod is of help. This quick mod will allow you to add items to the styles drop down in the TinyMCE editor - in this case a style for the code class. The mod is pretty straight forward. Normally when TinyMCE is called it looks for a stylesheet called &#39;editor.css&#39; in the default templates CSS folder. The contents of this are used to propagate the styles drop down. If this file is not found in the default templates CSS folder, then the system version is used instead. To add custom styles to the drop down, simply create the following file. (where current_template is the name of your template) /templates/current_template/css/editor.css Now you can add in the styles that you want displayed I added the following class to display the code as shown on this page pre, .code { padding: 10px 15px; margin: 5px 0 15px; border-left: 5px solid #999999; border-right: 1px solid #999999; border-top: 1px solid #999999; border-bottom: 1px solid #999999; background: #FFFFFF; font: 1em/1 &quot;Courier News&quot;, monospace; } After uploading the new editor.css file you should be able to see the option &#39;code&#39; in the drop down menu. To use it, select the text in the editor you want the style applied to and then select code form the drop down menu. Whilst this has altered the way that the code is displayed in the editor, we still have to alter the way that it is delivered to the browser. To do this you will need to add the same code above to your templates default style sheet /templates/current_template/css/template.css In this case, there is already an entry for pre, .code so we simply need to replace the style elements with our new ones above. Additionally, depending on your template, you may also have other instances of pre, .code in other style sheets. To determine if this is the case either take a look at the source code of your page and see what style sheets are being called, or look at the template setting in the admin panel to see if there are any additional themes in use, in my case there was an additional style sheet overriding the main one. /templates/current_template/styles/background/purewhite/css/editor.css Simply comment out or remove pre, .code in the overriding style sheet. Now when the page is served to the browser, the correct style is applied. There is, however, one caveat to this - the new editor.css style sheet, supersedes the default one previously used, so any style elements that used to be listed in the styles drop down, will now be missing. To overcome this you can copy them from the system style sheet into your new editor.css","@type":"BlogPosting","headline":"TinyMCE - add items to style drop down","dateModified":"2010-03-01T04:03:18+10:30","datePublished":"2010-03-01T04:03:18+10:30","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/joomla%201.5%20how%20to's/2010/03/01/tinymce-add-items-to-style-drop-down.html"},"url":"http://localhost:4000/joomla%201.5%20how%20to's/2010/03/01/tinymce-add-items-to-style-drop-down.html","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="DeeEmm" /></head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/">DeeEmm</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/about/">About</a><a class="page-link" href="/archives/">Archives</a><a class="page-link" href="/blog/">Blog</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">TinyMCE - add items to style drop down</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2010-03-01T04:03:18+10:30" itemprop="datePublished">Mar 1, 2010
+      </time></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>If you have to display code snippets on your Joomla site, you might find that the following mod is of help. This quick mod will allow you to add items to the styles drop down in the TinyMCE editor - in this case a style for the code class.</p>
+<p>The mod is pretty straight forward.</p>
+<p>Normally when TinyMCE is called it looks for a stylesheet called 'editor.css' in the default templates CSS folder. The contents of this are used to propagate the styles drop down. If this file is not found in the default templates CSS folder, then the system version is used instead. To add custom styles to the drop down, simply create the following file. (where current_template is the name of your template)</p>
+<p class="code">/templates/current_template/css/editor.css</p>
+<p>Now you can add in the styles that you want displayed I added the following class to display the code as shown on this page</p>
+<p class="code">pre, .code {<br /> padding: 10px 15px;<br /> margin: 5px 0 15px;<br /> border-left: 5px solid #999999;<br /> border-right: 1px solid #999999;<br /> border-top: 1px solid #999999;<br /> border-bottom: 1px solid #999999;<br /> background: #FFFFFF;<br /> font: 1em/1 "Courier News", monospace;<br /> }</p>
+<p>After uploading the new editor.css file you should be able to see the option 'code' in the drop down menu. To use it, select the text in the editor you want the style applied to and then select code form the drop down menu.</p>
+<p>Whilst this has altered the way that the code is displayed in the editor, we still have to alter the way that it is delivered to the browser. To do this you will need to add the same code above to your templates default style sheet</p>
+<p class="code">/templates/current_template/css/template.css</p>
+<p>In this case, there is already an entry for <em><strong>pre, .code</strong> </em>so we simply need to replace the style elements with our new ones above. Additionally, depending on your template, you may also have other instances of <em><strong>pre, .code</strong> </em>in other style sheets. To determine if this is the case either take a look at the source code of your page and see what style sheets are being called, or look at the template setting in the admin panel to see if there are any additional themes in use, in my case there was an additional style sheet overriding the main one.</p>
+<p class="code">/templates/current_template/styles/background/purewhite/css/editor.css</p>
+<p>Simply comment out or remove <em><strong>pre, .code</strong> </em>in the overriding style sheet. Now when the page is served to the browser, the correct style is applied. There is, however, one caveat to this - the new editor.css style sheet, supersedes the default one previously used, so any style elements that used to be listed in the styles drop down, will now be missing. To overcome this you can copy them from the system style sheet into your new editor.css</p>
+
+  </div><a class="u-url" href="/joomla%201.5%20how%20to's/2010/03/01/tinymce-add-items-to-style-drop-down.html" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">DeeEmm</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">DeeEmm</li><li><a class="u-email" href="mailto:deeemmm@deeemm.com">deeemmm@deeemm.com</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/DeeEmm"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">DeeEmm</span></a></li><li><a href="https://www.twitter.com/DeeEmm__"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">DeeEmm__</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>Waxing lyrical about life the universe and everything tech related since lunchtime 2006.</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>

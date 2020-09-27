@@ -1,0 +1,16 @@
+---
+layout: post
+title: First steps
+joomla_id: 146
+joomla_url: first-steps
+category: General
+tags: dolphin joomla migration
+date: 2011-09-02 03:51:55.000000000 +09:30
+---
+<p>If you are one of those visitors who is expectantly waiting for the release of the Dolphin to Joomla migration script, you will be happy to know that things are moving along nicely and the script will be released before the end of the month. In preparation for this imminent release I have started to prepare the documentation for the installation, including the scope of operation and the requirements for getting it up and running.</p>
+<p>The documentation will be provided in a series of articles in the tutorials section which will walk you through the whole process in a step by step manner. It will also cover the setting up of Joomla and Jomsocial, as well as providing installation help for the required third party modules.</p>
+<p>The first of these articles is now available to view and is an introduction that covers what you can expect from the migration. To view the article visit...</p>
+<p><a href="resources/tutorials/60-dolphin-to-joomla-migration.html">http://www.deeemm.com/resources/tutorials/60-dolphin-to-joomla-migration.html</a></p>
+<p>Long time dolphin frustratee's will be pleased to learn that the migration utilises the excellent Wordpress script for the blogging component, and includes the world class forum script 'Kunena'. Photo's videos, events, messaging, profile customisation including widgets and the mandatory activity wall are all standard core components in JomSocial. Mix this up with a few free modules from the Joomla Extensions Directory and you have a site to be reckoned with.</p>
+<p>So if are getting impatient, why not take a read through the first article, and maybe even install a test installation of Joomla and Jomsocial to have a play about and familiarise yourself with how it works.</p>
+<p>/DM</p>

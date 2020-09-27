@@ -38,7 +38,7 @@ collections:
     output: true # Set to render files in _pages folder
     permalink: /:title/ # Set the format of the permalink by default 
     
-keep_files: [CNAME, .git]
+# keep_files: [CNAME, .git]
   
 # Exclude from processing.
 # The following items will not be processed, by default.

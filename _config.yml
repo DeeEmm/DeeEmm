@@ -60,6 +60,3 @@ keep_files: [CNAME, .git]
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
-=======
-theme: jekyll-theme-hacker
->>>>>>> 51563677e89a32242e59fe51abf10503b13d479e

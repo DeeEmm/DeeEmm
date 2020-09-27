@@ -2,6 +2,7 @@
 layout: page
 title: About
 permalink: /about/
+published: true
 ---
 
 I am DeeEmm  
@@ -42,6 +43,7 @@ CycleKarts
 <br>
 # Current Projects
  
-Granule Extruder  
-MPCNC  
-Reef-Pi
+Visit my GitHub Page
+
+
+<a href="https://github.com/DeeEmm">https://github.com/DeeEmm</a>

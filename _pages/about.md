@@ -8,14 +8,8 @@ published: true
 I am DeeEmm  
 It's not an alter-ego  
 It is just a coding pseudonym  
-
-An Industrial Controls Engineer who specialises in code based programming. 
-
-IndustrialRobotProgrammerIndustrialElectricianElectricalEngineerSafetyConsultantMechanicFitterTurner ToolMakerWelderDesignerManufacturerTinkererMakerLandSpeedRecordHolderHusbandFatherSon. 
-
-I am all of these things, and more besides. 
-
-But most of all I love to code.
+I am many things, and more besides   
+But most of all I love to code  
 
 /DM  
 <br>

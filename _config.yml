@@ -30,7 +30,7 @@ github_username: DeeEmm
 # Build settings
 theme: minima
 plugins:
-#  - jekyll-feed
+  - jekyll-feed
   
 # Collectioms  
 collections:

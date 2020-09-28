@@ -1,5 +1,8 @@
 ---
 published: false
+tags: test draft
+category: general
+date: 7272568
 ---
 ## A Test Post
 

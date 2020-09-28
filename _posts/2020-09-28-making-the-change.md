@@ -1,8 +1,8 @@
 ---
-published: false
+published: true
 tags: DNS server github
 category: general
-date: {}
+date: 2020-09-01T02:12:00.000Z
 ---
 ## DNS now Pointed at GitHub
 

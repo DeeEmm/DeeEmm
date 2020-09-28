@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 'Home Automation Sonoff-Tasmota. ESP12: 10 Steps (with Pictures)'
+title: 'Home Automation Sonoff-Tasmota. ESP12: '
 joomla_id: 285
 joomla_url: >-
   home-automation-sonoff-tasmota-sensors-leds-development-board-esp12-10-steps-with-pictures

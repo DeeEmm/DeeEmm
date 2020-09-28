@@ -6,10 +6,10 @@ published: true
 ---
 
 I am DeeEmm  
-It's not an alter-ego  
+It is not an alter-ego  
 It is just a coding pseudonym  
 I am many things, and more besides   
-But most of all I love to code  
+But most of all I am a coder  
 
 /DM  
 <br>
@@ -27,10 +27,17 @@ DIY Dyno
 
 ---
 <br>
-# Community & Environment
+# Environment 
 Trashbin Challenge  
 Plastic Recycling  
+<br>
+
+---
+<br>
+# Community
 CycleKarts  
+Garage Culture  
+VDubber  
 <br>
 
 ---

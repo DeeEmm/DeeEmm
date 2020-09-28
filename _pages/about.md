@@ -9,10 +9,10 @@ published: true
 
 
 
-I am DeeEmm  
+I am DeeEmm.  
 It is not an alter-ego  
-It is just a coding pseudonym  
-I am many things, and more besides   
+It is just a coding pseudonym.  
+I am many things, and more besides.   
 But most of all I am a coder  
 
 /DM  

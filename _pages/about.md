@@ -17,7 +17,6 @@ But most of all I am a coder
 
 /DM  
 <BR><BR>
-
 # About this site
 
   

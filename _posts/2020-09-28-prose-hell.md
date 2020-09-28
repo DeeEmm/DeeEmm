@@ -2,7 +2,7 @@
 published: true
 tags: prose.io arrrgh jekyll
 category: general
-date: 7272568
+date: 2020-09-28T12:12:00.000Z
 ---
 ## Arrrgh
 

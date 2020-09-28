@@ -16,7 +16,7 @@ I am many things, and more besides
 But most of all I am a coder  
 
 /DM  
-<BR><BR>
+<BR>
 # About this site
 
   

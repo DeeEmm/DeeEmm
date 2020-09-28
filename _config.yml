@@ -21,7 +21,7 @@
 title: DeeEmm
 email: deeemmm@deeemm.com
 description: >- # this means to ignore newlines until "baseurl:"
-  Waxing lyrical about life the universe and everything tech related since lunchtime 2006.
+  Waxing lyrical about life the universe and everything code related since lunchtime 2006.
 baseurl: "DeeEmm" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: __DeeEmm

@@ -13,7 +13,7 @@ I am DeeEmm.
 It is not an alter-ego  
 It is just a coding pseudonym.  
 I am many things, and more besides.   
-But most of all I am a coder  
+But most of all I am a coder.  
 
 /DM  
 <BR>

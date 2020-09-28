@@ -1,12 +1,13 @@
 ---
 layout: post
-title: Adding order statusto woocommerce-product-attachment plugin
+title: Adding order status to woocommerce-product-attachment plugin
 joomla_id: 338
 joomla_url: >-
   adding-additional-partial-payment-field-to-dotstore-woocommerce-product-attachment-plugin
 category: General
-date: {}
+date: 2020-09-12T02:30:00.000Z
 published: true
+tags: wordpress woocommerce
 ---
 <p>I'm using the woocommerce deposits plugin with DotStore product-attachment plugin but noted that the partially paid order status was not included in the available selections.</p>
 

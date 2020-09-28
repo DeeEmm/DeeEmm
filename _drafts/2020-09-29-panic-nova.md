@@ -20,3 +20,5 @@ There's enough of Coda in Nova that Coda users will feel at home. Most of the me
 I think overall it is a win, it definitely feels like Coda has grown up a little but still manages to retain the same Mac charm that only a dedicated app can. There's enough basic features to support more complex workflows than in Coda, and is more like an IDE than the simple web editor that Coda sold itself as. 
 
 Great job Cabel.
+
+/DM

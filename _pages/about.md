@@ -16,7 +16,7 @@ I am many things, and more besides
 But most of all I am a coder  
 
 /DM  
-
+<BR><BR>
 
 
 
@@ -25,7 +25,7 @@ But most of all I am a coder
   
   
 This web-log started off being mostly about code related stuff, a place to share tutorials and a place to share and at one point sell CMS extensions. Over the years the site has evolved to include other different types of content. Much of that content is still tech related, but there is also a smattering of random stuff too. I guess you could call it eclectic-tech or maybe just techlectic for short.
-
+<BR><BR>
 
 
 

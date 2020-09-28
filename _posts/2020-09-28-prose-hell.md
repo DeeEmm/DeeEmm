@@ -1,5 +1,5 @@
 ---
-published: false
+published: true
 tags: prose.io arrrgh jekyll
 category: general
 date: 7272568

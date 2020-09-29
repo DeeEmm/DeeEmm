@@ -2,7 +2,7 @@
 published: true
 tags: prose.io arrrgh jekyll
 category: general
-date: 2020-09-28T12:12:00.000Z
+date: 2020-09-28T02:42:00.000Z
 ---
 ## Arrrgh
 
@@ -14,4 +14,4 @@ Guess I need to get used to a different workflow if I want to use Prose as my ed
 
 So the best workflow when using Prose as your only editor is to add the title, the meta and then commit the post as a draft before adding any content. This way if there is something it dosn't like, like a malformed date in my case (pesky spelling errors), then you haven't lost about 2 hours work
 
-Damn you Jekyll. Where's my emoticons. :( 
+Damn you Jekyll. Where's my emoticons. :(

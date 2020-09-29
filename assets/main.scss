@@ -2,12 +2,12 @@
 ---
 @import "{{ site.theme }}";
 
-.site-header,  .site-header a:visited {
+.site-header,  .site-header a:visited,  .site-header a:link{
 	background-color: #000 !important;
 	color: #efefef !important;	
 }
 
-.site-title, .site-title:visited {
+.site-title, a.site-title:visited, a.site-title:link, a.site-title:active {
 	color: #efefef !important;
 }
 

@@ -47,7 +47,7 @@ Note: Nodes are slave devices however they could also can act as master to other
   - Analog Input Status (Polled)
   - Analog Output Control
 
-Note: Data scaling of I/O from Data nopde needs to match in both node + RPi. This can be achieved by having predefined data types in the Rpi and boiler plate code in the nano that is selectable via the API (restrictive), or simply from user input in RPi I/O set up and hard coding in Nano (unrestricted). All cases will potentially require user to flash nano.
+Note: Data scaling of I/O from Data node needs to match in both node + RPi. This can be achieved by having predefined data types in the Rpi and boiler plate code in the nano that is selectable via the API (restrictive), or simply from user input in RPi I/O set up and hard coding in Nano (unrestricted). All cases will potentially require user to flash nano.
 
 My preference would be for the system to be unrestricted as then the user is not reliant on the devs to perform integration of new devices, however this does increase complexity of system.
 
@@ -78,19 +78,19 @@ The admin navigation is broken up into the basic functions
  - Time based control
 - Trend data
 
-All configuration is accessed from a single administration menu. There is also a dynamically generated top level user menu, where items are added based on the configuration settings chosen by the user (display in menu check box). In this manner both the name and layout can be configured by the end user, which means that the system can be dedicated to each application.
+All configuration is accessed from a single administration menu. There is also a dynamically generated top level user menu, where items are added based on the configuration settings chosen by the user (There is a display in menu check box on each sensor item). In this manner both the name and layout can be configured by the end user, which means that the system can be dedicated to each application.
 
 So in the case of an Aquarium controller you might have the following top level menu items and associated macros...
 
-Heater - conditional control - if temp less than setpoint 
-Light - time based control - light on 9:pm + light off 9 am
-ATC - conditional control - if float switch then ATC on
-Doser - time based control - Doser on 4 secs speed 4 at 9 pm / doser run for 1 sec speed 1 every 25 minutes
-Feeder - time based control - feeder operate 9am every day
-Wavemaker - time based control - 25% for 3 secs 100% for 3 secs
-Return pump - conditional control - if feeding mode on return pump 15%
-Skimmer pump - conditional control - if feeding mode on skimmer pump off
-
+Heater - conditional control - if temp less than setpoint  
+Light - time based control - light on 9:pm + light off 9 am  
+ATC - conditional control - if float switch then ATC on  
+Doser - time based control - Doser on 4 secs speed 4 at 9 pm / doser run for 1 sec speed 1 every 25 minutes  
+Feeder - time based control - feeder operate 9am every day  
+Wavemaker - time based control - 25% for 3 secs 100% for 3 secs  
+Return pump - conditional control - if feeding mode on return pump 15%  
+Skimmer pump - conditional control - if feeding mode on skimmer pump off  
+  
 It should also be noted that with each item it is also possible to enable data logging. This way historical trend data can be recorded. Logged data is displayed in a trend graph and can also be analysed in a dedicated trend analysis page
 
 
@@ -126,3 +126,5 @@ so values recorded for each sensor are:
 - Source
 
 A unique UID is also set for each unit which then allows SQL join operations across tables for data logging and data analysis. 
+
+[END]/[idea #10980970]

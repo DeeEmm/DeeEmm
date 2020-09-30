@@ -4,8 +4,6 @@ tags:
 category: general
 date: 2020-09-30 20:30:00 +9:30
 ---
-## Arduino Nano nodes
-
 I've been playing with the Reef-Pi system for a while now waiting for hardware to turn up so that I can finish building my system. What I have noted is that the system is inflexible when it comes in integration of third party components. Each integration has to be hard coded by the Reef-pi devs, which means that there is a relatively long time for integrating additional stuff. The Raspberry Pi also suffers when it comes to fast cyclical control as it is generally run as a single threaded machine.
 
 This got me to thinking about how this could be simplified and the speed issue overcome. What I came up with was a system where Arduino Nanos are used as control nodes. The Nanos can interface with the Rpi using I2C and controlled using a simple API. Each node could then autonomously control an item of equipment like a wavemaker or act as a simple pass-through in the case of equipment such as a sensor

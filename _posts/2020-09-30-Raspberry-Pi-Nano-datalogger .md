@@ -2,7 +2,7 @@
 published: true
 tags: Aquarium controller raspberry-pi arduino datalogger
 category: general
-date: 2020-09-30 22:o0:00 +9:30
+date: 2020-09-30 22:00:00 +9:30
 ---
 
 This follows on from my previous post on [using arduino nano as a control node](http://deeemm.com/general/2020/09/30/arduino-nano-nodes.html) and builds on the basic idea discussed there.

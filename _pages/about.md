@@ -41,8 +41,6 @@ This web-log started off being mostly about code related stuff, a place to share
 # Paying it forwards
 ---
 <BR>
-  
-  
 
 **Open Source**  
 [Marlin CNC Pendant](https://github.com/DeeEmm/Marlin-CNC-Pendant)  
@@ -68,7 +66,7 @@ This web-log started off being mostly about code related stuff, a place to share
 [Visit my GitHub Page](https://github.com/DeeEmm)  
 
 
-
+<br>
 # What I do  
 ---
 <br>

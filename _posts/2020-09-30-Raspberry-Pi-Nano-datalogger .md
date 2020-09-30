@@ -82,14 +82,14 @@ All configuration is accessed from a single administration menu. There is also a
 
 So in the case of an Aquarium controller you might have the following top level menu items and associated macros...
 
-Heater - conditional control - if temp less than setpoint  
-Light - time based control - light on 9:pm + light off 9 am  
-ATC - conditional control - if float switch then ATC on  
-Doser - time based control - Doser on 4 secs speed 4 at 9 pm / doser run for 1 sec speed 1 every 25 minutes  
-Feeder - time based control - feeder operate 9am every day  
-Wavemaker - time based control - 25% for 3 secs 100% for 3 secs  
-Return pump - conditional control - if feeding mode on return pump 15%  
-Skimmer pump - conditional control - if feeding mode on skimmer pump off  
+- Heater - conditional control - if temp less than setpoint  
+- Light - time based control - light on 9:pm + light off 9 am  
+- ATC - conditional control - if float switch then ATC on  
+- Doser - time based control - Doser on 4 secs speed 4 at 9 pm / doser run for 1 sec speed 1 every 25 minutes  
+- Feeder - time based control - feeder operate 9am every day  
+- Wavemaker - time based control - 25% for 3 secs 100% for 3 secs  
+- Return pump - conditional control - if feeding mode on return pump 15%  
+- Skimmer pump - conditional control - if feeding mode on skimmer pump off  
   
 It should also be noted that with each item it is also possible to enable data logging. This way historical trend data can be recorded. Logged data is displayed in a trend graph and can also be analysed in a dedicated trend analysis page
 

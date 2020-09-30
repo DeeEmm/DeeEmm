@@ -11,8 +11,7 @@ published: true
 I amm DeeEmm AKA Michael Percy.  
 
 I am an Electrical Engineer majoring in industrial automation and controls. I spent many years working in the manufacturing industry as an automation specialist. Creating, developing and installing automation equipment and machinery, programming industrial robots, PLC's SCADA, HMI's and various other technologies. I specialised in code based programming languages. This work took me all over the world and eventually to Australia.  
-I now run a small manufacturing business making supercharger kits and performance accessories for vintage Volkswagens out of a workshop in my back yard having turned a hobby into a business. _'Living the dream'_ as they say.  
-_'Onya Mate!'_
+I now run a small manufacturing business making supercharger kits and performance accessories for vintage Volkswagens out of a workshop in my back yard having turned a hobby into a business. _'Living the dream'_ as they say.  ;)
 
 
 

@@ -127,4 +127,4 @@ so values recorded for each sensor are:
 
 A unique UID is also set for each unit which then allows SQL join operations across tables for data logging and data analysis. 
 
-[END]/[idea #10980970]
+END/idea #10980970

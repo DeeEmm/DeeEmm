@@ -35,27 +35,33 @@ This web-log started off being mostly about code related stuff, a place to share
   
 
 **Open Source**  
-Marlin CNC Pendant  
-Sparkduino  
-DIY Flow Bench   
-DIY Dividing head  
-DMCMS  
-DIY Dyno  
+[Marlin CNC Pendant](https://github.com/DeeEmm/Marlin-CNC-Pendant)  
+[Sparkduino](https://github.com/DeeEmm/sparkduino)  
+[DIY Flow Bench](https://github.com/DeeEmm/DIY-Flow-Bench)   
+[DIY Dividing head](https://github.com/DeeEmm/DIY-Dividing-Head)  
+[DMCMS](https://sourceforge.net/projects/dmcms/)  
+[DIY Dyno](https://sourceforge.net/projects/diydyno/)  
 
 
 **Environment**  
-Trashbin Challenge  
-Plastic Recycling  
+[Trashbin Challenge](https://trashbinchallenge.org)  
+[Plastic Recycling 3D printer](https://DeeEmm.com)  
 
 
 **Community**  
-CycleKarts  
-Garage Culture  
-VDubber  
+[Aussie CycleKarts](https://cyclekarts.com.au)  
+[VDubber](https://vdubber.com)  
+[Garage Culture](https://garageculture.com)  
 
 
 **Sharing is caring**  
-Visit my GitHub Page
+[Visit my GitHub Page](https://github.com/DeeEmm)  
 
 
-<a href="https://github.com/DeeEmm">https://github.com/DeeEmm</a>
+
+# What I do  
+---
+<br>
+I make aftermarket performance parts for vintage Volkswagens.  
+This is kinda cool as it combines two of my hobbies: classic cars and making stuff.  
+[Joe Blow Superchargers](https://joeblow.me)  

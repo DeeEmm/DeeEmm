@@ -228,7 +228,7 @@ date: 2019-07-27 11:18:03.000000000 +09:30
 	</div></div><div class="ebd-block  " data-type="post" ><div class="post-block media">
     <div class="media-table">
         <div class="media-thumb" data-post-media="">
-            <img src="https://deeemm.com/../../../images/easyblog_articles/323/b2ap3_thumbnail_IMG_7775.jpg" data-post-image="">
+            <img src="../../../../images/easyblog_articles/323/b2ap3_thumbnail_IMG_7775.jpg" data-post-image="">
         </div>
         <div class="media-content">
             <h3>

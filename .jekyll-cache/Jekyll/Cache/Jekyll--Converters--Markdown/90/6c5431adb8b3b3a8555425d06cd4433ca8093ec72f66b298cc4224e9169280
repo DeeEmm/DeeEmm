@@ -3608,7 +3608,7 @@ id="techinfo"&gt;
 	<li>
 	  <h2><a href="/latest%20news/2011/04/28/sneak-peek-at-dolphin-to-jomsocial-migration-script.html">Sneak Peek at Dolphin to JomSocial migration script</a></h2>
 	  <p>Progress on the Boonex Dolphin to JomSocial migration script is underway, with the basic dolphin module mapped out and user data already handled by the exporter.</p>
-<p style="text-align: center;"><img src="images/jsmigrator.jpg" border="0" alt="http://www.deeemm.com/images/jsmigrator.jpg" title="http://www.deeemm.com/images/jsmigrator.jpg" width="400" height="222" /></p>
+<p style="text-align: center;"><img src="images/jsmigrator.jpg" border="0" alt="images/jsmigrator.jpg" title="images/jsmigrator.jpg" width="400" height="222" /></p>
 <p>The module is named Js Migrator and will allow migration of user data, and all compatible data available from the standard Dolphin modules. In addition support will be provided for the IBDW wall module.</p>
 <p>More to follow...</p>
 

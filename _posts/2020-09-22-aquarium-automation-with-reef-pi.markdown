@@ -12,10 +12,10 @@ date: 2020-09-22 04:31:42.000000000 +09:30
 	<div class="eb-image-figure is-responsive" style="width:100%;">
 
 				<a class="eb-image-viewport eb-image-popup-button"
-			href="../../../../../images/blog_articles/413/b2ap3_large_IMG_20200922_171018.jpg"
+			href="../../../images/easyblog_articles/413/b2ap3_large_IMG_20200922_171018.jpg"
 			title="">
 		
-					<img src="../../../../../images/blog_articles/413/b2ap3_small_IMG_20200922_171018.jpg" 			/>
+					<img src="../../../images/easyblog_articles/413/b2ap3_small_IMG_20200922_171018.jpg" 			/>
 		</a>
 	</div>
 				</div></div>
@@ -42,10 +42,10 @@ date: 2020-09-22 04:31:42.000000000 +09:30
 	<div class="eb-image-figure is-responsive" style="width:100%;">
 
 				<a class="eb-image-viewport eb-image-popup-button"
-			href="../../../../../images/blog_articles/413/b2ap3_large_IMG_20200922_171026.jpg"
+			href="../../../images/easyblog_articles/413/b2ap3_large_IMG_20200922_171026.jpg"
 			title="">
 		
-					<img src="../../../../../images/blog_articles/413/b2ap3_small_IMG_20200922_171026.jpg" 			/>
+					<img src="../../../images/easyblog_articles/413/b2ap3_small_IMG_20200922_171026.jpg" 			/>
 		</a>
 	</div>
 				</div></div>
@@ -79,10 +79,10 @@ date: 2020-09-22 04:31:42.000000000 +09:30
 	<div class="eb-image-figure is-responsive" style="width:100%;">
 
 				<a class="eb-image-viewport eb-image-popup-button"
-			href="../../../../../images/blog_articles/413/b2ap3_large_IMG_20200922_172131.jpg"
+			href="../../../images/easyblog_articles/413/b2ap3_large_IMG_20200922_172131.jpg"
 			title="">
 		
-					<img src="../../../../../images/blog_articles/413/b2ap3_small_IMG_20200922_172131.jpg" 			/>
+					<img src="../../../images/easyblog_articles/413/b2ap3_small_IMG_20200922_172131.jpg" 			/>
 		</a>
 	</div>
 				</div></div>
@@ -108,10 +108,10 @@ date: 2020-09-22 04:31:42.000000000 +09:30
 	<div class="eb-image-figure is-responsive" style="width:100%;">
 
 				<a class="eb-image-viewport eb-image-popup-button"
-			href="../../../../../images/blog_articles/413/b2ap3_large_IMG_20200922_172146.jpg"
+			href="../../../images/easyblog_articles/413/b2ap3_large_IMG_20200922_172146.jpg"
 			title="">
 		
-					<img src="../../../../../images/blog_articles/413/b2ap3_small_IMG_20200922_172146.jpg" 			/>
+					<img src="../../../images/easyblog_articles/413/b2ap3_small_IMG_20200922_172146.jpg" 			/>
 		</a>
 	</div>
 				</div></div>
@@ -137,10 +137,10 @@ date: 2020-09-22 04:31:42.000000000 +09:30
 	<div class="eb-image-figure is-responsive" style="width:100%;">
 
 				<a class="eb-image-viewport eb-image-popup-button"
-			href="../../../../../images/blog_articles/413/b2ap3_large_IMG_20200922_230113.jpg"
+			href="../../../images/easyblog_articles/413/b2ap3_large_IMG_20200922_230113.jpg"
 			title="">
 		
-					<img src="../../../../../images/blog_articles/413/b2ap3_small_IMG_20200922_230113.jpg" 			/>
+					<img src="../../../images/easyblog_articles/413/b2ap3_small_IMG_20200922_230113.jpg" 			/>
 		</a>
 	</div>
 				</div></div>
@@ -166,10 +166,10 @@ date: 2020-09-22 04:31:42.000000000 +09:30
 	<div class="eb-image-figure is-responsive" style="width:100%;">
 
 				<a class="eb-image-viewport eb-image-popup-button"
-			href="../../../../../images/blog_articles/413/b2ap3_large_IMG_20200922_172054.jpg"
+			href="../../../images/easyblog_articles/413/b2ap3_large_IMG_20200922_172054.jpg"
 			title="">
 		
-					<img src="../../../../../images/blog_articles/413/b2ap3_small_IMG_20200922_172054.jpg" 			/>
+					<img src="../../../images/easyblog_articles/413/b2ap3_small_IMG_20200922_172054.jpg" 			/>
 		</a>
 	</div>
 				</div></div>
@@ -195,10 +195,10 @@ date: 2020-09-22 04:31:42.000000000 +09:30
 	<div class="eb-image-figure is-responsive" style="width:100%;">
 
 				<a class="eb-image-viewport eb-image-popup-button"
-			href="../../../../../images/blog_articles/413/b2ap3_large_IMG_20200922_171414.jpg"
+			href="../../../images/easyblog_articles/413/b2ap3_large_IMG_20200922_171414.jpg"
 			title="">
 		
-					<img src="../../../../../images/blog_articles/413/b2ap3_small_IMG_20200922_171414.jpg" 			/>
+					<img src="../../../images/easyblog_articles/413/b2ap3_small_IMG_20200922_171414.jpg" 			/>
 		</a>
 	</div>
 				</div></div>
@@ -229,10 +229,10 @@ date: 2020-09-22 04:31:42.000000000 +09:30
 	<div class="eb-image-figure is-responsive" style="width:100%;">
 
 				<a class="eb-image-viewport eb-image-popup-button"
-			href="../../../../../images/blog_articles/413/b2ap3_large_IMG_20200922_170553.jpg"
+			href="../../../images/easyblog_articles/413/b2ap3_large_IMG_20200922_170553.jpg"
 			title="">
 		
-					<img src="../../../../../images/blog_articles/413/b2ap3_small_IMG_20200922_170553.jpg" 			/>
+					<img src="../../../images/easyblog_articles/413/b2ap3_small_IMG_20200922_170553.jpg" 			/>
 		</a>
 	</div>
 				</div></div>
@@ -258,10 +258,10 @@ date: 2020-09-22 04:31:42.000000000 +09:30
 	<div class="eb-image-figure is-responsive" style="width:100%;">
 
 				<a class="eb-image-viewport eb-image-popup-button"
-			href="../../../../../images/blog_articles/413/b2ap3_large_IMG_20200922_225423.jpg"
+			href="../../../images/easyblog_articles/413/b2ap3_large_IMG_20200922_225423.jpg"
 			title="">
 		
-					<img src="../../../../../images/blog_articles/413/b2ap3_small_IMG_20200922_225423.jpg" 			/>
+					<img src="../../../images/easyblog_articles/413/b2ap3_small_IMG_20200922_225423.jpg" 			/>
 		</a>
 	</div>
 				</div></div>
@@ -287,10 +287,10 @@ date: 2020-09-22 04:31:42.000000000 +09:30
 	<div class="eb-image-figure is-responsive" style="width:100%;">
 
 				<a class="eb-image-viewport eb-image-popup-button"
-			href="../../../../../images/blog_articles/413/b2ap3_large_IMG_20200922_170544.jpg"
+			href="../../../images/easyblog_articles/413/b2ap3_large_IMG_20200922_170544.jpg"
 			title="">
 		
-					<img src="../../../../../images/blog_articles/413/b2ap3_small_IMG_20200922_170544.jpg" 			/>
+					<img src="../../../images/easyblog_articles/413/b2ap3_small_IMG_20200922_170544.jpg" 			/>
 		</a>
 	</div>
 				</div></div>
@@ -316,10 +316,10 @@ date: 2020-09-22 04:31:42.000000000 +09:30
 	<div class="eb-image-figure is-responsive" style="width:100%;">
 
 				<a class="eb-image-viewport eb-image-popup-button"
-			href="../../../../../images/blog_articles/413/b2ap3_large_IMG_20200922_170437.jpg"
+			href="../../../images/easyblog_articles/413/b2ap3_large_IMG_20200922_170437.jpg"
 			title="">
 		
-					<img src="../../../../../images/blog_articles/413/b2ap3_small_IMG_20200922_170437.jpg" 			/>
+					<img src="../../../images/easyblog_articles/413/b2ap3_small_IMG_20200922_170437.jpg" 			/>
 		</a>
 	</div>
 				</div></div>
@@ -345,10 +345,10 @@ date: 2020-09-22 04:31:42.000000000 +09:30
 	<div class="eb-image-figure is-responsive" style="width:100%;">
 
 				<a class="eb-image-viewport eb-image-popup-button"
-			href="../../../../../images/blog_articles/413/b2ap3_large_IMG_20200922_222006.jpg"
+			href="../../../images/easyblog_articles/413/b2ap3_large_IMG_20200922_222006.jpg"
 			title="">
 		
-					<img src="../../../../../images/blog_articles/413/b2ap3_small_IMG_20200922_222006.jpg" 			/>
+					<img src="../../../images/easyblog_articles/413/b2ap3_small_IMG_20200922_222006.jpg" 			/>
 		</a>
 	</div>
 				</div></div>
@@ -374,10 +374,10 @@ date: 2020-09-22 04:31:42.000000000 +09:30
 	<div class="eb-image-figure is-responsive" style="width:100%;">
 
 				<a class="eb-image-viewport eb-image-popup-button"
-			href="../../../../../images/blog_articles/413/b2ap3_large_IMG_20200922_170611.jpg"
+			href="../../../images/easyblog_articles/413/b2ap3_large_IMG_20200922_170611.jpg"
 			title="">
 		
-					<img src="../../../../../images/blog_articles/413/b2ap3_small_IMG_20200922_170611.jpg" 			/>
+					<img src="../../../images/easyblog_articles/413/b2ap3_small_IMG_20200922_170611.jpg" 			/>
 		</a>
 	</div>
 				</div></div>

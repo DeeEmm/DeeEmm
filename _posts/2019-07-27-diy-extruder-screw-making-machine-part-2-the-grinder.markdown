@@ -11,7 +11,7 @@ date: 2019-07-27 11:18:03.000000000 +09:30
 
 		
 					<a class="eb-image-viewport">
-					<img src="../../../../../images/blog_articles/326/b2ap3_large_IMG_792_20190727-113815_1.jpg" 			/>
+					<img src="../../../images/easyblog_articles/326/b2ap3_large_IMG_792_20190727-113815_1.jpg" 			/>
 		</a>
 	</div>
 				</div></div><div class="ebd-block  " data-type="text" ><p>With the transport part of the machine fixed (again), I moved on to mounting the grinder. As you can see in the photo above the grinder mechanism is mounted to the moving 'table' with a simple hinge. This allows the grinder to move up and down and follow the profile of a cam. This cam defines the depth to which the grinder can cut, which effectively creates the variation to the depth of the flute. It is this variation in depth that creates the loading,&nbsp;compression and metering zones required in the screw profile as shown below.</p></div><div class="ebd-block  " data-type="image" style="text-align: center;"><div class="eb-image style-clear">
@@ -19,7 +19,7 @@ date: 2019-07-27 11:18:03.000000000 +09:30
 
 		
 					<a class="eb-image-viewport">
-					<img src="../../../../../images/blog_articles/326/b2ap3_large_extruder-screw-625.jpg" 			/>
+					<img src="../../../images/easyblog_articles/326/b2ap3_large_extruder-screw-625.jpg" 			/>
 		</a>
 	</div>
 				</div></div><div class="ebd-block  " data-type="text" ><p>But before we get too tied down in&nbsp;the cam design, we need to mount the grinder. The grinder has two threaded holes that are for attaching a handle to. I decided to use one of these to mount a small length of RHS to. The thread on my grinder was M8 so I simply drilled a hole through some 20x20 RHS and bolted it on to the grinder. I also&nbsp;added a bit of 20mm&nbsp;angle to the top so that the grinder could&nbsp;be strapped using a worm-drive clamp or heavy duty cable tie. I added a length of RHS to the bottom and braced it with&nbsp;a gusset cut&nbsp;from some scrap to give it strength and stop it from flexing. This entire assembly was then slid inside some larger RHS that was welded to a hinge on the slide. The sliding&nbsp;assembly can be locked in place by two M6 bolts. The adjustment allows the grinding wheel&nbsp;to be set to create channels wider than the width of the cutting wheel itself</p><p>A point to note was that the grinder was mounted at an angle of 60 degrees as this is the helix angle I measured on the auger.&nbsp;</p></div><div class="ebd-block  " data-type="image" style="text-align: center;"><div class="eb-image style-clear">
@@ -27,7 +27,7 @@ date: 2019-07-27 11:18:03.000000000 +09:30
 
 		
 					<a class="eb-image-viewport">
-					<img src="../../../../../images/blog_articles/326/b2ap3_large_IMG_7908.jpg" 			/>
+					<img src="../../../images/easyblog_articles/326/b2ap3_large_IMG_7908.jpg" 			/>
 		</a>
 	</div>
 				</div></div><div class="ebd-block  " data-type="text" ><p>​I added an axle with some skateboard bearings at the ends that&nbsp;run along the cams. These bearings support the weight of the grinder. I will add some large washers to the inside of the bearings that will site in between the two cams&nbsp;so that the force of the grinding wheel does not cause the mechanism to deflect. With the bearings in place running along the cams the entire motion is very smooth and easy to turn.</p><p>All that is really left to do is to cut the cam profiles and finish off the mounting for the workpiece. Then it's time for testing.</p></div><div class="ebd-block  " data-type="image" style="text-align: center;"><div class="eb-image style-clear">
@@ -35,7 +35,7 @@ date: 2019-07-27 11:18:03.000000000 +09:30
 
 		
 					<a class="eb-image-viewport">
-					<img src="../../../../../images/blog_articles/326/b2ap3_large_IMG_792_20190727-113935_1.jpg" 			/>
+					<img src="../../../images/easyblog_articles/326/b2ap3_large_IMG_792_20190727-113935_1.jpg" 			/>
 		</a>
 	</div>
 				</div></div><div class="ebd-block  " data-type="text" ><p>As I'm fairly sure that my description and the dodgy photos make it hard to follow what's going on, here's some sketchy video of it doing it's thing...</p></div><div class="ebd-block  " data-type="youtube" ><div class="youtube-embed video-embed-wrapper is-responsive">
@@ -48,7 +48,7 @@ date: 2019-07-27 11:18:03.000000000 +09:30
 
 		
 					<a class="eb-image-viewport">
-					<img src="../../../../../images/blog_articles/326/b2ap3_large_IMG_790_20190727-114144_1.jpg" 			 style="width:42.163%;height:100%;top:0%;left:28.918%;"/>
+					<img src="../../../images/easyblog_articles/326/b2ap3_large_IMG_790_20190727-114144_1.jpg" 			 style="width:42.163%;height:100%;top:0%;left:28.918%;"/>
 		</a>
 	</div>
 				</div></div>
@@ -60,7 +60,7 @@ date: 2019-07-27 11:18:03.000000000 +09:30
 
 		
 					<a class="eb-image-viewport">
-					<img src="../../../../../images/blog_articles/326/b2ap3_large_IMG_792_20190727-114123_1.jpg" 			 style="width:42.163%;height:100%;top:0%;left:28.918%;"/>
+					<img src="../../../images/easyblog_articles/326/b2ap3_large_IMG_792_20190727-114123_1.jpg" 			 style="width:42.163%;height:100%;top:0%;left:28.918%;"/>
 		</a>
 	</div>
 				</div></div>
@@ -72,7 +72,7 @@ date: 2019-07-27 11:18:03.000000000 +09:30
 
 		
 					<a class="eb-image-viewport">
-					<img src="../../../../../images/blog_articles/326/b2ap3_large_IMG_792_20190727-114113_1.jpg" 			 style="width:74.957%;height:100%;top:0%;left:12.521%;"/>
+					<img src="../../../images/easyblog_articles/326/b2ap3_large_IMG_792_20190727-114113_1.jpg" 			 style="width:74.957%;height:100%;top:0%;left:12.521%;"/>
 		</a>
 	</div>
 				</div></div>
@@ -84,7 +84,7 @@ date: 2019-07-27 11:18:03.000000000 +09:30
 
 		
 					<a class="eb-image-viewport">
-					<img src="../../../../../images/blog_articles/326/b2ap3_large_IMG_792_20190727-114101_1.jpg" 			 style="width:74.957%;height:100%;top:0%;left:12.521%;"/>
+					<img src="../../../images/easyblog_articles/326/b2ap3_large_IMG_792_20190727-114101_1.jpg" 			 style="width:74.957%;height:100%;top:0%;left:12.521%;"/>
 		</a>
 	</div>
 				</div></div>
@@ -96,7 +96,7 @@ date: 2019-07-27 11:18:03.000000000 +09:30
 
 		
 					<a class="eb-image-viewport">
-					<img src="../../../../../images/blog_articles/326/b2ap3_large_IMG_792_20190727-114001_1.jpg" 			 style="width:74.957%;height:100%;top:0%;left:12.521%;"/>
+					<img src="../../../images/easyblog_articles/326/b2ap3_large_IMG_792_20190727-114001_1.jpg" 			 style="width:74.957%;height:100%;top:0%;left:12.521%;"/>
 		</a>
 	</div>
 				</div></div>
@@ -108,7 +108,7 @@ date: 2019-07-27 11:18:03.000000000 +09:30
 
 		
 					<a class="eb-image-viewport">
-					<img src="../../../../../images/blog_articles/326/b2ap3_large_IMG_790_20190727-113948_1.jpg" 			 style="width:74.957%;height:100%;top:0%;left:12.521%;"/>
+					<img src="../../../images/easyblog_articles/326/b2ap3_large_IMG_790_20190727-113948_1.jpg" 			 style="width:74.957%;height:100%;top:0%;left:12.521%;"/>
 		</a>
 	</div>
 				</div></div>
@@ -120,7 +120,7 @@ date: 2019-07-27 11:18:03.000000000 +09:30
 
 		
 					<a class="eb-image-viewport">
-					<img src="../../../../../images/blog_articles/326/b2ap3_large_IMG_792_20190727-113935_1.jpg" 			 style="width:74.957%;height:100%;top:0%;left:12.521%;"/>
+					<img src="../../../images/easyblog_articles/326/b2ap3_large_IMG_792_20190727-113935_1.jpg" 			 style="width:74.957%;height:100%;top:0%;left:12.521%;"/>
 		</a>
 	</div>
 				</div></div>
@@ -132,7 +132,7 @@ date: 2019-07-27 11:18:03.000000000 +09:30
 
 		
 					<a class="eb-image-viewport">
-					<img src="../../../../../images/blog_articles/326/b2ap3_large_IMG_792_20190727-113924_1.jpg" 			 style="width:74.957%;height:100%;top:0%;left:12.521%;"/>
+					<img src="../../../images/easyblog_articles/326/b2ap3_large_IMG_792_20190727-113924_1.jpg" 			 style="width:74.957%;height:100%;top:0%;left:12.521%;"/>
 		</a>
 	</div>
 				</div></div>
@@ -144,7 +144,7 @@ date: 2019-07-27 11:18:03.000000000 +09:30
 
 		
 					<a class="eb-image-viewport">
-					<img src="../../../../../images/blog_articles/326/b2ap3_large_IMG_790_20190727-113905_1.jpg" 			 style="width:74.957%;height:100%;top:0%;left:12.521%;"/>
+					<img src="../../../images/easyblog_articles/326/b2ap3_large_IMG_790_20190727-113905_1.jpg" 			 style="width:74.957%;height:100%;top:0%;left:12.521%;"/>
 		</a>
 	</div>
 				</div></div>
@@ -156,7 +156,7 @@ date: 2019-07-27 11:18:03.000000000 +09:30
 
 		
 					<a class="eb-image-viewport">
-					<img src="../../../../../images/blog_articles/326/b2ap3_large_IMG_790_20190727-113834_1.jpg" 			 style="width:74.957%;height:100%;top:0%;left:12.521%;"/>
+					<img src="../../../images/easyblog_articles/326/b2ap3_large_IMG_790_20190727-113834_1.jpg" 			 style="width:74.957%;height:100%;top:0%;left:12.521%;"/>
 		</a>
 	</div>
 				</div></div>
@@ -168,7 +168,7 @@ date: 2019-07-27 11:18:03.000000000 +09:30
 
 		
 					<a class="eb-image-viewport">
-					<img src="../../../../../images/blog_articles/326/b2ap3_large_IMG_792_20190727-113815_1.jpg" 			 style="width:74.957%;height:100%;top:0%;left:12.521%;"/>
+					<img src="../../../images/easyblog_articles/326/b2ap3_large_IMG_792_20190727-113815_1.jpg" 			 style="width:74.957%;height:100%;top:0%;left:12.521%;"/>
 		</a>
 	</div>
 				</div></div>
@@ -180,7 +180,7 @@ date: 2019-07-27 11:18:03.000000000 +09:30
 
 		
 					<a class="eb-image-viewport">
-					<img src="../../../../../images/blog_articles/326/b2ap3_large_IMG_790_20190727-113803_1.jpg" 			 style="width:42.163%;height:100%;top:0%;left:28.918%;"/>
+					<img src="../../../images/easyblog_articles/326/b2ap3_large_IMG_790_20190727-113803_1.jpg" 			 style="width:42.163%;height:100%;top:0%;left:28.918%;"/>
 		</a>
 	</div>
 				</div></div>
@@ -228,7 +228,7 @@ date: 2019-07-27 11:18:03.000000000 +09:30
 	</div></div><div class="ebd-block  " data-type="post" ><div class="post-block media">
     <div class="media-table">
         <div class="media-thumb" data-post-media="">
-            <img src="https://deeemm.com/../../../../../images/blog_articles/323/b2ap3_thumbnail_IMG_7775.jpg" data-post-image="">
+            <img src="https://deeemm.com/../../../images/easyblog_articles/323/b2ap3_thumbnail_IMG_7775.jpg" data-post-image="">
         </div>
         <div class="media-content">
             <h3>

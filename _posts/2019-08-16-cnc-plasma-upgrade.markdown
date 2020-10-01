@@ -16,10 +16,10 @@ date: 2019-08-16 03:30:07.000000000 +09:30
 	<div class="eb-image-figure is-responsive" style="width:100%;">
 
 				<a class="eb-image-viewport eb-image-popup-button"
-			href="../../../../images/blog_articles/329/b2ap3_large_IMG_8047.jpg"
+			href="../../../../../images/blog_articles/329/b2ap3_large_IMG_8047.jpg"
 			title="Old Setup">
 		
-					<img src="../../../../images/blog_articles/329/b2ap3_small_IMG_8047.jpg" 			/>
+					<img src="../../../../../images/blog_articles/329/b2ap3_small_IMG_8047.jpg" 			/>
 		</a>
 	</div>
 					<div class="eb-image-caption" style="width:100%;">
@@ -32,10 +32,10 @@ date: 2019-08-16 03:30:07.000000000 +09:30
 	<div class="eb-image-figure is-responsive" style="width:100%;">
 
 				<a class="eb-image-viewport eb-image-popup-button"
-			href="../../../../images/blog_articles/329/b2ap3_large_IMG_8049.jpg"
+			href="../../../../../images/blog_articles/329/b2ap3_large_IMG_8049.jpg"
 			title="New Setup">
 		
-					<img src="../../../../images/blog_articles/329/b2ap3_small_IMG_8049.jpg" 			/>
+					<img src="../../../../../images/blog_articles/329/b2ap3_small_IMG_8049.jpg" 			/>
 		</a>
 	</div>
 					<div class="eb-image-caption" style="width:100%;">

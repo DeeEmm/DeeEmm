@@ -17,11 +17,11 @@ date: 2018-01-29 09:57:11.000000000 +10:30
 </ul>
 <p>My device was the S20 switch, the pins are (from left to right in photo below) GND TX RX VCC</p>
 <p> </p>
-<p> <img src="../../../../images/blog_articles/287/b2ap3_large_IMG_3875.jpg" width="1280" height="960" align="center" data-style="clear" /></p>
+<p> <img src="../../../../../images/blog_articles/287/b2ap3_large_IMG_3875.jpg" width="1280" height="960" align="center" data-style="clear" /></p>
 <p> </p>
 <p>And so I connected them up accordingly to the USB serial dongle using some jumper connections and a breadboard (as shown in the main photo).</p>
 <p> </p>
-<p><img src="../../../../images/blog_articles/287/b2ap3_large_IMG_3874.jpg" width="1280" height="960" align="center" data-style="clear" /></p>
+<p><img src="../../../../../images/blog_articles/287/b2ap3_large_IMG_3874.jpg" width="1280" height="960" align="center" data-style="clear" /></p>
 <p> </p>
 <p>Next up is to open the Tasmota code in the IDE. There are a few settings in platformio.ini and user_config.h that you will need to set - namely your WIFI access details and device specific details. Once these are set you can get ready to upload.</p>
 <p>To be able to upload to the device you need to put it into bootloader mode - this involved holding the device button in for a few seconds whilst plugging in the USB cable to the USB-Serial converter. You won't see any flashing lights or indication that you are in bootloader mode so you'll just have to proceed to the next step and see if the file can be uploaded. To do this simply select 'Upload' from the platformIO menu. There's no need to select any ports as it will auto detect the correct USB port (or at least it did on mine).</p>

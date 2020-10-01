@@ -11,17 +11,17 @@ date: 2017-12-21 11:26:00.000000000 +10:30
 <p>Tonight I removed the old screen and installed the new one. Unfortunately my suspicions were correct - the new screen is not tall enough and so leaves a gap at the top / bottom. The issue is simply that screen aspect ratios have changed since the P38 was a current model. The old 4:3 aspect ratio has now been superceded by 16:9, or wide screen / letterbox aspect. The result is that it is like looking at a widescreen movie on an old TV - you get a black stripe at the top and bottom of the screen - or in this case a gap.</p>
 
 <p>I did a search to see if I could get a 6" HDMI touch screen as this would have been the perfect height, but none seem to be available, at least not for an affordable price. The touch screen membranes are available, but no 6" LCD screens. Whilst it may be possible to repurpose the original screen from the sat nav unit and retrofit a touch screen membrane over the top of it, that would mean reverse engineering the video connectors for the screen and then making / installing a VGA converter. So, it's much easier to to stick with the 5" Raspi HDMI screen and make a mask up to hide the gaps, specially as it fits perfectly in the case...</p>
-<p><img style="display: block; margin-left: auto; margin-right: auto;" src="../../../../images/blog_articles/283/b2ap3_large_IMG_3322.jpg" width="751" height="563" align="center" data-style="clear" /></p>
+<p><img style="display: block; margin-left: auto; margin-right: auto;" src="../../../../../images/blog_articles/283/b2ap3_large_IMG_3322.jpg" width="751" height="563" align="center" data-style="clear" /></p>
 <p> </p>
-<p><img style="display: block; margin-left: auto; margin-right: auto;" src="../../../../images/blog_articles/283/b2ap3_large_IMG_3321.jpg" width="745" height="559" align="center" data-style="clear" /></p>
+<p><img style="display: block; margin-left: auto; margin-right: auto;" src="../../../../../images/blog_articles/283/b2ap3_large_IMG_3321.jpg" width="745" height="559" align="center" data-style="clear" /></p>
 <p> </p>
-<p><img style="display: block; margin-left: auto; margin-right: auto;" src="../../../../images/blog_articles/283/b2ap3_large_IMG_3320.jpg" width="742" height="556" align="center" data-style="clear" /></p>
+<p><img style="display: block; margin-left: auto; margin-right: auto;" src="../../../../../images/blog_articles/283/b2ap3_large_IMG_3320.jpg" width="742" height="556" align="center" data-style="clear" /></p>
 <p> </p>
 <p>As you can see below the touch screen unit wedges nicely into the space left by the old monitor. It also leaves enough room to be able to use the USB ports on the RASPI and still retain the small circuit board used for the pushbuttons and click wheel. The circuit board also houses the LED backlights as well as a status light on the mute button and front panel. I need to spend a bit of time to decode the PCB. It looks like there should be a simple pin-out for the buttons and LEDs, this will make it easy to connect to the RASPI so this it takes its input from these buttons. </p>
 <p> </p>
-<p><img style="display: block; margin-left: auto; margin-right: auto;" src="../../../../images/blog_articles/283/b2ap3_large_IMG_3391.jpg" width="1280" height="960" align="center" data-style="clear" /></p>
+<p><img style="display: block; margin-left: auto; margin-right: auto;" src="../../../../../images/blog_articles/283/b2ap3_large_IMG_3391.jpg" width="1280" height="960" align="center" data-style="clear" /></p>
 <p> </p>
-<p><img style="display: block; margin-left: auto; margin-right: auto;" src="../../../../images/blog_articles/283/b2ap3_large_IMG_3392.jpg" width="1280" height="960" align="center" data-style="clear" /></p>
+<p><img style="display: block; margin-left: auto; margin-right: auto;" src="../../../../../images/blog_articles/283/b2ap3_large_IMG_3392.jpg" width="1280" height="960" align="center" data-style="clear" /></p>
 <p> </p>
 <p>So in principle the screen fits but needs a mask to hide the gaps. It would also be good to use the existing buttons and click wheel, but the circuit board needs to be decoded and some signal conditioning might need to happen. If this is the case it might be simpler and cheaper to make up a replacement using prototype board.</p>
 <p>Apart from the above, the next steps are to choose some suitable software and start programming</p>

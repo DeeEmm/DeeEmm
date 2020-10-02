@@ -91,7 +91,7 @@ So in the case of an Aquarium controller you might have the following top level 
 - Return pump - conditional control - if feeding mode on return pump 15%  
 - Skimmer pump - conditional control - if feeding mode on skimmer pump off  
   
-It should also be noted that with each item it is also possible to enable data logging. This way historical trend data can be recorded. Logged data is displayed in a trend graph and can also be analysed in a dedicated trend analysis page
+It should also be noted that with each item it is also possible to enable data logging. This way historical trend data can be recorded. Logged data is displayed in a trend graph and can also be analysed in a dedicated trend analysis page which can display multiple traces on the same graph. Very useful for analysing how different system elements interact or impact each other.
 
 
 ## Data logging

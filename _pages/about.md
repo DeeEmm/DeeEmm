@@ -11,7 +11,9 @@ published: true
 I am DeeEmm AKA Michael Percy.  
 
 I am an Electrical Engineer majoring in industrial automation and controls. I spent many years working in the manufacturing industry as an automation specialist, creating, developing and installing automation equipment and machinery, programming industrial robots, PLC's SCADA, HMI's and integrating various other technologies. This work took me all over the world and eventually to Australia, where I now live.  
+
 Today I run a small manufacturing business out of a workshop in my back yard, having turned a hobby into a business. _'Living the dream'_ as they say.  :D  
+
 I still code, but today it is only for fun.
 
 # About DeeEmm

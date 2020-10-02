@@ -50,6 +50,9 @@ Once added your workflow will look like this:
 - Change settings for pierce height / pierce delay etc
 - Hit the OK button to create your Gcode.
 
+
+![ddcsv-plasma-post-processor-settings](/images/ddcsv-plasma-post-processor-settings.png)
+
 On the first run, because the post processor uses javascript, you will get a security popup message...
 
 ![ddcsv-plasma-js-warning](/images/ddcsv-plasma-js-warning.png)

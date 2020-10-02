@@ -45,6 +45,10 @@ I still code, but today it is only for fun.
 ---
 <BR>
 
+**Sharing is caring**  
+[Visit my GitHub Page](https://github.com/DeeEmm)  
+
+
 **Open Source**  
 [Marlin CNC Pendant](https://github.com/DeeEmm/Marlin-CNC-Pendant)  
 [Sparkduino](https://github.com/DeeEmm/sparkduino)  
@@ -63,10 +67,6 @@ I still code, but today it is only for fun.
 [Aussie CycleKarts](https://cyclekarts.com.au)  
 [VDubber](https://vdubber.com)  
 [Garage Culture](https://garageculture.com)  
-
-
-**Sharing is caring**  
-[Visit my GitHub Page](https://github.com/DeeEmm)  
 
 
 <br>

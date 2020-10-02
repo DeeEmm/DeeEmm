@@ -61,7 +61,9 @@ On the first run, because the post processor uses javascript, you will get a sec
 
 ![ddcsv-plasma-js-warning](/images/ddcsv-plasma-js-warning.png)
 
-Your Gcode will then open up in the standard code editor and you will be asked where to save it. Yhen just load it up into your DDCSV via USB and away you go.
+You will then be asked where to save your freshly generated Gcode and the code will also open up in the standard code editor if you enabled this option. Then just load it up into your DDCSV via USB and away you go. 
+
+A note on program names. You will note that the standard name is a number. This numbering convention is used a lot on CNC machines. It's not necessary on the DDCSV, but is provided as a standardised method of naming for good practice.
 
 Happy CNCing
 

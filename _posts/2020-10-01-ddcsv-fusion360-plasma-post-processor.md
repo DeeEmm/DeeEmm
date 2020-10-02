@@ -6,6 +6,7 @@ category: general
 date: 2020-09-30 22:00:00 +9:30
 ---
 
+![ddcsv-plasma-post-processor](/images/ddcsv-plasma-post-processor.png)
 
 So todays project has been setting up my CNC plasma (again). It's been offline for a number of years waiting for me to finish the THC integration. When I initially started to undertake the integration I was using LinuxCNC, I purchased a Proma THC that directly connected to Linux CNC via the BOB (break-out-board). This required [code changes](https://forum.linuxcnc.org/49-basic-configuration/27900-thc-config-that-works) to the Linux CNC controller to produce the on-the-fly corrections needed for the THC to work. At some point I had an upgrade issue with the Desktop PC and so the machine has sat there for the past few years bring used as a storage shelf.
 
@@ -23,7 +24,7 @@ A quick Google found the awesome [brainright CNC controller](https://www.brainri
 
 I researched other plasma based post processors using Fusion360 and eventually found [a post by woodysmuniciple](https://forums.autodesk.com/t5/hsm-post-processor-forum/post-processor-for-mach-3-plasma-table/m-p/6407657) that included 'Touch off' torch height control, which is the configuration I have my machine set up as. This uses a floating Z axis with a microswitch. Essentially the torch is driven downwards into the workpiece until the floating torch 'lifts' off of the z axis carrier activating a microswitch. an offset is then added to the workpiece coordinates to set the actual z location of the workpiece. The torch then back off to the pierce height and the pierce operation is started. 
 
-So I combined this and some other aspects to create a new post processor for the DDCSV that includes touch off THC and created a github repo for it. - [DDCSV11-Plasma](https://github.com/DeeEmm/DDCSV11-Plasma). I still need to add some documentation for it, and do some testing, but in principle it's working. I'll add to it as I commission my machine and integrate further functions.
+So I combined this and some other aspects to create a new post processor for the DDCSV that includes touch off THC and created a github repo for it: [DDCSV11-Plasma](https://github.com/DeeEmm/DDCSV11-Plasma). I still need to add some documentation for it, and do some testing, but in principle it's working. I'll add to it as I commission my machine and integrate further functions.
 
 ### So how do you use it?
 
@@ -49,9 +50,9 @@ Once added your workflow will look like this:
 - Change settings for pierce height / pierce delay etc
 - Hit the OK button to create your Gcode.
 
-On the first run, because the post processor uses javascript, you will get a security popup message.
+On the first run, because the post processor uses javascript, you will get a security popup message...
 
-insert image
+![ddcsv-plasma-js-warning](/images/ddcsv-plasma-js-warning.png)
 
 If you find the post processor of use, please pay it forwards with a random act of kindness. Please feel free to fork it and improve and don;t forget to push any changes you make back to the main repo. 
 

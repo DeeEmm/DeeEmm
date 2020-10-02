@@ -61,10 +61,15 @@ On the first run, because the post processor uses javascript, you will get a sec
 
 ![ddcsv-plasma-js-warning](/images/ddcsv-plasma-js-warning.png)
 
-If you find the post processor of use, please pay it forwards with a random act of kindness. Please feel free to fork it and improve and don;t forget to push any changes you make back to the main repo. 
-
-A helpful overview on how the Fusion360 post processor works including the available hooks can be found at - http://fab.cba.mit.edu/content/tools/hurco_mill/hurco_post_processor_explanation_docs/Autodesk%20Post%20Processor%20manual-sm-130829.pdf
+Your Gcode will then open up in the standard code editor and you will be asked where to save it. Yhen just load it up into your DDCSV via USB and away you go.
 
 Happy CNCing
+
+---
+
+If you find the post processor of use, please pay it forwards with a random act of kindness. Please feel free to fork it and improve it, and don't forget to push any changes you make back to the main repo. 
+
+If you want to do more with the post processor, taking a look through the existing post processors supplied with Fusion360 is a good stating place. Also a helpful overview on how the Fusion360 post processor works including the available hooks can be found at - http://fab.cba.mit.edu/content/tools/hurco_mill/hurco_post_processor_explanation_docs/Autodesk%20Post%20Processor%20manual-sm-130829.pdf
+
 
 /DM

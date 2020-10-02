@@ -10,18 +10,28 @@ published: true
 <BR>
 I am DeeEmm AKA Michael Percy.  
 
-I am an Electrical Engineer majoring in industrial automation and controls. I spent many years working in the manufacturing industry as an automation specialist. Creating, developing and installing automation equipment and machinery, programming industrial robots, PLC's SCADA, HMI's and various other technologies. I specialised in code based programming languages. This work took me all over the world and eventually to Australia.  
-I now run a small manufacturing business making supercharger kits and performance accessories for vintage Volkswagens out of a workshop in my back yard having turned a hobby into a business. _'Living the dream'_ as they say.  ;)
+I am an Electrical Engineer majoring in industrial automation and controls. I spent many years working in the manufacturing industry as an automation specialist, creating, developing and installing automation equipment and machinery, programming industrial robots, PLC's SCADA, HMI's and integrating various other technologies. This work took me all over the world and eventually to Australia, where I now live.  
+Today I run a small manufacturing business out of a workshop in my back yard, having turned a hobby into a business. _'Living the dream'_ as they say.  :D  
+I still code, but today it is only for fun.
 
+# About DeeEmm
+---
+<BR>
+DeeEmm is simply a coding pseudonym. It the phonetic spelling of the letters 'DM'. 
+
+What does it mean?
+
+Those who know, know.
 
 
 <BR>
-# About this site
+
+# About DeeEmm.com
 ---
 <BR>
   
   
-This web-log started off being mostly about code related stuff, a place to share tutorials and a place to share and at one point sell CMS extensions. Over the years the site has evolved to include other different types of content. Much of that content is still tech related, but there is also a smattering of random stuff too. I guess you could call it eclectic-tech or maybe just techlectic for short.  
+This web-log started off being mostly about code related stuff, a place to share tutorials and CMS extensions. Over the years the site has evolved to include other different types of content. Much of that content is still tech related, but there is also a smattering of random stuff too. I guess you could call it eclectic-tech or maybe just techlectic for short.  
 <BR><BR>
 
 
@@ -55,6 +65,7 @@ This web-log started off being mostly about code related stuff, a place to share
 
 
 <br>
+
 # What I do  
 ---
 <br>

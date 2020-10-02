@@ -24,8 +24,10 @@ Take for example something like a PH tester. There are many different types, som
 
 This massively simplifies the reef-pi code. It also means that the basic nano code can easily be hacked to work with any type of PH tester or ORP or SG or wavemaker or lights or basically anything at all.
 
-Additional devices can easily be added with simple additions to the reef-pi code. In fact if the main control object object is a simple logger then it can easily be added by the end user as they can set the device scaling, scale units and description. The nano code then returns the relevant response when requested. A simple error response can also be sent if there is an issue.
+Additional devices can easily be added with simple additions to the reef-pi code. In fact if the main control object is a simple logger then it can easily be added by the end user as they can set the device scaling, scale units and description. The nano code then returns the relevant response when requested. A simple error response can also be sent if there is an issue.
 
 If I have the time I would like to develop this as an idea. there's a lot of merit in its simplicity. It would also potentially allow the system to be used as a universal data logger / controller.
 
 Will get my system set up first and then take a look. I have a PH and conductivity sensor on order that do not interface with the reef-pi system so there is a good opportunity to build something such as this.
+
+/DM

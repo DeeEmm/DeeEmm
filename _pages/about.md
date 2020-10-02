@@ -15,7 +15,7 @@ I am an Electrical Engineer majoring in industrial automation and controls. I sp
 Today I run a small manufacturing business out of a workshop in my back yard, having turned a hobby into a business. _'Living the dream'_ as they say.  :D  
 
 I still code, but today it is only for fun.
-<BR>
+<BR><BR>
 
 # About DeeEmm
 ---

@@ -32,6 +32,7 @@ layout: default
 		  </a>
 		</h3>
 		<img src="{{page.image}}"/>
+		<br>
 		{{ post.content | strip_html | truncatewords:75 }}
 		{%- if site.show_excerpts -%}
 		  {{ post.excerpt }}

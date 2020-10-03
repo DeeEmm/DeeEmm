@@ -3,6 +3,7 @@ published: true
 title: DDCSV Fusion 360 Plasma Post Processor
 tags: Plasma DDCSV CNC Fusion360 Post-Processor Gcode Proma-THC
 category: general
+image: /images/ddcsv-plasma-post-processor.png
 date: 2020-09-30 22:00:00 +9:30
 ---
 

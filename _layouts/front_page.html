@@ -21,7 +21,6 @@ layout: default
 	{%- if page.list_title -%}
 	  <h1 class="post-list-heading">{{ page.list_title }}</h1>
 	{%- endif -%}
-	<img src="{{post.image}}"/>
 	<ul class="post-list">
 	  {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
 	  {%- for post in posts limit:7 -%}
@@ -32,6 +31,7 @@ layout: default
 			{{ post.title | escape }}
 		  </a>
 		</h3>
+		<img src="{{post.image}}"/>
 		{{ post.content | strip_html | truncatewords:75 }}
 		{%- if site.show_excerpts -%}
 		  {{ post.excerpt }}

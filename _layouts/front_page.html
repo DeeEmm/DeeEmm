@@ -33,8 +33,8 @@ layout: default
 		</h3>
 		{%- if post.image %}
 		<img src="{{post.image}}"/>
-		{%- endif -%}
 		<br><br>
+		{%- endif -%}
 		{{ post.content | strip_html | truncatewords:75 }}
 		{%- if site.show_excerpts -%}
 		  {{ post.excerpt }}

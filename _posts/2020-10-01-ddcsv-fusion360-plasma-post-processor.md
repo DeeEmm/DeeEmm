@@ -11,7 +11,7 @@ date: 2020-09-30 22:00:00 +9:30
 
 So todays project has been setting up my CNC plasma (again). It's been offline for a number of years waiting for me to finish the THC integration. When I initially started to undertake the integration I was using LinuxCNC, I purchased a Proma THC that directly connected to Linux CNC via the BOB (break-out-board). This required [code changes](https://forum.linuxcnc.org/49-basic-configuration/27900-thc-config-that-works) to the Linux CNC controller to produce the on-the-fly corrections needed for the THC to work. At some point I had an upgrade issue with the Desktop PC and so the machine has sat there for the past few years bring used as a storage shelf.
 
-###DDCSV Offline CNC
+### DDCSV Offline CNC
 
 Some time ago I purchased a DDCSV1.1 standalone CNC controller for use in the CNC mill project that I'm working on. Roll on a few months / years and the DDCSV1.1 unit has become superseded (they are currently on version 4) and so I decided that I would use it for the Plasma, replacing the old desktop running Linux CNC and buy a new and improved (5 axis) controller for the CNC mill project instead. (easy justification for buying the 5-axis controller :) )
 

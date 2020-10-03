@@ -9,11 +9,9 @@ published: true
 # About DeeEmm
 ---
 <BR>
-DeeEmm is simply a coding pseudonym. It the phonetic spelling of the letters 'DM'. 
+DeeEmm is simply a coding pseudonym. It's the phonetic spelling of the letters 'DM'. 
 
-What does it mean?
-
-Those who know, know.
+What does it mean? Those who know, know.
 
 
 <BR>

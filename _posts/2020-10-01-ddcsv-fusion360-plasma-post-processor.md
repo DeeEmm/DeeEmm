@@ -73,9 +73,11 @@ On the first run, because the post processor uses javascript, you will get a sec
 
 You will then be asked where to save your freshly generated Gcode and the code will also open up in the standard code editor if you enabled this option. Then just load it up into your DDCSV via USB and away you go. 
 
-You can also now right(control)-click the profile and run a simulation. This will show you the tool path along with lead-ins etc. It will also alert you to any errors in the setup, for example if your lead-in distance is larger than a hole.
+You can also right(control)-click the profile and run a simulation. This will show you the tool path along with lead-ins etc. It will also alert you to any errors in the setup, for example if your lead-in distance is larger than a hole. Pretty cool eh.
 
-By the way, if you struggle with plasma settings like I do, I found [this awesome online resource ](https://www.plasma-automation.com/partsdatabase/CuttingCharts/hpr260.pdf) which lists cutting speeds / pierce height / pierce delay / cut height. Just look up the corresponding table for your material thickness & cutting gas and it will list all of the info you need. By the way, to set the cutting speed you need to edit the tool itself.
+![plasma-simulation.png](/images/plasma-simulation.png)
+
+By the way, if you struggle with plasma settings like I do, I found [this awesome online resource ](https://www.plasma-automation.com/partsdatabase/CuttingCharts/hpr260.pdf) which lists cutting speeds / pierce height / pierce delay / cut height. Just look up the corresponding table for your material thickness & cutting gas and it will list all of the info you need. By the way, just in case you cannot find it, to set the cutting speed you need to edit the tool itself.
 
 A note on program names. You will note that the standard name is a number. This numbering convention is used a lot on CNC machines. It's not necessary on the DDCSV, but is provided as a standardised method of naming for good practice.
 

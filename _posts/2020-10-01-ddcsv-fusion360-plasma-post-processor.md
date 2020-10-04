@@ -25,11 +25,15 @@ Back then I was using 123D Design, a predecessor of Fusion360 to create my model
 
 Essentially once your (2D) design has been made, you can then enter into the manufacturing functions in Fusion360. You can then use a post processor to generate the necessary tool-paths and tool handling to convert your design into something that your machine understands, which in the case of the DDCSV is Gcode. There are a bunch of included post processors for a variety of commercial machines along with a few generic ones too, but nothing for the DDCSV.
 
-A quick Google found the awesome [brainright CNC controller](https://www.brainright.com/Projects/CNCController) project where Jay McClellan has already created a post processor for the DDCSV1.1, but this unfortunately did not work for my plasma as it was set up for a milling machine. Jay has generously shared his design under the BSD license so I decided to use it as a base for a plasma based DDCSV post processor.
+A quick Google found the awesome [brainright CNC controller](https://www.brainright.com/Projects/CNCController) project where Jay McClellan has already created a post processor for the DDCSV1.1, unfortunately this did not work for my plasma as it was set up for a milling machine. Fortunately Jay has generously shared his design under the BSD license so I decided to use it as a base to write a plasma based DDCSV post processor.
 
-I researched other plasma based post processors using Fusion360 and eventually found [a post by woodysmuniciple](https://forums.autodesk.com/t5/hsm-post-processor-forum/post-processor-for-mach-3-plasma-table/m-p/6407657) that included 'Touch off' torch height control, which is the configuration of my machine (floating z-axis). Essentially the torch is driven downwards into the workpiece until the torch touches and 'lifts' up the z axis carrier activating a microswitch. An offset is then added to the workpiece coordinates to set the actual z height of the workpiece. The torch then backs off to the pierce height and the pierce operation is started. 
+I researched other plasma based post processors using Fusion360 and eventually found [a post by woodysmuniciple](https://forums.autodesk.com/t5/hsm-post-processor-forum/post-processor-for-mach-3-plasma-table/m-p/6407657) that included 'Touch off' torch height control, which is the configuration of my machine (floating z-axis). Essentially the torch is driven downwards into the workpiece until the torch touches and 'lifts' up the z axis torch carrier activating a microswitch. An offset is then added to the workpiece coordinates to set the actual z height of the workpiece. The torch then backs off to the pierce height and the pierce operation is started. 
 
-So I combined this and some other aspects to create a new post processor for the DDCSV that includes touch off THC and created a github repo for it: [DDCSV11-Plasma](https://github.com/DeeEmm/DDCSV11-Plasma). I still need to add some documentation for it, and do some testing, but in principle it's working. I'll add to it as I commission my machine and integrate further functions.
+So I combined this and some other aspects to create a new post processor for the DDCSV that includes touch off THC and created a github repo for it: 
+
+[DeeEmm / DDCSV11-Plasma](https://github.com/DeeEmm/DDCSV11-Plasma). 
+
+I still need to add some documentation for it, and do some testing, but in principle it's working. I'll add to it as I commission my machine and integrate further functions.
 
 ### So how do you use it?
 
@@ -50,11 +54,13 @@ On a windows machine the path is different
 Once added your workflow will look like this:
 
 - Make your 2D part in fusion 360
-- Go to manufacture page
-- Additive menu > post process
-- Source >  personal posts
-- Select post processor - DDCSV11-Plasma
-- Change settings for pierce height / pierce delay etc
+- Go to the manufacture page
+- Create a setup using a plasma tool
+- Select the paths you want to cut and make sure tha the cut direction arrows are on the outside of the workpiece
+- Go to the Additive menu and select post process
+- Select personal posts from the source dialog
+- Here you should see the post processor file you added - DDCSV11-Plasma
+- Change the settings for pierce height / pierce delay etc to suit your workpiece.
 - Hit the OK button to create your Gcode.
 
 
@@ -66,7 +72,9 @@ On the first run, because the post processor uses javascript, you will get a sec
 
 You will then be asked where to save your freshly generated Gcode and the code will also open up in the standard code editor if you enabled this option. Then just load it up into your DDCSV via USB and away you go. 
 
-By the way, if you struggle with plasma settings like I do, I found [this awesome online resource ](https://www.plasma-automation.com/partsdatabase/CuttingCharts/hpr260.pdf) which lists cutting speeds / pierce height / pierce delay / cut height. Just look up the corresponding table for your material thickness & cutting gas and it will list all of the info you need. 
+You can also now right(control)-click the profile and run a simulation. This will show you the tool path along with lead-ins etc. It will also alert you to any errors in the setup, for example if your lead-in distance is larger than a hole.
+
+By the way, if you struggle with plasma settings like I do, I found [this awesome online resource ](https://www.plasma-automation.com/partsdatabase/CuttingCharts/hpr260.pdf) which lists cutting speeds / pierce height / pierce delay / cut height. Just look up the corresponding table for your material thickness & cutting gas and it will list all of the info you need. By the way, to set the cutting speed you need to edit the tool itself.
 
 A note on program names. You will note that the standard name is a number. This numbering convention is used a lot on CNC machines. It's not necessary on the DDCSV, but is provided as a standardised method of naming for good practice.
 

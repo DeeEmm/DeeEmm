@@ -56,7 +56,8 @@ Once added your workflow will look like this:
 - Make your 2D part in fusion 360
 - Go to the manufacture page
 - Create a setup using a plasma tool
-- Select the paths you want to cut and make sure tha the cut direction arrows are on the outside of the workpiece
+- Select the paths you want to cut 
+- Make sure that the cut direction arrows are on the outside of the workpiece
 - Go to the Additive menu and select post process
 - Select personal posts from the source dialog
 - Here you should see the post processor file you added - DDCSV11-Plasma

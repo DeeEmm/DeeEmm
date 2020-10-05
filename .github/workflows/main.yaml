@@ -4,22 +4,21 @@ on:
   push:
   workflow_dispatch:
   schedule:
-    # * is a special character in YAML so you have to quote this string
-    - cron:  "*/15 * * * *"
+	- cron: '0 */3 * * *'
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+	runs-on: ubuntu-latest
 
-    steps:
-      - name: Checkout current repository to Master branch
-        uses: actions/checkout@master
-	  - name: Setup NodeJs 13.x
-		uses: actions/setup-node@master
+	steps:
+	  - name: checkout
+		uses: actions/checkout@v1
+	  - name: setup node
+		uses: actions/setup-node@v1
 		with:
 		  node-version: '13.x'
-	  - name: Cache dependencies and build outputs to improve workflow execution time.
-		uses: actions/cache@master
+	  - name: cache
+		uses: actions/cache@v1
 		with:
 		  path: node_modules
 		  key: ${{ runner.os }}-js-${{ hashFiles('package-lock.json') }}
@@ -27,7 +26,7 @@ jobs:
 		run: npm install
 	  - name: Generate README file
 		run: node index.js
-	  - name: Commit and Push new README.md to the repository
+	  - name: Push new README.md
 		uses: DeeEmm/publish-to-github-action@master
 		env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+		  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

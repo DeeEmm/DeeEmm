@@ -4,16 +4,16 @@ on:
   push:
   workflow_dispatch:
   schedule:
-	  # * is a special character in YAML so you have to quote this string
-	  - cron:  '*/15 * * * *'
+    # * is a special character in YAML so you have to quote this string
+    - cron:  '*/15 * * * *'
 
 jobs:
   build:
-	runs-on: ubuntu-latest
+    runs-on: ubuntu-latest
 
-	steps:
-	  - name: Checkout current repository to Master branch
-		uses: actions/checkout@v1
+    steps:
+      - name: Checkout current repository to Master branch
+        uses: actions/checkout@v1
 	  - name: Setup NodeJs 13.x
 		uses: actions/setup-node@v1
 		with:
@@ -30,4 +30,4 @@ jobs:
 	  - name: Commit and Push new README.md to the repository
 		uses: DeeEmm/publish-to-github-action@master
 		env:
-		  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

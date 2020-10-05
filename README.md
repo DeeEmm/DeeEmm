@@ -5,6 +5,6 @@ Waxing lyrical about life, the universe and everything software related since lu
 https://DeeEmm.com  
 https://deeemm.github.io/DeeEmm/
 
-My name is DeeEmm
+My name is DeeEmm and today is Tuesday, 6 October, 00:55 GMT+10:30
 
 ---

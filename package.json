@@ -1,0 +1,22 @@
+{
+  "name": "deeemm",
+  "version": "1.0.0",
+  "description": "Waxing lyrical about life, the universe and everything software related since lunchtime 2006.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DeeEmm/DeeEmm.git"
+  },
+  "author": "DeeEmm",
+  "license": "GPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/DeeEmm/DeeEmm/issues"
+  },
+  "homepage": "https://github.com/DeeEmm/DeeEmm#readme",
+  "dependencies": {
+    "mustache": "^4.0.1"
+  }
+}

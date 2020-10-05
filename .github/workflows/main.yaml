@@ -5,7 +5,7 @@ on:
   workflow_dispatch:
   schedule:
     # * is a special character in YAML so you have to quote this string
-    - cron:  '*/15 * * * *'
+    - cron:  "*/15 * * * *"
 
 jobs:
   build:
@@ -17,7 +17,7 @@ jobs:
 	  - name: Setup NodeJs 13.x
 		uses: actions/setup-node@v1
 		with:
-		  node-version: '13.x'
+		  node-version: "13.x"
 	  - name: Cache dependencies and build outputs to improve workflow execution time.
 		uses: actions/cache@v1
 		with:

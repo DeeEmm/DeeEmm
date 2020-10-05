@@ -13,13 +13,13 @@ jobs:
 
     steps:
       - name: Checkout current repository to Master branch
-        uses: actions/checkout@v1
-	  - name: "Setup NodeJs 13.x"
-		uses: actions/setup-node@v1
+        uses: actions/checkout@master
+	  - name: Setup NodeJs 13.x
+		uses: actions/setup-node@master
 		with:
-		  node-version: "13.x"
+		  node-version: '13.x'
 	  - name: Cache dependencies and build outputs to improve workflow execution time.
-		uses: actions/cache@v1
+		uses: actions/cache@master
 		with:
 		  path: node_modules
 		  key: ${{ runner.os }}-js-${{ hashFiles('package-lock.json') }}

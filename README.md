@@ -7,4 +7,4 @@ https://deeemm.github.io/DeeEmm/
 
 ---
 
-eval(ruby -r 'jekyll/jekyll-import/rss' -e "JekyllImport::RSS.process(:source => 'https://deeemm.com/feed.xml')")
+eval(```ruby -r 'jekyll/jekyll-import/rss' -e "JekyllImport::RSS.process(:source => 'https://deeemm.com/feed.xml')"```)

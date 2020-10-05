@@ -4,7 +4,8 @@ on:
   push:
   workflow_dispatch:
   schedule:
-	- cron: '0 */6 * * *'
+		# * is a special character in YAML so you have to quote this string
+		- cron:  '*/15 * * * *'
 
 jobs:
   build:

@@ -24,5 +24,8 @@ https://deeemm.github.io/DeeEmm/
 
  and counting
 
+<img align="center" src="https://github-readme-stats.vercel.app/api/top-langs/?username=DeeEmm&theme=default" />
 
-Last Updated Tuesday, 6 October, 10:29 GMT+10:30
+
+
+Last Updated Tuesday, 6 October, 10:36 GMT+10:30

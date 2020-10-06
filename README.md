@@ -22,10 +22,7 @@ https://deeemm.github.io/DeeEmm/
 
 ## Stats
 
-[![DeeEmm's github stats](https://github-readme-stats.vercel.app/api?username=DeeEmm)](https://github.com/anuraghazra/github-readme-stats)
-
-<img align="center" src="https://github-readme-stats.vercel.app/api/top-langs/?username=DeeEmm&theme=default" />
+![DeeEmm's github stats](https://github-readme-stats.vercel.app/api?username=DeeEmm)
 
 
-
-Last Updated Tuesday, 6 October, 10:40 GMT+10:30
+Last Updated Tuesday, 6 October, 10:42 GMT+10:30

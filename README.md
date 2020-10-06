@@ -22,7 +22,7 @@ https://deeemm.github.io/DeeEmm/
 
 ## Stats
 
- and counting
+[![DeeEmm's github stats](https://github-readme-stats.vercel.app/api?username=DeeEmm)](https://github.com/anuraghazra/github-readme-stats)
 
 <img align="center" src="https://github-readme-stats.vercel.app/api/top-langs/?username=DeeEmm&theme=default" />
 

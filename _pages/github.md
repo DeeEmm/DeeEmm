@@ -1,6 +1,6 @@
 ---
-layout: page
+layout: external
 title: Github
-permalink: https://github.com/DeeEmm
+external_url: https://github.com/DeeEmm
 published: true
 ---

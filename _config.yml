@@ -39,6 +39,15 @@ collections:
     output: true # Set to render files in _pages folder
     permalink: /:title/ # Set the format of the permalink by default 
     
+    
+Navigation:
+    - title: Home
+     url: /index.html
+    - title: About
+    url: /about.html
+     - title: GitHub
+    url: https://github.com/DeeEmm
+    
 # keep_files: [CNAME, .git]
   
 # Exclude from processing.

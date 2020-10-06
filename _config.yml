@@ -41,12 +41,12 @@ collections:
     
     
 Navigation:
-    - title: Home
-     url: /index.html
-    - title: About
-    url: /about.html
-     - title: GitHub
-    url: https://github.com/DeeEmm
+- title: Home
+ url: /index.html
+- title: About
+url: /about.html
+ - title: GitHub
+url: https://github.com/DeeEmm
     
 # keep_files: [CNAME, .git]
   

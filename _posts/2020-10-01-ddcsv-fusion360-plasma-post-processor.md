@@ -77,6 +77,12 @@ You can also right(control)-click the profile and run a simulation. This will sh
 
 ![plasma-simulation.png](/images/plasma-simulation.png)
 <br><br>
+Here it is in action.
+<br><br>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/roLoUEFVtAE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<br><br>
+
+
 By the way, if you struggle with plasma settings like I do, I found [this awesome online resource ](https://www.plasma-automation.com/partsdatabase/CuttingCharts/hpr260.pdf) which lists cutting speeds / pierce height / pierce delay / cut height. Just look up the corresponding table for your material thickness & cutting gas and it will list all of the info you need. By the way, just in case you cannot find it, to set the cutting speed you need to edit the tool itself.
 
 A note on program names. You will note that the standard name is a number. This numbering convention is used a lot on CNC machines. It's not necessary on the DDCSV, but is provided as a standardised method of naming for good practice.

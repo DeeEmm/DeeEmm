@@ -87,7 +87,7 @@ By the way, if you struggle with plasma settings like I do, I found [this awesom
 
 A note on program names. You will note that the standard name is a number. This numbering convention is used a lot on CNC machines. It's not necessary on the DDCSV, but is provided as a standardised method of naming for good practice.
 
-If you want to do more with the post processor, taking a look through the existing post processors supplied with Fusion360 is a good stating place. Also a helpful overview on how the Fusion360 post processor works including the available hooks can be found in the [Autodesk Post Processor documentation](https://cam.autodesk.com/posts/posts/guides/Post%20Processor%20Training%20Guide.pdf)   There is also the [Autodesk PostProcessor class documentation](https://cam.autodesk.com/posts/reference/classPostProcessor.html) as well
+If you want to do more with the post processor, taking a look through the [list of existing post processors](https://cam.autodesk.com/hsmposts) supplied with Fusion360 is a good stating place . Also a helpful overview on how the Fusion360 post processor works including the available hooks can be found in the [Autodesk Post Processor documentation](https://cam.autodesk.com/posts/posts/guides/Post%20Processor%20Training%20Guide.pdf)   There is also the [Autodesk PostProcessor class documentation](https://cam.autodesk.com/posts/reference/classPostProcessor.html) as well
 
 ---
 <br>

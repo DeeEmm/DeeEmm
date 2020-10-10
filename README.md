@@ -7,7 +7,7 @@ https://deeemm.github.io/DeeEmm/
 
 ## Latest Blog Posts
 
-[[object Object]](https:&#x2F;&#x2F;deeemm.com&#x2F;2020&#x2F;10&#x2F;10&#x2F;2020-10-09-fusion360-plasma-spot-marking.html)  
+[Fusion 360 Plasma - Adding spot marking](https:&#x2F;&#x2F;deeemm.com&#x2F;cnc&#x2F;2020&#x2F;10&#x2F;09&#x2F;fusion360-plasma-spot-marking.html)  
           [Raspberry Pi Nano Datalogger](https:&#x2F;&#x2F;deeemm.com&#x2F;general&#x2F;2020&#x2F;09&#x2F;30&#x2F;Raspberry-Pi-Nano-datalogger.html)  
           [DDCSV Fusion 360 Plasma Post Processor](https:&#x2F;&#x2F;deeemm.com&#x2F;general&#x2F;2020&#x2F;09&#x2F;30&#x2F;ddcsv-fusion360-plasma-post-processor.html)  
           [Arduino Nano Nodes](https:&#x2F;&#x2F;deeemm.com&#x2F;general&#x2F;2020&#x2F;09&#x2F;30&#x2F;arduino-nano-nodes.html)  
@@ -25,4 +25,4 @@ https://deeemm.github.io/DeeEmm/
 ![DeeEmm's github stats](https://github-readme-stats.vercel.app/api?username=DeeEmm)
 
 
-Last Updated Sunday, 11 October, 02:24 GMT+10:30
+Last Updated Sunday, 11 October, 02:30 GMT+10:30

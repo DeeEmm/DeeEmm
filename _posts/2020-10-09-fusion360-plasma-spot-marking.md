@@ -1,6 +1,6 @@
 ---
 published: true
-title: Fusion 360 Plasma: Adding spot marking
+title: Fusion 360 Plasma - Adding spot marking
 tags: Fusion360 Plasma DDCSV Spot-punch Drill Spot-mark drilling feedrate
 category: CNC
 image: /images/spot-marking.png

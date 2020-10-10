@@ -7,7 +7,7 @@ image: /images/spot-marking.png
 date: 2020-10-09 10:32:00 +9:30
 ---
 
-So I've been dialling in the plasma post processor getting it to work on my plasma table and I've ended up adding a few features / functions that I thought will be useful or that have turned out to be necessary on my machine.
+So after [creating a DDDCSV plasma post processor for Fusion360](http://deeemm.com/general/2020/09/30/ddcsv-fusion360-plasma-post-processor.html), I've been dialling in the plasma post processor getting it to work on my plasma table and I've ended up adding a few features / functions that I thought will be useful or that have turned out to be necessary on my machine.
 
 I'm using a bargain basement Cut50 plasma machine, which leaves a lot to be desired as far as performance is concerned, It does however work and produce reasonable cuts, so I guess I should not be too hard on it especially when I consider how much it cost. One issue I did have with the machine is that the arc start stopped working. After countless hours trying to resolve the problem, following all of the usual suggestions relating to setting the contact gap on the HF start, making sure that the air was dry, the torch was not shorting and the consumables new, I just could not get the arc start to work. The torch works fine if you hold it to the workpiece, it just doesn't create the arc properly. 
 

@@ -7,7 +7,8 @@ https://deeemm.github.io/DeeEmm/
 
 ## Latest Blog Posts
 
-[Raspberry Pi Nano Datalogger](https:&#x2F;&#x2F;deeemm.com&#x2F;general&#x2F;2020&#x2F;09&#x2F;30&#x2F;Raspberry-Pi-Nano-datalogger.html)  
+[[object Object]](https:&#x2F;&#x2F;deeemm.com&#x2F;2020&#x2F;10&#x2F;10&#x2F;2020-10-09-fusion360-plasma-spot-marking.html)  
+          [Raspberry Pi Nano Datalogger](https:&#x2F;&#x2F;deeemm.com&#x2F;general&#x2F;2020&#x2F;09&#x2F;30&#x2F;Raspberry-Pi-Nano-datalogger.html)  
           [DDCSV Fusion 360 Plasma Post Processor](https:&#x2F;&#x2F;deeemm.com&#x2F;general&#x2F;2020&#x2F;09&#x2F;30&#x2F;ddcsv-fusion360-plasma-post-processor.html)  
           [Arduino Nano Nodes](https:&#x2F;&#x2F;deeemm.com&#x2F;general&#x2F;2020&#x2F;09&#x2F;30&#x2F;arduino-nano-nodes.html)  
           [Panic Nova](https:&#x2F;&#x2F;deeemm.com&#x2F;general&#x2F;2020&#x2F;09&#x2F;28&#x2F;panic-nova.html)  
@@ -16,7 +17,6 @@ https://deeemm.github.io/DeeEmm/
           [Welcome to my new Github io page](https:&#x2F;&#x2F;deeemm.com&#x2F;general&#x2F;2020&#x2F;09&#x2F;27&#x2F;my-new-github-io-page.html)  
           [Installing mysql2 under OSX with gem](https:&#x2F;&#x2F;deeemm.com&#x2F;general&#x2F;2020&#x2F;09&#x2F;25&#x2F;installing-mysql2-under-osx-with.html)  
           [GitHub Pages](https:&#x2F;&#x2F;deeemm.com&#x2F;general&#x2F;2020&#x2F;09&#x2F;25&#x2F;github-pages.html)  
-          [DIY Drip doser](https:&#x2F;&#x2F;deeemm.com&#x2F;general&#x2F;2020&#x2F;09&#x2F;25&#x2F;diy-drip-doser.html)  
           
 
 
@@ -25,4 +25,4 @@ https://deeemm.github.io/DeeEmm/
 ![DeeEmm's github stats](https://github-readme-stats.vercel.app/api?username=DeeEmm)
 
 
-Last Updated Sunday, 11 October, 01:48 GMT+10:30
+Last Updated Sunday, 11 October, 02:23 GMT+10:30

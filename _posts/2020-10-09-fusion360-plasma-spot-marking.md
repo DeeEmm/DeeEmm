@@ -36,3 +36,9 @@ This method does manage to keep the cutting and drilling operations basically as
 The other major change that I made to the post processor was the inclusion of cutting and positioning speeds. Unfortunately there is no (documented) way to access the inbuilt jet feedrates, so I decided to create feedrate overrides instead. This allows the user to set the feedrates in the post processor along with all of the other settings. No doubt there's a more elegant way of achieving this, especially as the post processor has an extensive API, but there's definitely a case of effort versus reward here and investing time into decyphering undocumented features is not helping me to make any parts on my plasma table.
 
 The updated post processor file is available on github - [https://github.com/DeeEmm/DDCSV11-Plasma](https://github.com/DeeEmm/DDCSV11-Plasma)
+
+I've also created a walk-through video which covers how to install the post processor, how to create a simple model in Fusion360 and how to create CAM toolpaths and export them to Gcode using the manufacture workspace and the DDCSV-Plasma post processor. 
+
+<br><br>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/FzAZNHg6ciQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<br><br>

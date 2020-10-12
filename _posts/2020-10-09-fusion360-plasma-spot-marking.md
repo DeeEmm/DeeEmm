@@ -37,7 +37,7 @@ The other major change that I made to the post processor was the inclusion of cu
 
 The updated post processor file is available on github - [https://github.com/DeeEmm/DDCSV11-Plasma](https://github.com/DeeEmm/DDCSV11-Plasma)
 
-I've also created a walk-through video which covers how to install the post processor, how to create a simple model in Fusion360 and how to create CAM toolpaths and export them to Gcode using the manufacture workspace and the DDCSV-Plasma post processor. 
+I've also created a walk-through video which covers how to install the post processor, how to create a simple model in Fusion360 and how to create CAM toolpaths and export them to Gcode using the manufacture workspace and the DDCSV-Plasma post processor. It also outlines the use of the Spot Marking feature.
 
 <br><br>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/FzAZNHg6ciQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

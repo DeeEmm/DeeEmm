@@ -22,7 +22,7 @@ I then created a new 'content' block called 'main' and nested it inside the orig
 
 **my-base.html**
 
-	``` jinja
+	``` 
 	
 	{% extends "bootstrap/base.html" %}
 
@@ -49,7 +49,7 @@ Then within the rendered pages all I need to do is override or extend the 'main'
 
 **my-page.html**
 
-	``` jinja
+	``` 
 	{% extends "my-base.html" %}
 	
 	{% block main %}

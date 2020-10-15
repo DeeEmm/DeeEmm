@@ -54,7 +54,7 @@ Then within the rendered pages all I need to do is override or extend the 'main'
 { % extends "my-base.html" % }
 
 { % block main % }
-  { { super() } } <!--NOTE I am APPENDING this to the boilerplate code in the base.html file so I use 'super'-->
+  { { super ( ) } } <!--NOTE I am APPENDING this to the boilerplate code in the base.html file so I use 'super'-->
   <div class="container">
 	  <div class="jumbotron">
 		<h1>Here's your content</h1>

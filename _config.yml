@@ -28,6 +28,11 @@ twitter_username: __DeeEmm
 github_username: DeeEmm
 linkedin_username: mickpercy
 
+markdown: kramdown
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+
 # Build settings
 theme: minima
 plugins:

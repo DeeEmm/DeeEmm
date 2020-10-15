@@ -1,8 +1,8 @@
 ---
 published: false
 title: Adding a footer to flask-bootstrap
-tags: 
-category: flask flask-bootstrap footer
+tags: flask flask-bootstrap footer 
+category: flask 
 image: /images/flask-icon.png
 date: 2020-10-15 10:30:00 +9:30
 ---

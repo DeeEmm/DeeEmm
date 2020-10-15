@@ -7,6 +7,8 @@ image: /images/flask-bootstrap-footer.png
 date: 2020-10-15 10:30:00 +9:30
 ---
 
+Whilst working on the Acqua project
+
 Thanks for this Diego, I was also struggling to include a footer in an elegant manner, your solution was the only one that made any sense however I could not get it to work to my satisfaction. I ended up building on your idea and doing something slightly different.
 
 I decided not to bring the 'content' block into my rendered pages, but just leave it in the base.html template. 

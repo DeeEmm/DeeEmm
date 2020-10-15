@@ -43,6 +43,7 @@ I then created a new 'content' block called 'main' and nested it inside the orig
 	   {%- endblock %}
 	
 	{% endblock %}
+	
 	```
 
 Then within the rendered pages all I need to do is override or extend the 'main' block.
@@ -61,6 +62,7 @@ Then within the rendered pages all I need to do is override or extend the 'main'
 			</div>
 	  </div>
 	{%- endblock %}
+	
 	```
 
 There is need to include the footer block again as we are not changing it by overriding it or extending it. Once the footer is defined within our base template we're pretty much done with it. `base.html` is acting as a proper template and the individual rendered pages are acting as overrides. I'm not repeating or recycling any blocks, all of which I find acceptable. It's not hack-ish and the code is completely portable as it still follows all of the  rules laid down by flask.

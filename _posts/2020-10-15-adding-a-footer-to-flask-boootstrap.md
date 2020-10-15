@@ -11,7 +11,7 @@ Whilst working on the [Acqua](https://deeemm.com/acqua/2020/10/05/acqua-dp.html)
 
 So whilst searching for less hack-ish solutions a came across [Diego Quitanas solution](https://gist.github.com/diegoquintanav/c72f827401dfac68ef4ec62e1c234612), which was to create a new footer block outside of the content block. This could then be called without having to use the super() function, which is a heaps more elegant solution than the one suggested in the flask-bootstrap FAQ.
 
-So I played around with this for a while, but was not 100% happy with it. I found that needed to recreate the footer on each individual template page, which kind defeated the purpose of using a template, I might just as well write HTML. Whatever happened to [good old fashioned HTML and CSS](http://www.csszengarden.com/) remember that?!
+So I played around with this for a while, but was not 100% happy with it. I found that needed to recreate the footer on each individual template page, which kind defeated the purpose of using a template, I might just as well write HTML. Whatever happened to [good old fashioned HTML and CSS](http://www.csszengarden.com/) (remember that!?)
 
 But thanks for this Diego's solution I was inspired to building on his idea and do something slightly different.
 
@@ -25,38 +25,38 @@ I then created a new 'content' block called 'main' and nested it inside the orig
 
 ...
 
-{% block content %}
-
-   {% block main %}
-	  ... just include boilerplate code here, stuff that you want to appear on ALL pages, like breadcrumbs etc
-   {%- endblock %}
-   
-   {% block footer %}
-   <div class="container">
-	  <div id="footer">
-		   <p>&copy 2020 Your footer stuff goes here</p>
-	 </div>
-  </div>
-   {%- endblock %}
-
-{%- endblock %}
+	{% block content %}
+	
+	   {% block main %}
+		  ... just include boilerplate code here, stuff that you want to appear on ALL pages, like breadcrumbs etc
+	   {%- endblock %}
+	   
+	   {% block footer %}
+	   <div class="container">
+		  <div id="footer">
+			   <p>&copy 2020 Your footer stuff goes here</p>
+		 </div>
+	  </div>
+	   {%- endblock %}
+	
+	{%- endblock %}
 ```
 
 Then within the rendered pages all I need to do is override or extend the 'main' block.
 
 **my-page.html**
 ```jinja2
-{% extends "my-base.html" %}
-
-{% block main %}
-  {{ super() }} <!--NOTE I am APPENDING this to the boilerplate code in the base.html file so I use 'super'-->
-  <div class="container">
-	  <div class="jumbotron">
-		<h1>Here's your content</h1>
-		<p>This is the index page</p>
-		</div>
-  </div>
-{%- endblock %}
+	{% extends "my-base.html" %}
+	
+	{% block main %}
+	  {{ super() }} <!--NOTE I am APPENDING this to the boilerplate code in the base.html file so I use 'super'-->
+	  <div class="container">
+		  <div class="jumbotron">
+			<h1>Here's your content</h1>
+			<p>This is the index page</p>
+			</div>
+	  </div>
+	{%- endblock %}
 ```
 
 There is need to include the footer block again as we are not changing it by overriding it or extending it. Once the footer is defined within our base template we're pretty much done with it. `base.html` is acting as a proper template and the individual rendered pages are acting as overrides. I'm not repeating or recycling any blocks, all of which I find acceptable. It's not hack-ish and the code is completely portable as it still follows all of the  rules laid down by flask.

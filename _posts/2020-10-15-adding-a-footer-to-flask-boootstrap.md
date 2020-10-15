@@ -23,7 +23,8 @@ I then created a new 'content' block called 'main' and nested it inside the orig
 **my-base.html**
 
 	``` jinja
-	{%- extends "bootstrap/base.html" %}
+	
+	{% extends "bootstrap/base.html" %}
 
 	...
 
@@ -41,7 +42,7 @@ I then created a new 'content' block called 'main' and nested it inside the orig
 	  </div>
 	   {%- endblock %}
 	
-	{%- endblock %}
+	{% endblock %}
 	```
 
 Then within the rendered pages all I need to do is override or extend the 'main' block.

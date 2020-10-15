@@ -11,7 +11,7 @@ Whilst working on the [Acqua](https://deeemm.com/acqua/2020/10/05/acqua-dp.html)
 
 So whilst searching for less hack-ish solutions a came across [Diego Quitanas solution](https://gist.github.com/diegoquintanav/c72f827401dfac68ef4ec62e1c234612), which was to create a new footer block outside of the content block. This could then be called without having to use the super() function, which is a heaps more elegant solution than the one suggested in the flask-bootstrap FAQ.
 
-So I played around with this for a while, but was not 100% happy with it. I found that needed to recreate the footer on each individual template page, which kind defeated the purpose of using a template, I might just as well write HTML. Whatever happened to [good old fashioned HTML and CSS](http://www.csszengarden.com/) (remember that?!)
+So I played around with this for a while, but was not 100% happy with it. I found that needed to recreate the footer on each individual template page, which kind defeated the purpose of using a template, I might just as well write HTML. Whatever happened to [good old fashioned HTML and CSS](http://www.csszengarden.com/) remember that?!
 
 But thanks for this Diego's solution I was inspired to building on his idea and do something slightly different.
 

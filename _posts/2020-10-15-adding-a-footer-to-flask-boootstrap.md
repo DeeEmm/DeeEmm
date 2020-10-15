@@ -1,5 +1,5 @@
 ---
-published: false
+published: true
 title: Adding a footer to flask-bootstrap
 tags: flask flask-bootstrap footer 
 category: flask 

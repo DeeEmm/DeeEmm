@@ -14,7 +14,7 @@ So whilst searching for less hack-ish solutions a came across [Diego Quitanas so
 
 So I played around with this for a while, but was not 100% happy with it. I found that needed to recreate the footer on each individual template page, which kind defeated the purpose of using a template, I might just as well write HTML. Whatever happened to [good old fashioned HTML and CSS](http://www.csszengarden.com/) (remember that!?)
 
-But thanks for this Diego's solution I was inspired to building on his idea and do something slightly different.
+But thanks to Diego's solution I was inspired to build on his idea and do something slightly different.
 
 I decided not to bring the 'content' block into my rendered pages, but just leave it in the base.html template. There's really no need to recreate it for each page as it is always the same.
 
@@ -22,7 +22,7 @@ I then created a new 'content' block called 'main' and nested it inside the orig
 
 **my-base.html**
 
-```jinja
+```javascript
 
 { % extends "bootstrap/base.html" % }
 
@@ -50,11 +50,11 @@ Then within the rendered pages all I need to do is override or extend the 'main'
 
 **my-page.html**
 
-```jinja
+```javascript
 { % extends "my-base.html" % }
 
 { % block main % }
-  {{ super() }} <!--NOTE I am APPENDING this to the boilerplate code in the base.html file so I use 'super'-->
+  { { super() } } <!--NOTE I am APPENDING this to the boilerplate code in the base.html file so I use 'super'-->
   <div class="container">
 	  <div class="jumbotron">
 		<h1>Here's your content</h1>

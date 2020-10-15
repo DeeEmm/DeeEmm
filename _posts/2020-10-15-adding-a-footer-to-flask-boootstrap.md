@@ -20,7 +20,7 @@ I decided not to bring the 'content' block into my rendered pages, but just leav
 I then created a new 'content' block called 'main' and nested it inside the original 'content' block along with the footer block so that it looks like this
 
 **my-base.html**
-```jinja2
+``` javascript
 {%- extends "bootstrap/base.html" %}
 
 ...
@@ -45,7 +45,7 @@ I then created a new 'content' block called 'main' and nested it inside the orig
 Then within the rendered pages all I need to do is override or extend the 'main' block.
 
 **my-page.html**
-```jinja2
+``` javascript
 	{% extends "my-base.html" %}
 	
 	{% block main %}

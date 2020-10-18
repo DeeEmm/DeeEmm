@@ -3,7 +3,7 @@ published: true
 title: Acqua - CRUD
 tags: acqua flask sqlite crud
 category: acqua
-image: /images/aqua-crud.png
+image: /images/acqua-crud.png
 date: 2020-10-19 01:03:00 +9:30
 ---
 

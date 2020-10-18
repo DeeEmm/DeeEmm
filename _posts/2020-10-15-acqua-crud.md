@@ -7,7 +7,7 @@ image: /images/aqua-dp.png
 date: 2020-10-19 01:03:00 +9:30
 ---
 
-![/images/aqua-crud.png](/images/aqua-crud.png)
+![/images/acqua-crud.png](/images/acqua-crud.png)
 
 ## CRUD literally
 

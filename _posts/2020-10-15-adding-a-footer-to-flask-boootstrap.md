@@ -71,6 +71,7 @@ I nested the 'main' and 'footer' blocks within the 'content' block so that they 
 
 But anyhow's, I digress, back to the matter at hand. I'm essentially treating the 'content' block the same way I would the `<body>` tag. It encapsulates all content and so is not something that needs to be repeated in individual template files. This recycling and repeating of code seems to be something that is missed on all of the tutorials online, where much of the code is recycled.  Diego's solution was the only one to address this.
 
+
 ---
 <br>
 If you find this post of use, please pay it forwards with a random act of kindness. 

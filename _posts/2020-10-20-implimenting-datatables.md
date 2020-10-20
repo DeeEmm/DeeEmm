@@ -1,7 +1,7 @@
 ---
-published: false
-title: Datatables library
-tags: acqua datatables MVC FLask Database
+published: true
+title: Acqua - Implimenting Datatables
+tags: acqua datatables MVC FLask Database SQLAlchemy
 category: acqua
 image: /images/datatables.png
 date: 2020-10-20 08:30:00 +9:30

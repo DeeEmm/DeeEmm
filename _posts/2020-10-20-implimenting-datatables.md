@@ -25,31 +25,29 @@ Essentially the front end template or the 'view' part of our MVC setup includes 
 
 ``` javascript
 <table id="datatable" class="table table-striped table-sm">
-			  <thead>
-				<tr>
-				  <th>#</th>
-				  <th>Date</th>
-				  <th>Trend Type</th>
-				  <th>Value</th>
-				  <th>Units</th>
-				</tr>
-			  </thead>
-			  <tbody>
-				  
-				  
-				{ %  for trend_data_entry in trend_data  % }
-				<tr>
-					<td>{ { trend_data_entry.id} } </td>
-					<td>{ { trend_data_entry.timestamp} } </td>
-					<td>{ { trend_data_entry.trend_type} } </td>
-					<td>{ { trend_data_entry.value} } </td>
-					<td>{ { trend_data_entry.unit_of_measure} } </td>
-				</tr>
-				{ %  endfor  % }				  
-  
-				  
-			  </tbody>
-			</table>
+	<thead>
+	<tr>
+	  <th>#</th>
+	  <th>Date</th>
+	  <th>Trend Type</th>
+	  <th>Value</th>
+	  <th>Units</th>
+	</tr>
+	</thead>
+	<tbody>
+	  
+	{ %  for trend_data_entry in trend_data  % }
+	<tr>
+		<td>{ { trend_data_entry.id} } </td>
+		<td>{ { trend_data_entry.timestamp} } </td>
+		<td>{ { trend_data_entry.trend_type} } </td>
+		<td>{ { trend_data_entry.value} } </td>
+		<td>{ { trend_data_entry.unit_of_measure} } </td>
+	</tr>
+	{ %  endfor  % }				  
+	 
+	</tbody>
+	</table>
 ```
 
 The magic is happening in the `	{ %  for trend_data_entry in trend_data  % } ... { %  endfor  % }` statement which acts much the same as a traditional for-next loop where you would use the loop count to index the array position of the variables, except that with Jekyll there's no array index needed, it automagically takes care of all of that. The Jekyll templating datatypes are very reminiscent of the templating functionality I developed in my DeeEmm CMS (DMCMS) and are a very powerful way to bring backend processing into HTML, although I do wonder if half of the Flask-Jekyll-SQLAlchemy-Bootstrap implementation is little more than code masturbation, after-all, what was wrong with plain old HTML, CSS and backend processing, more on that in a seperate rant when I get to it :D

@@ -23,7 +23,7 @@ Essentially the front end template or the 'view' part of our MVC setup includes 
 
 `/acqua/application/trends/template/trends.html`
 
-``` jekyll
+``` javascript
 <table id="datatable" class="table table-striped table-sm">
 			  <thead>
 				<tr>
@@ -64,7 +64,7 @@ Let's take a look at what's going on in the back end. This is our trends.py blue
 
 `/acqua/application/trends/trends.py`
 
-```
+``` javascript
 from flask import Flask
 from flask.ext.sqlalchemy import SQLAlchemy
 ...
@@ -115,7 +115,7 @@ So that's the template engine (the 'View') and our main code (the 'Controller') 
 
 `/acqua/application/trends/models.py`
 
-```
+``` javascript
 from application.database import db
 
 # Trends - id | type | description | unit
@@ -175,7 +175,7 @@ Other functions also sit within the application folder and follow the same layou
 
 So in the Model what we are doing is creating individual 'models' of the database, each of which represents a specific table. Here's the 'trends' table:
 
-```
+``` javascript
 class Trends(db.Model):
 	__tablename__ = 'trends'
 	id = db.Column(db.Integer, unique=True, primary_key=True, )

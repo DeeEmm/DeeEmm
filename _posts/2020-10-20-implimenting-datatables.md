@@ -91,18 +91,31 @@ def trends():
 		return render_template("trends.html", trends=trends, trend_data=trend_data)
 ```  
 
-I've removed some code for brevity, so the above example differs from the committed version but essentially what's going on here is that the `/trends` endpoint calls the following code:
+I've removed some code for brevity, so the above example differs from the committed version but essentially what's going on here is that the `/trends` endpoint calls the code to grab the database values it needs. Lets break it down...
 
-`trends = Trends.query.all()` - Here we run the equivilent of an `SQL SELECT ALL FROM TABLE 'Trends'` statement and store the results in the `trends` variable, which is essentially an array.  
-
-
-`.join(Trends, Trend_Data.id==Trends.id)\` the join function works the same way as a traditional `SQL LEFT JOIN` which joins the id fields of the `Trend_data` and `Trends` tables.  
-
-
-`.add_columns(Trend_Data.trend_id, Trend_Data.timestamp, Trend_Data.value, Trends.unit_of_measure, Trends.trend_type)\` - Here we specify what data we want to use from the join.  
+```
+trends = Trends.query.all()
+```
+Here we run the equivilent of an `SQL SELECT ALL FROM TABLE 'Trends'` statement and store the results in the `trends` variable, which is essentially an array.  
 
 
-`return render_template("trends.html", trends=trends, trend_data=trend_data, release=release, version=version)` - and here we create the jekyll template variables that will be used in the front end, note the `trend_data` variable we used above in our `for-endfor` loop.  
+```
+.join(Trends, Trend_Data.id==Trends.id)\
+``` 
+
+The join function works the same way as a traditional `SQL LEFT JOIN` which joins the id fields of the `Trend_data` and `Trends` tables.  
+
+
+```
+.add_columns(Trend_Data.trend_id, Trend_Data.timestamp, Trend_Data.value, Trends.unit_of_measure, Trends.trend_type)\
+```
+Here we specify what data we want to use from the join.  
+
+
+```
+return render_template("trends.html", trends=trends, trend_data=trend_data, release=release, version=version)
+``` 
+And here we create the jekyll template variables that will be used in the front end, note the `trend_data` variable we used above in the `for-endfor` loop in the template - this is where it originates.  
 
 
 In short, when the '/trends' endpoint is called, we pull the data from the database and assign it to variables which we can use to parse the template engine.

@@ -7,6 +7,8 @@ image: /images/datatables.png
 date: 2020-10-20 08:30:00 +9:30
 ---
 
+![/images/datatables.png](/images/datatables.png)
+
 # Datatables Library
 
 I've been slowly working through my list of TODOs on the Acqua project, which for the initial alpha release is just a basic functional outline. I decided to initially focus on getting a manual data storage / display interface up and running as this could then easily be extended by automating the data storage aspects, plus I wanted a way to include manually entered records as there's a good use case for this when implemented as an aquarium controller as in addition to automated data acquisition manual water parameter tests are also carried out. Presently I use a program called aquarium live to record and manage these test parameters so it seemed like a good idea to be able to cater for manually entered data, plus an easy pathway into developing the app.

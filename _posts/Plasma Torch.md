@@ -1,5 +1,5 @@
 ---
-published: false
+published: true
 title: Plasma Upgrade
 tags: Lotos, LTP5500D, IPT80, Plasma, Machine, Torch
 category: Plasma, CNC

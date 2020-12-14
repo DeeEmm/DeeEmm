@@ -3,11 +3,11 @@ published: false
 title: 123 - Template
 tags: add, some, tags
 category: Your Category
-image: /images/123-template.png
+image: /images/123-template.jpg
 date: 2020-10-20 08:30:00 +9:30
 ---
 
-![/images/123-template.png](/images/123-template.png)
+![/images/123-template.jpg](/images/123-template.jpg)
 
 [I'm an inline-style link](https://www.google.com)
 

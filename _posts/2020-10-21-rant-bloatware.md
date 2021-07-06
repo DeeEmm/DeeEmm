@@ -43,11 +43,10 @@ Code complexity is like porn for geeks.
 
 Just like Hackaday, where people spend inordinate amounts of time reverse engineering something where the value appears to be inversely proportional to the complexity of the project and the effort expended, creating complex code is literally code masturbation for geek types. There's no brevity in coding nowadays. No one writes pragmatic code any more. 
 
-It's like object oriented programming. People seem to have lost the original premise of hat it's all about, instead developing vastly complex coding standards that simply add bloat by requiring code to be structured in an ever more complex fashion. 
+It's like object oriented programming. People seem to have lost the original premise of what it's all about, instead of developing portable reusable code they develop vastly complex coding standards that simply add bloat by requiring code to be structured in an ever more complex fashion. 
 
-As coding languages develop and software systems improve, programming appears to be getting ever more lazy and bloated.
+It's a paradox. As coding languages develop and software systems improve, programming appears to be getting ever more lazy and bloated.
 
-It's a complete paradox.
 
 
 ## Bootstrapon

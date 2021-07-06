@@ -1,6 +1,6 @@
 ---
 published: true
-title: Bloatware
+title: [RANT] Bloatware
 tags: Bootstrap, pron, geek, bloatware
 category: Rants
 image: /images/bloat.jpg

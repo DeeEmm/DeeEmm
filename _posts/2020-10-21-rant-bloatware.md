@@ -7,7 +7,7 @@ image: /images/bloat.jpg
 date: 2020-10-20 08:30:00 +9:30
 ---
 
-![/images/bloat.png](/images/bloat.png)
+![/images/bloat.jpg](/images/bloat.jpg)
 
 Random musings for today.
 

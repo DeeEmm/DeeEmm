@@ -4,7 +4,7 @@ title: Proma THC Setup
 tags: Plasma, Proma, THC, 
 category: CNC
 image: /images/plasma-update.jpg
-date: 2020-10-20 08:30:00 +9:30
+date: 2021-05-28 08:30:00 +9:30
 ---
 
 ![/images/plasma-update.jpg](/images/plasma-update.jpg)

@@ -4,7 +4,7 @@ title: Arduino Mega Pro Serial Comms Issue
 tags: Arduino, Mega Pro, 
 category: Arduino
 image: /images/123-template.jpg
-date: 2021-06-07 08:30:00 +9:30
+date: 2021-06-10 08:30:00 +9:30
 ---
 
 ![/images/123-template.jpg](/images/123-template.jpg)

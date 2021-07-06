@@ -4,7 +4,7 @@ title: "[RANT] Bloatware"
 tags: Bootstrap, pron, geek, bloatware
 category: Rants
 image: /images/bloat.jpg
-date: 2020-10-20 08:30:00 +9:30
+date: 2020-10-21 08:30:00 +9:30
 ---
 
 ![/images/bloat.jpg](/images/bloat.jpg)

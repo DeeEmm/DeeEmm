@@ -13,7 +13,7 @@ One thing that I wanted to be able to do on the Mill One was to make some protot
 
 Making a PCB by milling or isolation milling as it is commonly referred to is not without its challenges. PCBs need to be completely flat, tooling needs to be correct and the design is generally limited to through hole layouts due to the cutter size being larger than many SMD pad pitches. The other challenge is finding a workflow that works for me.
 
-As I use EasyEDA for my PCB design it naturally made sense to try and retain it for designing PCBs that I wanted to mill. I did take a quick look at Eagle within Fusion360, but I found the component library to be completely lacking and I did not want to have to waste a bunch of time creating components when all I really wanted was a quick and easy solution to be able to create PCBs without a lot of fuss. This is one area that EasyEDA really shines. Not only is the official component library pretty good, but the community contributions are excellent. Components you create are available to others to use and ice-versa, which means that it is rare you cannot find something that works. It's a bit of a shame that Fusion360 is not more accessible as the CAD to CAM functionality is pretty good.
+As I use EasyEDA for my PCB design it naturally made sense to try and retain it for designing PCBs that I wanted to mill. I did take a quick look at Eagle within Fusion360, but I found the component library to be completely lacking and I did not want to have to waste a bunch of time creating components when all I really wanted was a quick and easy solution to be able to create PCBs without a lot of fuss. This is one area that EasyEDA really shines. Not only is the official component library pretty good, but the community contributions are excellent. Components you create are available to others to use and vice-versa, which means that it is rare you cannot find something that works. It's a bit of a shame that Fusion360 is not more accessible as the CAD to CAM functionality is pretty good.
 
 EasyEDA can spit out Gerber files along with drill files, so it made sense to use a Gerber to Gcode converter to generate milling paths for the Mill One. There's a few options out there but the most appealing one was FlatCam. Not only did it have a more polished interface than the others, but also had support for OSX, or at least that's how it appeared.
 
@@ -25,35 +25,53 @@ There were a couple of small issues that I had to overcome getting this to work 
 
 # Lets get started
 
+I'll walk you through the process step-by-step. It's essentially the same process that Miguel outlines but there's a few errors that I had to deal with along the way...
+
 - Create a directory (Lets call it FlatCAM :D ) 
 - Open a terminal session at this location
 - Using WGET copy the development code from the remote host. The latest version is different to that listed in Miguels article. You can see the current version by visiting [https://bitbucket.org/jpcgt/flatcam/downloads/](https://bitbucket.org/jpcgt/flatcam/downloads/).
 - You may also find like me that you cannot use the WGET command (It's a linux package) but you can easily install it under homebrew by using the following command
+
 ```brew install wget```
+
 - The package I used was as follows...
+
 ```wget https://bitbucket.org/jpcgt/flatcam/downloads/FlatCAM_beta_8.994_sources.zip```
+
 - Next up unzip the package
+
 ```unzip FlatCAM_beta_8.994_sources```
+
 - and change to the resulting directory
+
 ```cd FlatCAM_beta_8.994_sources```
+
 - Now you are ready to proceed with Miguels instructions...
-- # Create a Python virtual environment
+
+- Create a Python virtual environment
+
 ```virtualenv env```
-- # Activate the virtual environment
+
+- Activate the virtual environment
+
 ```source env/bin/activate```
-- # Install all Python dependencies in the virtual environment
+
+- Install all Python dependencies in the virtual environment
+
 ```pip3 install numpy matplotlib rtree scipy shapely simplejson lxml rasterio ezdxf svg.path freetype-py fontTools ortools vispy PyOpenGL PyQT5```
-- # Get out of the virtual environment
+
+- Get out of the virtual environment
+
 ```deactivate```
 
 
 At this stage you can try to run the application by launching it under python...
 
-- python3 flatcam.py
+```python3 flatcam.py```
 
 What I found was that there were a number of dependencies that were not met despite being installed above. These will show themselves as an error...
 
-- ModuleNotFoundError: No module named 'reportlab'
+```ModuleNotFoundError: No module named 'reportlab'```
 
 The simple solution is to force a reinstallation of the dependencies
 
@@ -80,6 +98,11 @@ Again I found that it failed with an error. I just force re-installed the next d
 - qrcode
 - dill
 
+I'm not 100% sure why I had the issues with the dependencies, it could be that installing them within the environment as Miguel had done did not work for my specific install. In fact the prescribed way of installing the dependencies is to use the pre-made requirements file within the repository by issuing the following command
+
+```pip3 install -r requirements.txt```
+
+This might be a better option if you also find that you have dependency issues. Of course it was no big deal to work through them one by one as I did above but if I were to try this again I'd definitely give this a shot first.
 
 
 
@@ -100,11 +123,6 @@ With these issues resolved I was able to launch FlatCAM.
 
 ![/images/flatcam-app.png](/images/flatcam-app.png)
 
-I'm not 100% sure why I had the issues with the dependencies, it could be that installing them within the environment as Miguel had done did not work for my specific install. In fact the prescribed way of installing the dependencies is to use the pre-made requirements file within the repository by issuing the following command
-
-```pip3 install -r requirements.txt```
-
-This might be a better option if you also find that you have dependency issues. Of course it was no big deal to work through them one by one as I did above but if I were to try this again I'd definitely give this a shot first.
 
 
 # Creating an App
@@ -164,14 +182,14 @@ And finally compile the AppleScript into an application
 ```osacompile -o FlatCAM.app FlatCAM.scpt```
 
 
-Before we can use the application we need to make sure that our script is executable which means CHMOD'ding the file permissions and setting the execute bit.
+Before we can use the application we need to make sure that our script is executable which means CHMOD'ing the file permissions and setting the execute bit.
 
 ```chmod 555 FlatCAM```
 
 
-Now when you click on the application it will open FLatCAM. YAY!
+Now when you click on the application it will open FlatCAM. YAY!
 
-If you want you can copy the entire folder into your applications folder.  I also updated the application icon. To do this download a suitable icon and use an online converter to convert the file into the correct icns format. You can then right click the application and view the 'Get Info' dialog. Simply drag the new icon onto the existing icon at the top left of the dialog. 
+If you want you can copy the entire folder into your applications folder.  I also updated the application icon. To do this download a suitable icon and use an online converter to convert the file into the correct icns format. You can then right click the application and view the 'Get Info' dialog. Simply drag the new icon.icns file onto the existing icon at the top left of the dialog. (here's the icon I used)
 
 ![/images/flatcam-icon.png](/images/flatcam-icon.png)
 

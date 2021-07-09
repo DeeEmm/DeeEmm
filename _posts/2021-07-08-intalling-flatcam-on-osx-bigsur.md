@@ -1,7 +1,7 @@
 ---
 published: true
 title: Installing FlatCAM on OSX Big Sur
-tags: CNC, Flatcam, PCB, Milling
+tags: CNC, Flatcam, PCB, Mill One, GRBL
 category: CNC
 image: /images/flatcam.jpg
 date: 2021-07-08 08:30:00 +9:30

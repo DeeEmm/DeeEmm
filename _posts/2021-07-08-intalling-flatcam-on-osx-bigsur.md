@@ -3,11 +3,11 @@ published: true
 title: Installing FlatCAM on OSX Big Sur
 tags: CNC, Flatcam, PCB, Mill One, GRBL
 category: CNC
-image: /images/flatcam.jpg
+image: /images/flatcam.png
 date: 2021-07-08 08:30:00 +9:30
 ---
 
-![/images/flatcam.jpg](/images/flatcam.jpg)
+![/images/flatcam.png](/images/flatcam.png)
 
 One thing that I wanted to be able to do on the Mill One was to make some prototype PCBs. Generally I use JLCPCB but there are occasions that I just need a quick and simple solution to make a PCB that did not involve waiting. 
 

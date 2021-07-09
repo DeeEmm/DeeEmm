@@ -64,7 +64,7 @@ I'll walk you through the process step-by-step. It's essentially the same proces
 
 - Get out of the virtual environment
 
-    deactivate
+    ```deactivate```
 
 At this stage you can try to run the application by launching it under python
 

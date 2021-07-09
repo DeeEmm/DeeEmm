@@ -67,7 +67,7 @@ I'll walk you through the process step-by-step. It's essentially the same proces
 ```deactivate```
 
 
-At this stage you can try to run the application by launching it under python...
+At this stage you can try to run the application by launching it under python
 
 ```python3 flatcam.py```
 

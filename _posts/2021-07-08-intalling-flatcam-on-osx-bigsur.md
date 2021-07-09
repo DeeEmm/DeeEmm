@@ -103,7 +103,7 @@ I'm not 100% sure why I had the issues with the dependencies, it could be that i
 
 ```pip3 install -r requirements.txt```
 
-This might be a better option if you also find that you have dependency issues. Of course it was no big deal to work through them one by one as I did above but if I were to try this again I'd definitely give this a shot first.
+This might be a better option if you also find that you have dependency issues. Of course it was no big deal to work through them one by one as I did above but if I were to try this again I'd definitely give this a shot first. The other possibility is that as I was running the script outside of the environment they were simply not available. At any rate whichever it is, the end result works out okay...
 
 
 

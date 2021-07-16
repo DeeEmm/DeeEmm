@@ -1,5 +1,5 @@
 ---
-published: false
+published: true
 title: ESPduino + Protoneer CNC Shield
 tags: ESP32, Protoneer, CNC Shield, Sienci, MillOne
 category: CNC

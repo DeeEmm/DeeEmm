@@ -45,7 +45,7 @@ Fortunately Tim has written his code in a well structured manner and it was a si
 constEndMcodeSet = {5, 9,30}
 ```
 
-I added the M30 command to the onClose function to be sure that Tims code had a nice easy to find delimiter to mark the end of the code...
+I added the M30 command to the onClose function of the DDCSV11-Plasma Post Processor to be sure that Tims code had a nice easy to find delimiter to mark the end of the code...
 
 ```
 /**********

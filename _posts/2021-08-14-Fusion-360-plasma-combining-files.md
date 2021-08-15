@@ -74,9 +74,9 @@ This allowed the DDCSV11-Plasma post processor to work with Tims Add-in.
 
 ## Setting it all up.
 
-If you want to use Tims Add-in with my DDCSV11-Plasma post processor you will need to install Tims add-in into Fusion360. I've forked Tims repo and committed the changes described above so all you need to do is follow the instructions described in the ReadMe - https://github.com/DeeEmm/Fusion360-Batch-Post
+If you want to use Tims Add-in with my DDCSV11-Plasma post processor you will need to install Tims add-in into Fusion360. I've forked Tims repo and committed the changes described above so all you need to do is follow the instructions described in the ReadMe - [https://github.com/DeeEmm/Fusion360-Batch-Post](https://github.com/DeeEmm/Fusion360-Batch-Post)
 
-I've also committed the changed to the DDCSV11-Plasma post processor itself. So if you have the previous version installed you will need to update it to the current version. - https://github.com/DeeEmm/DDCSV11-Plasma
+I've also committed the changed to the DDCSV11-Plasma post processor itself. So if you have the previous version installed you will need to update it to the current version. - [https://github.com/DeeEmm/DDCSV11-Plasma](https://github.com/DeeEmm/DDCSV11-Plasma)
 
 ## Using it
 

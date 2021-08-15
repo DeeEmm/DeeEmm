@@ -12,7 +12,7 @@ date: 2021-08-14 08:30:00 +9:30
 
 If you have been using my [post processor](https://deeemm.com/general/2020/09/30/ddcsv-fusion360-plasma-post-processor.html) with your DDCSV controller, perhaps with a plasma or even with a generic CNC setup you would know that there's a bit of manual editing to do to join NC files together. This is due to a limitation in the free 'Maker' version of Fusion360 that does not allow you to generate NC programs that contain tool changes. Instead it will generate a seperate NC and Post program for each tool path, which means that you then need to join them together yourself. This soon becomes tedious, especially when you are creating a bunch of plasma jobs that have [spot marking](https://deeemm.com/cnc/2020/10/09/fusion360-plasma-spot-marking.html).
 
-So just recently, whilst looking for something else I stumbled across Tim Patersons [Fusion 360 Batch Post](https://github.com/TimPaterson/Fusion360-Batch-Post). This is a Fusion 360 Add-In that is essentially a batch post processor that detects tool changes in the generated files and joins the code together to make one single output file.
+So just recently, whilst looking for something else I stumbled across Tim Patersons [Fusion 360 Batch Post](https://github.com/TimPaterson/Fusion360-Batch-Post). This is a Fusion 360 Add-In that is essentially a batch post processor that detects tool changes in the generated files and stitches the seperate tool paths together to make one single output file.
 
 The Add-In looks for GCode elements that signify where the tool changes would normally reside and then splits the code removing the headers and footers and stitching code parts of each toolpath together before reassembling a header and footer to produce a single file.
 
@@ -100,6 +100,6 @@ The result of all of this is that Fusion360 now works like the licensed version,
 
 So a big thanks to Tim Paterson for his awesome add-in, he's definitely saved me from cut-and-paste hell.
 
-I've made a request to Tim to see if he will consider updating his plugin to allow user selectable _constEndMcodeSet_ values and operationally removing the space added in the generated output. https://github.com/TimPaterson/Fusion360-Batch-Post/issues/22 But even if he doesn't then you can still used the updated code on my fork.
+I've made a request to Tim to see if he will consider updating his plugin to allow user selectable _constEndMcodeSet_ values and operationally removing the space added in the generated output. [https://github.com/TimPaterson/Fusion360-Batch-Post/issues/22](https://github.com/TimPaterson/Fusion360-Batch-Post/issues/22) But even if he doesn't then you can still used the updated code on my fork to get it working on your machine.
 
 /DM

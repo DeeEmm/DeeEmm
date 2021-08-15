@@ -7,8 +7,7 @@ https://deeemm.github.io/DeeEmm/
 
 ## Latest Blog Posts
 
-[Fusion 360 Plasma Post Processor - Combining Files](https:&#x2F;&#x2F;deeemm.com&#x2F;cnc&#x2F;2021&#x2F;08&#x2F;14&#x2F;Fusion-360-plasma-combining-files.html)  
-          [Fusion 360 Plasma Post Processor - Combining Files](https:&#x2F;&#x2F;deeemm.com&#x2F;cnc&#x2F;2021&#x2F;08&#x2F;13&#x2F;Fusion-360-plasma-combining-files.html)  
+[Fusion 360 Plasma Post Processor - Combining Files](https:&#x2F;&#x2F;deeemm.com&#x2F;cnc&#x2F;2021&#x2F;08&#x2F;13&#x2F;Fusion-360-plasma-combining-files.html)  
           [ESPduino + Protoneer CNC Shield](https:&#x2F;&#x2F;deeemm.com&#x2F;cnc&#x2F;2021&#x2F;07&#x2F;15&#x2F;ESPduino-protoneer-CNC-Shield.html)  
           [Installing FlatCAM on OSX Big Sur](https:&#x2F;&#x2F;deeemm.com&#x2F;cnc&#x2F;2021&#x2F;07&#x2F;07&#x2F;intalling-flatcam-on-osx-bigsur.html)  
           [Sienci Mill One Upgrades](https:&#x2F;&#x2F;deeemm.com&#x2F;cnc&#x2F;2021&#x2F;06&#x2F;06&#x2F;sienci-mill-one-upgrades.html)  
@@ -17,6 +16,7 @@ https://deeemm.github.io/DeeEmm/
           [Robot Laser Scanner](https:&#x2F;&#x2F;deeemm.com&#x2F;robots&#x2F;2020&#x2F;11&#x2F;04&#x2F;robot-laser-scanner.html)  
           [[RANT] Bloatware](https:&#x2F;&#x2F;deeemm.com&#x2F;rants&#x2F;2020&#x2F;10&#x2F;20&#x2F;rant-bloatware.html)  
           [Acqua - Implimenting Datatables](https:&#x2F;&#x2F;deeemm.com&#x2F;acqua&#x2F;2020&#x2F;10&#x2F;19&#x2F;implimenting-datatables.html)  
+          [Acqua - CRUD](https:&#x2F;&#x2F;deeemm.com&#x2F;acqua&#x2F;2020&#x2F;10&#x2F;18&#x2F;acqua-crud.html)  
           
 
 
@@ -28,4 +28,4 @@ https://deeemm.github.io/DeeEmm/
 
 If you have found anything that I do of use, note that I don’t ask for beer, coffee or patreon donations, I just ask that you pay it forwards with a random act of kindness.
 
-Last Updated Sunday, 15 August, 20:35 GMT+9:30
+Last Updated Sunday, 15 August, 20:37 GMT+9:30

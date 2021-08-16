@@ -3,11 +3,11 @@ published: true
 title: Fusion 360 Plasma Post Processor - Combining Files
 tags: plasma, fusion 360, CNC, Post Processor
 category: CNC
-image: /images/combined_setup.png
+image: /images/combined_setups.png
 date: 2021-08-14 08:30:00 +9:30
 ---
 
-![/images/combined_setup.png](/images/combined_setup.png)
+![/images/combined_setup.png](/images/combined_setups.png)
 
 
 If you have been using my [post processor](https://deeemm.com/general/2020/09/30/ddcsv-fusion360-plasma-post-processor.html) with your DDCSV controller, perhaps with a plasma or even with a generic CNC setup you would know that there's a bit of manual editing to do to join NC files together. This is due to a limitation in the free 'Maker' version of Fusion360 that does not allow you to generate NC programs that contain tool changes. Instead it will generate a seperate NC and Post program for each tool path, which means that you then need to join them together yourself. This soon becomes tedious, especially when you are creating a bunch of plasma jobs that have [spot marking](https://deeemm.com/cnc/2020/10/09/fusion360-plasma-spot-marking.html).
@@ -84,17 +84,23 @@ To generate an NC program that combines tool paths into one single output file y
 
 The main difference is that instead of creating two setups - one for each tool, you first create the drilling operation and then the cut operation under the same setup
 
+
 So this...
 
 
 ![/images/seperate_setups.png](/images/seperate_setups.png)
 
+
 becomes this...
 
 
-![/images/combined_setup.png](/images/combined_setup.png)
+![/images/combined_setup.png](/images/combined_setups.png)
 
 It is important that you edit each tool afterwards to check that the post-processor tool number is the same for all tools. If they are not then you may get some weird Z-height stuff going on as each tool will have a different tool length which is obviously not desirable for a plasma setup. to check / edit this, right click on each operation and choose 'edit tool'. Then click on the 'Post Processor' tab and make sure that the tool number used for each operation is the same.
+
+
+![/images/tool_numbers.png](/images/tool_numbers.png)
+
 
 Now when you call the Fusion360 Batch Post Add-in it will combine both files into one. If you do not combine the operations under a single setup the Add-in will not combine the files and will instead give you two output files - one for each operation.
 

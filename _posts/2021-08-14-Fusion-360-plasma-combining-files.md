@@ -9,6 +9,12 @@ date: 2021-08-14 08:30:00 +9:30
 
 ![/images/combined_setup.png](/images/combined_setups.png)
 
+### UPDATE: 
+
+Tim added an additional field in his plugin that lets you specify exactly which G-codes are used as end marks. This allowed me to easily remove the M5 command without needing to edit the source code. In addition to this Tims is now detecting whether spaces are present in the generated output files. If spaces are found it retains them, but if they are not found it no longer adds them. This means that Tims plugin now works with the DDCSV with no further actions required.
+
+A great big thank to Tim for his prompt update. Please be sure to go check out his work.
+
 
 If you have been using my [post processor](https://deeemm.com/general/2020/09/30/ddcsv-fusion360-plasma-post-processor.html) with your DDCSV controller, perhaps with a plasma or even with a generic CNC setup you would know that there's a bit of manual editing to do to join NC files together. This is due to a limitation in the free 'Maker' version of Fusion360 that does not allow you to generate NC programs that contain tool changes. Instead it will generate a seperate NC and Post program for each tool path, which means that you then need to join them together yourself. This soon becomes tedious, especially when you are creating a bunch of plasma jobs that have [spot marking](https://deeemm.com/cnc/2020/10/09/fusion360-plasma-spot-marking.html).
 
@@ -74,7 +80,7 @@ This allowed the DDCSV11-Plasma post processor to work with Tims Add-in.
 
 ## Setting it all up.
 
-If you want to use Tims Add-in with my DDCSV11-Plasma post processor you will need to install Tims add-in into Fusion360. I've forked Tims repo and committed the changes outlined above so you do not need to make these changes yourself. All you need to do is follow the instructions described in the ReadMe - [https://github.com/DeeEmm/Fusion360-Batch-Post](https://github.com/DeeEmm/Fusion360-Batch-Post)
+If you want to use Tims Add-in with my DDCSV11-Plasma post processor you will need to install Tims add-in into Fusion360. ~~I've forked Tims repo and committed the changes outlined above so you do not need to make these changes yourself. All you need to do is follow the instructions described in the ReadMe - [https://github.com/DeeEmm/Fusion360-Batch-Post](https://github.com/DeeEmm/Fusion360-Batch-Post)
 
 I've also committed the changes to the DDCSV11-Plasma post processor too. So if you have the previous version installed you will need to update it to the current version. - [https://github.com/DeeEmm/DDCSV11-Plasma](https://github.com/DeeEmm/DDCSV11-Plasma) If not just follow the instructions outlined on the repo main page.
 
@@ -109,5 +115,7 @@ The result of all of this is that Fusion360 now works like the licensed version,
 So a big thanks to Tim Paterson for his awesome add-in, he's definitely saved me from cut-and-paste hell.
 
 I've made a request to Tim to see if he will consider updating his plugin to allow user selectable _constEndMcodeSet_ values and operationally removing the space added in the generated output. [https://github.com/TimPaterson/Fusion360-Batch-Post/issues/22](https://github.com/TimPaterson/Fusion360-Batch-Post/issues/22) But even if he doesn't then you can still used the updated code on my fork to get it working on your machine.
+
+
 
 /DM

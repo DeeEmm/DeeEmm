@@ -46,7 +46,7 @@ The right to repair laws that appear to be popping up are an interesting take on
 
 ### But what does this have to do with my project? 
 
-Ultimately the impact on a project like mine is still that there will always be someone out there who believes it's fine to ignore licensing and try to profit from the work of others and believe that they have a right to do so, despite what the license or the law may say. I am certainly not in any financial position to challenge them in court, and so if this situation did arise I would be at a loss. So the commercial side of my brain says don't release it as this protects my IP by not making it available to those who may take advantage. However this is completely at odds with the open source side of my brain which says the opposite.
+Ultimately the impact on a project like mine is still that there will always be someone out there who believes it's fine to ignore licensing and try to profit from the work of others and believe that they have a right to do so, despite what the license or the law may say. I am certainly not in any financial position to challenge them in court, and so if this situation did arise I would be at a loss. So the commercial side of my brain says don't release it as this protects my IP, by not making it available to those who may take advantage. However this is completely at odds with the open source side of my brain which doesn't care for such things.
 
 Which brings me back to my dilemma and what to do.
 

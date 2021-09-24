@@ -10,7 +10,7 @@ date: 2021-09-24 08:30:00 +9:30
 ![/images/diyfb-shield.jpg](/images/diyfb-shield.jpg)
 
 
-### A dilemma
+### A dilemma... 
 
 If you've been following my work you will probably know about the [DIY Flow Bench](https://github.com/DeeEmm/DIY-Flow-Bench) project. This is an open source software / hardware device that measures volumetric air flow and is used in applications like automotive cylinder head development. I created the project back in 2018 after having had the idea for some time. Since then I have worked on it off and on, covid and family permitting, to get to the stage where the software is currently going through unit testing and the bugs are being ironed out of the hardware 
 

@@ -22,10 +22,10 @@ https://deeemm.github.io/DeeEmm/
 
 ## Stats
 
-[![DeeEmm's GitHub stats](https://github-readme-stats.vercel.app/api?username=DeeEmm)](https://github.com/anuraghazra/github-readme-stats)
+![DeeEmm's github stats](https://github-readme-stats.vercel.app/api?username=DeeEmm)
 
 ## Donations / Sponsors
 
 If you have found anything that I do of use, note that I don’t ask for beer, coffee or patreon donations, I just ask that you pay it forwards with a random act of kindness.
 
-Last Updated Wednesday, 18 January, 19:47 GMT+10:30
+Last Updated Wednesday, 18 January, 20:34 GMT+10:30

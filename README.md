@@ -22,7 +22,7 @@ https://deeemm.github.io/DeeEmm/
 
 ## Stats
 
-![DeeEmm's github stats](https://github-readme-stats.vercel.app/api?username=DeeEmm)
+[![DeeEmm's GitHub stats](https://github-readme-stats.vercel.app/api?username=DeeEmm)](https://github.com/anuraghazra/github-readme-stats)
 
 ## Donations / Sponsors
 

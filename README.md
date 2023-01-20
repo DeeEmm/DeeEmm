@@ -22,10 +22,10 @@ https://deeemm.github.io/DeeEmm/
 
 ## Stats
 
-![DeeEmm's github stats](https://github-readme-stats-1iz0w3p1y-deeemm.vercel.app//api?username=DeeEmm)
+![DeeEmm's github stats](https://github-readme-stats-deeemm.vercel.app//api?username=DeeEmm&count_private=true)
 
 ## Donations / Sponsors
 
 If you have found anything that I do of use, note that I don’t ask for beer, coffee or patreon donations, I just ask that you pay it forwards with a random act of kindness.
 
-Last Updated Friday, 20 January, 16:44 GMT+10:30
+Last Updated Friday, 20 January, 16:49 GMT+10:30

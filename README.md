@@ -7,7 +7,7 @@ https://deeemm.github.io/DeeEmm/
 
 ## Latest Blog Posts
 
-[Carvey CNC Upgrade](https:&#x2F;&#x2F;deeemm.com&#x2F;cnc&#x2F;2022&#x2F;09&#x2F;09&#x2F;carvey-cnc.html)  
+[Carvey CNC](https:&#x2F;&#x2F;deeemm.com&#x2F;cnc&#x2F;2022&#x2F;09&#x2F;09&#x2F;carvey-cnc.html)  
           [Open Hardware Licensing](https:&#x2F;&#x2F;deeemm.com&#x2F;diyfb&#x2F;2021&#x2F;09&#x2F;23&#x2F;open-hardware-licensing.html)  
           [Fusion 360 Plasma Post Processor - Combining Files](https:&#x2F;&#x2F;deeemm.com&#x2F;cnc&#x2F;2021&#x2F;08&#x2F;13&#x2F;Fusion-360-plasma-combining-files.html)  
           [Handheld Wifi MPG for ESP32 based CNC Controllers](https:&#x2F;&#x2F;deeemm.com&#x2F;cnc&#x2F;2021&#x2F;07&#x2F;20&#x2F;Handheld-Wifi-GRBL-ESP32-MPG.html)  
@@ -28,4 +28,4 @@ https://deeemm.github.io/DeeEmm/
 
 If you have found anything that I do of use, note that I don’t ask for beer, coffee or patreon donations, I just ask that you pay it forwards with a random act of kindness.
 
-Last Updated Thursday, 12 September, 12:05 GMT+9:30
+Last Updated Thursday, 12 September, 12:10 GMT+9:30

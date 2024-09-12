@@ -9,7 +9,8 @@ date: 2022-10-21 08:30:00 +9:30
 
 ![/images/carvey-pcb.jpg](/images/carvey-pcb.jpg)
 
-## PCB Layout
+
+### PCB Layout
 
 After stripping down the controller I've settled on a path forwards with the replacement design. Top of the list is getting all of the components mounted up within the same space. Thsi is important as the old main board is enclosed within a steel housingm located at the rear of the main enclosure, which provides protection whaever else is going on inside.
 

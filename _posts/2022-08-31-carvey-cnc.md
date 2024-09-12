@@ -9,24 +9,25 @@ date: 2022-09-10 08:30:00 +9:30
 
 ![/images/carvey.jpg](/images/carvey.jpg)
 
-## Carvey
+
+### Carvey
 
 I've long been a follower of the desktop CNC scene and was pretty impressed when the Inventibles Carvey was released. It was a very professional looking machine greatly different to the typical CNC routers made from bolt together extrusions. It's most appealing features were the enclosed workspace and simple workflow, similar to the Sienci MillOne in that it placed importance on the requirement for a proper enclosure to be used as a true desktop machine. Unfortunately however, the price tag was not so appealing. 
 
 Fast forward to last month and a Carvey appears on my local auction-bouse listings. An opportunity that might result in a more reasonable price, an opportunity too good to pass up. I figured that even if the machine needed fixing, it was the perfect basis for a true desktop CNC format that I could use in my office, something that I have tried to build with the MillOne. And so, after a bit of bidding it was mine.
 
 
-## Taking Check
+### Taking Check
 
 The machine had come from the local university, which can be both a good and bad thing. Good in that they generally don't see much use, but bad in that they are often misused and abused. The machine had definitely not seen that much use. In fact it still had all of the original accessories along with the test material supplied with the machine. It was also fairly clean and did not have a massive buildup of cutting dust, so looks like a win on that count. But the win was short lived as when I tested it I discovered that there was drift on the X axis. Misuse? Possibly. But also entirely likely just down to poor design or manufacturing.
 
 I suspected that the issue might be just due to stepper driver tuning, as this is a typical issue found on stepper based CNCs. But when I started to dig a but deeper I found that the stepper drivers are integrated into the main board and there was no way to set the current limits or change the driver.
 
-## Support
+### Support
 
 I spoke to support about the issue who said that replacement main boards were available at US$1000, which was more than I paid for the machine. They were helpful enough in providing some documentation but did not offer any kind of repair service. So I decided to order a replacement driver chip and swap it out myself. Unfortunately changing the chip did not fix the issue, which means that I now have to resort to Plan B
 
-## Plan B
+### Plan B
 
 Plan B is to junk the controller in favour of something else. It really should not be too hard to convert it to use a regular generic 3 axis Arduino based CNC controller board, there's heaps of different types available. The Arduino Uno based CNC V3 shields are cheap and readily available and a good candidate for a simple 3 axis machine. These may be old but they really do the job well. These are exactly what I used on my MillOne.
 
@@ -44,7 +45,7 @@ It's definitely possible to replace the controller with an alternative and not o
 
 I have most parts but need to order a 24v PSU buck and DC Speed controller.
 
-## Info from schematic
+### Info from schematic
 
 Other basic info from the schematic:
 
@@ -61,7 +62,7 @@ The button LED appears to be 5v and fed direct from the ECU via PWM (note: signa
 Spindle control is via MosFET similar to most basic DC motor control circuits.
 
 
-## Door control
+### Door control
 
 The magnetic door interlock is actually a bit more complex than just being connected to the feed hold input. Electronically it is connected to the spindle controller and each of the axis. Opening the door electronically drops the spindle relay out and holds the X,Y and Z step signal lines low via transistors, which physically kills all movement. This is exactly as it should be - a hardwired safety circuit, not a software based safety circuit. Whilst it is not quite up to required SIL or CAT safety levels for this type of machine, it is heaps better than simply initiating a stop in software which is what 99.9% of hobby CNC’s do.
 
@@ -72,7 +73,7 @@ In addition to the hardwired stop, a signal is also sent to the cover_switch inp
 I’m not sure if I am going to replicate the door control electronics for my build. It’s not necessary for my environment and use case, and does over complicate the upgrade, however I do want my kids to be able to use this so I will definitely implement a software hold as a minimum. Cutting the 48v via a relay is the simplest option, but this does not bring the machine to a controlled stop, it also makes recovery difficult as the machine will be in an unknown position (due to inertia). All of these issues are addressed with the original design. Will have to ponder this a little more before deciding.
 
 
-## Pin Designations
+### Pin Designations
 
 Going through the schematic and picking out the board connections has allowed me to create a wiring schema. Each of the molex plugs is labelled J followed by a number, i.e. J1, J2 etc.
 

@@ -9,7 +9,7 @@ date: 2022-09-10 08:30:00 +9:30
 
 ![/images/carvey.jpg](/images/carvey.jpg)
 
-# Carvey
+## Carvey
 
 I've long been a follower of the desktop CNC scene and was pretty impressed when the Inventibles Carvey was released. It was a very professional looking machine greatly different to the typical CNC routers made from bolt together extrusions. It's most appealing features were the enclosed workspace and simple workflow, similar to the Sienci MillOne in that it placed importance on the requirement for a proper enclosure to be used as a true desktop machine. Unfortunately however, the price tag was not so appealing. 
 

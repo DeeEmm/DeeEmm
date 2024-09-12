@@ -1,7 +1,7 @@
 ---
 published: true
 title: Carvey Update
-tags: Carvey, CNC
+tags: Carvey, CNC, Desktop
 category: CNC
 image: /images/carvey-pcb.jpg
 date: 2022-10-21 08:30:00 +9:30

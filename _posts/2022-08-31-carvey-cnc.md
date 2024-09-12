@@ -7,6 +7,7 @@ image: /images/carvey.jpg
 date: 2022-09-10 08:30:00 +9:30
 ---
 
+![/images/carvey.jpg](/images/carvey.jpg)
 
 # Carvey
 

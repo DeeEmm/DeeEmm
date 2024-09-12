@@ -7,6 +7,7 @@ image: /images/carvey-pcb.jpg
 date: 2022-10-21 08:30:00 +9:30
 ---
 
+![/images/carvey-pcb.jpg](/images/carvey-pcb.jpg)
 
 # PCB Layout
 

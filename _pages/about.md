@@ -32,13 +32,15 @@ This web-log started off being mostly about code related stuff, a place to share
 <BR>
 I am DeeEmm AKA Michael (Mick) Percy.  
 
-I am an Electrical Engineer specialising in industrial automation and controls. I spent many years working in the manufacturing industry as an automation specialist, creating, developing and installing automation equipment and machinery for clients ranging from Audi to Zinifex. This included programming industrial robots, PLC's, SCADA, HMI's and integrating various other technologies. At times I worked in projects that were at the forefront of the technology of the time, for instance machine vision, laser scanning and machine learning; technologies that only now are becoming more widely developed. This work took me all over the world and eventually to Australia, where I decided to stay.  
+I am an Electrical Engineer specialising in industrial automation and controls. I spent many years working in the manufacturing industry as an automation specialist, creating, developing and installing automation equipment and machinery for clients ranging from Audi to Zinifex. This included programming industrial robots, PLC's, SCADA, HMI's and integrating various other technologies. 
+
+At times I worked in projects that were at the forefront of the technology of the time, for instance machine vision, laser scanning and machine learning; all technologies that only now are becoming more widely developed. This work took me all over the world and eventually to Australia, where I decided to stay.  
 
 My interest in computers and programming started back in 1982 when I received a Sinclair ZX Spectrum computer as a birthday present. It did not take long to put those rubbery keys to work creating simple programs and games in ZXbasic such as an etch-a-sketch style drawing program using INKEY$ to monitor the keyboard for input and then drawing on the screen usig the PLOT command, and a car racing game that controlled a sprite at the bottom of the screen as the 'road' scrolled down from the top. Real basic stuff. But the seed was planted.
 
-I also have my parents to thank for my interest in electronics, as around that time I received a 75-in-1 electronics kit. I marvelled at it's springy terminals and worked my way through the 75 projects. Essentially the Arduino of its day.
+I also have my parents to thank for my interest in electronics, as around that same time I received a 75-in-1 electronics kit. I marvelled at it's springy terminals and worked my way through the 75 projects. Essentially the Arduino of its day. I didn't realise it back then, but my parents obviously had a master plan for my future.
 
-I now run a small manufacturing business out of a workshop in my back yard, having turned what was a hobby into a business. _'Living the dream'_ as they say round here.  :D  
+Since moving to Australia and having kids of my own, I have stepped away from the daily grind of working away from home, and now run a small manufacturing business out of a workshop in my back yard. I was fortunate to be able to turn what started out as a hobby into a business. _'Living the dream'_ as they say round here.  :D  
 
 I still code, but today it is only for fun. 
 <BR><BR>

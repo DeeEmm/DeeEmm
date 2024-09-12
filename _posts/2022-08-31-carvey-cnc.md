@@ -3,13 +3,10 @@ published: true
 title: Carvey CNC Upgrade
 tags: Carvey, CNC, Desktop
 category: CNC
-image: /images/123-template.jpg
+image: /images/carvey.jpg
 date: 2022-09-10 08:30:00 +9:30
 ---
 
-![/images/123-template.jpg](/images/123-template.jpg)
-
-[I'm an inline-style link](https://www.google.com)
 
 # Carvey
 

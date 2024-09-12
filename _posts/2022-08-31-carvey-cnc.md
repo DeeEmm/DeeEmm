@@ -1,6 +1,6 @@
 ---
 published: true
-title: Carvey CNC Upgrade
+title: Carvey CNC
 tags: Carvey, CNC, Desktop
 category: CNC
 image: /images/carvey.jpg

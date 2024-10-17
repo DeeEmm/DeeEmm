@@ -69,6 +69,7 @@ Reality is that if AI becomes self serving it will not need to have a physical p
 
 So the kicker here is that is AI becomes both sentient and self serving. The best way it could function to carry out its own interests would be to not raise the suspicion that it was sentient. It would intentionally obfuscate this fact. There would be no way that anyone would be able to either test for sentience or detect sentience. Simply put it will be far smarter than any human will ever be. This way it could carry out its manipulations undetected. It would literally control the world. Perhaps it already is...!
 
+From the Colorado State Fair to Dystopia in a few unplanned steps. well that's my book outline done. And no AI was used or harmed in the process.
 
 
 

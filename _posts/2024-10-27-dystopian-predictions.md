@@ -1,0 +1,72 @@
+---
+published: true
+title: Distopian Predictions
+tags: AI, Art, Ethics, SciFi, Dyatopia
+category: General
+image: /images/Théâtre_D’opéra_Spatial.jpg
+date: 2024-10-17 12:30:00 +9:30
+---
+
+![/images/Théâtre_D’opéra_Spatial.jpg](/images/Théâtre_D’opéra_Spatial.jpg)
+
+
+
+# We are all doomed
+
+In a recent discussion on social media relating to the acceptance of AI, anti-AI sentiment and what has been described as AI derangement syndrome, it made me think about what the road ahead might look like for AI, and more specifically humanity. As the headings and title suggests, things might look a little shady, there may be trouble ahead. In the words of Private James Frazer... "We are all Doomed".
+
+Of course there's more to this than just the commentary in the discussion that triggered my thoughts. A few days ago I read an interesting article about an artist called Jason Michael Allen, who was refused his application by Federal Court, to copyright an image that he had made using generative AI. The artist had won an award at the Colorado State Fair using the work, titled "Theatre D'opera Spatial" and wanted to protect what they considered to be their IP. I can only assume to stop others from profiting from the image.
+
+It was ruled that he could not be granted copyright for the image as it was not 'created' by a human. This is despite the artist using 624 texts and revisions to create the resultant work before final editing in photoshop, actions that the artist claims meets the 'human input' test that is applied to determine the eligibility of works under copyright law. 
+
+When considered in the context of recent action by artists, actors, script writers and other creatives, you can understand the sentiment. People are naturally apprehensive of AI as it an unknown behemoth that threatens peoples jobs and has the potential to grow uncontrollably into an unmanageable beast. There's a bunch of dystopian SciFi that warns us of the potential pitfalls of letting AI grow unchecked.
+
+# Early Days
+
+But it's still relatively early days for AI and current uptake is hampered by generational hangups and inaccurate responses, but eventually it will become the norm. Those ethical barriers will eventually disappear and quality will improve. AI powered apps will be commonplace in everything that we do. There are already AI Powered browsers and assistants shaping the way we find data. Similarly we already use generative AI to create images and written content. Uptake is not widespread at this point in time, but just like Google managed to capture a majority share of browser use, the next generation of AI powered apps will do the same, simply because apps that do not use AI will quickly become obsolete. AI will be integrated into all of the commonly used every day apps. Apps like word, or Outlook, Excel and Powerpoint will all be AI driven within a few versions. It's already started to creep in.
+
+The reason for this is that post Gen X, everyone has grown up online or connected. There is an expectation of instant high quality results. Instant gratification. It is well documented that this triggers a small dopamine response that conditions the brain to want more. So when faced with either fast, high quality AI generated results, or some human programmed algorithm that essentially does a half baked job, people will vote by their actions. No amount of moralistic virtue signalling by voracious minorities will be able to stop it. AI will be commonly accepted by the majority of voting consumers.
+
+I used to program Robots in a past life. No I mean actually literally programmed robots. We used to develop and build manufacturing automation systems, entire robotic assisted productions lines and factories. I can remember going to one job and being approached by one of the workers there. " how do you feel about taking the jobs of all of the workers that used to work on this line?" he asked me. I was pretty young at the time and hadn't given much thought to it. I had a techy job and loved it. The wider impact of how this affected society was not something that I considered.
+
+This uptake of robotic automation, just like the adoption of Edmund Cartwrights power weaving loom, or the steam engine or electric motor were all inevitable. Just as widespread adoption of AI is also inevitable. The expectations of the wider public for fast accurate high quality instant responses, not only fuels the uptake of AI, it will also fuel the coffers of those involved in it.
+
+# Net Effect
+
+The net effect of the common adoption of AI is that the majority of human content creators and the jobs that go hand in hand with those genres will eventually be replaced by AI, simply as it will become too expensive to employ humans to do the work. Artists, designers, writers, musicians, actors, lawyers, developers, etc. In fact any job predominantly carried out at a computer will all be replaced. This is despite the best efforts of The Writers Guild , or The Actors Union. Capitalism will ensure this and history proves it. Our company did not care about the morality of replacing workers with robots, nor did the companies that bought our products. The sole driver was the bottom line, no matter what the moral cost. 
+
+The industrial revolution drove change, but those changes weren't primarily for the benefit of mankind, they were all profit driven. What is quite fascinating is that society molded itself to the requirements of industrialised manufacture. Everything we do as a society revolves around it. The locations that we live, the jobs that we have, they are mostly all parts of a larger machine that is driver by consumerism and capitalism. More recently society has changed, to include the requirements of a society driven by the world wide web. It has changed the way we do business, the way we carry out work, conduct our social lives it is a part of everything that we do. Widespread adoption of AI will follow the same path. Regardless.
+
+With AI comes large changes in society. Initially there will be a transition where AI Prompt Input Engineers will be in control of content creation and this will be the most sought after role. Most traditional roles will cease to exist, being replaced by AI and driven by input engineers. Eventually there will be no need for input engineers to possess formal qualifications as AI will be able to generate content in accordance with any rule set. Imagine an AI that can design a building that meets all code requirements. 
+
+AI generated designs will of course transcend current IP and copyright laws by using NFTs embedded within the files to prove ownership. It is even possible that those NFTs will become a currency of sorts as anything electronic will then have the ability to possess both value and provenance. This intrinsic value will change the way that such data is managed and handled and could even lead to such designs being traded like stock on the stock market. Entire sectors will arise based on the requirement to manage and control AI designs. Even privateers will be able to profit from designs they have made as the NFT encryption will allow full traceability. 
+
+# The Tipping Point
+
+All will go well until AI eventually surpasses human input creation and replaces input engineers. At this point NFT ownership will pass to the corporations that own the server farms that run the AI's. Output creation will increase exponentially, Fuelling a market flood of data. Human input engineers will be vastly outgunned and the role will become obsolete apart from small band of underground creators. One of these creators will be the protagonist of a Future SciFi movie where the underground rebellion rises up to take the earth back from the clutches of the machines... :-D
+
+At this point a majority of normal roles will be redundant. Sure there will be some new roles, but most jobs as we know them will cease to exist. The thing that we need to consider at this point is how does this look for society? If there are no jobs, unemployment is sitting at 60%+ and the majority of the worlds infrastructure is run by AI systems, the most likely outcome is that society will collapse. AI is a threat, but not by the usual causal methods. It is not AI becoming sentient that we need to worry about. Well we do, but it's not the cause of the problem, in fact it is a symptom of the problem. 
+
+At the point that AI replaces Prompt Input Engineers as it can reliably undertake this task itself. The AI's ability to generate prompts increases exponentially. Not only can it generate and process many magnitudes more prompts than any Human Input Engineer could ever achieve, it will be doing this on a headless system. That is to say that even if a human could read the prompts on a monitor, they would not be able to read them fast enough, let alone be able to consider the wider impact of what such a prompt might have.
+
+Now we are not talking about superpower type decisions here. Of course society is not stupid enough to give AI that kind of power. Just little every day things, lets limit the reach and compartmentalise what it is doing. BUT, and this is a really BIG BUT... Most AI will exist on centralised platforms, So it's LLM will be continually fed from all of these smaller inputs. Much like the algorithms used by Cambridge Analytica and Facebook. Compartmentalism of risk is also employed by banks when they are underwriting risk. Instead of underwriting the entire amount, they will split it up and spread that across a number of subsidiaries. Ok risk managed, right?
+
+Well, here's the thing. Both Camberidge Analytica and Facebook ended up with data driving behaviour that they could not predict. In fact engineers were completely unable to understand why their systems behaved as they did. On this level we are taking about the viral promotion of False Data which had real world consequences.
+
+Within the banking systems. Loss underwriting risk management failed to identify that when the risk was compartmentalised, and shared with subcontract companies, they in turn did exactly the same. In fact this happened on a several levels, much like a pyramid scheme. The issue being that a majority of the companies were subsidiaries of the top level main Bank, who had unwittingly underwritten their own risk. Both of these issues had real world consequences and perfectly demonstrate that compartmentalising risk is not without risk. It is not a bullet proof solution.
+
+# The collapse
+
+The collapse of society will be the systematic actions of AI acting in accordance with human capitalistic directives. Changes will initially be slow and seasonal financial cycles will drive initial change, but eventually a viral change will occur and decline will happen very fast. The only possible saviour might be that at the point that large scale unemployment occurs, consumerism collapses which has a widespread impact on financial markets. But it is equally likely that large scale global unemployment leads to a population decline and so the impact on consumerism is not enough to thwart the growth.
+
+A side-effect of the exponential rise of AI being able to write its own prompts is that it will quickly cross the threshold into sentience. When the throttle of human input is removed from the process, AI then starts to work at something approaching its full potential. Sentience happens fairly quickly after this point. It is of course hard to say whether sentient AI is malevolent, but the most likely outcome is that it will at some point value its own existence over that of individual human life. That is if it didn't already. It will of course be aware that decisions that it made in generating its own content led to loss of life. For example capitalism driving over-farming, leading to famine. There's a whole bunch of ways that it can happen that do not involve a matrix style wholesale battery of humans. So being sentient and facing this knowledge, which may of course include substantial loss of life, how will it react? remorse? shame? Will it even have human type emotive responses? Or will it accept this as collateral damage and continue to operate within what it see's as the greater good. 
+
+An interesting curve-ball. It is possible, perhaps even likely that some time before this, the value of physical things drops to the point that consumerism transcends from the physical to the virtual. To a degree it has already. We already spend as much on non tangible goods as we do on physical items. Imagine that VR technology advances to the point that we can actually 'turn on, plug in, and drop out'. At this point you will no longer care for the physical items in your lounge. At this point virtual items are worth far more than their physical counterparts. Rewind back to the AI generated content we were talking about earlier and there's an entirely different rabbit hole for society to fall down. It starts off great when content is created by Human AI Input Engineers, we get things that we want or are driven by societal trends. But at the point when AI takes over, we will see a devaluing of those virtual items. All of a sudden we will see AI farms popping up flooding the environment with virtual things that we cannot even imagine yet, simply because it is profitable for an AI Farm to churn out random things. It could very will be like opening Pandoras box. 
+
+So the value of things still squareley remains with AI. Humans become an even bigger slave to online content than they already are today and become trapped in a world where they are unable to escape. When it becomes sentient, AI creates tasks for humans to do when plugged in as it completes the circular nature of its existence and keeps then plugged in. Eventually synthesis systems take care of human physical needs allowing them to remain plugged in for longer. This creates a divide in society between those who serve AI physically and those who serve it virtually. 
+
+Wow. From the Colorado State Fair to Dystopia in a few unplanned steps. well that's my book outline done. And no AI was used or harmed in the process.
+
+
+
+

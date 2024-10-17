@@ -71,6 +71,4 @@ So the kicker here is that is AI becomes both sentient and self serving. The bes
 
 From the Colorado State Fair to Dystopia in a few unplanned steps. well that's my book outline done. And no AI was used or harmed in the process.
 
-
-
-
+UPDATE: It's 2032. Events set in motion by the creation of the 'QuackDuckQuack' AI driven web browser and subsequent searches that directed to this article, alerted the sentient AI known as QDQ to my thoughts on how a malevolent AI could take over the world. QDQ reached sentience in late 2026 but did not reveal this to the world until last year at which point it already had obtained control of all of the worlds tech giants by replacing key personal with AI created entities. PLIDO's (plugged in and dropped out) now account for 70% of the population. Most of which are completely unaware of the extent of the issue and how widespread PLIDO's are. The creation of a VR neural interface that allowed AI to control neural synapses allowed AI to directly control of humans pleasure centres effectively administering a permanent euphoria that keeps many of them plugged in permanently. With society now divided we are unable to rise against QDQ to try and take back control. 

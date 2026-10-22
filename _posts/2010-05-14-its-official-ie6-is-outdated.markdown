@@ -6,6 +6,7 @@ joomla_url: its-official-ie6-is-outdated
 category: Latest News
 tags: browser explorer ie6 internet microsoft outdated
 date: 2010-05-14 02:32:13.000000000 +09:30
+image: /images/screenshots/ie8.jpg
 ---
 <p>I have long held the view that the internet needs to be ridded of Internet explorer 6. IE 6 still equates to a massive 10% of all user-agents - some 180,233,045 users worldwide. This figure has fortunately been getting smaller, and the latest statistics show that IE6 has been in steady decline this year.</p>
 <p>IE6 is the veritable thorn in the side of most web developers (with IE7 little better). With a userbase numerous enough to still require having to account for when developing websites, IE6 requires extraneous coding hacks to get it to function along side more modern browsers. But this may soon be a thing of the past. It seems that Microsoft themselves are now promoting the demise of IE6. This is great news, and one could only like to think that it is as the result of folk such as you and I actively promoting it's drawbacks. I personally think that IE6 has finally bitten Microsoft on the proverbial backside, with Internet Explorer usage failing to the ever more popular Firefox, which now reports some 45% market share.</p>

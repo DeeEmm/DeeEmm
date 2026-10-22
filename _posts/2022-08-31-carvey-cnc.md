@@ -91,5 +91,5 @@ J12 connects to the smart clamp. The schematics also show this signal available 
 
 I've previously posted pin-outs for the ESP32duino and protoneer CNC shield...
 
-[https://deeemm.com/cnc/2021/07/15/ESPduino-protoneer-CNC-Shield.html](https://deeemm.com/cnc/2021/07/15/ESPduino-protoneer-CNC-Shield.html)
+[https://deeemm.com/cnc/2021/07/15/ESPduino-protoneer-CNC-Shield.html](/cnc/2021/07/15/ESPduino-protoneer-CNC-Shield.html)
 

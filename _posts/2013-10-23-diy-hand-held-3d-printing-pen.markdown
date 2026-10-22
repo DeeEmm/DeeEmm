@@ -5,6 +5,7 @@ joomla_id: 306
 joomla_url: diy-hand-held-3d-printing-pen
 category: General
 date: 2013-10-23 11:27:29.000000000 +10:30
+image: https://web.archive.org/web/20160621143127im_/../../../images/easyblog_images/307/b2ap3_thumbnail_IMG_8633.jpg
 ---
 <p style="margin: 0px 0px 9px; box-sizing: border-box; color: #777777; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 13px;">Make your own DIY 3Doodler style 'Filament Gun' from a hot glue gun and downloadable 3D printable filament sticks. </p>
 <p style="margin: 0px 0px 9px; box-sizing: border-box; color: #777777; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 13px;">If you are a bit of a 3D printing fan you probably could not help but notice some of the hand held 3d printing devices starting to emerge. The <a style="color: #5990de; outline: 0px; box-sizing: border-box; background: transparent;" href="https://web.archive.org/web/20160621143127/http://www.the3doodler.com/" target="_blank" rel="noopener noreferrer">3doodler</a>was the first device on the market but this has already been followed by a very similar looking pen type printer and will no doubt be followed by many others.</p>

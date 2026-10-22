@@ -6,6 +6,7 @@ joomla_url: end-of-the-road-for-dmcms
 category: DMCMS
 tags: dmcms
 date: 2011-04-27 06:02:14.000000000 +09:30
+image: /images/dmodmcms.jpg
 ---
 <p>With it's inception way back in 2004, DMCMS was originally developed for my personal website. Written in PHP and MySQL, it was aimed at being a simple content management system with no frills that could easily handle the management of a small site. Over the years it has been modified and updated a number of times, and is still in use in a number of places.</p>
 <p>With the advent of social interactivity on the web, the lack of user registration and management, and the lack of any interactivity tools have pretty much made DMCMS redundant. Whilst the management of non user based sites is still required, there are much better tools out there for the job, and with the advent of Web2 technologies, DMCMS also now looks very dated.</p>

@@ -5,6 +5,7 @@ joomla_id: 404
 joomla_url: mick-brooklands-bentley-1-4
 category: CycleKarts
 date: 2019-08-20 02:07:47.000000000 +09:30
+image: https://cyclekarts.com.au/media/com_easysocial/photos/11/213/img-8082_large.jpg
 ---
 <div class="es-frontend es-main  view-stream layout-item is-desktop"><div class="es-streams">
 	<div class="es-stream"><p>Managed to squeeze a few minutes build time in yesterday. Drew up some front spring hangers and made a few cardboard templates to figure out a design that I liked. This is what I ended up with. Now I just need to make another three.</p><div class="es-stream-preview"><div class="es-photos photos-2 es-stream-photos pattern-tile"><p><a href="https://cyclekarts.com.au/build-pages/brooklands-bentley/photos/213-img-8082" title="IMG_8082">

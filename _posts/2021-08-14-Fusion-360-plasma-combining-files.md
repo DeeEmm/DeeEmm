@@ -16,7 +16,7 @@ Tim added an additional field in his plugin that lets you specify exactly which 
 A great big thank to Tim for his prompt update. Please be sure to go check out his work.
 
 
-If you have been using my [post processor](https://deeemm.com/general/2020/09/30/ddcsv-fusion360-plasma-post-processor.html) with your DDCSV controller, perhaps with a plasma or even with a generic CNC setup you would know that there's a bit of manual editing to do to join NC files together. This is due to a limitation in the free 'Maker' version of Fusion360 that does not allow you to generate NC programs that contain tool changes. Instead it will generate a seperate NC and Post program for each tool path, which means that you then need to join them together yourself. This soon becomes tedious, especially when you are creating a bunch of plasma jobs that have [spot marking](https://deeemm.com/cnc/2020/10/09/fusion360-plasma-spot-marking.html).
+If you have been using my [post processor](/general/2020/09/30/ddcsv-fusion360-plasma-post-processor.html) with your DDCSV controller, perhaps with a plasma or even with a generic CNC setup you would know that there's a bit of manual editing to do to join NC files together. This is due to a limitation in the free 'Maker' version of Fusion360 that does not allow you to generate NC programs that contain tool changes. Instead it will generate a seperate NC and Post program for each tool path, which means that you then need to join them together yourself. This soon becomes tedious, especially when you are creating a bunch of plasma jobs that have [spot marking](/cnc/2020/10/09/fusion360-plasma-spot-marking.html).
 
 So just recently, whilst looking for something else I stumbled across Tim Patersons [Fusion 360 Batch Post](https://github.com/TimPaterson/Fusion360-Batch-Post). This is a Fusion 360 Add-In that is essentially a batch post processor that detects tool changes in the generated files and stitches the seperate tool paths together to make one single output file.
 
@@ -86,7 +86,7 @@ I've also committed the changes to the DDCSV11-Plasma post processor too. So if 
 
 ## Using it
 
-To generate an NC program that combines tool paths into one single output file you need to set up your job a certain way. This is a little different to how I originally described this process in the original [post processor](https://deeemm.com/general/2020/09/30/ddcsv-fusion360-plasma-post-processor.html) post.
+To generate an NC program that combines tool paths into one single output file you need to set up your job a certain way. This is a little different to how I originally described this process in the original [post processor](/general/2020/09/30/ddcsv-fusion360-plasma-post-processor.html) post.
 
 The main difference is that instead of creating two setups - one for each tool, you first create the drilling operation and then the cut operation under the same setup
 

@@ -5,6 +5,7 @@ joomla_id: 304
 joomla_url: diy-acetone
 category: General
 date: 2013-09-17 11:10:32.000000000 +09:30
+image: https://web.archive.org/web/20160804003358im_/../../../images/easyblog_images/308/Acetone%20Bath/b2ap3_thumbnail_IMG_8566.jpg
 ---
 <p style="margin: 0px 0px 9px; box-sizing: border-box; color: #777777; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 13px;">We have been having a bit of a play around with acetone vapor today. </p>
 <p style="margin: 0px 0px 9px; box-sizing: border-box; color: #777777; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 13px;"><br style="box-sizing: border-box;" />Inspired by the <a style="color: #5990de; outline: 0px; box-sizing: border-box; background: transparent;" href="https://web.archive.org/web/20160804003358/http://blog.reprap.org/2013/02/vapor-treating-abs-rp-parts.html" target="_blank" rel="noopener noreferrer">attempts of others</a>, and wanting to achieve a better finish for some parts that we are looking to produce for sale, we decided to put together a vapor bath. Before we got stuck in we watched a few YouTube videos and read a few blogs and decided to come up with a shortlist of considerations that we could use to drive our design. Here's what we came up with.<br style="box-sizing: border-box;" /><br style="box-sizing: border-box;" /><strong style="box-sizing: border-box;">Temperature requirements</strong></p>

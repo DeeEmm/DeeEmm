@@ -9,7 +9,7 @@ date: 2021-07-16 08:30:00 +9:30
 
 ![/images/protoneer.jpg](/images/protoneer.jpg)
 
-If you've been following my [recent posts](https://deeemm.com/cnc/2021/06/06/sienci-mill-one-upgrades.html) on building a new improved Sienci MillOne you may recall that I wanted to experiment with using an ESP32 board rather than the Arduino UNO / Rasberry Pi setup that I already had set up.Well after some experimentation I now have the MillOne running under ESP32 control.
+If you've been following my [recent posts](/cnc/2021/06/06/sienci-mill-one-upgrades.html) on building a new improved Sienci MillOne you may recall that I wanted to experiment with using an ESP32 board rather than the Arduino UNO / Rasberry Pi setup that I already had set up.Well after some experimentation I now have the MillOne running under ESP32 control.
 
 Setting up the Protoneer CNC Shield was pretty straight forwards, in fact the only modification that needs to be undertaken is to remove the end stop resistor R1 as this cases the ESP32 into an endless loop of resetting which prevents it from booting up. Simply removing the resistor fixes this issue.
 

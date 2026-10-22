@@ -1,0 +1,77 @@
+{
+  "$schema": "https://frontmatter.codes/frontmatter.schema.json",
+  "frontMatter.taxonomy.contentTypes": [
+    {
+      "name": "default",
+      "pageBundle": false,
+      "previewPath": null,
+      "fields": [
+        {
+          "title": "Title",
+          "name": "title",
+          "type": "string"
+        },
+        {
+          "title": "Description",
+          "name": "description",
+          "type": "string"
+        },
+        {
+          "title": "Publishing date",
+          "name": "date",
+          "type": "datetime",
+          "default": "{{now}}",
+          "isPublishDate": true
+        },
+        {
+          "title": "Cover image",
+          "name": "image",
+          "type": "image",
+          "isPreviewImage": true
+        },
+        {
+          "title": "Is in draft",
+          "name": "draft",
+          "type": "draft"
+        },
+        {
+          "title": "Tags",
+          "name": "tags",
+          "type": "tags"
+        },
+        {
+          "title": "Categories",
+          "name": "categories",
+          "type": "categories"
+        }
+      ]
+    }
+  ],
+  "frontMatter.framework.id": "jekyll",
+  "frontMatter.content.publicFolder": "images",
+  "frontMatter.preview.host": "http://localhost:4000",
+  "frontMatter.content.pageFolders": [
+    {
+      "title": "drafts",
+      "path": "[[workspace]]/_drafts"
+    },
+    {
+      "title": "posts",
+      "path": "[[workspace]]/_posts"
+    },
+    {
+      "path": "[[workspace]]/_site",
+      "title": "_site"
+    },
+    {
+      "title": "_pages",
+      "path": "[[workspace]]/_pages"
+    },
+    {
+      "title": "images",
+      "path": "[[workspace]]/images"
+    }
+  ],
+  "frontMatter.git.enabled": true,
+  "frontMatter.website.host": "https://deeemm.com"
+}

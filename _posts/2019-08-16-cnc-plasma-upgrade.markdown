@@ -6,6 +6,7 @@ joomla_url: cnc-plasma-upgrade
 category: General
 tags: arduino cnc ddcsv plasma thc
 date: 2019-08-16 03:30:07.000000000 +09:30
+image: /images/easyblog_articles/329/b2ap3_small_IMG_8047.jpg
 ---
 <div class="ebd-block  " data-type="text" ><p>I built my Plasma CNC about 5 years ago. I had originally intended to use it to cut out component parts for a product that I make, however I found that the output quality&nbsp;was not 100% reliable and so with the cost of laser cutting being very cheap locally, it was simply not cost effective to run. So for the most part it has sat in the workshop taking up space. I've recently decided to update it to hopefully improve its reliability.<br><br></p></div><div class="ebd-block  " data-type="readmore" ></div><div class="ebd-block  " data-type="heading" ><h2>
 	<span>THC Issues&nbsp;</span>
@@ -16,10 +17,10 @@ date: 2019-08-16 03:30:07.000000000 +09:30
 	<div class="eb-image-figure is-responsive" style="width:100%;">
 
 				<a class="eb-image-viewport eb-image-popup-button"
-			href="../../../../images/easyblog_articles/329/b2ap3_large_IMG_8047.jpg"
+			href="/images/easyblog_articles/329/b2ap3_large_IMG_8047.jpg"
 			title="Old Setup">
 		
-					<img src="../../../../images/easyblog_articles/329/b2ap3_small_IMG_8047.jpg" 			/>
+					<img src="/images/easyblog_articles/329/b2ap3_small_IMG_8047.jpg" 			/>
 		</a>
 	</div>
 					<div class="eb-image-caption" style="width:100%;">
@@ -32,10 +33,10 @@ date: 2019-08-16 03:30:07.000000000 +09:30
 	<div class="eb-image-figure is-responsive" style="width:100%;">
 
 				<a class="eb-image-viewport eb-image-popup-button"
-			href="../../../../images/easyblog_articles/329/b2ap3_large_IMG_8049.jpg"
+			href="/images/easyblog_articles/329/b2ap3_large_IMG_8049.jpg"
 			title="New Setup">
 		
-					<img src="../../../../images/easyblog_articles/329/b2ap3_small_IMG_8049.jpg" 			/>
+					<img src="/images/easyblog_articles/329/b2ap3_small_IMG_8049.jpg" 			/>
 		</a>
 	</div>
 					<div class="eb-image-caption" style="width:100%;">

@@ -6,6 +6,7 @@ joomla_url: diy-maps
 category: General
 tags: backspace diy geo javascript location mapapp maps xml
 date: 2010-10-12 23:17:48.000000000 +10:30
+image: /images/stories/576903-1013201010740am.png
 ---
 <p>With the advent of Google maps, it's now very easy to add a map to your website, a few lines of code, and you have added a nicely styled map. The style is of course pretty much fixed, and you have to retain the Google logo, but it's free and easy to use.&nbsp;But what if the style does not fit in with your website, or what if you want to show some geographical data, like highlighting a specific area or region?</p>
 <p>&nbsp;</p>

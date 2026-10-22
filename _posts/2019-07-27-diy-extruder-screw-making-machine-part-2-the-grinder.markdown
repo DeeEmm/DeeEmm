@@ -5,13 +5,14 @@ joomla_id: 326
 joomla_url: diy-extruder-screw-making-machine-part-2-the-grinder
 category: General
 date: 2019-07-27 11:18:03.000000000 +09:30
+image: /images/easyblog_articles/326/b2ap3_large_IMG_792_20190727-113815_1.jpg
 ---
-<div class="ebd-block  " data-type="text" ><p>Last week <a href="https://deeemm.com/index.php/entry/general/diy-extruder-auger-machine-part-1" title="" class="" target="_blank" rel="noopener noreferrer">I wrote about the extruder screw that I'm making</a> and shared the initial build of a machine to make my own screw. In that post I created the basic table using an auger as a lead screw. This proved the concept of using an auger as the transport mechanism but when I started to build the second part, the mechanism that holds the grinder, I found that the auger was mounted&nbsp;too low in the frame&nbsp;and so&nbsp;the grinding wheel would not be able to reach the workpiece.&nbsp;So before I could get stuck into mounting the grinder I needed to move the 'lead screw' up on top of the frame.</p><p><br></p></div><div class="ebd-block  " data-type="readmore" ></div><div class="ebd-block  " data-type="text" ><p>Moving the lead screw&nbsp;also allowed me to change&nbsp;the design a little. After my initial tests you may recall that I decided that the nut design I had come up with was overly complex, in fact after doing some more experimenting I decided that the auger did not need to be held captive and&nbsp;enclosed within a nut at all. What I decided to do was simply run a bit of round bar over the top of the auger (I actually used a bolt as it was a little harder than round bar). The bolt is welded to the top of the slides and&nbsp;held against the top of the&nbsp;auger. The auger itself was positioned such that it engaged with the bolt with as little play as possible. Once I was happy with how everything was positioned I tacked it together and tested it out. The result is pretty good. It's not quite as smooth as the previous version with the bearings, but considering that the goal is to be able to make this with easily accessible materials and hand tools it's a win.</p><p><br></p></div><div class="ebd-block  " data-type="image" style="text-align: center;"><div class="eb-image style-clear">
+<div class="ebd-block  " data-type="text" ><p>Last week <a href="/general/2019/07/20/diy-extruder-auger-machine-part-1.html" title="" class="" target="_blank" rel="noopener noreferrer">I wrote about the extruder screw that I'm making</a> and shared the initial build of a machine to make my own screw. In that post I created the basic table using an auger as a lead screw. This proved the concept of using an auger as the transport mechanism but when I started to build the second part, the mechanism that holds the grinder, I found that the auger was mounted&nbsp;too low in the frame&nbsp;and so&nbsp;the grinding wheel would not be able to reach the workpiece.&nbsp;So before I could get stuck into mounting the grinder I needed to move the 'lead screw' up on top of the frame.</p><p><br></p></div><div class="ebd-block  " data-type="readmore" ></div><div class="ebd-block  " data-type="text" ><p>Moving the lead screw&nbsp;also allowed me to change&nbsp;the design a little. After my initial tests you may recall that I decided that the nut design I had come up with was overly complex, in fact after doing some more experimenting I decided that the auger did not need to be held captive and&nbsp;enclosed within a nut at all. What I decided to do was simply run a bit of round bar over the top of the auger (I actually used a bolt as it was a little harder than round bar). The bolt is welded to the top of the slides and&nbsp;held against the top of the&nbsp;auger. The auger itself was positioned such that it engaged with the bolt with as little play as possible. Once I was happy with how everything was positioned I tacked it together and tested it out. The result is pretty good. It's not quite as smooth as the previous version with the bearings, but considering that the goal is to be able to make this with easily accessible materials and hand tools it's a win.</p><p><br></p></div><div class="ebd-block  " data-type="image" style="text-align: center;"><div class="eb-image style-clear">
 	<div class="eb-image-figure is-responsive">
 
 		
 					<a class="eb-image-viewport">
-					<img src="../../../../images/easyblog_articles/326/b2ap3_large_IMG_792_20190727-113815_1.jpg" 			/>
+					<img src="/images/easyblog_articles/326/b2ap3_large_IMG_792_20190727-113815_1.jpg" 			/>
 		</a>
 	</div>
 				</div></div><div class="ebd-block  " data-type="text" ><p>With the transport part of the machine fixed (again), I moved on to mounting the grinder. As you can see in the photo above the grinder mechanism is mounted to the moving 'table' with a simple hinge. This allows the grinder to move up and down and follow the profile of a cam. This cam defines the depth to which the grinder can cut, which effectively creates the variation to the depth of the flute. It is this variation in depth that creates the loading,&nbsp;compression and metering zones required in the screw profile as shown below.</p></div><div class="ebd-block  " data-type="image" style="text-align: center;"><div class="eb-image style-clear">
@@ -19,7 +20,7 @@ date: 2019-07-27 11:18:03.000000000 +09:30
 
 		
 					<a class="eb-image-viewport">
-					<img src="../../../../images/easyblog_articles/326/b2ap3_large_extruder-screw-625.jpg" 			/>
+					<img src="/images/easyblog_articles/326/b2ap3_large_extruder-screw-625.jpg" 			/>
 		</a>
 	</div>
 				</div></div><div class="ebd-block  " data-type="text" ><p>But before we get too tied down in&nbsp;the cam design, we need to mount the grinder. The grinder has two threaded holes that are for attaching a handle to. I decided to use one of these to mount a small length of RHS to. The thread on my grinder was M8 so I simply drilled a hole through some 20x20 RHS and bolted it on to the grinder. I also&nbsp;added a bit of 20mm&nbsp;angle to the top so that the grinder could&nbsp;be strapped using a worm-drive clamp or heavy duty cable tie. I added a length of RHS to the bottom and braced it with&nbsp;a gusset cut&nbsp;from some scrap to give it strength and stop it from flexing. This entire assembly was then slid inside some larger RHS that was welded to a hinge on the slide. The sliding&nbsp;assembly can be locked in place by two M6 bolts. The adjustment allows the grinding wheel&nbsp;to be set to create channels wider than the width of the cutting wheel itself</p><p>A point to note was that the grinder was mounted at an angle of 60 degrees as this is the helix angle I measured on the auger.&nbsp;</p></div><div class="ebd-block  " data-type="image" style="text-align: center;"><div class="eb-image style-clear">
@@ -27,7 +28,7 @@ date: 2019-07-27 11:18:03.000000000 +09:30
 
 		
 					<a class="eb-image-viewport">
-					<img src="../../../../images/easyblog_articles/326/b2ap3_large_IMG_7908.jpg" 			/>
+					<img src="/images/easyblog_articles/326/b2ap3_large_IMG_7908.jpg" 			/>
 		</a>
 	</div>
 				</div></div><div class="ebd-block  " data-type="text" ><p>​I added an axle with some skateboard bearings at the ends that&nbsp;run along the cams. These bearings support the weight of the grinder. I will add some large washers to the inside of the bearings that will site in between the two cams&nbsp;so that the force of the grinding wheel does not cause the mechanism to deflect. With the bearings in place running along the cams the entire motion is very smooth and easy to turn.</p><p>All that is really left to do is to cut the cam profiles and finish off the mounting for the workpiece. Then it's time for testing.</p></div><div class="ebd-block  " data-type="image" style="text-align: center;"><div class="eb-image style-clear">
@@ -35,7 +36,7 @@ date: 2019-07-27 11:18:03.000000000 +09:30
 
 		
 					<a class="eb-image-viewport">
-					<img src="../../../../images/easyblog_articles/326/b2ap3_large_IMG_792_20190727-113935_1.jpg" 			/>
+					<img src="/images/easyblog_articles/326/b2ap3_large_IMG_792_20190727-113935_1.jpg" 			/>
 		</a>
 	</div>
 				</div></div><div class="ebd-block  " data-type="text" ><p>As I'm fairly sure that my description and the dodgy photos make it hard to follow what's going on, here's some sketchy video of it doing it's thing...</p></div><div class="ebd-block  " data-type="youtube" ><div class="youtube-embed video-embed-wrapper is-responsive">
@@ -48,7 +49,7 @@ date: 2019-07-27 11:18:03.000000000 +09:30
 
 		
 					<a class="eb-image-viewport">
-					<img src="../../../../images/easyblog_articles/326/b2ap3_large_IMG_790_20190727-114144_1.jpg" 			 style="width:42.163%;height:100%;top:0%;left:28.918%;"/>
+					<img src="/images/easyblog_articles/326/b2ap3_large_IMG_790_20190727-114144_1.jpg" 			 style="width:42.163%;height:100%;top:0%;left:28.918%;"/>
 		</a>
 	</div>
 				</div></div>
@@ -60,7 +61,7 @@ date: 2019-07-27 11:18:03.000000000 +09:30
 
 		
 					<a class="eb-image-viewport">
-					<img src="../../../../images/easyblog_articles/326/b2ap3_large_IMG_792_20190727-114123_1.jpg" 			 style="width:42.163%;height:100%;top:0%;left:28.918%;"/>
+					<img src="/images/easyblog_articles/326/b2ap3_large_IMG_792_20190727-114123_1.jpg" 			 style="width:42.163%;height:100%;top:0%;left:28.918%;"/>
 		</a>
 	</div>
 				</div></div>
@@ -72,7 +73,7 @@ date: 2019-07-27 11:18:03.000000000 +09:30
 
 		
 					<a class="eb-image-viewport">
-					<img src="../../../../images/easyblog_articles/326/b2ap3_large_IMG_792_20190727-114113_1.jpg" 			 style="width:74.957%;height:100%;top:0%;left:12.521%;"/>
+					<img src="/images/easyblog_articles/326/b2ap3_large_IMG_792_20190727-114113_1.jpg" 			 style="width:74.957%;height:100%;top:0%;left:12.521%;"/>
 		</a>
 	</div>
 				</div></div>
@@ -84,7 +85,7 @@ date: 2019-07-27 11:18:03.000000000 +09:30
 
 		
 					<a class="eb-image-viewport">
-					<img src="../../../../images/easyblog_articles/326/b2ap3_large_IMG_792_20190727-114101_1.jpg" 			 style="width:74.957%;height:100%;top:0%;left:12.521%;"/>
+					<img src="/images/easyblog_articles/326/b2ap3_large_IMG_792_20190727-114101_1.jpg" 			 style="width:74.957%;height:100%;top:0%;left:12.521%;"/>
 		</a>
 	</div>
 				</div></div>
@@ -96,7 +97,7 @@ date: 2019-07-27 11:18:03.000000000 +09:30
 
 		
 					<a class="eb-image-viewport">
-					<img src="../../../../images/easyblog_articles/326/b2ap3_large_IMG_792_20190727-114001_1.jpg" 			 style="width:74.957%;height:100%;top:0%;left:12.521%;"/>
+					<img src="/images/easyblog_articles/326/b2ap3_large_IMG_792_20190727-114001_1.jpg" 			 style="width:74.957%;height:100%;top:0%;left:12.521%;"/>
 		</a>
 	</div>
 				</div></div>
@@ -108,7 +109,7 @@ date: 2019-07-27 11:18:03.000000000 +09:30
 
 		
 					<a class="eb-image-viewport">
-					<img src="../../../../images/easyblog_articles/326/b2ap3_large_IMG_790_20190727-113948_1.jpg" 			 style="width:74.957%;height:100%;top:0%;left:12.521%;"/>
+					<img src="/images/easyblog_articles/326/b2ap3_large_IMG_790_20190727-113948_1.jpg" 			 style="width:74.957%;height:100%;top:0%;left:12.521%;"/>
 		</a>
 	</div>
 				</div></div>
@@ -120,7 +121,7 @@ date: 2019-07-27 11:18:03.000000000 +09:30
 
 		
 					<a class="eb-image-viewport">
-					<img src="../../../../images/easyblog_articles/326/b2ap3_large_IMG_792_20190727-113935_1.jpg" 			 style="width:74.957%;height:100%;top:0%;left:12.521%;"/>
+					<img src="/images/easyblog_articles/326/b2ap3_large_IMG_792_20190727-113935_1.jpg" 			 style="width:74.957%;height:100%;top:0%;left:12.521%;"/>
 		</a>
 	</div>
 				</div></div>
@@ -132,7 +133,7 @@ date: 2019-07-27 11:18:03.000000000 +09:30
 
 		
 					<a class="eb-image-viewport">
-					<img src="../../../../images/easyblog_articles/326/b2ap3_large_IMG_792_20190727-113924_1.jpg" 			 style="width:74.957%;height:100%;top:0%;left:12.521%;"/>
+					<img src="/images/easyblog_articles/326/b2ap3_large_IMG_792_20190727-113924_1.jpg" 			 style="width:74.957%;height:100%;top:0%;left:12.521%;"/>
 		</a>
 	</div>
 				</div></div>
@@ -144,7 +145,7 @@ date: 2019-07-27 11:18:03.000000000 +09:30
 
 		
 					<a class="eb-image-viewport">
-					<img src="../../../../images/easyblog_articles/326/b2ap3_large_IMG_790_20190727-113905_1.jpg" 			 style="width:74.957%;height:100%;top:0%;left:12.521%;"/>
+					<img src="/images/easyblog_articles/326/b2ap3_large_IMG_790_20190727-113905_1.jpg" 			 style="width:74.957%;height:100%;top:0%;left:12.521%;"/>
 		</a>
 	</div>
 				</div></div>
@@ -156,7 +157,7 @@ date: 2019-07-27 11:18:03.000000000 +09:30
 
 		
 					<a class="eb-image-viewport">
-					<img src="../../../../images/easyblog_articles/326/b2ap3_large_IMG_790_20190727-113834_1.jpg" 			 style="width:74.957%;height:100%;top:0%;left:12.521%;"/>
+					<img src="/images/easyblog_articles/326/b2ap3_large_IMG_790_20190727-113834_1.jpg" 			 style="width:74.957%;height:100%;top:0%;left:12.521%;"/>
 		</a>
 	</div>
 				</div></div>
@@ -168,7 +169,7 @@ date: 2019-07-27 11:18:03.000000000 +09:30
 
 		
 					<a class="eb-image-viewport">
-					<img src="../../../../images/easyblog_articles/326/b2ap3_large_IMG_792_20190727-113815_1.jpg" 			 style="width:74.957%;height:100%;top:0%;left:12.521%;"/>
+					<img src="/images/easyblog_articles/326/b2ap3_large_IMG_792_20190727-113815_1.jpg" 			 style="width:74.957%;height:100%;top:0%;left:12.521%;"/>
 		</a>
 	</div>
 				</div></div>
@@ -180,7 +181,7 @@ date: 2019-07-27 11:18:03.000000000 +09:30
 
 		
 					<a class="eb-image-viewport">
-					<img src="../../../../images/easyblog_articles/326/b2ap3_large_IMG_790_20190727-113803_1.jpg" 			 style="width:42.163%;height:100%;top:0%;left:28.918%;"/>
+					<img src="/images/easyblog_articles/326/b2ap3_large_IMG_790_20190727-113803_1.jpg" 			 style="width:42.163%;height:100%;top:0%;left:28.918%;"/>
 		</a>
 	</div>
 				</div></div>
@@ -228,11 +229,11 @@ date: 2019-07-27 11:18:03.000000000 +09:30
 	</div></div><div class="ebd-block  " data-type="post" ><div class="post-block media">
     <div class="media-table">
         <div class="media-thumb" data-post-media="">
-            <img src="../../../../images/easyblog_articles/323/b2ap3_thumbnail_IMG_7775.jpg" data-post-image="">
+            <img src="/images/easyblog_articles/323/b2ap3_thumbnail_IMG_7775.jpg" data-post-image="">
         </div>
         <div class="media-content">
             <h3>
-                <a data-post-link="" href="https://deeemm.com/index.php/entry/general/diy-extruder-auger-machine-part-1">
+                <a data-post-link="" href="/general/2019/07/20/diy-extruder-auger-machine-part-1.html">
                     <span data-post-title="">DIY Extruder screw making machine Part 1 - The table</span>
                 </a>
             </h3>
@@ -240,7 +241,7 @@ date: 2019-07-27 11:18:03.000000000 +09:30
 </div>
 
             <span>
-                <a data-post-link="" data-post-link-preview="" href="https://deeemm.com/index.php/entry/general/diy-extruder-auger-machine-part-1">https://deeemm.com/index.php/entry/general/diy-extruder-auger-machine-part-1</a>
+                <a data-post-link="" data-post-link-preview="" href="/general/2019/07/20/diy-extruder-auger-machine-part-1.html">/general/2019/07/20/diy-extruder-auger-machine-part-1.html</a>
             </span>
         </div>
     </div>

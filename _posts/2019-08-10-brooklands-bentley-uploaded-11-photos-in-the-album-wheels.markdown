@@ -7,6 +7,7 @@ joomla_id: 408
 joomla_url: brooklands-bentley-uploaded-11-photos-in-the-album-wheels
 category: CycleKarts
 date: 2019-08-10 14:48:14.000000000 +09:30
+image: https://cyclekarts.com.au/media/com_easysocial/photos/1/203/img-8014_large.jpg
 ---
 <div data-es-photo-group="album:1" data-stream-item="0" data-es-photo-streamid="196">
 			<div>

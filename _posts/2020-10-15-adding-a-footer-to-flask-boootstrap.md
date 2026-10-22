@@ -8,7 +8,7 @@ image: /images/flask-icon.png
 date: 2020-10-15 10:30:00 +9:30
 ---
 
-Whilst working on the [Acqua](https://deeemm.com/acqua/2020/10/05/acqua-dp.html) project I wanted to add a footer to the applications web page. Acqua uses flask along with flask-bootstrap to handle page generation and rendering. Whilst flask-bootstrap is pretty good at delivering general layout content, the [method described in the documentation](https://pythonhosted.org/Flask-Bootstrap/faq.html?highlight=footer#how-do-i-add-a-footer) for adding a footer leaves a lot to be desired, especially the way that they have actually implemented the footer itself, which is far from elegant, it's bordering on hackish.
+Whilst working on the [Acqua](/acqua/2020/10/05/acqua-dp.html) project I wanted to add a footer to the applications web page. Acqua uses flask along with flask-bootstrap to handle page generation and rendering. Whilst flask-bootstrap is pretty good at delivering general layout content, the [method described in the documentation](https://pythonhosted.org/Flask-Bootstrap/faq.html?highlight=footer#how-do-i-add-a-footer) for adding a footer leaves a lot to be desired, especially the way that they have actually implemented the footer itself, which is far from elegant, it's bordering on hackish.
 
 So whilst searching for less hack-ish solutions a came across [Diego Quitanas solution](https://gist.github.com/diegoquintanav/c72f827401dfac68ef4ec62e1c234612), which was to create a new footer block outside of the content block. This could then be called without having to use the super() function, which is a heaps more elegant solution than the one suggested in the flask-bootstrap FAQ.
 

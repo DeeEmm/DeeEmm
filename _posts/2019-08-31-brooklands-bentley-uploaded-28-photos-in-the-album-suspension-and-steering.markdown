@@ -7,6 +7,7 @@ joomla_id: 403
 joomla_url: brooklands-bentley-uploaded-28-photos-in-the-album-suspension-and-steering
 category: CycleKarts
 date: 2019-08-31 09:09:24.000000000 +09:30
+image: https://cyclekarts.com.au/media/com_easysocial/photos/23/250/img-8198_large.jpg
 ---
 <div data-es-photo-group="album:23" data-stream-item="0" data-es-photo-streamid="201">
 			<div>

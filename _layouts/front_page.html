@@ -4,67 +4,83 @@ layout: default
 
 <div class="home">
   {%- if page.title -%}
-	<h1 class="page-heading">{{ page.title }}</h1>
+    <h1 class="page-heading">{{ page.title }}</h1>
   {%- endif -%}
 
   {{ content }}
   
-  <hr><br/>
+  <div class="home-divider"></div>
 
   {% if site.paginate %}
-	{% assign posts = paginator.posts %}
+    {% assign posts = paginator.posts %}
   {% else %}
-	{% assign posts = site.posts %}
+    {% assign posts = site.posts %}
   {% endif %}
   
   {%- if posts.size > 0 -%}
-	{%- if page.list_title -%}
-	  <h1 class="post-list-heading">{{ page.list_title }}</h1>
-	{%- endif -%}
-	<ul class="post-list">
-	  {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
-	  {%- for post in posts limit:7 -%}
-	  <li>
-		<span class="post-meta">{{ post.date | date: date_format }}</span>
-		<h3>
-		  <a class="post-link" href="{{ post.url | relative_url }}">
-			{{ post.title | escape }}
-		  </a>
-		</h3>
-		{%- if post.image %}
-		<img src="{{post.image}}"/>
-		<br><br>
-		{%- endif -%}
-		{{ post.content | strip_html | truncatewords:75 }}
-		{%- if site.show_excerpts -%}
-		  {{ post.excerpt }}
-		{%- endif -%}
-	  </li><hr><br>
-	  {%- endfor -%}
-	</ul>
+    {%- if page.list_title -%}
+      <h2 class="post-list-heading">{{ page.list_title }}</h2>
+    {%- endif -%}
+    <div class="home-post-list">
+      {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+      {%- for post in posts limit:7 -%}
+      <article class="home-post-item">
+        {%- if post.image %}
+        <div class="home-post-thumb">
+          <a href="{{ post.url | relative_url }}">
+            <img src="{{ post.image | relative_url }}" alt="{{ post.title | escape }}" loading="lazy" />
+          </a>
+        </div>
+        {%- endif -%}
+        
+        <div class="home-post-body">
+          <div class="home-post-meta">
+            <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: date_format }}</time>
+            {% assign post_cat = post.category | default: post.categories | first %}
+            {% if post_cat %}
+              <a href="{{ '/archives/' | relative_url }}#category={{ post_cat | downcase | url_encode }}" class="home-category-badge">{{ post_cat }}</a>
+            {% endif %}
+          </div>
+          
+          <h2 class="home-post-title">
+            <a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
+          </h2>
+          
+          <div class="home-post-excerpt">
+            {{ post.content | strip_html | strip_newlines | truncatewords: 60 }}
+          </div>
+          
+          <div class="home-post-footer">
+            <a class="read-article-link" href="{{ post.url | relative_url }}">Read article &rarr;</a>
+          </div>
+        </div>
+      </article>
+      {%- endfor -%}
+    </div>
 
-	{% if site.paginate %}
-	  <div class="pager">
-		<ul class="pagination">
-		{%- if paginator.previous_page %}
-		  <li><a href="{{ paginator.previous_page_path | relative_url }}" class="previous-page">{{ paginator.previous_page }}</a></li>
-		{%- else %}
-		  <li><div class="pager-edge">•</div></li>
-		{%- endif %}
-		  <li><div class="current-page">{{ paginator.page }}</div></li>
-		{%- if paginator.next_page %}
-		  <li><a href="{{ paginator.next_page_path | relative_url }}" class="next-page">{{ paginator.next_page }}</a></li>
-		{%- else %}
-		  <li><div class="pager-edge">•</div></li>
-		{%- endif %}
-		</ul>
-	  </div>
-	{%- endif %}
+    {% if site.paginate %}
+      <div class="pager">
+        <ul class="pagination">
+        {%- if paginator.previous_page %}
+          <li><a href="{{ paginator.previous_page_path | relative_url }}" class="previous-page">{{ paginator.previous_page }}</a></li>
+        {%- else %}
+          <li><div class="pager-edge">•</div></li>
+        {%- endif %}
+          <li><div class="current-page">{{ paginator.page }}</div></li>
+        {%- if paginator.next_page %}
+          <li><a href="{{ paginator.next_page_path | relative_url }}" class="next-page">{{ paginator.next_page }}</a></li>
+        {%- else %}
+          <li><div class="pager-edge">•</div></li>
+        {%- endif %}
+        </ul>
+      </div>
+    {%- endif %}
 
   {%- endif -%}
 
-  
-  	<a class="post-link read-more-link style="text-align: right;" href="archives">
-		More...
-	</a>
+  <div class="home-archives-link-wrapper">
+    <a class="all-archives-btn" href="/archives/">
+      View All Posts in Archives &rarr;
+    </a>
+  </div>
 </div>

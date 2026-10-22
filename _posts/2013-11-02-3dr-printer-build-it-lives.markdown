@@ -5,6 +5,7 @@ joomla_id: 316
 joomla_url: 3dr-printer-build-it-lives
 category: General
 date: 2013-11-02 14:02:01.000000000 +10:30
+image: https://web.archive.org/web/20160805222314im_/images/originalphotos/307/9/0b51e72e024730e6d9b74b8b.jpg
 ---
 <p><span style="color: #777777; font-family: 'Open Sans', sans-serif; font-size: 13px;">Inspired by the recent receipt of my hot end I decided that it really was time I strung up the spectra line and got the printer a little more finished. Well it's finally finished and up and running. </span></p>
 <p><span style="color: #777777; font-family: 'Open Sans', sans-serif; font-size: 13px;">After running some test prints there' few issues I need to address...</span></p>

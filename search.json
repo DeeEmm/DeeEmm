@@ -1,0 +1,17 @@
+---
+layout: null
+---
+[
+  {% for post in site.posts %}
+  {
+    "title"    : {{ post.title | jsonify }},
+    "url"      : {{ post.url | relative_url | jsonify }},
+    "category" : {{ post.category | default: post.categories | first | jsonify }},
+    "tags"     : {{ post.tags | jsonify }},
+    "date"     : {{ post.date | date: "%b %-d, %Y" | jsonify }},
+    "year"     : {{ post.date | date: "%Y" | jsonify }},
+    "image"    : {{ post.image | jsonify }},
+    "snippet"  : {{ post.content | strip_html | strip_newlines | truncatewords: 25 | jsonify }}
+  }{% unless forloop.last %},{% endunless %}
+  {% endfor %}
+]

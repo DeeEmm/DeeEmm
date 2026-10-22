@@ -5,6 +5,7 @@ joomla_id: 305
 joomla_url: the-g-test
 category: General
 date: 2013-09-24 11:19:27.000000000 +09:30
+image: https://web.archive.org/web/20160804183836im_/../../../images/easyblog_images/308/b2ap3_thumbnail_g.jpg
 ---
 <p style="margin: 0px 0px 9px; box-sizing: border-box; color: #777777; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 13px;">If you create your own 3D models for 3D printing you might have wondered which of the current free mainstream 3D modellers gives the best results. To find out we decided to do some benchmarking by testing the current offerings from Google, Autodesk and FreeCAD.</p>
 <p style="margin: 0px 0px 9px; box-sizing: border-box; color: #777777; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 13px;">I've been an avid Sketchup user since it's initial free release by Google in 2006. I've used it to design many real-life projects and also had great success using it as a tool to illustrate design concepts to clients. Using Sketchup to design parts for 3D printing seemed like a natural transition, especially with the STL import / export plugin allowing me to be able to create files that I could directly import into my slicing program. The STL plugin really empowered me to create things for my printer that otherwise I might not have been able to. Without it I might have just had to make do with downloading things from Thingiverse.</p>

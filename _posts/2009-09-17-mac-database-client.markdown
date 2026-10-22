@@ -6,6 +6,7 @@ joomla_url: mac-database-client
 category: General
 tags: client database mac osx sequelpro
 date: 2009-09-17 00:00:00.000000000 +09:30
+image: http://www.sequelpro.com/assets/images/g-notebook-header.png
 ---
 <p><img src="http://www.sequelpro.com/assets/images/g-notebook-header.png" border="0" alt="http://www.sequelpro.com/assets/images/g-notebook-header.png" title="http://www.sequelpro.com/assets/images/g-notebook-header.png" hspace="15" width="207" height="133" align="right">A recent project using a remote database server forced me to go looking for a suitable database client for my Mac. Previously i had used EMMA on Linux, but as I only has my macbook to hand I decided to have a look into what was available.<br><br>A quick google turned up Sequel Pro - an open source project - <a href="http://www.sequelpro.com/" title="http://www.sequelpro.com/">http://www.sequelpro.com/</a></p>
 <p>Sequel Pro is a very capable tool, that works flawlessly, it supports SSL connections and had a wide range of encoding options. The layout is instantly familiar to anyone who is used to using phpMyAdmin, and the interface is pretty intuitive to use.</p>

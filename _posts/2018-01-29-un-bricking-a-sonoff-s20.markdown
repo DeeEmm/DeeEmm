@@ -6,6 +6,7 @@ joomla_url: un-bricking-a-sonoff-s20
 category: General
 tags: firmware home-automation s20 sonoff tasmota
 date: 2018-01-29 09:57:11.000000000 +10:30
+image: /images/easyblog_articles/287/b2ap3_large_IMG_3875.jpg
 ---
 <p>A while ago I invested in a bunch of home automation stuff to augment my Google home. I opted on the Sonoff devices as they are by far the best value and also come with Aussie compatible plugs and sockets. Unfortunately one of the units was DOA.</p>
 <p>In a bid to try and resuscitate the device I decided to have a go at re-flashing the firmware with the updated Tasmota firmware. The Tasmota firmware is a third party developed firmware that adds a bunch of features to Sonoff devices, including removing some communications limitations. This last feature is one that I'm particularly interested in installing into some other 4.22mhz transmitters so that they become more usable (communications are very limited in the Ewelink app), so this initial experiment to see if the firmware upgrade works is a bit of a test. If all goes well I'll look to update my other Sonoff devices.</p>
@@ -17,11 +18,11 @@ date: 2018-01-29 09:57:11.000000000 +10:30
 </ul>
 <p>My device was the S20 switch, the pins are (from left to right in photo below) GND TX RX VCC</p>
 <p> </p>
-<p> <img src="../../../../images/easyblog_articles/287/b2ap3_large_IMG_3875.jpg" width="1280" height="960" align="center" data-style="clear" /></p>
+<p> <img src="/images/easyblog_articles/287/b2ap3_large_IMG_3875.jpg" width="1280" height="960" align="center" data-style="clear" /></p>
 <p> </p>
 <p>And so I connected them up accordingly to the USB serial dongle using some jumper connections and a breadboard (as shown in the main photo).</p>
 <p> </p>
-<p><img src="../../../../images/easyblog_articles/287/b2ap3_large_IMG_3874.jpg" width="1280" height="960" align="center" data-style="clear" /></p>
+<p><img src="/images/easyblog_articles/287/b2ap3_large_IMG_3874.jpg" width="1280" height="960" align="center" data-style="clear" /></p>
 <p> </p>
 <p>Next up is to open the Tasmota code in the IDE. There are a few settings in platformio.ini and user_config.h that you will need to set - namely your WIFI access details and device specific details. Once these are set you can get ready to upload.</p>
 <p>To be able to upload to the device you need to put it into bootloader mode - this involved holding the device button in for a few seconds whilst plugging in the USB cable to the USB-Serial converter. You won't see any flashing lights or indication that you are in bootloader mode so you'll just have to proceed to the next step and see if the file can be uploaded. To do this simply select 'Upload' from the platformIO menu. There's no need to select any ports as it will auto detect the correct USB port (or at least it did on mine).</p>

@@ -5,13 +5,11 @@
 
   <body>
 
-<!--	{%- include header.html -%} -->
-
-	<nav class="site-header">
-		<div class="wrapper">
+	<header class="site-header" role="banner">
+		<div class="wrapper site-header-wrapper">
 			<a class="site-title" rel="author" href="/">DeeEmm</a>
 
-		<nav class="site-nav">
+			<nav class="site-nav">
 				<input type="checkbox" id="nav-trigger" class="nav-trigger">
 				<label for="nav-trigger">
 				  <span class="menu-icon">
@@ -21,17 +19,23 @@
 				  </span>
 				</label>
 		
-				<span class="trigger">
-				<a class="page-link" href="/archives/">Archives</a>
-				<a class="page-link" href="/about/">About</a>
-				<a class="page-link" target="_blank" href="https://discord.gg/NendhZZ">Discord</a>
-				<a class="page-link" target="_blank" href="https://github.com/DeeEmm">Github</a>
-				</span>
-	    </nav>
+				<div class="trigger">
+					<a class="page-link" href="/archives/">Archives</a>
+					<a class="page-link" href="/about/">About</a>
+					<a class="page-link" target="_blank" rel="noopener noreferrer" href="https://discord.gg/NendhZZ">Discord</a>
+					<a class="page-link" target="_blank" rel="noopener noreferrer" href="https://github.com/DeeEmm">Github</a>
+					<button class="nav-search-trigger" id="openSearchModal" type="button" aria-label="Search site (Press /)">
+						<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+							<circle cx="11" cy="11" r="8"></circle>
+							<line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+						</svg>
+						<span class="search-text">Search</span>
+						<kbd class="search-kbd">/</kbd>
+					</button>
+				</div>
+			</nav>
 		</div>
-		  
-	</nav>
-		
+	</header>
 
 	<main class="page-content" aria-label="Content">
 	  <div class="wrapper">
@@ -40,6 +44,175 @@
 	</main>
 
 	{%- include footer.html -%}
+
+	<!-- Global Site Search Modal -->
+	<div class="search-modal-backdrop" id="searchModal" aria-hidden="true" style="display: none;">
+		<div class="search-modal-container" role="dialog" aria-modal="true" aria-label="Search posts">
+			<div class="search-modal-header">
+				<svg class="search-modal-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+					<circle cx="11" cy="11" r="8"></circle>
+					<line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+				</svg>
+				<input type="text" id="globalSearchInput" class="search-modal-input" placeholder="Search articles, topics, code..." autocomplete="off">
+				<button type="button" id="closeSearchModal" class="search-modal-close" aria-label="Close search (Esc)">&times;</button>
+			</div>
+			<div class="search-modal-categories">
+				<span class="search-cat-label">Quick topics:</span>
+				<button type="button" class="search-cat-chip" data-cat="CNC">CNC</button>
+				<button type="button" class="search-cat-chip" data-cat="Arduino">Arduino</button>
+				<button type="button" class="search-cat-chip" data-cat="CycleKarts">CycleKarts</button>
+				<button type="button" class="search-cat-chip" data-cat="Acqua">Acqua</button>
+				<button type="button" class="search-cat-chip" data-cat="General">General</button>
+				<a href="{{ '/archives/' | relative_url }}" class="search-cat-all-link">All in Archives &rarr;</a>
+			</div>
+			<div class="search-modal-results" id="searchResultsContainer">
+				<div class="search-hint">Type keywords to search across 300+ posts...</div>
+			</div>
+			<div class="search-modal-footer">
+				<span><kbd>&uarr;</kbd> <kbd>&darr;</kbd> Navigate</span>
+				<span><kbd>Enter</kbd> Open</span>
+				<span><kbd>Esc</kbd> Close</span>
+			</div>
+		</div>
+	</div>
+
+	<script>
+	(function() {
+		const modal = document.getElementById('searchModal');
+		const openBtn = document.getElementById('openSearchModal');
+		const closeBtn = document.getElementById('closeSearchModal');
+		const input = document.getElementById('globalSearchInput');
+		const resultsContainer = document.getElementById('searchResultsContainer');
+
+		let searchIndex = null;
+		let isLoading = false;
+
+		function loadIndex() {
+			if (searchIndex || isLoading) return;
+			isLoading = true;
+			fetch('{{ "/search.json" | relative_url }}')
+				.then(res => res.json())
+				.then(data => {
+					searchIndex = data;
+					isLoading = false;
+					if (input.value.trim()) runSearch(input.value.trim());
+				})
+				.catch(err => {
+					console.error('Failed to load search index:', err);
+					isLoading = false;
+				});
+		}
+
+		function openModal() {
+			modal.style.display = 'flex';
+			modal.setAttribute('aria-hidden', 'false');
+			document.body.style.overflow = 'hidden';
+			loadIndex();
+			setTimeout(() => input.focus(), 50);
+		}
+
+		function closeModal() {
+			modal.style.display = 'none';
+			modal.setAttribute('aria-hidden', 'true');
+			document.body.style.overflow = '';
+			input.value = '';
+			resultsContainer.innerHTML = '<div class="search-hint">Type keywords to search across 300+ posts...</div>';
+		}
+
+		function runSearch(query) {
+			if (!searchIndex) {
+				resultsContainer.innerHTML = '<div class="search-hint">Loading search index...</div>';
+				return;
+			}
+			const q = query.toLowerCase().trim();
+			if (!q) {
+				resultsContainer.innerHTML = '<div class="search-hint">Type keywords to search across 300+ posts...</div>';
+				return;
+			}
+
+			const words = q.split(/\s+/);
+			const matches = searchIndex.filter(post => {
+				const title = (post.title || '').toLowerCase();
+				const snippet = (post.snippet || '').toLowerCase();
+				const category = (post.category || '').toLowerCase();
+				const tags = (Array.isArray(post.tags) ? post.tags.join(' ') : (post.tags || '')).toLowerCase();
+				const text = `${title} ${category} ${tags} ${snippet}`;
+				return words.every(w => text.includes(w));
+			});
+
+			if (matches.length === 0) {
+				resultsContainer.innerHTML = `<div class="search-no-results">No results found for "<strong>${escapeHtml(query)}</strong>"</div>`;
+				return;
+			}
+
+			const html = matches.slice(0, 15).map(post => {
+				const imgHtml = post.image 
+					? `<div class="search-result-thumb"><img src="${escapeHtml(post.image)}" alt="" /></div>`
+					: `<div class="search-result-thumb placeholder"><svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" fill="none"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path></svg></div>`;
+				
+				const catBadge = post.category ? `<span class="search-result-badge">${escapeHtml(post.category)}</span>` : '';
+
+				return `
+					<a href="${escapeHtml(post.url)}" class="search-result-item">
+						${imgHtml}
+						<div class="search-result-details">
+							<div class="search-result-meta">
+								<time>${escapeHtml(post.date || '')}</time>
+								${catBadge}
+							</div>
+							<h4 class="search-result-title">${escapeHtml(post.title || '')}</h4>
+							<p class="search-result-snippet">${escapeHtml(post.snippet || '')}</p>
+						</div>
+					</a>
+				`;
+			}).join('');
+
+			resultsContainer.innerHTML = html;
+		}
+
+		function escapeHtml(str) {
+			const div = document.createElement('div');
+			div.textContent = str;
+			return div.innerHTML;
+		}
+
+		if (openBtn) openBtn.addEventListener('click', openModal);
+		if (closeBtn) closeBtn.addEventListener('click', closeModal);
+
+		modal.addEventListener('click', (e) => {
+			if (e.target === modal) closeModal();
+		});
+
+		input.addEventListener('input', (e) => {
+			runSearch(e.target.value);
+		});
+
+		document.querySelectorAll('.search-cat-chip').forEach(chip => {
+			chip.addEventListener('click', () => {
+				const cat = chip.getAttribute('data-cat');
+				input.value = cat;
+				input.focus();
+				runSearch(cat);
+			});
+		});
+
+		window.addEventListener('keydown', (e) => {
+			if (e.key === '/' && document.activeElement !== input && !['INPUT', 'TEXTAREA'].includes(document.activeElement.tagName)) {
+				e.preventDefault();
+				openModal();
+			} else if (e.key === 'Escape' && modal.style.display !== 'none') {
+				closeModal();
+			} else if ((e.metaKey || e.ctrlKey) && e.key === 'k') {
+				e.preventDefault();
+				if (modal.style.display === 'none') {
+					openModal();
+				} else {
+					closeModal();
+				}
+			}
+		});
+	})();
+	</script>
 
   </body>
 

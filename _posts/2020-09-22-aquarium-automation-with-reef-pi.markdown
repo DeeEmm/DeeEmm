@@ -6,16 +6,17 @@ joomla_url: aquarium-automation-with-reef-pi
 category: General
 tags: aquarium raspberry-pi reef-pi rpi
 date: 2020-09-22 04:31:42.000000000 +09:30
+image: /images/easyblog_articles/413/b2ap3_small_IMG_20200922_171018.jpg
 ---
 <div class="ebd-block  " data-type="text" ><p>I'm setting up a <a href="https://reef-pi.github.io/" title="" class="" target="_blank" rel="noopener noreferrer">reef-pi</a> controller on my tank. Reef-Pi is a DIY Raspberry-Pi based aquarium controller.&nbsp;I had considered making a simple controller using an Arduino, but when i was searching online I found&nbsp;the Reef-Pi project and decided it was perfect for my needs and would save a bunch of work and time. Win-Win!</p><p><br></p></div><div class="ebd-block  " data-type="readmore" ></div><div class="ebd-block  " data-type="text" ><p>The main reason I was considering some kind of tank controller was just to control my lights with the eventual goal of building some DIY LED Lights. I also quite like the idea of switching all of my pumps to DC pumps powered by a solar charged battery bank to help save on electricity costs and overcome power outages, so moving to a centralised controller would make this possible. I'm not 100% sure if reef-pi will be able to control the main pump in this manner but it's something that can be looked into down the track, it certainly has the capability to control DC pumps and so looks like it will&nbsp;be able to do the job.</p><p>For the time being I'll concentrate on getting the pi set up with some simple on / off relay control and dimming control for the existing LED lighting and control of the tanks heaters. There is also the possibility to integrate things like Auto Top Up, doser&nbsp;control, PH monitoring,&nbsp;feeder control, etc. In fact there is a pretty flexible macro system that means it can potentially control many different things.</p><p>So I decided to invest some time into putting a Reef-Pi system together with the end&nbsp;goal of complete tank control, whatever that looks like.</p></div><div class="ebd-block  " data-type="thumbnails" ><div class="eb-thumbs">
 	<div class="eb-thumbs-col"><div class="eb-thumb" data-position="0"><div><div class="ebd-block  is-nested is-isolated " data-type="image" style="text-align: center;"><div class="eb-image style-clear">
 	<div class="eb-image-figure is-responsive" style="width:100%;">
 
 				<a class="eb-image-viewport eb-image-popup-button"
-			href="../../../../images/easyblog_articles/413/b2ap3_large_IMG_20200922_171018.jpg"
+			href="/images/easyblog_articles/413/b2ap3_large_IMG_20200922_171018.jpg"
 			title="">
 		
-					<img src="../../../../images/easyblog_articles/413/b2ap3_small_IMG_20200922_171018.jpg" 			/>
+					<img src="/images/easyblog_articles/413/b2ap3_small_IMG_20200922_171018.jpg" 			/>
 		</a>
 	</div>
 				</div></div>
@@ -42,10 +43,10 @@ date: 2020-09-22 04:31:42.000000000 +09:30
 	<div class="eb-image-figure is-responsive" style="width:100%;">
 
 				<a class="eb-image-viewport eb-image-popup-button"
-			href="../../../../images/easyblog_articles/413/b2ap3_large_IMG_20200922_171026.jpg"
+			href="/images/easyblog_articles/413/b2ap3_large_IMG_20200922_171026.jpg"
 			title="">
 		
-					<img src="../../../../images/easyblog_articles/413/b2ap3_small_IMG_20200922_171026.jpg" 			/>
+					<img src="/images/easyblog_articles/413/b2ap3_small_IMG_20200922_171026.jpg" 			/>
 		</a>
 	</div>
 				</div></div>
@@ -79,10 +80,10 @@ date: 2020-09-22 04:31:42.000000000 +09:30
 	<div class="eb-image-figure is-responsive" style="width:100%;">
 
 				<a class="eb-image-viewport eb-image-popup-button"
-			href="../../../../images/easyblog_articles/413/b2ap3_large_IMG_20200922_172131.jpg"
+			href="/images/easyblog_articles/413/b2ap3_large_IMG_20200922_172131.jpg"
 			title="">
 		
-					<img src="../../../../images/easyblog_articles/413/b2ap3_small_IMG_20200922_172131.jpg" 			/>
+					<img src="/images/easyblog_articles/413/b2ap3_small_IMG_20200922_172131.jpg" 			/>
 		</a>
 	</div>
 				</div></div>
@@ -108,10 +109,10 @@ date: 2020-09-22 04:31:42.000000000 +09:30
 	<div class="eb-image-figure is-responsive" style="width:100%;">
 
 				<a class="eb-image-viewport eb-image-popup-button"
-			href="../../../../images/easyblog_articles/413/b2ap3_large_IMG_20200922_172146.jpg"
+			href="/images/easyblog_articles/413/b2ap3_large_IMG_20200922_172146.jpg"
 			title="">
 		
-					<img src="../../../../images/easyblog_articles/413/b2ap3_small_IMG_20200922_172146.jpg" 			/>
+					<img src="/images/easyblog_articles/413/b2ap3_small_IMG_20200922_172146.jpg" 			/>
 		</a>
 	</div>
 				</div></div>
@@ -137,10 +138,10 @@ date: 2020-09-22 04:31:42.000000000 +09:30
 	<div class="eb-image-figure is-responsive" style="width:100%;">
 
 				<a class="eb-image-viewport eb-image-popup-button"
-			href="../../../../images/easyblog_articles/413/b2ap3_large_IMG_20200922_230113.jpg"
+			href="/images/easyblog_articles/413/b2ap3_large_IMG_20200922_230113.jpg"
 			title="">
 		
-					<img src="../../../../images/easyblog_articles/413/b2ap3_small_IMG_20200922_230113.jpg" 			/>
+					<img src="/images/easyblog_articles/413/b2ap3_small_IMG_20200922_230113.jpg" 			/>
 		</a>
 	</div>
 				</div></div>
@@ -166,10 +167,10 @@ date: 2020-09-22 04:31:42.000000000 +09:30
 	<div class="eb-image-figure is-responsive" style="width:100%;">
 
 				<a class="eb-image-viewport eb-image-popup-button"
-			href="../../../../images/easyblog_articles/413/b2ap3_large_IMG_20200922_172054.jpg"
+			href="/images/easyblog_articles/413/b2ap3_large_IMG_20200922_172054.jpg"
 			title="">
 		
-					<img src="../../../../images/easyblog_articles/413/b2ap3_small_IMG_20200922_172054.jpg" 			/>
+					<img src="/images/easyblog_articles/413/b2ap3_small_IMG_20200922_172054.jpg" 			/>
 		</a>
 	</div>
 				</div></div>
@@ -195,10 +196,10 @@ date: 2020-09-22 04:31:42.000000000 +09:30
 	<div class="eb-image-figure is-responsive" style="width:100%;">
 
 				<a class="eb-image-viewport eb-image-popup-button"
-			href="../../../../images/easyblog_articles/413/b2ap3_large_IMG_20200922_171414.jpg"
+			href="/images/easyblog_articles/413/b2ap3_large_IMG_20200922_171414.jpg"
 			title="">
 		
-					<img src="../../../../images/easyblog_articles/413/b2ap3_small_IMG_20200922_171414.jpg" 			/>
+					<img src="/images/easyblog_articles/413/b2ap3_small_IMG_20200922_171414.jpg" 			/>
 		</a>
 	</div>
 				</div></div>
@@ -229,10 +230,10 @@ date: 2020-09-22 04:31:42.000000000 +09:30
 	<div class="eb-image-figure is-responsive" style="width:100%;">
 
 				<a class="eb-image-viewport eb-image-popup-button"
-			href="../../../../images/easyblog_articles/413/b2ap3_large_IMG_20200922_170553.jpg"
+			href="/images/easyblog_articles/413/b2ap3_large_IMG_20200922_170553.jpg"
 			title="">
 		
-					<img src="../../../../images/easyblog_articles/413/b2ap3_small_IMG_20200922_170553.jpg" 			/>
+					<img src="/images/easyblog_articles/413/b2ap3_small_IMG_20200922_170553.jpg" 			/>
 		</a>
 	</div>
 				</div></div>
@@ -258,10 +259,10 @@ date: 2020-09-22 04:31:42.000000000 +09:30
 	<div class="eb-image-figure is-responsive" style="width:100%;">
 
 				<a class="eb-image-viewport eb-image-popup-button"
-			href="../../../../images/easyblog_articles/413/b2ap3_large_IMG_20200922_225423.jpg"
+			href="/images/easyblog_articles/413/b2ap3_large_IMG_20200922_225423.jpg"
 			title="">
 		
-					<img src="../../../../images/easyblog_articles/413/b2ap3_small_IMG_20200922_225423.jpg" 			/>
+					<img src="/images/easyblog_articles/413/b2ap3_small_IMG_20200922_225423.jpg" 			/>
 		</a>
 	</div>
 				</div></div>
@@ -287,10 +288,10 @@ date: 2020-09-22 04:31:42.000000000 +09:30
 	<div class="eb-image-figure is-responsive" style="width:100%;">
 
 				<a class="eb-image-viewport eb-image-popup-button"
-			href="../../../../images/easyblog_articles/413/b2ap3_large_IMG_20200922_170544.jpg"
+			href="/images/easyblog_articles/413/b2ap3_large_IMG_20200922_170544.jpg"
 			title="">
 		
-					<img src="../../../../images/easyblog_articles/413/b2ap3_small_IMG_20200922_170544.jpg" 			/>
+					<img src="/images/easyblog_articles/413/b2ap3_small_IMG_20200922_170544.jpg" 			/>
 		</a>
 	</div>
 				</div></div>
@@ -316,10 +317,10 @@ date: 2020-09-22 04:31:42.000000000 +09:30
 	<div class="eb-image-figure is-responsive" style="width:100%;">
 
 				<a class="eb-image-viewport eb-image-popup-button"
-			href="../../../../images/easyblog_articles/413/b2ap3_large_IMG_20200922_170437.jpg"
+			href="/images/easyblog_articles/413/b2ap3_large_IMG_20200922_170437.jpg"
 			title="">
 		
-					<img src="../../../../images/easyblog_articles/413/b2ap3_small_IMG_20200922_170437.jpg" 			/>
+					<img src="/images/easyblog_articles/413/b2ap3_small_IMG_20200922_170437.jpg" 			/>
 		</a>
 	</div>
 				</div></div>
@@ -345,10 +346,10 @@ date: 2020-09-22 04:31:42.000000000 +09:30
 	<div class="eb-image-figure is-responsive" style="width:100%;">
 
 				<a class="eb-image-viewport eb-image-popup-button"
-			href="../../../../images/easyblog_articles/413/b2ap3_large_IMG_20200922_222006.jpg"
+			href="/images/easyblog_articles/413/b2ap3_large_IMG_20200922_222006.jpg"
 			title="">
 		
-					<img src="../../../../images/easyblog_articles/413/b2ap3_small_IMG_20200922_222006.jpg" 			/>
+					<img src="/images/easyblog_articles/413/b2ap3_small_IMG_20200922_222006.jpg" 			/>
 		</a>
 	</div>
 				</div></div>
@@ -374,10 +375,10 @@ date: 2020-09-22 04:31:42.000000000 +09:30
 	<div class="eb-image-figure is-responsive" style="width:100%;">
 
 				<a class="eb-image-viewport eb-image-popup-button"
-			href="../../../../images/easyblog_articles/413/b2ap3_large_IMG_20200922_170611.jpg"
+			href="/images/easyblog_articles/413/b2ap3_large_IMG_20200922_170611.jpg"
 			title="">
 		
-					<img src="../../../../images/easyblog_articles/413/b2ap3_small_IMG_20200922_170611.jpg" 			/>
+					<img src="/images/easyblog_articles/413/b2ap3_small_IMG_20200922_170611.jpg" 			/>
 		</a>
 	</div>
 				</div></div>

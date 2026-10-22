@@ -5,7 +5,7 @@ category: general
 date: 2020-09-30 22:00:00 +9:30
 ---
 
-This follows on from my previous post on [using arduino nano as a control node](http://deeemm.com/general/2020/09/30/arduino-nano-nodes.html) and builds on the basic idea discussed there.
+This follows on from my previous post on [using arduino nano as a control node](/general/2020/09/30/arduino-nano-nodes.html) and builds on the basic idea discussed there.
 
 The idea is a new control / data logging system using a Raspberry Pi as a master controller and web app server and the Arduino nano/micro as slave devices on an I2C network. The slave system is user extensible and has the ability for nodes to be created to interface to practically anything. Whilst the original idea was in the context of a reef tank controller, by using generalised descriptors the program can be used as a datalogger or programmable controller for any system requiring automation. This includes systems like irrigation, aquariums, aquaponics, motorsport, experimental systems, in fact anywhere where a simple user programmable datalog / control system is required. The extensibility of the system allows quick integration of any kind of device and includes wide capabilities as standard. Additional cases can easily be catered for by editing the nano code to suit.
 

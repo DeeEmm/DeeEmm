@@ -6,6 +6,7 @@ joomla_url: south-australian-planting-guide
 category: General
 tags: aquaponics gardening south-australia vegetables
 date: 2019-04-07 15:13:26.000000000 +09:30
+image: https://www.aquagardening.com.au/assets/images/wysiwyg/wysiwyg/learn/Seasonal-Vegetables-Aquaponics.jpg
 ---
 <p>A bit of a departure from my usual tech posting, but I needed to keep this somewhere and here seemed as good a place as any (there's SOME tech involved). I'm reinstating my aquaponics setup after moving it and so found a local general planting calendar that will help me know what to plant in what month. My plan is to keep this updated with additional info as I come across it / figure it out. It's not specifically an aquaponics planting guide at the moment, but I'll notate it as the months come.</p>
 <p>We've had an aquaponics setup for about 5 or 6 years and had varied success with it. Some stuff has grown very well, but other stuff that generally seems to thrive in everyone else's setup, has not done so well for us. I did put a lot of effort into things like seasonal planting, succession planting and companion planting, but it is very hard to get right, especially in such a small space. One of the issues was probably the planting guide I was using as it was not tailored for South Australia, so I've started to put together a tailored guide, as below. It's a mix of several sources; both books and web, and my plan is to notate it with information specific to aquaponics husbandry that will provide a reference for me each season.</p>

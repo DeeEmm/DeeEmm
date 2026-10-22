@@ -6,6 +6,7 @@ joomla_url: free-stock-icons
 category: General
 tags: bitcons famfam free stock-icons
 date: 2011-05-11 00:48:19.000000000 +09:30
+image: http://icons.mysitemyway.com/icon-banners/black-ink-grunge-stamps-textures-icons.jpg
 ---
 <p><img src="http://icons.mysitemyway.com/icon-banners/black-ink-grunge-stamps-textures-icons.jpg" border="0" alt="http://icons.mysitemyway.com/icon-banners/black-ink-grunge-stamps-textures-icons.jpg" title="http://icons.mysitemyway.com/icon-banners/black-ink-grunge-stamps-textures-icons.jpg" width="197" height="197" style="float: right; margin: 10px;"></p>
 <p>Occasionally I need to use icons in an application or website, generally I favour the 'standard' stock icon sets like the fantastic and widely used&nbsp;<a href="http://www.famfamfam.com/lab/icons/silk/" title="http://www.famfamfam.com/lab/icons/silk/">FamFam Silk</a> icon set or <a href="http://somerandomdude.com/projects/bitcons/" title="http://somerandomdude.com/projects/bitcons/">Bitcons by Somerandomdude</a> which I utilised in earlier versions of DMCMS. but recently I needed a larger icon set to create buttons for an admin panel that I was putting together for a web based application.</p>
